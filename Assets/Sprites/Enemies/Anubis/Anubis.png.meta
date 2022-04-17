@@ -1,0 +1,1625 @@
+fileFormatVersion: 2
+guid: fa56c4b575062a34f82f717f21e2da92
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 4264317810600858832
+    second: Anubis_0
+  - first:
+      213: 7788615925255226250
+    second: Anubis_1
+  - first:
+      213: 1617184400179488643
+    second: Anubis_2
+  - first:
+      213: 8584992145257259839
+    second: Anubis_3
+  - first:
+      213: 3715270960955789728
+    second: Anubis_4
+  - first:
+      213: -9094559770210731518
+    second: Anubis_5
+  - first:
+      213: 5482159855455746608
+    second: Anubis_6
+  - first:
+      213: -1093752688839023340
+    second: Anubis_7
+  - first:
+      213: -5370561602514909149
+    second: Anubis_8
+  - first:
+      213: 8656899437489330530
+    second: Anubis_9
+  - first:
+      213: -1717683147523081712
+    second: Anubis_10
+  - first:
+      213: -7258621589677752472
+    second: Anubis_11
+  - first:
+      213: 385907810013575503
+    second: Anubis_12
+  - first:
+      213: -8448209048220502054
+    second: Anubis_13
+  - first:
+      213: -4399952908644071766
+    second: Anubis_14
+  - first:
+      213: 1795501694727551195
+    second: Anubis_15
+  - first:
+      213: 7854688771131725449
+    second: Anubis_16
+  - first:
+      213: 643170015426157769
+    second: Anubis_17
+  - first:
+      213: 4903051912593258901
+    second: Anubis_18
+  - first:
+      213: -3941853747753016165
+    second: Anubis_19
+  - first:
+      213: 3062523089704407041
+    second: Anubis_20
+  - first:
+      213: -3901139770702784966
+    second: Anubis_21
+  - first:
+      213: 5872720590868495638
+    second: Anubis_22
+  - first:
+      213: 2650962620344432247
+    second: Anubis_23
+  - first:
+      213: 1734729597695404829
+    second: Anubis_24
+  - first:
+      213: 2662370949463222512
+    second: Anubis_25
+  - first:
+      213: -7201837232081286081
+    second: Anubis_26
+  - first:
+      213: 3877651282570507052
+    second: Anubis_27
+  - first:
+      213: -4396971117142428510
+    second: Anubis_28
+  - first:
+      213: -1207591101985315032
+    second: Anubis_29
+  - first:
+      213: -7275976380495419718
+    second: Anubis_30
+  - first:
+      213: -7831056765029865316
+    second: Anubis_31
+  - first:
+      213: 981823289532112233
+    second: Anubis_32
+  - first:
+      213: -7209672697705431920
+    second: Anubis_33
+  - first:
+      213: -1575497808364366129
+    second: Anubis_34
+  - first:
+      213: -1504147168807450214
+    second: Anubis_35
+  - first:
+      213: -8481525012728063182
+    second: Anubis_36
+  - first:
+      213: -6764897063623724951
+    second: Anubis_37
+  - first:
+      213: -3937105207705636136
+    second: Anubis_38
+  - first:
+      213: -7597175712919380583
+    second: Anubis_39
+  - first:
+      213: 7854582031819334878
+    second: Anubis_40
+  - first:
+      213: -3618169182004540786
+    second: Anubis_41
+  - first:
+      213: 5052242073907837633
+    second: Anubis_42
+  - first:
+      213: 3609701271341561760
+    second: Anubis_43
+  - first:
+      213: -2386539628327462045
+    second: Anubis_44
+  - first:
+      213: -3536099739850340560
+    second: Anubis_45
+  - first:
+      213: 2032760070021186252
+    second: Anubis_46
+  - first:
+      213: -832140483493744926
+    second: Anubis_47
+  - first:
+      213: -7941818123518155281
+    second: Anubis_48
+  - first:
+      213: 2664484947162510626
+    second: Anubis_49
+  - first:
+      213: 7362960342725573538
+    second: Anubis_50
+  - first:
+      213: 5276539051270924968
+    second: Anubis_51
+  - first:
+      213: -6708231172539764717
+    second: Anubis_52
+  - first:
+      213: -7981024130290239531
+    second: Anubis_53
+  - first:
+      213: -1806526370586396184
+    second: Anubis_54
+  - first:
+      213: 217908552137692558
+    second: Anubis_0
+  - first:
+      213: 3830250530726476688
+    second: Anubis_1
+  - first:
+      213: 8119880897478754042
+    second: Anubis_2
+  - first:
+      213: -1579628712631965748
+    second: Anubis_3
+  - first:
+      213: 5298239529944327589
+    second: Anubis_4
+  - first:
+      213: -123367316337664935
+    second: Anubis_5
+  - first:
+      213: 2289318140082411993
+    second: Anubis_6
+  - first:
+      213: 5035624944491507172
+    second: Anubis_7
+  - first:
+      213: 6239408232864804920
+    second: Anubis_8
+  - first:
+      213: -2718636133520513163
+    second: Anubis_9
+  - first:
+      213: 8746636860397480196
+    second: Anubis_10
+  - first:
+      213: 5776860839901032035
+    second: Anubis_11
+  - first:
+      213: -4963668158238884682
+    second: Anubis_12
+  - first:
+      213: -4094542452652547548
+    second: Anubis_13
+  - first:
+      213: -422864385516130245
+    second: Anubis_14
+  - first:
+      213: -1394058305527166018
+    second: Anubis_15
+  - first:
+      213: -4696291602007765310
+    second: Anubis_16
+  - first:
+      213: -7357379288672084983
+    second: Anubis_17
+  - first:
+      213: 2832642261264140811
+    second: Anubis_18
+  - first:
+      213: 6975024472476652700
+    second: Anubis_19
+  - first:
+      213: -4907742459770069887
+    second: Anubis_20
+  - first:
+      213: -7881357441164117777
+    second: Anubis_21
+  - first:
+      213: 5458647691966559338
+    second: Anubis_22
+  - first:
+      213: 5519525843829611305
+    second: Anubis_23
+  - first:
+      213: -1571226346903067081
+    second: Anubis_24
+  - first:
+      213: 8001723692898862792
+    second: Anubis_25
+  - first:
+      213: 3704248460149161487
+    second: Anubis_26
+  - first:
+      213: -1345348113642930157
+    second: Anubis_27
+  - first:
+      213: 4055423385305591321
+    second: Anubis_28
+  - first:
+      213: -3430861800698262154
+    second: Anubis_29
+  - first:
+      213: -3149103122966683646
+    second: Anubis_30
+  - first:
+      213: 1150576055562499142
+    second: Anubis_31
+  - first:
+      213: 8276199854709368740
+    second: Anubis_32
+  - first:
+      213: 7794513915999581368
+    second: Anubis_33
+  - first:
+      213: 5996741948966312452
+    second: Anubis_34
+  - first:
+      213: -2511728455386979572
+    second: Anubis_35
+  - first:
+      213: 167217393375832948
+    second: Anubis_36
+  - first:
+      213: -6483765367948009305
+    second: Anubis_37
+  - first:
+      213: 6572132951446224044
+    second: Anubis_38
+  - first:
+      213: -105489176406168889
+    second: Anubis_39
+  - first:
+      213: -4657826386116683019
+    second: Anubis_40
+  - first:
+      213: 7828892424166272798
+    second: Anubis_41
+  - first:
+      213: 3873711417532450038
+    second: Anubis_42
+  - first:
+      213: 487803423032350467
+    second: Anubis_43
+  - first:
+      213: 7947363246439893194
+    second: Anubis_44
+  - first:
+      213: 5064073445815043771
+    second: Anubis_45
+  - first:
+      213: 6049483638643967240
+    second: Anubis_46
+  - first:
+      213: -5129001277495885420
+    second: Anubis_47
+  - first:
+      213: -7575033668724752141
+    second: Anubis_48
+  - first:
+      213: 1414696894220836154
+    second: Anubis_49
+  - first:
+      213: 7130826119782920297
+    second: Anubis_50
+  - first:
+      213: 521527211023545719
+    second: Anubis_51
+  - first:
+      213: 4101421707866308475
+    second: Anubis_52
+  - first:
+      213: 7848421665156895327
+    second: Anubis_53
+  - first:
+      213: -3695872704802192889
+    second: Anubis_54
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Anubis_0
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 2558
+        width: 347
+        height: 514
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e85dfa37caa260300800000000000000
+      internalID: 217908552137692558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_1
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 2558
+        width: 349
+        height: 514
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bf3bc6098c72530800000000000000
+      internalID: 3830250530726476688
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_2
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 2560
+        width: 349
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: afe73b0c7ac9fa070800000000000000
+      internalID: 8119880897478754042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_3
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 2560
+        width: 351
+        height: 512
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc7609a1e08041ae0800000000000000
+      internalID: -1579628712631965748
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_4
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 2558
+        width: 492
+        height: 514
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a5a34df7c0278940800000000000000
+      internalID: 5298239529944327589
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_5
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 2558
+        width: 488
+        height: 514
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95cdcc45416b94ef0800000000000000
+      internalID: -123367316337664935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_6
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 2558
+        width: 349
+        height: 514
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d9587518ba45cf10800000000000000
+      internalID: 2289318140082411993
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_7
+      rect:
+        serializedVersion: 2
+        x: 3664
+        y: 2558
+        width: 351
+        height: 514
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ed2386053222e540800000000000000
+      internalID: 5035624944491507172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_8
+      rect:
+        serializedVersion: 2
+        x: 4177
+        y: 2558
+        width: 349
+        height: 514
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 830fd80eab4d69650800000000000000
+      internalID: 6239408232864804920
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_9
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 2045
+        width: 383
+        height: 348
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577e7fb27d6754ad0800000000000000
+      internalID: -2718636133520513163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_10
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 2045
+        width: 383
+        height: 348
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 409645302eb426970800000000000000
+      internalID: 8746636860397480196
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_11
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 2045
+        width: 380
+        height: 348
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36e6a27a3588b2050800000000000000
+      internalID: 5776860839901032035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_12
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 2047
+        width: 351
+        height: 367
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6bcf045db128d1bb0800000000000000
+      internalID: -4963668158238884682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_13
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 2047
+        width: 492
+        height: 379
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42263e745534d27c0800000000000000
+      internalID: -4094542452652547548
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_14
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 2047
+        width: 488
+        height: 370
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b30b521f41fa12af0800000000000000
+      internalID: -422864385516130245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_15
+      rect:
+        serializedVersion: 2
+        x: 3153
+        y: 2045
+        width: 349
+        height: 330
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebbcede6b5f47ace0800000000000000
+      internalID: -1394058305527166018
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_16
+      rect:
+        serializedVersion: 2
+        x: 3665
+        y: 2047
+        width: 348
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2ce4da48bab63deb0800000000000000
+      internalID: -4696291602007765310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_17
+      rect:
+        serializedVersion: 2
+        x: 4177
+        y: 2047
+        width: 349
+        height: 331
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 90c52ec948655e990800000000000000
+      internalID: -7357379288672084983
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_18
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 1534
+        width: 383
+        height: 348
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b0a886ee0219f4720800000000000000
+      internalID: 2832642261264140811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_19
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 1534
+        width: 383
+        height: 346
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9490ad6dc34cc060800000000000000
+      internalID: 6975024472476652700
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_20
+      rect:
+        serializedVersion: 2
+        x: 1090
+        y: 1534
+        width: 380
+        height: 346
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 18c9d443c3234ebb0800000000000000
+      internalID: -4907742459770069887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_21
+      rect:
+        serializedVersion: 2
+        x: 1648
+        y: 1534
+        width: 288
+        height: 331
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fe8f78b1a2bcf9290800000000000000
+      internalID: -7881357441164117777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_22
+      rect:
+        serializedVersion: 2
+        x: 2159
+        y: 1534
+        width: 355
+        height: 331
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a643ca9972301cb40800000000000000
+      internalID: 5458647691966559338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_23
+      rect:
+        serializedVersion: 2
+        x: 2672
+        y: 1534
+        width: 383
+        height: 331
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 92b5d02e28b499c40800000000000000
+      internalID: 5519525843829611305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_24
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 1534
+        width: 326
+        height: 328
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 736ab1356f1e13ae0800000000000000
+      internalID: -1571226346903067081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_25
+      rect:
+        serializedVersion: 2
+        x: 3678
+        y: 1534
+        width: 326
+        height: 330
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c64012cd45db0f60800000000000000
+      internalID: 8001723692898862792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_26
+      rect:
+        serializedVersion: 2
+        x: 4190
+        y: 1536
+        width: 325
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0e7afa3952286330800000000000000
+      internalID: 3704248460149161487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_27
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 1021
+        width: 347
+        height: 330
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3104213c40d545de0800000000000000
+      internalID: -1345348113642930157
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_28
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 1023
+        width: 349
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91ea3f61512c74830800000000000000
+      internalID: 4055423385305591321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_29
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 1023
+        width: 349
+        height: 331
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 67d4ce7ae512360d0800000000000000
+      internalID: -3430861800698262154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_30
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 1023
+        width: 351
+        height: 367
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2006f72f4632c44d0800000000000000
+      internalID: -3149103122966683646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_31
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 1023
+        width: 492
+        height: 379
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6447fd693daa7ff00800000000000000
+      internalID: 1150576055562499142
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_32
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 1023
+        width: 488
+        height: 370
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7671e2be7fad270800000000000000
+      internalID: 8276199854709368740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_33
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 1023
+        width: 326
+        height: 328
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b47ef70c1dab2c60800000000000000
+      internalID: 7794513915999581368
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_34
+      rect:
+        serializedVersion: 2
+        x: 3678
+        y: 1023
+        width: 326
+        height: 330
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 40a12ddc705b83350800000000000000
+      internalID: 5996741948966312452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_35
+      rect:
+        serializedVersion: 2
+        x: 4189
+        y: 1025
+        width: 326
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c032b6c074c842dd0800000000000000
+      internalID: -2511728455386979572
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_36
+      rect:
+        serializedVersion: 2
+        x: 78
+        y: 510
+        width: 357
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 47bee645553125200800000000000000
+      internalID: 167217393375832948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_37
+      rect:
+        serializedVersion: 2
+        x: 589
+        y: 510
+        width: 357
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a0aa7410c90506a0800000000000000
+      internalID: -6483765367948009305
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_38
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 510
+        width: 358
+        height: 322
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cac77934918e43b50800000000000000
+      internalID: 6572132951446224044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_39
+      rect:
+        serializedVersion: 2
+        x: 1651
+        y: 510
+        width: 351
+        height: 364
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ca69a8272a398ef0800000000000000
+      internalID: -105489176406168889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_40
+      rect:
+        serializedVersion: 2
+        x: 2088
+        y: 510
+        width: 432
+        height: 441
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fad21e74931c5fb0800000000000000
+      internalID: -4657826386116683019
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_41
+      rect:
+        serializedVersion: 2
+        x: 2606
+        y: 510
+        width: 421
+        height: 440
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1f6d273e20d5ac60800000000000000
+      internalID: 7828892424166272798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_42
+      rect:
+        serializedVersion: 2
+        x: 3017
+        y: 709
+        width: 14
+        height: 13
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6f4856ca20032c530800000000000000
+      internalID: 3873711417532450038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_43
+      rect:
+        serializedVersion: 2
+        x: 3165
+        y: 512
+        width: 326
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3071016f0a605c600800000000000000
+      internalID: 487803423032350467
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_44
+      rect:
+        serializedVersion: 2
+        x: 3678
+        y: 512
+        width: 326
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac88b0504c4ba4e60800000000000000
+      internalID: 7947363246439893194
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_45
+      rect:
+        serializedVersion: 2
+        x: 4189
+        y: 514
+        width: 326
+        height: 329
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb64b46e7f3374640800000000000000
+      internalID: 5064073445815043771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_46
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 349
+        height: 339
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80549eb515514f350800000000000000
+      internalID: 6049483638643967240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_47
+      rect:
+        serializedVersion: 2
+        x: 593
+        y: 0
+        width: 349
+        height: 339
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4914552438022d8b0800000000000000
+      internalID: -5129001277495885420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_48
+      rect:
+        serializedVersion: 2
+        x: 1106
+        y: 0
+        width: 349
+        height: 339
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f08906330310e690800000000000000
+      internalID: -7575033668724752141
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_49
+      rect:
+        serializedVersion: 2
+        x: 1668
+        y: 0
+        width: 351
+        height: 366
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3d91e4745302a310800000000000000
+      internalID: 1414696894220836154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_50
+      rect:
+        serializedVersion: 2
+        x: 2069
+        y: 0
+        width: 492
+        height: 378
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 960fcb04398c5f260800000000000000
+      internalID: 7130826119782920297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_51
+      rect:
+        serializedVersion: 2
+        x: 2584
+        y: 0
+        width: 488
+        height: 369
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77532c93c36dc3700800000000000000
+      internalID: 521527211023545719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_52
+      rect:
+        serializedVersion: 2
+        x: 3158
+        y: 0
+        width: 342
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b7f7273205d2be830800000000000000
+      internalID: 4101421707866308475
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_53
+      rect:
+        serializedVersion: 2
+        x: 3669
+        y: 0
+        width: 342
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f521827fbe13bec60800000000000000
+      internalID: 7848421665156895327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Anubis_54
+      rect:
+        serializedVersion: 2
+        x: 4182
+        y: 0
+        width: 342
+        height: 291
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 70204374b5f95bcc0800000000000000
+      internalID: -3695872704802192889
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
