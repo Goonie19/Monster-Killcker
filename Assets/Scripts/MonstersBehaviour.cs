@@ -20,7 +20,7 @@ public class MonstersBehaviour : MonoBehaviour
 
     [Serializable]
     public class MonsterWave {
-        public List<MonsterData> Monsters;
+        public MonsterData Monster;
         public bool Completed;
 
         public bool unlockPowerUp;
@@ -30,33 +30,11 @@ public class MonstersBehaviour : MonoBehaviour
 
         private int _index;
 
-        public MonsterData Peek()
+        public MonsterData GetMonster()
         {
-            return Monsters[_index];
+            return Monster;
         }
 
-        public int GetIndex()
-        {
-            return _index;
-        }
-
-        public MonsterData NextMonster()
-        {
-            if (_index < Monsters.Count - 1)
-                ++_index;
-            else
-            {
-                _index = 0;
-                if (!Completed && unlockPowerUp)
-                    AlliesManager.Instance.UnlockAllies(AllyIndexes);
-
-                Completed = true;
-                
-
-            }
-            return Monsters[_index];
-            
-        }
     }
     [Serializable]
     public struct MonsterData
@@ -81,7 +59,7 @@ public class MonstersBehaviour : MonoBehaviour
     private void Awake()
     {
         _monstersLevels = 0;
-        _life = waves[_monstersLevels].Peek().LifePoints;
+        _life = waves[_monstersLevels].GetMonster().LifePoints;
         _renderer = GetComponentInChildren<Image>();
         _anim = GetComponent<Animator>();
         NextMonsterButton.interactable = waves[_monstersLevels].Completed;
@@ -97,7 +75,7 @@ public class MonstersBehaviour : MonoBehaviour
         {
             _life -= damage;
 
-            HealthFillImage.fillAmount = _life / (waves[_monstersLevels].Peek().LifePoints);
+            HealthFillImage.fillAmount = _life / (waves[_monstersLevels].GetMonster().LifePoints);
 
             if (_life <= 0 && !_dead)
                 Die();
@@ -113,16 +91,30 @@ public class MonstersBehaviour : MonoBehaviour
     {
         _anim.SetTrigger("Die");
         _dead = true;
-        PlayerManager.Instance.Experience += waves[_monstersLevels].Peek().MonsterExperience;
+        PlayerManager.Instance.Experience += waves[_monstersLevels].GetMonster().MonsterExperience;
+
+        if (!waves[_monstersLevels].Completed && waves[_monstersLevels].unlockPowerUp)
+            AlliesManager.Instance.UnlockAllies(waves[_monstersLevels].AllyIndexes);
+
+        if (_monstersLevels + 1 < waves.Count)
+        {
+            if (!waves[_monstersLevels].Completed)
+            {
+                waves[_monstersLevels].Completed = true;
+                ++_monstersLevels;
+            } else
+                waves[_monstersLevels].Completed = true;
+        }
         Invoke("Spawn", 1f);
     }
 
 
     void Spawn()
     {
-        _dead = false;
-        _renderer.sprite = waves[_monstersLevels].NextMonster().sprite;
-        _life = waves[_monstersLevels].Peek().LifePoints;
+        _dead = false;        
+
+        _renderer.sprite = waves[_monstersLevels].GetMonster().sprite;
+        _life = waves[_monstersLevels].GetMonster().LifePoints;
         HealthFillImage.fillAmount = 1;
 
         NextMonsterButton.interactable = waves[_monstersLevels].Completed;
@@ -163,14 +155,14 @@ public class MonstersBehaviour : MonoBehaviour
         else
             PreviousMonsterButton.interactable = true;
 
-        _life = waves[_monstersLevels].Peek().LifePoints;
+        _life = waves[_monstersLevels].GetMonster().LifePoints;
         _dead = false;
     }
 
     public void changeRandomSprite()
     {
         
-        _renderer.sprite = waves[_monstersLevels].Peek().sprite;
+        _renderer.sprite = waves[_monstersLevels].GetMonster().sprite;
         _renderer.SetNativeSize();
     }
 
