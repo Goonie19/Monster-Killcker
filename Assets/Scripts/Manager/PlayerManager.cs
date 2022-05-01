@@ -9,6 +9,7 @@ public class PlayerManager : MonoBehaviour
 
     public static PlayerManager Instance;
 
+
     public enum UnlockableAllies
     {
         Archer, Lancer
@@ -57,6 +58,8 @@ public class PlayerManager : MonoBehaviour
     public void Attack()
     {
         Monster.TakeDamage(BaseDamage * multiplierDamage, true, true);
+        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(Placeholders.HIT_SFX_EVENT_PATH);
+        instance.start();
     }
 
 }
