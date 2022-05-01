@@ -57,7 +57,8 @@ public class AlliesManager : MonoBehaviour
     {
         while(true)
         {
-            PlayerManager.Instance.Monster.TakeDamage(_totalDamage * 0.1f, false);
+            if(_totalDamage > 0)
+                PlayerManager.Instance.Monster.TakeDamage(_totalDamage * 0.1f, false);
             yield return new WaitForSeconds(0.1f);
         }
     }

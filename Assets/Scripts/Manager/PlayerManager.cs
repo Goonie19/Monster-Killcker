@@ -56,7 +56,7 @@ public class PlayerManager : MonoBehaviour
 
     public void Attack()
     {
-        Monster.TakeDamage(BaseDamage * multiplierDamage);
+        Monster.TakeDamage(BaseDamage * multiplierDamage, true, true);
     }
 
 }

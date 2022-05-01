@@ -10,6 +10,8 @@ using UnityEngine.UI;
 public class MonstersBehaviour : MonoBehaviour
 {
     public Image HealthFillImage;
+    public Transform DamageDisplaySpawn;
+    public GameObject DamageInfoPrefab;
     [Title("Oleadas")]
     [SerializeField]
     public List<MonsterWave> waves;
@@ -68,12 +70,19 @@ public class MonstersBehaviour : MonoBehaviour
             PreviousMonsterButton.interactable = false;
     }
 
-    public void TakeDamage(float damage, bool animate = true)
+    public void TakeDamage(float damage, bool animate = true, bool player = false)
     {
         
         if(_life > 0)
         {
             _life -= damage;
+
+            if(player)
+            {
+                GameObject display = Instantiate(DamageInfoPrefab, DamageDisplaySpawn);
+
+                display.GetComponent<DamageInfoText>().SetDamage(damage);
+            }
 
             HealthFillImage.fillAmount = _life / (waves[_monstersLevels].GetMonster().LifePoints);
 
