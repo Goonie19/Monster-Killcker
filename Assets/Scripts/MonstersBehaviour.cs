@@ -80,8 +80,10 @@ public class MonstersBehaviour : MonoBehaviour
             if(player)
             {
                 GameObject display = Instantiate(DamageInfoPrefab, DamageDisplaySpawn);
-
                 display.GetComponent<DamageInfoText>().SetDamage(damage);
+
+                FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(Placeholders.HIT_SFX_EVENT_PATH);
+                instance.start();
             }
 
             HealthFillImage.fillAmount = _life / (waves[_monstersLevels].GetMonster().LifePoints);
