@@ -71,6 +71,8 @@ public class AlliesManager : MonoBehaviour
     public void ActivateAllyImage(int id)
     {
         AlliesImages[id].gameObject.SetActive(true);
+        AlliesImages[id].GetComponent<Image>().SetNativeSize();
+
     }
 
     public void UnlockAllies(List<int> ally)
@@ -80,6 +82,7 @@ public class AlliesManager : MonoBehaviour
             if (a >= 0 && a < Allies.Count)
             {
                 Allies[a].SetActive(true);
+                
             }
         }
     }

@@ -24,6 +24,7 @@ public class PlayerManager : MonoBehaviour
     public MonstersBehaviour Monster;
     public Transform PowerUpParent;
     public TextMeshProUGUI ExpText;
+    public TextMeshProUGUI HeadsText;
 
     [Title("Events")]
     public Action OnHeadsAdded;
@@ -45,6 +46,7 @@ public class PlayerManager : MonoBehaviour
         set
         {
             _heads = value;
+            HeadsText.text = _heads.ToString();
         }
     } 
 
@@ -64,7 +66,7 @@ public class PlayerManager : MonoBehaviour
 
     public void AddMonsterHead()
     {
-        ++_heads;
+        ++MonsterHeads;
         OnHeadsAdded?.Invoke();
 
     }
