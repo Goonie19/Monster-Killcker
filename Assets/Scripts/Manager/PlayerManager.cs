@@ -1,4 +1,5 @@
 ﻿using Sirenix.OdinInspector;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -24,7 +25,8 @@ public class PlayerManager : MonoBehaviour
     public Transform PowerUpParent;
     public TextMeshProUGUI ExpText;
 
-
+    [Title("Events")]
+    public Action OnHeadsAdded;
 
 
     public float Experience
@@ -58,6 +60,13 @@ public class PlayerManager : MonoBehaviour
     public void Attack()
     {
         Monster.TakeDamage(BaseDamage * multiplierDamage, true, true);
+    }
+
+    public void AddMonsterHead()
+    {
+        ++_heads;
+        OnHeadsAdded?.Invoke();
+
     }
 
 }

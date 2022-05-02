@@ -1,4 +1,5 @@
 ﻿using Sirenix.OdinInspector;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,14 +9,38 @@ public class AlliesManager : MonoBehaviour
 {
     public static AlliesManager Instance;
 
+    public List<AllyInfo> ActiveAllies;
+
     public List<GameObject> Allies;
 
     public List<Image> AlliesImages;
 
+    public List<AllyPowerUp> AlliesPowerUps;
+
     [Title("Allies Damage Coroutine Data")]
+
     public float TotalDamage { get => _totalDamage; }
 
     private float _totalDamage;
+
+    [Serializable]
+    public class AllyInfo {
+        
+        public int Amount;
+        public float DamageMultiplier;
+        public float BaseDamage;
+
+        public float ExperienceRequired;
+
+        public AllyInfo(int id, int amount, float damageMultiplier, float baseDamage)
+        {
+            Amount = amount;
+            DamageMultiplier = damageMultiplier;
+            BaseDamage = baseDamage;
+        }
+
+
+    }
 
     private void Awake()
     {
@@ -25,6 +50,17 @@ public class AlliesManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+
+    }
+
+    private void OnEnable()
+    {
+        PlayerManager.Instance.OnHeadsAdded += CheckPowerUp;
+    }
+
+    private void OnDisable()
+    {
+        PlayerManager.Instance.OnHeadsAdded -= CheckPowerUp;
     }
 
     private void Start()
@@ -48,19 +84,30 @@ public class AlliesManager : MonoBehaviour
         }
     }
 
-    public void BuffAlly(float Damage)
+    public void BuffAlly(int id, int amount, float Damage, float multiplier, float PriceMultiplier)
     {
-        _totalDamage += Damage;
+        ActiveAllies[id].Amount += amount;
+        ActiveAllies[id].BaseDamage += Damage;
+        ActiveAllies[id].DamageMultiplier += multiplier;
+        ActiveAllies[id].ExperienceRequired *= PriceMultiplier;
     }
 
     IEnumerator MakeAllyDamage()
     {
         while(true)
         {
-            if(_totalDamage > 0)
-                PlayerManager.Instance.Monster.TakeDamage(_totalDamage * 0.1f, false);
+            foreach(AllyInfo info in ActiveAllies)
+            {
+                PlayerManager.Instance.Monster.TakeDamage(info.Amount * info.BaseDamage * info.DamageMultiplier * 0.1f, false);
+            }
             yield return new WaitForSeconds(0.1f);
         }
+    }
+
+    void CheckPowerUp()
+    {
+        AllyPowerUp p = AlliesPowerUps.Find(x => x.HeadsRequiredToUnlock <= PlayerManager.Instance.MonsterHeads && x.gameObject.activeInHierarchy == false && !x.used);
+        p?.gameObject.SetActive(true);
     }
 
 }

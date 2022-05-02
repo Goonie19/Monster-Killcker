@@ -8,8 +8,7 @@ public class AllyButton : MonoBehaviour
 {
     public int AllyId;
 
-    public float DamagePerSecond;
-    public float ExpRequired;
+ 
     public float PriceMultiplier = 1.3f;
     public TextMeshProUGUI ExpText;
     public TextMeshProUGUI LvlText;
@@ -18,12 +17,12 @@ public class AllyButton : MonoBehaviour
 
     private void Awake()
     {
-        ExpText.text = ExpRequired.ToString() + " Exp";
+        ExpText.text = AlliesManager.Instance.ActiveAllies[AllyId].ExperienceRequired.ToString() + " Exp";
     }
 
     private void Update()
     {
-        if (PlayerManager.Instance.Experience >= ExpRequired)
+        if (PlayerManager.Instance.Experience >= AlliesManager.Instance.ActiveAllies[AllyId].ExperienceRequired)
             GetComponent<Button>().interactable = true;
         else
             GetComponent<Button>().interactable = false;
@@ -37,10 +36,10 @@ public class AllyButton : MonoBehaviour
     public void BuffAlly()
     {
         ++_level;
-        PlayerManager.Instance.Experience -= ExpRequired;
-        ExpRequired *= PriceMultiplier;
-        ExpText.text = ExpRequired.ToString() + " Exp";
+        PlayerManager.Instance.Experience -= AlliesManager.Instance.ActiveAllies[AllyId].ExperienceRequired;
+        AlliesManager.Instance.BuffAlly(AllyId, 1, 0, 0, PriceMultiplier);
+        ExpText.text = AlliesManager.Instance.ActiveAllies[AllyId].ExperienceRequired.ToString() + " Exp";
         LvlText.text = "X" + _level.ToString();
-        AlliesManager.Instance.BuffAlly(DamagePerSecond);
+
     }
 }

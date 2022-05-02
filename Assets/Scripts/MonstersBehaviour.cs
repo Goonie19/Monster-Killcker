@@ -103,6 +103,7 @@ public class MonstersBehaviour : MonoBehaviour
         _anim.SetTrigger("Die");
         _dead = true;
         PlayerManager.Instance.Experience += waves[_monstersLevels].GetMonster().MonsterExperience;
+        PlayerManager.Instance.AddMonsterHead();
 
         if (!waves[_monstersLevels].Completed && waves[_monstersLevels].unlockPowerUp)
             AlliesManager.Instance.UnlockAllies(waves[_monstersLevels].AllyIndexes);
