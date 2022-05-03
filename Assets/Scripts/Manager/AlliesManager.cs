@@ -71,8 +71,6 @@ public class AlliesManager : MonoBehaviour
     public void ActivateAllyImage(int id)
     {
         AlliesImages[id].gameObject.SetActive(true);
-        AlliesImages[id].GetComponent<Image>().SetNativeSize();
-
     }
 
     public void UnlockAllies(List<int> ally)
@@ -85,6 +83,8 @@ public class AlliesManager : MonoBehaviour
                 
             }
         }
+        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(Placeholders.BLOP_SFX_EVENT_PATH);
+        instance.start();
     }
 
     public void BuffAlly(int id, int amount, float Damage, float multiplier, float PriceMultiplier)
@@ -111,6 +111,12 @@ public class AlliesManager : MonoBehaviour
     {
         AllyPowerUp p = AlliesPowerUps.Find(x => x.HeadsRequiredToUnlock <= PlayerManager.Instance.MonsterHeads && x.gameObject.activeInHierarchy == false && !x.used);
         p?.gameObject.SetActive(true);
+
+        if(p)
+        {
+            FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(Placeholders.BLOP_SFX_EVENT_PATH);
+            instance.start();
+        }
     }
 
 }

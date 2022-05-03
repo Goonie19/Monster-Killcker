@@ -45,6 +45,7 @@ public class MonstersBehaviour : MonoBehaviour
         public Sprite sprite;
         public float LifePoints;
         public float MonsterExperience;
+        public int MonsterHeads;
     }
 
     #endregion
@@ -103,7 +104,7 @@ public class MonstersBehaviour : MonoBehaviour
         _anim.SetTrigger("Die");
         _dead = true;
         PlayerManager.Instance.Experience += waves[_monstersLevels].GetMonster().MonsterExperience;
-        PlayerManager.Instance.AddMonsterHead();
+        PlayerManager.Instance.AddMonsterHead(waves[_monstersLevels].GetMonster().MonsterHeads);
 
         if (!waves[_monstersLevels].Completed && waves[_monstersLevels].unlockPowerUp)
             AlliesManager.Instance.UnlockAllies(waves[_monstersLevels].AllyIndexes);

@@ -17,5 +17,7 @@ public class PlayerPowerUp : PowerUp
         ExpText.text = ExpRequired.ToString() + " Exp";
         AmountText.text = "X" + _amount.ToString();
 
+        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(Placeholders.COIN_SFX_EVENT_PATH);
+        instance.start();
     }
 }

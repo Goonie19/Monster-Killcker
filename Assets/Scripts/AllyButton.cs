@@ -41,5 +41,7 @@ public class AllyButton : MonoBehaviour
         ExpText.text = AlliesManager.Instance.ActiveAllies[AllyId].ExperienceRequired.ToString() + " Exp";
         LvlText.text = "X" + _level.ToString();
 
+        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(Placeholders.COIN_SFX_EVENT_PATH);
+        instance.start();
     }
 }

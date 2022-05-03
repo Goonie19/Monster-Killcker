@@ -21,5 +21,8 @@ public class AllyPowerUp : PowerUp
         AlliesManager.Instance.BuffAlly(AllyId, 0, AttackBonus, MultiplierBonus, PriceMultiplier);
         used = true;
         gameObject.SetActive(false);
+
+        FMOD.Studio.EventInstance instance = FMODUnity.RuntimeManager.CreateInstance(Placeholders.COIN_SFX_EVENT_PATH);
+        instance.start();
     }
 }

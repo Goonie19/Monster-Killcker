@@ -64,9 +64,9 @@ public class PlayerManager : MonoBehaviour
         Monster.TakeDamage(BaseDamage * multiplierDamage, true, true);
     }
 
-    public void AddMonsterHead()
+    public void AddMonsterHead(int heads)
     {
-        ++MonsterHeads;
+        MonsterHeads += heads;
         OnHeadsAdded?.Invoke();
 
     }

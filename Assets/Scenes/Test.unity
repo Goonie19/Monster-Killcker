@@ -155,6 +155,7 @@ MonoBehaviour:
   Monster: {fileID: 397030841}
   PowerUpParent: {fileID: 1572521001}
   ExpText: {fileID: 457224521}
+  HeadsText: {fileID: 1973607875}
 --- !u!4 &13510361
 Transform:
   m_ObjectHideFlags: 0
@@ -255,7 +256,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 66.4
+  m_fontSize: 66.45
   m_fontSizeBase: 51.2
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2432,6 +2433,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 945f288811606de4db240e4e6a28406e, type: 3}
       LifePoints: 50
       MonsterExperience: 10
+      MonsterHeads: 1
     Completed: 0
     unlockPowerUp: 1
     AllyIndexes: 00000000
@@ -2440,6 +2442,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 0e3c971bc7fa2df47bae97027e2adbb7, type: 3}
       LifePoints: 150
       MonsterExperience: 50
+      MonsterHeads: 1
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 01000000
@@ -2448,6 +2451,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 0de5e0bebf366f34c942a7dba1c30943, type: 3}
       LifePoints: 400
       MonsterExperience: 200
+      MonsterHeads: 2
     Completed: 0
     unlockPowerUp: 1
     AllyIndexes: 01000000
@@ -2456,6 +2460,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: ac886fc941a78c445b5a7ac0abda3438, type: 3}
       LifePoints: 490
       MonsterExperience: 220
+      MonsterHeads: 2
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2464,6 +2469,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: ddd723c4a82d39442af36ca38afa889e, type: 3}
       LifePoints: 550
       MonsterExperience: 330
+      MonsterHeads: 2
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2472,6 +2478,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 6a46e0f71d8d82948a6a9dd997aa9d89, type: 3}
       LifePoints: 600
       MonsterExperience: 380
+      MonsterHeads: 2
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2480,6 +2487,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: ddd156a2a6264714b86e6ec8465a27d0, type: 3}
       LifePoints: 1200
       MonsterExperience: 630
+      MonsterHeads: 4
     Completed: 0
     unlockPowerUp: 1
     AllyIndexes: 02000000
@@ -2488,6 +2496,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 694160600756b0443b835a46ecfd20df, type: 3}
       LifePoints: 1600
       MonsterExperience: 780
+      MonsterHeads: 4
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2496,6 +2505,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: aaa777a6f166a2b46af7c514ea35a986, type: 3}
       LifePoints: 1800
       MonsterExperience: 840
+      MonsterHeads: 4
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2504,6 +2514,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: fdbf60cb11abb4e4eb0ef636aed1b6af, type: 3}
       LifePoints: 2100
       MonsterExperience: 960
+      MonsterHeads: 4
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2512,6 +2523,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 270aaabb6eaf05142bfe26d1218f14d8, type: 3}
       LifePoints: 2500
       MonsterExperience: 1300
+      MonsterHeads: 4
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2520,6 +2532,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 9cb6818f54b69844c9b94ce06fd6def0, type: 3}
       LifePoints: 6000
       MonsterExperience: 6500
+      MonsterHeads: 5
     Completed: 0
     unlockPowerUp: 1
     AllyIndexes: 03000000
@@ -2528,6 +2541,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 37732e36bea4123438944bc45b4013df, type: 3}
       LifePoints: 6300
       MonsterExperience: 6700
+      MonsterHeads: 5
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2536,6 +2550,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 77309146e50cd3f44ac7acf776addedc, type: 3}
       LifePoints: 6600
       MonsterExperience: 7000
+      MonsterHeads: 5
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2544,6 +2559,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: c9137ed93f82d954cb1163f409170eab, type: 3}
       LifePoints: 7300
       MonsterExperience: 7200
+      MonsterHeads: 5
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2552,6 +2568,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: 3a2f982a47898814fa406cc9a86d72c5, type: 3}
       LifePoints: 14000
       MonsterExperience: 9000
+      MonsterHeads: 7
     Completed: 0
     unlockPowerUp: 1
     AllyIndexes: 04000000
@@ -2560,6 +2577,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: e52aba1048f2efb46ac56bba52e886ec, type: 3}
       LifePoints: 16000
       MonsterExperience: 10500
+      MonsterHeads: 7
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -2568,6 +2586,7 @@ MonoBehaviour:
       sprite: {fileID: 21300000, guid: af9ce1f83ccda634eb1ff7a2ed8bfa8a, type: 3}
       LifePoints: 18000
       MonsterExperience: 12000
+      MonsterHeads: 7
     Completed: 0
     unlockPowerUp: 0
     AllyIndexes: 
@@ -3180,7 +3199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 247.2, y: 201.3}
+  m_AnchoredPosition: {x: 218.7, y: 143}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &480932489
@@ -3393,7 +3412,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -47.2, y: 214.8}
+  m_AnchoredPosition: {x: -47.2, y: 318}
   m_SizeDelta: {x: 349.43762, y: 23.755053}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &557033566
@@ -4982,12 +5001,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720945782}
-  m_RootOrder: 4
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.665125, y: 0.2196609}
-  m_AnchorMax: {x: 0.665125, y: 0.2196609}
-  m_AnchoredPosition: {x: 121, y: 606}
-  m_SizeDelta: {x: 269, y: 232}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -82.489, y: 420.92}
+  m_SizeDelta: {x: 141.60724, y: 122.992096}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &957562908
 MonoBehaviour:
@@ -5612,12 +5631,12 @@ RectTransform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720945782}
-  m_RootOrder: 3
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.665125, y: 0.2196609}
-  m_AnchorMax: {x: 0.665125, y: 0.2196609}
-  m_AnchoredPosition: {x: -1136.5, y: 364}
-  m_SizeDelta: {x: 213, y: 249}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 66, y: 224}
+  m_SizeDelta: {x: 116.151245, y: 136.95142}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1120071592
 GameObject:
@@ -6261,7 +6280,7 @@ GameObject:
   - component: {fileID: 1264585041}
   - component: {fileID: 1264585040}
   m_Layer: 5
-  m_Name: ironLanzerPowerUp
+  m_Name: StoneLanzerPowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7002,7 +7021,9 @@ MonoBehaviour:
   - {fileID: 1727579158}
   - {fileID: 1729045224}
   - {fileID: 1096079172}
+  - {fileID: 957562908}
   AlliesPowerUps:
+  - {fileID: 1264585040}
   - {fileID: 223600547}
 --- !u!4 &1466885028
 Transform:
@@ -7565,12 +7586,12 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720945782}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.665125, y: 0.2196609}
-  m_AnchorMax: {x: 0.8022083, y: 0.42033923}
-  m_AnchoredPosition: {x: -0.5, y: 1.4998779}
-  m_SizeDelta: {x: 1, y: -5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -88.539856, y: 90.31}
+  m_SizeDelta: {x: 148.9978, y: 152.22894}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1720168052
 MonoBehaviour:
@@ -7638,18 +7659,18 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1720168051}
-  - {fileID: 1727579157}
-  - {fileID: 1729045226}
-  - {fileID: 1096079174}
   - {fileID: 957562907}
+  - {fileID: 1096079174}
+  - {fileID: 1729045226}
+  - {fileID: 1727579157}
+  - {fileID: 1720168051}
   m_Father: {fileID: 1588704298}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
-  m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.22035596}
+  m_AnchorMax: {x: 0.7894286, y: 1}
+  m_AnchoredPosition: {x: 4.2299805, y: 0.45999146}
+  m_SizeDelta: {x: 8.45459, y: -0.91638184}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1720945783
 MonoBehaviour:
@@ -7718,12 +7739,12 @@ RectTransform:
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1720945782}
-  m_RootOrder: 1
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.665125, y: 0.2196609}
-  m_AnchorMax: {x: 0.665125, y: 0.2196609}
-  m_AnchoredPosition: {x: -1136.5, y: 109.93}
-  m_SizeDelta: {x: 281, y: 207}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 112.30005, y: 88.410034}
+  m_SizeDelta: {x: 208.61182, y: 155.41156}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1727579158
 MonoBehaviour:
@@ -7908,10 +7929,10 @@ RectTransform:
   m_Father: {fileID: 1720945782}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.665125, y: 0.2196609}
-  m_AnchorMax: {x: 0.665125, y: 0.2196609}
-  m_AnchoredPosition: {x: 121, y: 324.43}
-  m_SizeDelta: {x: 263, y: 222}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -87.362, y: 257}
+  m_SizeDelta: {x: 151.35388, y: 126.91467}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1736426689
 GameObject:
