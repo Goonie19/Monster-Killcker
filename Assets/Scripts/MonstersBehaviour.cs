@@ -28,6 +28,12 @@ public class MonstersBehaviour : MonoBehaviour
     public AnimatorController BossAnimator;
     public MonsterData BossData;
 
+    [Title("Iteraciones")]
+    public float LifeMultiplier;
+    public float ExperienceMultiplier;
+    public int headsMultiplier;
+
+
     #region MONSTER WAVE BEHAVIOUR
 
     [Serializable]
@@ -77,6 +83,7 @@ public class MonstersBehaviour : MonoBehaviour
         _life = waves[_monstersLevels].GetMonster().LifePoints;
         _bossActualLifePoints = BossData.LifePoints;
         _anim = GetComponent<Animator>();
+        _anim.runtimeAnimatorController = EnemyAnimator;
         NextMonsterButton.interactable = waves[_monstersLevels].Completed;
 
         if (_monstersLevels == 0)
@@ -184,6 +191,8 @@ public class MonstersBehaviour : MonoBehaviour
     {
         _anim.runtimeAnimatorController = BossAnimator;
         _isOnBoss = true;
+
+        HealthFillImage.fillAmount = 1;
 
         Sequence sq = DOTween.Sequence();
 
