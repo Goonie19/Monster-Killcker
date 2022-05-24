@@ -35,9 +35,10 @@ public class AllyButton : MonoBehaviour
 
     public void BuffAlly()
     {
+        AlliesManager.Instance.BuffAlly(AllyId, 1, 0, 0, PriceMultiplier);
+
         ++_level;
         PlayerManager.Instance.Experience -= AlliesManager.Instance.ActiveAllies[AllyId].ExperienceRequired;
-        AlliesManager.Instance.BuffAlly(AllyId, 1, 0, 0, PriceMultiplier);
         ExpText.text = AlliesManager.Instance.ActiveAllies[AllyId].ExperienceRequired.ToString() + " Exp";
         LvlText.text = "X" + _level.ToString();
 

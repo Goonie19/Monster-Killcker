@@ -200,8 +200,7 @@ public class MonstersBehaviour : MonoBehaviour
 
         sq.Play();
 
-        sq.OnComplete(() => { BossRenderer.gameObject.SetActive(true); Renderer.gameObject.SetActive(false); Deflash(); });
-
+        sq.OnComplete(() => { BossRenderer.gameObject.SetActive(true); Renderer.gameObject.SetActive(false); Deflash(); StartCoroutine(BossBehaviour()); });
 
     }
 
@@ -231,6 +230,44 @@ public class MonstersBehaviour : MonoBehaviour
         }
 
 
+    }
+
+    IEnumerator BossBehaviour()
+    {
+        while(!AlliesDefeated())
+        {
+            SubstractFromAllAllies(10);
+
+            yield return new WaitForSeconds(10f);
+        }
+
+    }
+
+    bool AlliesDefeated()
+    {
+        bool defeated = true;
+        int i = 0;
+        while (i < AlliesManager.Instance.ActiveAllies.Count && defeated)
+        {
+            if (AlliesManager.Instance.ActiveAllies[i].Amount != 0)
+                defeated = false;
+            ++i;
+        }
+
+        return defeated;
+
+    }
+
+    void SubstractFromAllAllies(int amount)
+    {
+        int i = 0;
+
+        while(i < AlliesManager.Instance.ActiveAllies.Count)
+        {
+            AlliesManager.Instance.ActiveAllies[i].Amount -= amount;
+
+            ++i;
+        }
     }
 
     #endregion
@@ -272,5 +309,7 @@ public class MonstersBehaviour : MonoBehaviour
         Renderer.sprite = waves[_monstersLevels].GetMonster().sprite;
         Renderer.SetNativeSize();
     }
+
+
 
 }

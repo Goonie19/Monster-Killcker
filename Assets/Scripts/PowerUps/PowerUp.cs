@@ -35,5 +35,13 @@ public abstract class PowerUp : MonoBehaviour
             GetComponent<Button>().interactable = false;
     }
 
+    public void Subtract(int a)
+    {
+        if (_amount < a)
+            _amount = 0;
+        else
+            _amount -= a;
+    }
+
     public abstract void GetPowerUp();
 }
