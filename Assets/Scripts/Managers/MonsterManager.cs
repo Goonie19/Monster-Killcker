@@ -32,4 +32,14 @@ public class MonsterManager : MonoBehaviour
         return BaseHealth * HealthMultiplier;
     }
 
+    public float GetExperience()
+    {
+        return BaseExperience * ExperienceMultiplier;
+    }
+
+    public int GetHeads()
+    {
+        return BaseHeads;
+    }
+
 }
