@@ -11,6 +11,9 @@ public class PlayerManager : MonoBehaviour
     public float BaseDamage = 1;
     public float DamageMultiplier = 1;
 
+    [Title("Buff List")]
+    public List<Buff> buffs;
+
     public float ActualExperience
     {
         get => _actualExperience;
