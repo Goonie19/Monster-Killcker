@@ -8,6 +8,9 @@ using UnityEngine.UI;
 [Serializable]
 public class AllyType
 {
+    [Title("Ally Id")]
+    public int AllyId;
+
     [Title("Ally References")]
     public string AllyName;
     public Sprite AllySprite;

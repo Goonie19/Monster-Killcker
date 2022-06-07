@@ -17,9 +17,10 @@ public abstract class Buff : ScriptableObject
 
     public bool OneUseBuff;
     public bool Unlocked;
+    public bool Acquired;
 
     [HideIf("OneUseBuff")]
-    public TextMeshProUGUI NumberOfBuffs;
+    public int NumberOfBuffs;
 
     public abstract void ApplyBuff();
 
