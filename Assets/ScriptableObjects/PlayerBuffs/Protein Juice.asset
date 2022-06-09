@@ -12,9 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
   m_Name: Protein Juice
   m_EditorClassIdentifier: 
-  BuffName: 
+  BuffName: Protein Juice
   BuffDescription: 
   HeadsToUnlock: 0
   OneUseBuff: 0
-  Unlocked: 0
-  NumberOfBuffs: {fileID: 0}
+  Unlocked: 1
+  Acquired: 0
+  NumberOfBuffs: 0
+  addToBaseDamage: 0
+  addToMultiplierDamage: 0
+  DamageAddToBase: 0
+  MultiplierToAdd: 0

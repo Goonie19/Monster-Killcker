@@ -7,7 +7,6 @@ using UnityEngine;
 public class PlayerBuff : Buff {
 
     [Title("Player Parameters")]
-
     public bool addToBaseDamage;
     public bool addToMultiplierDamage;
 

@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BuffName: Arrow of stone
   BuffDescription: 
+  HeadsToUnlock: 20
   OneUseBuff: 1
   Unlocked: 0
-  NumberOfBuffs: {fileID: 0}
+  Acquired: 0
+  NumberOfBuffs: 0
+  AllyId: 0
+  addToBaseDamage: 0
+  addToMultiplierDamage: 1
+  DamageAddToBase: 0
+  MultiplierToAdd: 0.2
