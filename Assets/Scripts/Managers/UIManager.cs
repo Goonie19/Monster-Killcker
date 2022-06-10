@@ -28,4 +28,42 @@ public class UIManager : MonoBehaviour
     {
         Instance = this;
     }
+
+    public void InstantiateAllyButton(AllyBuff buff)
+    {
+        if(buff.OneUseBuff)
+        {
+            GameObject b = Instantiate(AllyButtonOneUse, AlliesBuffContentDisplay);
+            b.GetComponent<BuffButton>().Setup(buff);
+
+        } else
+        {
+            GameObject b = Instantiate(AllyButton, AlliesBuffContentDisplay);
+            b.GetComponent<BuffButton>().Setup(buff);
+        }
+    }
+
+    public void InstantiateMonsterButton(MonsterBuff buff)
+    {
+        if(buff.OneUseBuff)
+        {
+            //GameObject b = Instantiate
+        }
+    }
+
+    public void InstantiatePlayerBuffButton(PlayerBuff buff)
+    {
+        if (buff.OneUseBuff)
+        {
+            GameObject b = Instantiate(AllyButtonOneUse, AlliesBuffContentDisplay);
+            b.GetComponent<BuffButton>().Setup(buff);
+
+        }
+        else
+        {
+            GameObject b = Instantiate(AllyButton, AlliesBuffContentDisplay);
+            b.GetComponent<BuffButton>().Setup(buff);
+        }
+
+    }
 }

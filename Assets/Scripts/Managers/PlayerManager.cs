@@ -32,5 +32,23 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        foreach(Buff b in buffs)
+        {
+            b.SetUnlockedToFalse();
+        }
+        
+    }
+
+    public void CheckBuffs()
+    {
+        foreach(Buff b in buffs)
+        {
+            if (b.HeadsToUnlock <= ActualHeads)
+            {
+                b.Unlock();
+                
+            }
+        }
     }
 }

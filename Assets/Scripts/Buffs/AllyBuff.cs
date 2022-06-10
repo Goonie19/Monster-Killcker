@@ -17,6 +17,18 @@ public class AllyBuff : Buff
     [ShowIf("addToMultiplierDamage")]
     public float MultiplierToAdd;
 
+    public bool Unlocked
+    {
+        get => _unlocked;
+        set
+        {
+            if (!_unlocked && value)
+                UIManager.Instance.InstantiateAllyButton(this);
+
+            _unlocked = value;
+        }
+    }
+
     public override void ApplyBuff()
     {
         if (OneUseBuff)
@@ -28,5 +40,10 @@ public class AllyBuff : Buff
             AllyManager.Instance.allies[i].BaseDamage += DamageAddToBase;
         if(addToMultiplierDamage)
             AllyManager.Instance.allies[i].DamageMultiplier += MultiplierToAdd;
+    }
+
+    public override void Unlock()
+    {
+        Unlocked = true;
     }
 }

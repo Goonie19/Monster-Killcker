@@ -39,7 +39,9 @@ public class MonsterBehaviour : MonoBehaviour
 
         sq.Play();
 
-        sq.OnComplete(() => { 
+        sq.OnComplete(() => {
+            GetRewards();
+            PlayerManager.Instance.CheckBuffs();
             Spawn(); 
         });
         
@@ -58,7 +60,7 @@ public class MonsterBehaviour : MonoBehaviour
             _dead = false;
 
             _actualHealth = MonsterManager.Instance.GetHealth();
-            GetRewards();
+            
         });
     }
 

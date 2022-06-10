@@ -15,11 +15,28 @@ public class PlayerBuff : Buff {
     [ShowIf("addToMultiplierDamage")]
     public float MultiplierToAdd;
 
+    public bool Unlocked
+    {
+        get => _unlocked;
+        set
+        {
+            if (!_unlocked && value)
+                UIManager.Instance.InstantiatePlayerBuffButton(this);
+
+            _unlocked = value;
+        }
+    }
+
     public override void ApplyBuff()
     {
         if (addToBaseDamage)
             PlayerManager.Instance.BaseDamage += DamageAddToBase;
         if (addToMultiplierDamage)
             PlayerManager.Instance.DamageMultiplier += MultiplierToAdd;
+    }
+
+    public override void Unlock()
+    {
+        Unlocked = true;
     }
 }

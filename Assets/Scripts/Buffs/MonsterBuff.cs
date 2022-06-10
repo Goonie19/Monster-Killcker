@@ -17,6 +17,17 @@ public class MonsterBuff : Buff
     [ShowIf("addToHeads")]
     public int HeadsToAdd;
 
+    public bool Unlocked
+    {
+        get => _unlocked;
+        set
+        {
+
+
+            _unlocked = value;
+        }
+    }
+
     public override void ApplyBuff()
     {
         if (OneUseBuff)
@@ -28,4 +39,8 @@ public class MonsterBuff : Buff
             MonsterManager.Instance.BaseHeads += HeadsToAdd;
     }
 
+    public override void Unlock()
+    {
+        Unlocked = true;
+    }
 }
