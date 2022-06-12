@@ -9,15 +9,13 @@ public class AllyManager : MonoBehaviour
 
     public List<AllyType> allies;
 
-    // Start is called before the first frame update
-    void Start()
+    private void Awake()
     {
-        
+        Instance = this;
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BuyAlly(int AllyId)
     {
-        
+        allies.Find((x) => x.AllyId == AllyId).NumberOfAllies++;
     }
 }

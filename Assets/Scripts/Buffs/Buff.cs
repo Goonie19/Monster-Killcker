@@ -8,6 +8,8 @@ using UnityEngine;
 
 public abstract class Buff : ScriptableObject
 {
+    public int Id;
+
     public Sprite Icon;
 
     public string BuffName;

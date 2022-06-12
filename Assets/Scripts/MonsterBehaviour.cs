@@ -68,6 +68,9 @@ public class MonsterBehaviour : MonoBehaviour
     {
         PlayerManager.Instance.ActualExperience += MonsterManager.Instance.GetExperience();
         PlayerManager.Instance.ActualHeads += MonsterManager.Instance.GetHeads();
+
+        UIManager.Instance.ExperienceDisplayText.text = PlayerManager.Instance.ActualExperience.ToString();
+        UIManager.Instance.HeadsDisplayText.text = PlayerManager.Instance.ActualHeads.ToString();
     }
 
 }

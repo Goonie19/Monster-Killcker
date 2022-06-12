@@ -23,47 +23,107 @@ public class UIManager : MonoBehaviour
     [Title("Button Prefabs")]
     public GameObject AllyButton;
     public GameObject AllyButtonOneUse;
+    public GameObject MonsterButton;
+    public GameObject MonsterButtonOneUse;
+
+    [Title("List of Buffs")]
+    public List<BuffButton> UnlockedPlayerBuffs;
+    public List<BuffButton> UnlockedAllyBuffs;
+    public List<BuffButton> UnlockedMonsterBuffs;
 
     private void Awake()
     {
         Instance = this;
     }
 
+    #region INSTANTIATE BUTTONS
+
     public void InstantiateAllyButton(AllyBuff buff)
     {
-        if(buff.OneUseBuff)
-        {
-            GameObject b = Instantiate(AllyButtonOneUse, AlliesBuffContentDisplay);
-            b.GetComponent<BuffButton>().Setup(buff);
+        GameObject b;
 
-        } else
-        {
-            GameObject b = Instantiate(AllyButton, AlliesBuffContentDisplay);
-            b.GetComponent<BuffButton>().Setup(buff);
-        }
+        if (buff.OneUseBuff)
+            b = Instantiate(AllyButtonOneUse, AlliesBuffContentDisplay);
+        else
+            b = Instantiate(AllyButton, AlliesBuffContentDisplay);
+        
+        b.GetComponent<BuffButton>().Setup(buff);
+        UnlockedAllyBuffs.Add(b.GetComponent<BuffButton>());
     }
 
     public void InstantiateMonsterButton(MonsterBuff buff)
     {
-        if(buff.OneUseBuff)
-        {
-            //GameObject b = Instantiate
-        }
+        GameObject b;
+
+        if (buff.OneUseBuff)
+            b = Instantiate(MonsterButtonOneUse, MonsterBuffContentDisplay);
+        else
+            b = Instantiate(MonsterButton, MonsterBuffContentDisplay);
+
+        b.GetComponent<BuffButton>().Setup(buff);
+        UnlockedMonsterBuffs.Add(b.GetComponent<BuffButton>());
     }
 
     public void InstantiatePlayerBuffButton(PlayerBuff buff)
     {
-        if (buff.OneUseBuff)
-        {
-            GameObject b = Instantiate(AllyButtonOneUse, AlliesBuffContentDisplay);
-            b.GetComponent<BuffButton>().Setup(buff);
+        GameObject b;
 
-        }
+        if (buff.OneUseBuff)
+            b = Instantiate(AllyButtonOneUse, AlliesBuffContentDisplay);
         else
-        {
-            GameObject b = Instantiate(AllyButton, AlliesBuffContentDisplay);
-            b.GetComponent<BuffButton>().Setup(buff);
-        }
+            b = Instantiate(AllyButton, AlliesBuffContentDisplay);
+
+        b.GetComponent<BuffButton>().Setup(buff);
+        UnlockedPlayerBuffs.Add(b.GetComponent<BuffButton>());
 
     }
+
+    #endregion
+
+    #region UPDATE BUTTONS
+
+    public void UpdateAllyButtoninfo(int Id)
+    {
+        UnlockedAllyBuffs.Find((x) => x.GetBuffId() == Id).UpdateInfo();
+    }
+
+    public void UpdatePlayerButtoninfo(int Id)
+    {
+        UnlockedPlayerBuffs.Find((x) => x.GetBuffId() == Id).UpdateInfo();
+    }
+
+    public void UpdateMonsterButtoninfo(int Id)
+    {
+        UnlockedMonsterBuffs.Find((x) => x.GetBuffId() == Id).UpdateInfo();
+    }
+
+    #endregion
+
+    #region DELETE BUTTONS
+
+    public void DeletePlayerBuff(int Id)
+    {
+        int ListIndex = UnlockedPlayerBuffs.FindIndex((x) => x.GetBuffId() == Id);
+        BuffButton b = UnlockedPlayerBuffs[ListIndex];
+        UnlockedPlayerBuffs.RemoveAt(ListIndex);
+        Destroy(b.gameObject);
+    }
+
+    public void DeleteAllyBuff(int Id)
+    {
+        int ListIndex = UnlockedAllyBuffs.FindIndex((x) => x.GetBuffId() == Id);
+        BuffButton b = UnlockedAllyBuffs[ListIndex];
+        UnlockedAllyBuffs.RemoveAt(ListIndex);
+        Destroy(b.gameObject);
+    }
+
+    public void DeleteMonsterBuff(int Id)
+    {
+        int ListIndex = UnlockedMonsterBuffs.FindIndex((x) => x.GetBuffId() == Id);
+        BuffButton b = UnlockedMonsterBuffs[ListIndex];
+        UnlockedMonsterBuffs.RemoveAt(ListIndex);
+        Destroy(b.gameObject);
+    }
+
+    #endregion
 }

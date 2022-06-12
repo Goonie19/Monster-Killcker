@@ -1675,6 +1675,7 @@ MonoBehaviour:
   BaseDamage: 1
   DamageMultiplier: 1
   buffs:
+  - {fileID: 11400000, guid: 104c179949a8f384b9966a41037da0d6, type: 2}
   - {fileID: 11400000, guid: b7602e24be669f5469d93bba23d80825, type: 2}
   - {fileID: 11400000, guid: 892984c02334ac54b9d33109a2d4ad94, type: 2}
   - {fileID: 11400000, guid: 9b28edf7f5ab92d4195583b94233f339, type: 2}
@@ -2676,6 +2677,13 @@ MonoBehaviour:
     type: 3}
   AllyButtonOneUse: {fileID: 5788542767498188737, guid: 23e5a0059a64cb741bcf318cc2894955,
     type: 3}
+  MonsterButton: {fileID: 6898187698100185783, guid: 79e8b2e31a447d843a6c4d9602e1d64c,
+    type: 3}
+  MonsterButtonOneUse: {fileID: 3647306042350940455, guid: af5d927326b4b1e48afaf49650274e16,
+    type: 3}
+  UnlockedPlayerBuffs: []
+  UnlockedAllyBuffs: []
+  UnlockedMonsterBuffs: []
 --- !u!1 &1971498385
 GameObject:
   m_ObjectHideFlags: 0
@@ -3069,7 +3077,7 @@ MonoBehaviour:
   m_Spacing: 2
   m_ChildForceExpandWidth: 1
   m_ChildForceExpandHeight: 1
-  m_ChildControlWidth: 0
+  m_ChildControlWidth: 1
   m_ChildControlHeight: 0
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
