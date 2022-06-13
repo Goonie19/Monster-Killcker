@@ -13,12 +13,6 @@ public class AllyBuff : Buff
     public bool addToBaseDamage;
     public bool addToMultiplierDamage;
     public bool addAnAlly;
-
-    [Title("Price")]
-    public float ExpPrice;
-    [HideIf("OneUseBuff")]
-    public float PriceMultiplier;
-
     
     [ShowIf("addToBaseDamage")]
     public float DamageAddToBase;
@@ -39,6 +33,10 @@ public class AllyBuff : Buff
 
     public override void ApplyBuff()
     {
+
+        PlayerManager.Instance.ActualExperience -= Price;
+
+        UIManager.Instance.CheckButtonInteraction();
 
         //Applying buff to specific ally
         int i = AllyManager.Instance.allies.FindIndex((x) => x.AllyId == AllyId);
@@ -65,5 +63,7 @@ public class AllyBuff : Buff
     public override void Unlock()
     {
         Unlocked = true;
+        Debug.Log("Llego hasta aqui");
+
     }
 }

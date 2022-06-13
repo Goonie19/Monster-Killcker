@@ -10,9 +10,6 @@ public class PlayerBuff : Buff {
     public bool addToBaseDamage;
     public bool addToMultiplierDamage;
 
-    [Title("Price")]
-    public float ExpPrice;
-
     [ShowIf("addToBaseDamage")]
     public float DamageAddToBase;
     [ShowIf("addToMultiplierDamage")]
@@ -32,6 +29,10 @@ public class PlayerBuff : Buff {
 
     public override void ApplyBuff()
     {
+
+        PlayerManager.Instance.ActualExperience -= Price;
+
+        UIManager.Instance.CheckButtonInteraction();
 
         if (addToBaseDamage)
             PlayerManager.Instance.BaseDamage += DamageAddToBase;

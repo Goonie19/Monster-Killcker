@@ -125,5 +125,16 @@ public class UIManager : MonoBehaviour
         Destroy(b.gameObject);
     }
 
+    public void CheckButtonInteraction() {
+        foreach (BuffButton b in UnlockedAllyBuffs)
+            b.CheckInteractable();
+
+        foreach (BuffButton b in UnlockedPlayerBuffs)
+            b.CheckInteractable();
+
+        foreach (BuffButton b in UnlockedMonsterBuffs)
+            b.CheckInteractable();
+    }
+
     #endregion
 }

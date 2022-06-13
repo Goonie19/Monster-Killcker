@@ -20,11 +20,11 @@ MonoBehaviour:
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
+  Price: 20
+  PriceMultiplier: 0
   AllyId: 0
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   addAnAlly: 0
-  ExpPrice: 20
-  PriceMultiplier: 0
   DamageAddToBase: 0
   MultiplierToAdd: 0.2

@@ -20,8 +20,9 @@ MonoBehaviour:
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0
+  Price: 50
+  PriceMultiplier: 1.5
   addToHealth: 1
   addToHeads: 0
-  HeadsPrice: 8
   HealthAddToBase: 10
   HeadsToAdd: 0

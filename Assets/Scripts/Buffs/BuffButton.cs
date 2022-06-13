@@ -17,12 +17,18 @@ public class BuffButton : MonoBehaviour
 
     public void Setup(Buff b)
     {
+        if ((PlayerManager.Instance.ActualHeads < b.Price && b is MonsterBuff) || PlayerManager.Instance.ActualExperience < b.Price && !(b is MonsterBuff))
+            GetComponent<Button>().interactable = false;
+
+
         IconRender.sprite = b.Icon;
         IconShadow.sprite = b.Icon;
 
         BuffName.text = b.BuffName;
         if (NumberOfBuffs)
             NumberOfBuffs.text = "x" + b.NumberOfBuffs.ToString();
+
+        ExperienceText.text = b.Price.ToString();
 
         GetComponent<Button>().onClick.RemoveAllListeners();
 
@@ -37,9 +43,20 @@ public class BuffButton : MonoBehaviour
         IconRender.sprite = _associatedBuff.Icon;
         IconShadow.sprite = _associatedBuff.Icon;
 
+        ExperienceText.text = _associatedBuff.Price.ToString();
+
         BuffName.text = _associatedBuff.BuffName;
         if (NumberOfBuffs)
             NumberOfBuffs.text = "x" + _associatedBuff.NumberOfBuffs.ToString();
+    }
+
+    public void CheckInteractable()
+    {
+        if ((PlayerManager.Instance.ActualHeads < _associatedBuff.Price && _associatedBuff is MonsterBuff) || 
+            PlayerManager.Instance.ActualExperience < _associatedBuff.Price && !(_associatedBuff is MonsterBuff))
+            GetComponent<Button>().interactable = false;
+        else
+            GetComponent<Button>().interactable = true;
     }
 
     public int GetBuffId()

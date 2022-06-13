@@ -6,12 +6,9 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "MonsterBuff", menuName = "Buffs/MonsterBuff")]
 public class MonsterBuff : Buff
 {
-
+    [Title("Monster parameters")]
     public bool addToHealth;
     public bool addToHeads;
-
-    [Title("Price")]
-    public int HeadsPrice;
 
     
     [ShowIf("addToHealth")]
@@ -33,8 +30,12 @@ public class MonsterBuff : Buff
 
     public override void ApplyBuff()
     {
-        
-        if(addToHealth)
+
+        PlayerManager.Instance.ActualHeads -= (int)Price;
+
+        UIManager.Instance.CheckButtonInteraction();
+
+        if (addToHealth)
             MonsterManager.Instance.BaseHealth += HealthAddToBase;
         if (addToHeads)
             MonsterManager.Instance.BaseHeads += HeadsToAdd;

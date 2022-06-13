@@ -20,8 +20,9 @@ MonoBehaviour:
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0
+  Price: 15
+  PriceMultiplier: 1.6
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  ExpPrice: 0
   DamageAddToBase: 1
   MultiplierToAdd: 0

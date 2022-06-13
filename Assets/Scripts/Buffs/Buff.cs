@@ -8,6 +8,7 @@ using UnityEngine;
 
 public abstract class Buff : ScriptableObject
 {
+    [Title("Buff base parameters")]
     public int Id;
 
     public Sprite Icon;
@@ -15,10 +16,15 @@ public abstract class Buff : ScriptableObject
     public string BuffName;
     [TextArea(3,5)]
     public string BuffDescription;
-
     
+    [Title("Price parameters")]
     public int HeadsToUnlock;
+    public float Price;
 
+    [HideIf("OneUseBuff")]
+    public float PriceMultiplier;
+
+    [Title("Bools for diferent behaviours")]
     public bool OneUseBuff;
 
     [ShowIf("OneUseBuff")]
@@ -38,5 +44,12 @@ public abstract class Buff : ScriptableObject
     public abstract void Unlock();
 
     public abstract void ApplyBuff();
+
+    public void Reset()
+    {
+        _unlocked = false;
+        Acquired = false;
+        NumberOfBuffs = 0;
+    }
 
 }

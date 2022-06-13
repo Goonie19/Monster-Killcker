@@ -17,13 +17,23 @@ public class PlayerManager : MonoBehaviour
     public float ActualExperience
     {
         get => _actualExperience;
-        set => _actualExperience = value;
+        set
+        {
+            _actualExperience = value;
+
+            UIManager.Instance.ExperienceDisplayText.text = _actualExperience.ToString();
+        }
     }
 
     public int ActualHeads
     {
         get => _actualHeads;
-        set => _actualHeads = value;
+        set
+        {
+            _actualHeads = value;
+
+            UIManager.Instance.HeadsDisplayText.text = _actualHeads.ToString();
+        }
     }
 
     private float _actualExperience;
@@ -36,19 +46,23 @@ public class PlayerManager : MonoBehaviour
         foreach(Buff b in buffs)
         {
             b.SetUnlockedToFalse();
+            b.Reset();
         }
         
     }
 
     public void CheckBuffs()
     {
-        foreach(Buff b in buffs)
+
+        foreach (Buff b in buffs)
         {
             if (b.HeadsToUnlock <= ActualHeads)
             {
                 b.Unlock();
-                
+
             }
         }
+
+        UIManager.Instance.CheckButtonInteraction();
     }
 }
