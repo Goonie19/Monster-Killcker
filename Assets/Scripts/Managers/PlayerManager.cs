@@ -21,7 +21,10 @@ public class PlayerManager : MonoBehaviour
         {
             _actualExperience = value;
 
-            UIManager.Instance.ExperienceDisplayText.text = _actualExperience.ToString();
+            if (_actualExperience % 1 == 0)
+                UIManager.Instance.ExperienceDisplayText.text = _actualExperience.ToString();
+            else
+                UIManager.Instance.ExperienceDisplayText.text = string.Format("{0:0.00}", ActualExperience);
         }
     }
 

@@ -34,7 +34,7 @@ public class MonsterManager : MonoBehaviour
 
     public float GetExperience()
     {
-        return BaseExperience * ExperienceMultiplier;
+        return BaseExperience * ExperienceMultiplier * (BaseHealth * 0.01f);
     }
 
     public int GetHeads()
