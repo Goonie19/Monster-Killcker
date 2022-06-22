@@ -35,6 +35,8 @@ public abstract class Buff : ScriptableObject
 
     protected bool _unlocked = false;
 
+    protected float _actualPrice;
+
     [ContextMenu("Lock")]
     public void SetUnlockedToFalse()
     {
@@ -50,6 +52,12 @@ public abstract class Buff : ScriptableObject
         _unlocked = false;
         Acquired = false;
         NumberOfBuffs = 0;
+        _actualPrice = Price;
+    }
+
+    public float GetPrice()
+    {
+        return _actualPrice;
     }
 
 }

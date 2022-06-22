@@ -22,10 +22,25 @@ public class MonsterBehaviour : MonoBehaviour
         
         if(!_dead)
         {
-            _actualHealth -= PlayerManager.Instance.BaseDamage * PlayerManager.Instance.DamageMultiplier;
+            
+
+            TakeDamage(PlayerManager.Instance.BaseDamage * PlayerManager.Instance.DamageMultiplier);
 
             if (_actualHealth <= 0)
                 Die();
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        if (!_dead)
+        {
+
+            _actualHealth -= damage;
+
+            if (_actualHealth <= 0)
+                Die();
+
         }
     }
 

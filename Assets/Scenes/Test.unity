@@ -643,7 +643,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &433859534
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -697,8 +697,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 416, y: -425}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 373.9, y: -382.9}
+  m_SizeDelta: {x: 184.20483, y: 184.20483}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &465885064
 GameObject:
@@ -840,9 +840,13 @@ MonoBehaviour:
   - AllyId: 0
     AllyName: Archer
     AllySprite: {fileID: 21300000, guid: 0dbf2724286d4bf4988dc9fcdb8d98da, type: 3}
+    Icon: {fileID: 21300000, guid: 94ac10234ef1c421aaf199c5b9844220, type: 3}
     AllyImageReference: {fileID: 433859534}
     BaseDamage: 0.25
     DamageMultiplier: 1
+    Price: 20
+    PriceMultiplier: 1.2
+    HeadsToUnlock: 0
     NumberOfAllies: 0
 --- !u!4 &485353349
 Transform:
@@ -1674,11 +1678,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BaseDamage: 1
   DamageMultiplier: 1
-  buffs:
-  - {fileID: 11400000, guid: 104c179949a8f384b9966a41037da0d6, type: 2}
-  - {fileID: 11400000, guid: b7602e24be669f5469d93bba23d80825, type: 2}
-  - {fileID: 11400000, guid: 892984c02334ac54b9d33109a2d4ad94, type: 2}
-  - {fileID: 11400000, guid: 9b28edf7f5ab92d4195583b94233f339, type: 2}
+  buffs: []
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0
@@ -2681,6 +2681,7 @@ MonoBehaviour:
     type: 3}
   MonsterButtonOneUse: {fileID: 3647306042350940455, guid: af5d927326b4b1e48afaf49650274e16,
     type: 3}
+  AllyButtons: []
   UnlockedPlayerBuffs: []
   UnlockedAllyBuffs: []
   UnlockedMonsterBuffs: []

@@ -27,6 +27,7 @@ public class UIManager : MonoBehaviour
     public GameObject MonsterButtonOneUse;
 
     [Title("List of Buffs")]
+    public List<BuffButton> AllyButtons;
     public List<BuffButton> UnlockedPlayerBuffs;
     public List<BuffButton> UnlockedAllyBuffs;
     public List<BuffButton> UnlockedMonsterBuffs;
@@ -37,6 +38,16 @@ public class UIManager : MonoBehaviour
     }
 
     #region INSTANTIATE BUTTONS
+
+    public void InstantiateAlly(AllyType ally)
+    {
+        GameObject b;
+
+        b = Instantiate(AllyButton, AlliesBuffContentDisplay);
+
+        b.GetComponent<BuffButton>().Setup(ally);
+        AllyButtons.Add(b.GetComponent<BuffButton>());
+    }
 
     public void InstantiateAllyButton(AllyBuff buff)
     {
@@ -82,6 +93,11 @@ public class UIManager : MonoBehaviour
 
     #region UPDATE BUTTONS
 
+    public void UpdateAllyInfo(int Id)
+    {
+        AllyButtons.Find((x) => x.GetBuffId() == Id).UpdateInfo();
+    }
+
     public void UpdateAllyButtoninfo(int Id)
     {
         UnlockedAllyBuffs.Find((x) => x.GetBuffId() == Id).UpdateInfo();
@@ -100,6 +116,14 @@ public class UIManager : MonoBehaviour
     #endregion
 
     #region DELETE BUTTONS
+
+    public void DeleteAlly(int Id)
+    {
+        int ListIndex = AllyButtons.FindIndex((x) => x.GetBuffId() == Id);
+        BuffButton b = AllyButtons[ListIndex];
+        AllyButtons.RemoveAt(ListIndex);
+        Destroy(b.gameObject);
+    }
 
     public void DeletePlayerBuff(int Id)
     {
@@ -126,6 +150,9 @@ public class UIManager : MonoBehaviour
     }
 
     public void CheckButtonInteraction() {
+        foreach (BuffButton b in AllyButtons)
+            b.CheckInteractable();
+
         foreach (BuffButton b in UnlockedAllyBuffs)
             b.CheckInteractable();
 

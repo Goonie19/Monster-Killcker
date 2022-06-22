@@ -14,14 +14,69 @@ public class AllyType
     [Title("Ally References")]
     public string AllyName;
     public Sprite AllySprite;
+    public Sprite Icon;
     public Image AllyImageReference;
 
     [Title("Ally Damage Parameters")]
     public float BaseDamage;
     public float DamageMultiplier;
 
+    [Title("Ally Price Parameters")]
+    public float Price;
+    public float PriceMultiplier;
+
     [Title("Ally Parameters")]
+    public int HeadsToUnlock;
     public int NumberOfAllies;
 
-    
+    public bool Unlocked
+    {
+        get => _unlocked;
+        set
+        {
+            if (!_unlocked && value)
+            {
+                _actualPrice = Price;
+                UIManager.Instance.InstantiateAlly(this);
+                
+            }
+
+            _unlocked = value;
+        }
+    }
+
+    private bool _unlocked;
+    private float _actualPrice;
+
+    public void BuyAlly()
+    {
+
+        PlayerManager.Instance.ActualExperience -= _actualPrice;
+
+        UIManager.Instance.CheckButtonInteraction();
+
+        if (NumberOfAllies == 0)
+        {
+            AllyImageReference.gameObject.SetActive(true);
+            AllyImageReference.sprite = AllySprite;
+            AllyImageReference.SetNativeSize();
+        }
+
+        ++NumberOfAllies;
+
+        _actualPrice *= PriceMultiplier;
+        UIManager.Instance.UpdateAllyInfo(AllyId);
+
+    }
+
+    public void Unlock()
+    {
+        Unlocked = true;
+    }
+
+    public float GetPrice()
+    {
+        return _actualPrice;
+    }
+
 }

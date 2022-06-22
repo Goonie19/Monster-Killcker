@@ -12,7 +12,6 @@ public class AllyBuff : Buff
     [Title("Ally Buff Adds")]
     public bool addToBaseDamage;
     public bool addToMultiplierDamage;
-    public bool addAnAlly;
     
     [ShowIf("addToBaseDamage")]
     public float DamageAddToBase;
@@ -34,7 +33,7 @@ public class AllyBuff : Buff
     public override void ApplyBuff()
     {
 
-        PlayerManager.Instance.ActualExperience -= Price;
+        PlayerManager.Instance.ActualExperience -= _actualPrice;
 
         UIManager.Instance.CheckButtonInteraction();
 
@@ -45,11 +44,8 @@ public class AllyBuff : Buff
             AllyManager.Instance.allies[i].BaseDamage += DamageAddToBase;
         if(addToMultiplierDamage)
             AllyManager.Instance.allies[i].DamageMultiplier += MultiplierToAdd;
-        if (addAnAlly)
-        {
-            ++NumberOfBuffs;
-            AllyManager.Instance.BuyAlly(AllyId);
-        }
+        
+        
 
         //If it for one use only, it erases the button.
         if (OneUseBuff)
@@ -57,13 +53,18 @@ public class AllyBuff : Buff
             Acquired = true;
             UIManager.Instance.DeleteAllyBuff(Id);
 
+        } else
+        {
+            _actualPrice *= PriceMultiplier;
+
+            ++NumberOfBuffs;
+            UIManager.Instance.UpdateAllyButtoninfo(Id);
+            
         }
     }
 
     public override void Unlock()
     {
         Unlocked = true;
-        Debug.Log("Llego hasta aqui");
-
     }
 }

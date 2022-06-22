@@ -31,7 +31,7 @@ public class MonsterBuff : Buff
     public override void ApplyBuff()
     {
 
-        PlayerManager.Instance.ActualHeads -= (int)Price;
+        PlayerManager.Instance.ActualHeads -= (int)_actualPrice;
 
         UIManager.Instance.CheckButtonInteraction();
 
@@ -46,6 +46,9 @@ public class MonsterBuff : Buff
             UIManager.Instance.DeleteMonsterBuff(Id);
         } else
         {
+            _actualPrice *= PriceMultiplier;
+            _actualPrice = (int)_actualPrice;
+
             ++NumberOfBuffs;
             UIManager.Instance.UpdateMonsterButtoninfo(Id);
         }

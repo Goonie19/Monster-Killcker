@@ -36,8 +36,16 @@ public class PlayerManager : MonoBehaviour
         }
     }
 
+    public bool InBattle
+    {
+        get => _inBattle;
+        set => _inBattle = value;
+    }
+
     private float _actualExperience;
     private int _actualHeads;
+
+    private bool _inBattle = true;
 
     private void Awake()
     {
@@ -53,6 +61,8 @@ public class PlayerManager : MonoBehaviour
 
     public void CheckBuffs()
     {
+
+        AllyManager.Instance.CheckAllies();
 
         foreach (Buff b in buffs)
         {

@@ -30,7 +30,7 @@ public class PlayerBuff : Buff {
     public override void ApplyBuff()
     {
 
-        PlayerManager.Instance.ActualExperience -= Price;
+        PlayerManager.Instance.ActualExperience -= _actualPrice;
 
         UIManager.Instance.CheckButtonInteraction();
 
@@ -45,6 +45,8 @@ public class PlayerBuff : Buff {
             UIManager.Instance.DeletePlayerBuff(Id);
         } else
         {
+            _actualPrice *= PriceMultiplier;
+
             ++NumberOfBuffs;
             UIManager.Instance.UpdatePlayerButtoninfo(Id);
         }
