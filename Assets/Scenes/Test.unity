@@ -1678,7 +1678,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   BaseDamage: 1
   DamageMultiplier: 1
-  buffs: []
+  buffs:
+  - {fileID: 11400000, guid: 6d449ce936e290745919bb4ff0dc0253, type: 2}
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0

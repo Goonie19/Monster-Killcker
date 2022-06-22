@@ -20,15 +20,9 @@ public class MonsterBehaviour : MonoBehaviour
     public void ClickMonster()
     {
         
-        if(!_dead)
-        {
-            
-
+        if(!_dead)    
             TakeDamage(PlayerManager.Instance.BaseDamage * PlayerManager.Instance.DamageMultiplier);
-
-            if (_actualHealth <= 0)
-                Die();
-        }
+        
     }
 
     public void TakeDamage(float damage)

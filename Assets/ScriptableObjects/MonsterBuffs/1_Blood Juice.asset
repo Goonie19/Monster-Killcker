@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
+  m_Name: MonsterBuff
+  m_EditorClassIdentifier: 
+  Id: 0
+  Icon: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
+  BuffName: Blood Juice
+  BuffDescription: 
+  HeadsToUnlock: 15
+  Price: 35
+  PriceMultiplier: 1.5
+  OneUseBuff: 0
+  Acquired: 0
+  NumberOfBuffs: 0
+  addToHealth: 1
+  addToHeads: 0
+  HealthAddToBase: 50
+  HeadsToAdd: 0
