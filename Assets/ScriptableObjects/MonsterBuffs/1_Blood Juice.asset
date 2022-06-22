@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: MonsterBuff
+  m_Name: 1_Blood Juice
   m_EditorClassIdentifier: 
   Id: 0
   Icon: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}

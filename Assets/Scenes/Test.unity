@@ -1680,6 +1680,8 @@ MonoBehaviour:
   DamageMultiplier: 1
   buffs:
   - {fileID: 11400000, guid: 6d449ce936e290745919bb4ff0dc0253, type: 2}
+  - {fileID: 11400000, guid: 4b51829af49d2e449a14ea1637778c80, type: 2}
+  - {fileID: 11400000, guid: 159d6818fbf2e08498195efcbe8f6ff9, type: 2}
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0
