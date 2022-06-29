@@ -13,8 +13,15 @@ public class MonsterBuff : Buff
     
     [ShowIf("addToHealth")]
     public float HealthAddToBase;
+    [ShowIf("addToHealth")]
+    public float HealthAddToMultiplier;
+    [ShowIf("addToHealth")]
+    public float HealthAddToMultiplierEXP;
+
     [ShowIf("addToHeads")]
     public int HeadsToAdd;
+    [ShowIf("addToHeads")]
+    public int MultiplierAdd;
 
     public bool Unlocked
     {
@@ -33,10 +40,12 @@ public class MonsterBuff : Buff
 
         PlayerManager.Instance.ActualHeads -= (int)_actualPrice;
 
-        UIManager.Instance.CheckButtonInteraction();
-
-        if (addToHealth)
+        if (addToHealth) {
             MonsterManager.Instance.BaseHealth += HealthAddToBase;
+            MonsterManager.Instance.HealthMultiplier += HealthAddToMultiplier;
+            MonsterManager.Instance.HealthPercentageExp += HealthAddToMultiplierEXP;
+        }
+
         if (addToHeads)
             MonsterManager.Instance.BaseHeads += HeadsToAdd;
 
@@ -52,6 +61,8 @@ public class MonsterBuff : Buff
             ++NumberOfBuffs;
             UIManager.Instance.UpdateMonsterButtoninfo(Id);
         }
+
+        UIManager.Instance.CheckButtonInteraction();
     }
 
     public override void Unlock()

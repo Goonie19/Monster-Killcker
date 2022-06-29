@@ -10,19 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 1_Blood Juice
+  m_Name: Blood Sacrifice
   m_EditorClassIdentifier: 
   Id: 0
   Icon: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
-  BuffName: Blood Juice
+  BuffName: Blood Sacrifice
   BuffDescription: 
   HeadsToUnlock: 15
-  Price: 35
-  PriceMultiplier: 1.5
+  Price: 20
+  PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 0
+  NumberOfBuffs: 1
   addToHealth: 1
   addToHeads: 0
-  HealthAddToBase: 50
+  HealthAddToBase: 10
+  HealthAddToMultiplier: 0
+  HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
+  MultiplierAdd: 0

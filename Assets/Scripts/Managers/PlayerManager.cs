@@ -35,8 +35,15 @@ public class PlayerManager : MonoBehaviour
         {
             _actualHeads = value;
 
+            _totalHeadsAchieved += value;
+
             UIManager.Instance.HeadsDisplayText.text = _actualHeads.ToString();
         }
+    }
+
+    public int TotalHeads
+    {
+        get => _totalHeadsAchieved;
     }
 
     public bool InBattle
@@ -48,18 +55,21 @@ public class PlayerManager : MonoBehaviour
     private float _actualExperience;
     private int _actualHeads;
 
+    private int _totalHeadsAchieved;
+
     private bool _inBattle = true;
 
     private void Awake()
     {
         Instance = this;
-
-        foreach(Buff b in buffs)
+        if (buffs.Count != 0)
         {
-            b.SetUnlockedToFalse();
-            b.Reset();
+            foreach (Buff b in buffs)
+            {
+                b.SetUnlockedToFalse();
+                b.Reset();
+            }
         }
-        
     }
 
     public void CheckBuffs()
@@ -69,7 +79,7 @@ public class PlayerManager : MonoBehaviour
 
         foreach (Buff b in buffs)
         {
-            if (b.HeadsToUnlock <= ActualHeads)
+            if (b.HeadsToUnlock <= TotalHeads)
             {
                 b.Unlock();
 

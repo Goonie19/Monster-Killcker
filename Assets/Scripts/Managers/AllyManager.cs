@@ -25,7 +25,7 @@ public class AllyManager : MonoBehaviour
     {
         foreach(AllyType ally in allies)
         {
-            if (ally.HeadsToUnlock <= PlayerManager.Instance.ActualHeads)
+            if (ally.HeadsToUnlock <= PlayerManager.Instance.TotalHeads)
                 ally.Unlock();
         }
     }

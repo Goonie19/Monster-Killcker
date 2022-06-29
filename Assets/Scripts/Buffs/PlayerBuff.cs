@@ -32,8 +32,6 @@ public class PlayerBuff : Buff {
 
         PlayerManager.Instance.ActualExperience -= _actualPrice;
 
-        UIManager.Instance.CheckButtonInteraction();
-
         if (addToBaseDamage)
             PlayerManager.Instance.BaseDamage += DamageAddToBase;
         if (addToMultiplierDamage)
@@ -50,6 +48,8 @@ public class PlayerBuff : Buff {
             ++NumberOfBuffs;
             UIManager.Instance.UpdatePlayerButtoninfo(Id);
         }
+
+        UIManager.Instance.CheckButtonInteraction();
     }
 
     public override void Unlock()

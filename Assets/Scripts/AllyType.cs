@@ -53,8 +53,6 @@ public class AllyType
 
         PlayerManager.Instance.ActualExperience -= _actualPrice;
 
-        UIManager.Instance.CheckButtonInteraction();
-
         if (NumberOfAllies == 0)
         {
             AllyImageReference.gameObject.SetActive(true);
@@ -65,6 +63,9 @@ public class AllyType
         ++NumberOfAllies;
 
         _actualPrice *= PriceMultiplier;
+
+        UIManager.Instance.CheckButtonInteraction();
+
         UIManager.Instance.UpdateAllyInfo(AllyId);
 
     }

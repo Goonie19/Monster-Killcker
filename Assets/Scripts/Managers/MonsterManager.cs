@@ -11,12 +11,14 @@ public class MonsterManager : MonoBehaviour
     [Title("Monster Health Related Atributes")]
     public float BaseHealth = 5;
     public float HealthMultiplier = 1;
+    public float HealthPercentageExp;
 
     [Title("Monster Possible Sprites")]
     public List<Sprite> MonsterSprites;
 
     [Title("Monster Heads Related Atributes")]
     public int BaseHeads = 1;
+    public float MultiplierHeads;
 
     [Title("Monster Experience Related Atributes")]
     public float BaseExperience = 10;
@@ -34,7 +36,7 @@ public class MonsterManager : MonoBehaviour
 
     public float GetExperience()
     {
-        return BaseExperience * ExperienceMultiplier * (BaseHealth * 0.01f);
+        return BaseExperience * ExperienceMultiplier + (GetHealth() * HealthPercentageExp);
     }
 
     public int GetHeads()
