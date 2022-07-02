@@ -19,10 +19,19 @@ public class MonsterBehaviour : MonoBehaviour
 
     public void ClickMonster()
     {
-        
-        if(!_dead)    
+
+        if (!_dead)
+        {
+            Sequence sq = DOTween.Sequence();
+
+            sq.Append(transform.DOScale(0.8f, 0.1f).SetEase(Ease.Linear));
+            sq.Append(transform.DOScale(1, 0.1f).SetEase(Ease.Linear));
+
+            sq.Play();
+
             TakeDamage(PlayerManager.Instance.BaseDamage * PlayerManager.Instance.DamageMultiplier);
-        
+           
+        }
     }
 
     public void TakeDamage(float damage)
