@@ -26,6 +26,11 @@ public class UIManager : MonoBehaviour
     public GameObject MonsterButton;
     public GameObject MonsterButtonOneUse;
 
+    [Title("Buffs Info Panel")]
+    public Transform BuffsInfoPanel;
+    public TextMeshProUGUI BuffTitle;
+    public TextMeshProUGUI BuffDescription;
+
     [Title("List of Buffs")]
     public List<BuffButton> AllyButtons;
     public List<BuffButton> UnlockedPlayerBuffs;
@@ -35,6 +40,14 @@ public class UIManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+    }
+
+    public void SpawnInfoPanel(Buff b)
+    {
+        BuffTitle.text = b.BuffName;
+        BuffDescription.text = b.BuffDescription;
+
+        BuffsInfoPanel.position = Input.mousePosition;
     }
 
     #region INSTANTIATE BUTTONS

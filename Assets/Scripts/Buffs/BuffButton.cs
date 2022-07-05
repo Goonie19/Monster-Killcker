@@ -21,6 +21,8 @@ public class BuffButton : MonoBehaviour
 
     private AllyType _associatedAlly;
 
+    private bool _onButton;
+
     public void Setup(AllyType ally)
     {
         Type = ButtonType.Ally;
@@ -119,6 +121,17 @@ public class BuffButton : MonoBehaviour
             return _associatedAlly.AllyId;
         else
             return _associatedBuff.Id;
+    }
+
+    public void ShowInfo()
+    {
+        if (Type == ButtonType.Buff)
+            UIManager.Instance.SpawnInfoPanel(_associatedBuff);
+    }
+
+    public void OnButton(bool onButton)
+    {
+        _onButton = onButton;
     }
 
 }

@@ -26,8 +26,13 @@ public class AllyType
     public float PriceMultiplier;
 
     [Title("Ally Parameters")]
+    [TextArea(3, 5)]
+    public string Description;
+
+    [Space(20)]
     public int HeadsToUnlock;
     public int NumberOfAllies;
+    
 
     public bool Unlocked
     {
