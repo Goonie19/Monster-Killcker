@@ -15,6 +15,8 @@ public class BuffButton : MonoBehaviour
 
     public ButtonType Type;
 
+    public float MouseMovementThreshold;
+
     public enum ButtonType { Buff, Ally}
 
     private Buff _associatedBuff;
@@ -22,6 +24,8 @@ public class BuffButton : MonoBehaviour
     private AllyType _associatedAlly;
 
     private bool _onButton;
+
+    private Vector2 MouseLastPosition;
 
     public void Setup(AllyType ally)
     {
@@ -127,11 +131,53 @@ public class BuffButton : MonoBehaviour
     {
         if (Type == ButtonType.Buff)
             UIManager.Instance.SpawnInfoPanel(_associatedBuff);
+        else
+            UIManager.Instance.SpawnInfoPanel(_associatedAlly);
     }
 
     public void OnButton(bool onButton)
     {
         _onButton = onButton;
+
+        if (_onButton)
+            StartCoroutine(ShowingInfo());
+        else
+        {
+            if(_associatedAlly != null)
+                UIManager.Instance.BuffsInfoPanel.gameObject.SetActive(false);
+            else
+            {
+                if(_associatedBuff is MonsterBuff)
+                    UIManager.Instance.BuffsMonsterInfoPanel.gameObject.SetActive(false);
+                else
+                    UIManager.Instance.BuffsInfoPanel.gameObject.SetActive(false);
+            }
+        }
+            
+    }
+
+    IEnumerator ShowingInfo()
+    {
+        float time = 0;
+        MouseLastPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
+        while(_onButton)
+        {
+            if (Vector2.Distance(MouseLastPosition, Input.mousePosition) > MouseMovementThreshold)
+                time = 0;
+            else
+                time += 0.01f;
+
+            if (time >= 1f)
+            {
+                ShowInfo();
+                _onButton = false;
+            }
+
+            MouseLastPosition = Input.mousePosition;
+
+            yield return new WaitForSeconds(0.01f);
+        }
+
     }
 
 }

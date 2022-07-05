@@ -694,6 +694,7 @@ MonoBehaviour:
   NumberOfBuffs: {fileID: 6444562449266632971}
   ExperienceText: {fileID: 595078963}
   Type: 0
+  MouseMovementThreshold: 0.5
 --- !u!114 &4678288553912951524
 MonoBehaviour:
   m_ObjectHideFlags: 0
