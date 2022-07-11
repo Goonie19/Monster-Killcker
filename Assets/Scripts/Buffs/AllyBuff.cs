@@ -63,6 +63,25 @@ public class AllyBuff : Buff
         }
     }
 
+    public override void SetBuffPanelInfo()
+    {
+        /*UIManager.Instance.AllyBuffPanel.BuffTitle.text = BuffName;
+        UIManager.Instance.AllyBuffPanel.BuffDescription.text = BuffDescription;
+
+        if (OneUseBuff)
+            UIManager.Instance.AllyBuffPanel.StatsDisplay.gameObject.SetActive(false);
+        else
+        {
+            UIManager.Instance.AllyBuffPanel.StatsDisplay.gameObject.SetActive(true);
+
+            if (addToBaseDamage)
+                UIManager.Instance.AllyBuffPanel.DamagePerSecondText.text = "+" + DamageAddToBase.ToString();
+            else if (addToMultiplierDamage)
+                UIManager.Instance.AllyBuffPanel.DamagePerSecondText.text = "x" + MultiplierToAdd.ToString();
+
+        }*/
+    }
+
     public override void Unlock()
     {
         Unlocked = true;

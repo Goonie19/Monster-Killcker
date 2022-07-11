@@ -21,10 +21,10 @@ MonoBehaviour:
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 1
+  NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 0
-  HealthAddToBase: 10
+  HealthAddToBase: 0
   HealthAddToMultiplier: 0
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0

@@ -27,13 +27,8 @@ public class UIManager : MonoBehaviour
     public GameObject MonsterButtonOneUse;
 
     [Title("Buffs Info Panel")]
-    public Transform BuffsInfoPanel;
-    public TextMeshProUGUI BuffTitle;
-    public TextMeshProUGUI BuffDescription;
-
-    public Transform BuffsMonsterInfoPanel;
-    public TextMeshProUGUI MonsterBuffTitle;
-    public TextMeshProUGUI MonsterBuffDescription;
+    public BuffInfoPanel AllyBuffPanel;
+    public BuffInfoPanel MonsterBuffPanel;
 
     [Title("List of Buffs")]
     public List<BuffButton> AllyButtons;
@@ -51,31 +46,23 @@ public class UIManager : MonoBehaviour
 
         if(b is MonsterBuff)
         {
-            MonsterBuffTitle.text = b.BuffName;
-            MonsterBuffDescription.text = b.BuffDescription;
+            b.SetBuffPanelInfo();
 
-            BuffsMonsterInfoPanel.position = Input.mousePosition;
-
-            BuffsMonsterInfoPanel.gameObject.SetActive(true);
+            MonsterBuffPanel.gameObject.SetActive(true);
         } else
         {
-            BuffTitle.text = b.BuffName;
-            BuffDescription.text = b.BuffDescription;
+            b.SetBuffPanelInfo();
 
-            BuffsInfoPanel.position = Input.mousePosition;
-            BuffsInfoPanel.gameObject.SetActive(true);
+            AllyBuffPanel.gameObject.SetActive(true);
         }
 
     }
 
     public void SpawnInfoPanel(AllyType a)
     {
-        BuffTitle.text = a.AllyName;
-        BuffDescription.text = a.Description;
+        AllyBuffPanel.Setup(a);
 
-        BuffsInfoPanel.position = Input.mousePosition;
-
-        BuffsInfoPanel.gameObject.SetActive(true);
+        AllyBuffPanel.gameObject.SetActive(true);
     }
 
     #region INSTANTIATE BUTTONS

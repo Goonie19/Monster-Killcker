@@ -85,4 +85,9 @@ public class AllyType
         return _actualPrice;
     }
 
+    public float GetDamage()
+    {
+        return BaseDamage * DamageMultiplier;
+    }
+
 }

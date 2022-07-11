@@ -144,13 +144,13 @@ public class BuffButton : MonoBehaviour
         else
         {
             if(_associatedAlly != null)
-                UIManager.Instance.BuffsInfoPanel.gameObject.SetActive(false);
+                UIManager.Instance.AllyBuffPanel.gameObject.SetActive(false);
             else
             {
                 if(_associatedBuff is MonsterBuff)
-                    UIManager.Instance.BuffsMonsterInfoPanel.gameObject.SetActive(false);
+                    UIManager.Instance.MonsterBuffPanel.gameObject.SetActive(false);
                 else
-                    UIManager.Instance.BuffsInfoPanel.gameObject.SetActive(false);
+                    UIManager.Instance.AllyBuffPanel.gameObject.SetActive(false);
             }
         }
             
