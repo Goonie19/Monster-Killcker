@@ -58,12 +58,12 @@ public class AllyType
 
         PlayerManager.Instance.ActualExperience -= _actualPrice;
 
-        if (NumberOfAllies == 0)
+        /*if (NumberOfAllies == 0)
         {
-            AllyImageReference.gameObject.SetActive(true);
+            //AllyImageReference.gameObject.SetActive(true);
             AllyImageReference.sprite = AllySprite;
             AllyImageReference.SetNativeSize();
-        }
+        }*/
 
         ++NumberOfAllies;
 

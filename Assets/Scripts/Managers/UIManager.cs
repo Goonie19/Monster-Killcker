@@ -22,9 +22,15 @@ public class UIManager : MonoBehaviour
 
     [Title("Button Prefabs")]
     public GameObject AllyButton;
-    public GameObject AllyButtonOneUse;
-    public GameObject MonsterButton;
-    public GameObject MonsterButtonOneUse;
+
+    public GameObject AllyBuffButton;
+    public GameObject AllyBuffButtonOneUse;
+
+    public GameObject PlayerBuffButton;
+    public GameObject PlayerBuffButtonOneUse;
+
+    public GameObject MonsterBuffButton;
+    public GameObject MonsterBuffButtonOneUse;
 
     [Title("Buffs Info Panel")]
     public BuffInfoPanel AllyBuffPanel;
@@ -82,9 +88,9 @@ public class UIManager : MonoBehaviour
         GameObject b;
 
         if (buff.OneUseBuff)
-            b = Instantiate(AllyButtonOneUse, BuffContentDisplay);
+            b = Instantiate(AllyBuffButtonOneUse, BuffContentDisplay);
         else
-            b = Instantiate(AllyButton, BuffContentDisplay);
+            b = Instantiate(AllyBuffButton, BuffContentDisplay);
         
         b.GetComponent<BuffButton>().Setup(buff);
         UnlockedAllyBuffs.Add(b.GetComponent<BuffButton>());
@@ -95,9 +101,9 @@ public class UIManager : MonoBehaviour
         GameObject b;
 
         if (buff.OneUseBuff)
-            b = Instantiate(MonsterButtonOneUse, BuffContentDisplay);
+            b = Instantiate(MonsterBuffButtonOneUse, BuffContentDisplay);
         else
-            b = Instantiate(MonsterButton, BuffContentDisplay);
+            b = Instantiate(MonsterBuffButton, BuffContentDisplay);
 
         b.GetComponent<BuffButton>().Setup(buff);
         UnlockedMonsterBuffs.Add(b.GetComponent<BuffButton>());
@@ -108,9 +114,9 @@ public class UIManager : MonoBehaviour
         GameObject b;
 
         if (buff.OneUseBuff)
-            b = Instantiate(AllyButtonOneUse, BuffContentDisplay);
+            b = Instantiate(PlayerBuffButtonOneUse, BuffContentDisplay);
         else
-            b = Instantiate(AllyButton, BuffContentDisplay);
+            b = Instantiate(PlayerBuffButton, BuffContentDisplay);
 
         b.GetComponent<BuffButton>().Setup(buff);
         UnlockedPlayerBuffs.Add(b.GetComponent<BuffButton>());

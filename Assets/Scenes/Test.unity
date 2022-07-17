@@ -1870,8 +1870,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 3.2000122, y: -65.600006}
-  m_SizeDelta: {x: -31.850983, y: -166.69073}
+  m_AnchoredPosition: {x: -2.5, y: -65.600006}
+  m_SizeDelta: {x: -20.457825, y: -166.69073}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &477611925
 MonoBehaviour:
@@ -4588,7 +4588,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.000061035156, y: 0}
+  m_AnchoredPosition: {x: -0.00012207031, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1477659043
@@ -4713,8 +4713,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 2.2999878, y: -64.54001}
-  m_SizeDelta: {x: -27.207062, y: -168.87036}
+  m_AnchoredPosition: {x: -2.3200684, y: -64.54004}
+  m_SizeDelta: {x: -17.975769, y: -168.87036}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1519483176
 MonoBehaviour:
@@ -5242,7 +5242,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.91962564}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -375, y: 0.27398682}
+  m_AnchoredPosition: {x: -375, y: 0.27404785}
   m_SizeDelta: {x: -800, y: -0.55293274}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676304614
@@ -5316,7 +5316,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.034820627, y: 0.6904198}
   m_AnchorMax: {x: 0.3882835, y: 0.9663704}
-  m_AnchoredPosition: {x: 0, y: 0.0000038146973}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 1.5243683, y: 1}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1684396438
@@ -5616,13 +5616,19 @@ MonoBehaviour:
   AlliesContentDisplay: {fileID: 355289954}
   ExperienceDisplayText: {fileID: 1241828539}
   HeadsDisplayText: {fileID: 410679128}
-  AllyButton: {fileID: 6444562450014089615, guid: 54293491ce98a614ebb91d5db2fb099f,
+  AllyButton: {fileID: 7253001472102197220, guid: 22171f44b23b1204d94c7869ef1f16e6,
     type: 3}
-  AllyButtonOneUse: {fileID: 5788542767498188737, guid: 23e5a0059a64cb741bcf318cc2894955,
+  AllyBuffButton: {fileID: 3553399409706306407, guid: 0095f55f96c2a6d4fbb908b3c16497f4,
     type: 3}
-  MonsterButton: {fileID: 6898187698100185783, guid: 79e8b2e31a447d843a6c4d9602e1d64c,
+  AllyBuffButtonOneUse: {fileID: 3265553909664400230, guid: f6ff91c1bf8e3b24b9dc80a64e47fa22,
     type: 3}
-  MonsterButtonOneUse: {fileID: 3647306042350940455, guid: af5d927326b4b1e48afaf49650274e16,
+  PlayerBuffButton: {fileID: 5696241475489128543, guid: c4b5b427b20466f43a00782d23c97100,
+    type: 3}
+  PlayerBuffButtonOneUse: {fileID: 3475111640562871835, guid: aa33e66e14c43fc4bb9f260ecca3ccb7,
+    type: 3}
+  MonsterBuffButton: {fileID: 2882953280804015371, guid: 3bafdfef1eca8b04985fed73c4cfcb68,
+    type: 3}
+  MonsterBuffButtonOneUse: {fileID: 3109870039592105563, guid: 1d1a1592013a1c5439e1edfb3e06654b,
     type: 3}
   AllyBuffPanel: {fileID: 1034634707}
   MonsterBuffPanel: {fileID: 0}
@@ -5666,7 +5672,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0.2975, y: 0.22311455}
-  m_AnchoredPosition: {x: 0.9000244, y: 1.5001221}
+  m_AnchoredPosition: {x: 0.9001465, y: 1.5001221}
   m_SizeDelta: {x: 1.7701416, y: 2.9250488}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1779209254
