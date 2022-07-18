@@ -33,14 +33,20 @@ public class UIManager : MonoBehaviour
     public GameObject MonsterBuffButtonOneUse;
 
     [Title("Buffs Info Panel")]
-    public BuffInfoPanel AllyBuffPanel;
-    public BuffInfoPanel MonsterBuffPanel;
+    public AllyInfoPanel allyInfoPanel;
+    public BuffInfoPanel buffInfoPanel;
 
     [Title("List of Buffs")]
     public List<BuffButton> AllyButtons;
     public List<BuffButton> UnlockedPlayerBuffs;
     public List<BuffButton> UnlockedAllyBuffs;
     public List<BuffButton> UnlockedMonsterBuffs;
+
+    [Title("Monster Information UI Elements")]
+    public TextMeshProUGUI MonsterMaximumHealth;
+    public TextMeshProUGUI MonsterDropingHeads;
+    public TextMeshProUGUI MonstersLifePercentageAddedToExp;
+
 
     private void Awake()
     {
@@ -50,25 +56,16 @@ public class UIManager : MonoBehaviour
     public void SpawnInfoPanel(Buff b)
     {
 
-        if(b is MonsterBuff)
-        {
-            b.SetBuffPanelInfo();
+        buffInfoPanel.Setup(b);
 
-            MonsterBuffPanel.gameObject.SetActive(true);
-        } else
-        {
-            b.SetBuffPanelInfo();
-
-            AllyBuffPanel.gameObject.SetActive(true);
-        }
-
+        buffInfoPanel.gameObject.SetActive(true);
     }
 
     public void SpawnInfoPanel(AllyType a)
     {
-        AllyBuffPanel.Setup(a);
+        allyInfoPanel.Setup(a);
 
-        AllyBuffPanel.gameObject.SetActive(true);
+        allyInfoPanel.gameObject.SetActive(true);
     }
 
     #region INSTANTIATE BUTTONS

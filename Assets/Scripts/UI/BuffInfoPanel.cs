@@ -10,21 +10,18 @@ public class BuffInfoPanel : MonoBehaviour
     public TextMeshProUGUI BuffDescription;
     public TextMeshProUGUI NumberOfBuffs;
 
-    public Transform StatsDisplay;
-    public TextMeshProUGUI BaseDamagePerSecondText;
-    public TextMeshProUGUI MultiplierDamageText;
-    public TextMeshProUGUI TotalDamageText;
-
-    public void Setup(AllyType ally)
+    public void Setup(Buff b)
     {
-        BuffTitle.text = ally.AllyName;
-        BuffDescription.text = ally.Description;
-        NumberOfBuffs.text = ally.NumberOfAllies.ToString();
-        BaseDamagePerSecondText.text = ally.BaseDamage.ToString();
-        MultiplierDamageText.text = ally.DamageMultiplier.ToString();
-        TotalDamageText.text = ally.GetDamage().ToString();
-
+        BuffTitle.text = b.BuffName;
+        BuffDescription.text = b.BuffDescription;
+        NumberOfBuffs.text = b.NumberOfBuffs.ToString();
+        if (!b.OneUseBuff)
+            NumberOfBuffs.transform.gameObject.SetActive(true);
+        else
+            NumberOfBuffs.transform.gameObject.SetActive(false);
 
         transform.position = Input.mousePosition;
+
     }
+
 }

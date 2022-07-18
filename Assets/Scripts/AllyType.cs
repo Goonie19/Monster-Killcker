@@ -73,6 +73,8 @@ public class AllyType
 
         UIManager.Instance.UpdateAllyInfo(AllyId);
 
+        UIManager.Instance.allyInfoPanel.Setup(this);
+
     }
 
     public void Unlock()

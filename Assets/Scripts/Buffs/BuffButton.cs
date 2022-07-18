@@ -88,6 +88,7 @@ public class BuffButton : MonoBehaviour
             BuffName.text = _associatedBuff.BuffName;
             if (NumberOfBuffs)
                 NumberOfBuffs.text = "x" + _associatedBuff.NumberOfBuffs.ToString();
+
         } else
         {
             IconRender.sprite = _associatedAlly.Icon;
@@ -99,6 +100,7 @@ public class BuffButton : MonoBehaviour
             if (NumberOfBuffs)
                 NumberOfBuffs.text = "x" + _associatedAlly.NumberOfAllies.ToString();
         }
+
     }
 
     public void CheckInteractable()
@@ -144,14 +146,10 @@ public class BuffButton : MonoBehaviour
         else
         {
             if(_associatedAlly != null)
-                UIManager.Instance.AllyBuffPanel.gameObject.SetActive(false);
+                UIManager.Instance.allyInfoPanel.gameObject.SetActive(false);
             else
-            {
-                if(_associatedBuff is MonsterBuff)
-                    UIManager.Instance.MonsterBuffPanel.gameObject.SetActive(false);
-                else
-                    UIManager.Instance.AllyBuffPanel.gameObject.SetActive(false);
-            }
+                UIManager.Instance.buffInfoPanel.gameObject.SetActive(false);
+            
         }
             
     }

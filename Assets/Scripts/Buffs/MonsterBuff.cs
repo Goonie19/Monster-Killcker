@@ -63,35 +63,11 @@ public class MonsterBuff : Buff
         }
 
         UIManager.Instance.CheckButtonInteraction();
+        UIManager.Instance.buffInfoPanel.Setup(this);
+
     }
 
-    public override void SetBuffPanelInfo()
-    {
-        /*UIManager.Instance.AllyBuffPanel.BuffTitle.text = BuffName;
-        UIManager.Instance.AllyBuffPanel.BuffDescription.text = BuffDescription;
 
-        if (OneUseBuff)
-            UIManager.Instance.AllyBuffPanel.StatsDisplay.gameObject.SetActive(false);
-        else
-        {
-            UIManager.Instance.AllyBuffPanel.StatsDisplay.gameObject.SetActive(true);
-
-            if (addToHealth)
-            {
-                if(HealthAddToBase > 0)
-                    UIManager.Instance.AllyBuffPanel.DamagePerSecondText.text = "+" + HealthAddToBase.ToString();
-
-                if(HealthAddToMultiplier > 0)
-                    UIManager.Instance.AllyBuffPanel. = "+" + HealthAddToBase.ToString();
-
-
-            }
-            else if (addToHeads)
-                UIManager.Instance.AllyBuffPanel.DamagePerSecondText.text = "x" + HeadsToAdd.ToString();
-
-        }
-        */
-    }
 
     public override void Unlock()
     {

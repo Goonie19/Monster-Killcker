@@ -47,8 +47,6 @@ public abstract class Buff : ScriptableObject
 
     public abstract void ApplyBuff();
 
-    public abstract void SetBuffPanelInfo();
-
     public void Reset()
     {
         _unlocked = false;
