@@ -47,10 +47,20 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI MonsterDropingHeads;
     public TextMeshProUGUI MonstersLifePercentageAddedToExp;
 
+    [Title("Player Information UI Elements")]
+    public TextMeshProUGUI PlayerBaseDamageText;
+    public TextMeshProUGUI PlayerDamageMultiplierText;
+    public TextMeshProUGUI PlayerTotalDamageText;
+
 
     private void Awake()
     {
         Instance = this;
+    }
+
+    private void Start()
+    {
+        UpdateInfoPanels();
     }
 
     public void SpawnInfoPanel(Buff b)
@@ -66,6 +76,18 @@ public class UIManager : MonoBehaviour
         allyInfoPanel.Setup(a);
 
         allyInfoPanel.gameObject.SetActive(true);
+    }
+
+    public void UpdateInfoPanels()
+    {
+        MonsterMaximumHealth.text = MonsterManager.Instance.GetHealth().ToString();
+        MonsterDropingHeads.text = MonsterManager.Instance.GetHeads().ToString();
+        MonstersLifePercentageAddedToExp.text = MonsterManager.Instance.HealthPercentageExp.ToString();
+
+        PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
+        PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
+        PlayerTotalDamageText.text = (PlayerManager.Instance.DamageMultiplier * PlayerManager.Instance.BaseDamage).ToString();
+
     }
 
     #region INSTANTIATE BUTTONS

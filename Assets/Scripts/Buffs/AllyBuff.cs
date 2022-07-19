@@ -63,6 +63,7 @@ public class AllyBuff : Buff
         }
 
         UIManager.Instance.buffInfoPanel.Setup(this);
+        UIManager.Instance.UpdateInfoPanels();
 
     }
 

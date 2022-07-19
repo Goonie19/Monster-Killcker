@@ -64,6 +64,8 @@ public class MonsterBuff : Buff
 
         UIManager.Instance.CheckButtonInteraction();
         UIManager.Instance.buffInfoPanel.Setup(this);
+        UIManager.Instance.UpdateInfoPanels();
+
 
     }
 
