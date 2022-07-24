@@ -89,7 +89,7 @@ public class AllyType
 
     public float GetDamage()
     {
-        return BaseDamage * DamageMultiplier;
+        return BaseDamage * DamageMultiplier * NumberOfAllies;
     }
 
 }

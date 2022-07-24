@@ -82,7 +82,7 @@ public class UIManager : MonoBehaviour
     {
         MonsterMaximumHealth.text = MonsterManager.Instance.GetHealth().ToString();
         MonsterDropingHeads.text = MonsterManager.Instance.GetHeads().ToString();
-        MonstersLifePercentageAddedToExp.text = MonsterManager.Instance.HealthPercentageExp.ToString();
+        MonstersLifePercentageAddedToExp.text = (MonsterManager.Instance.HealthPercentageExp * 100).ToString() + "%";
 
         PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
         PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();

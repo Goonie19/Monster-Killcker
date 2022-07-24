@@ -9,6 +9,10 @@ public class BuffButton : MonoBehaviour
     public Image IconRender;
     public Image IconShadow;
 
+    public Image MoneyImage;
+    public Sprite MoneyAlly;
+    public Sprite MoneyMonster;
+
     public TextMeshProUGUI BuffName;
     public TextMeshProUGUI NumberOfBuffs;
     public TextMeshProUGUI ExperienceText;
@@ -41,6 +45,8 @@ public class BuffButton : MonoBehaviour
 
         BuffName.text = ally.AllyName;
 
+        MoneyImage.sprite = MoneyAlly;
+
         if (NumberOfBuffs)
             NumberOfBuffs.text = "x" + ally.NumberOfAllies.ToString();
 
@@ -58,6 +64,10 @@ public class BuffButton : MonoBehaviour
         if ((PlayerManager.Instance.ActualHeads < b.GetPrice()  && b is MonsterBuff) || PlayerManager.Instance.ActualExperience < b.GetPrice() && !(b is MonsterBuff))
             GetComponent<Button>().interactable = false;
 
+        if (b is MonsterBuff)
+            MoneyImage.sprite = MoneyMonster;
+        else
+            MoneyImage.sprite = MoneyAlly;
 
         IconRender.sprite = b.Icon;
         IconShadow.sprite = b.Icon;

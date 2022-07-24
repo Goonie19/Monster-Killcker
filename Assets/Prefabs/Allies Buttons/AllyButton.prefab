@@ -348,6 +348,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconRender: {fileID: 7253001472299733624}
   IconShadow: {fileID: 7253001473032449961}
+  MoneyImage: {fileID: 4451941334263944081}
+  MoneyAlly: {fileID: 21300000, guid: 82b8b2544f0ce4164a31119e70601d03, type: 3}
+  MoneyMonster: {fileID: 21300000, guid: 6980abda02f3f46c7a9ceef8df7e4048, type: 3}
   BuffName: {fileID: 7253001472804424207}
   NumberOfBuffs: {fileID: 7253001472449429344}
   ExperienceText: {fileID: 4451941333809527128}
