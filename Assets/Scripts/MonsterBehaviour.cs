@@ -8,6 +8,8 @@ public class MonsterBehaviour : MonoBehaviour
 
     public float DyingTime = 0.2f;
 
+    private bool _speakSpawned;
+
     private bool _dead;
     private float _actualHealth;
 
@@ -15,6 +17,8 @@ public class MonsterBehaviour : MonoBehaviour
     {
         _actualHealth = MonsterManager.Instance.GetHealth();
         _dead = false;
+
+        StartCoroutine(SpawnConversation());
     }
 
     public void ClickMonster()
@@ -51,6 +55,9 @@ public class MonsterBehaviour : MonoBehaviour
     {
         _dead = true;
 
+        StopSpeaking();
+        CancelInvoke("StopSpeaking");
+
         Sequence sq = DOTween.Sequence();
 
         sq.Append(transform.DOScale(0, DyingTime));
@@ -60,7 +67,6 @@ public class MonsterBehaviour : MonoBehaviour
         sq.OnComplete(() => {
             GetRewards();
             PlayerManager.Instance.CheckBuffs();
-
             Spawn(); 
         });
         
@@ -90,4 +96,51 @@ public class MonsterBehaviour : MonoBehaviour
 
     }
 
+    IEnumerator SpawnConversation()
+    {
+        float SpawnTimer = 0;
+
+        while(true)
+        {
+            SpawnTimer = Random.Range(1, 10);
+            yield return new WaitForSeconds(SpawnTimer);
+
+            if (!_dead)
+                Speak();
+        }
+    }
+
+    void Speak()
+    {
+        if(!_speakSpawned)
+        {
+            UIManager.Instance.DialogueText.text = MonsterManager.Instance.GetRandomPhrase();
+            Sequence sq = DOTween.Sequence();
+
+            sq.Append(UIManager.Instance.DialoguePanel.transform.DOScale(1, DyingTime).SetEase(Ease.Linear));
+
+            sq.Play();
+
+            sq.OnComplete(() => {
+                _speakSpawned = true;
+                
+                Invoke("StopSpeaking", 2f);
+            });
+
+           
+        }
+    }
+
+    void StopSpeaking()
+    {
+        Sequence sq = DOTween.Sequence();
+
+        sq.Append(UIManager.Instance.DialoguePanel.transform.DOScale(0, DyingTime).SetEase(Ease.Linear));
+
+        sq.Play();
+
+        sq.OnComplete(() => {
+            _speakSpawned = false;
+        });
+    }
 }

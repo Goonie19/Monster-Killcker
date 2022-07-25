@@ -15,6 +15,8 @@ public class MonsterManager : MonoBehaviour
 
     [Title("Monster Possible Sprites")]
     public List<Sprite> MonsterSprites;
+    [TextArea(0,3)]
+    public List<string> MonsterPhrases;
 
     [Title("Monster Heads Related Atributes")]
     public int BaseHeads = 1;
@@ -44,4 +46,8 @@ public class MonsterManager : MonoBehaviour
         return BaseHeads;
     }
 
+    public string GetRandomPhrase()
+    {
+        return MonsterPhrases[Random.Range(0, MonsterPhrases.Count)];
+    }
 }

@@ -52,6 +52,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI PlayerDamageMultiplierText;
     public TextMeshProUGUI PlayerTotalDamageText;
 
+    [Title("Conversations UI Elements")]
+    public GameObject DialoguePanel;
+    public TextMeshProUGUI DialogueText;
 
     private void Awake()
     {
