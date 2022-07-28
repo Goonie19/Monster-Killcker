@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using DG.Tweening;
+using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -30,6 +31,11 @@ public class BuffButton : MonoBehaviour
     private bool _onButton;
 
     private Vector2 MouseLastPosition;
+
+    private void Awake()
+    {
+        transform.DOScale(1, 1).SetEase(Ease.OutBounce).Play();
+    }
 
     public void Setup(AllyType ally)
     {

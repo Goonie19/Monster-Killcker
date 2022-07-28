@@ -104,7 +104,7 @@ RectTransform:
   m_GameObject: {fileID: 3553399409706306407}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 3553399410766512939}
   - {fileID: 3553399409350180600}
@@ -214,6 +214,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   IconRender: {fileID: 3553399409350180603}
   IconShadow: {fileID: 3553399410766512938}
+  MoneyImage: {fileID: 0}
+  MoneyAlly: {fileID: 0}
+  MoneyMonster: {fileID: 0}
   BuffName: {fileID: 3553399409851852428}
   NumberOfBuffs: {fileID: 3553399410166748131}
   ExperienceText: {fileID: 7511892615977080283}

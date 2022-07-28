@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
@@ -11,6 +12,13 @@ public class UIManager : MonoBehaviour
 
     [Title("Monster")]
     public MonsterBehaviour MonsterToClick;
+    [Title("Boss")]
+    public BossBehaviour BossToClick;
+
+    [Title("Boss Appearing Parameters")]
+    public GameObject BossAppearingPanel;
+    public Image BossAppearingImage;
+    public TextMeshProUGUI BossSpeakingText;
 
     [Title("Buff Display")]
     public Transform BuffContentDisplay;
