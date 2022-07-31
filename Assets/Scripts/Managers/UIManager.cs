@@ -16,6 +16,7 @@ public class UIManager : MonoBehaviour
     public BossBehaviour BossToClick;
 
     [Title("Boss Appearing Parameters")]
+    public GameObject BossAppearButton;
     public GameObject BossAppearingPanel;
     public Image BossAppearingImage;
     public TextMeshProUGUI BossSpeakingText;

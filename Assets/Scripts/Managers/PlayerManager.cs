@@ -38,6 +38,9 @@ public class PlayerManager : MonoBehaviour
             _totalHeadsAchieved += value;
 
             UIManager.Instance.HeadsDisplayText.text = _actualHeads.ToString();
+
+            if (_totalHeadsAchieved >= BossManager.Instance.HeadsToUnlock)
+                UIManager.Instance.BossAppearButton.SetActive(true);
         }
     }
 

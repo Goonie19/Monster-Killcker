@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -51,6 +52,11 @@ public class BossBehaviour : MonoBehaviour
         }
     }
 
+    public void StartBattle()
+    {
+        StartCoroutine(BossAttackBehaviour());
+    }
+
     private void Die()
     {
 
@@ -59,5 +65,39 @@ public class BossBehaviour : MonoBehaviour
     public void Spawn()
     {
         BossImage.gameObject.SetActive(true);
+    }
+
+    IEnumerator BossAttackBehaviour()
+    {
+        _timer = 0;
+
+        int i = 1;
+        float timeOfNextAttack = BossManager.Instance.BossFightTime / BossManager.Instance.NumberOfAttacks;
+
+        while(_timer < BossManager.Instance.BossFightTime)
+        {
+            _timer += Time.deltaTime;
+
+            if(_timer >= timeOfNextAttack)
+            {
+                Attack();
+                timeOfNextAttack += BossManager.Instance.BossFightTime / BossManager.Instance.NumberOfAttacks;
+            }
+
+            yield return null;
+        }
+    }
+
+    private void Attack()
+    {
+        int i = 0;
+
+        while(i < AllyManager.Instance.allies.Count)
+        {
+            if (AllyManager.Instance.allies[i].NumberOfAllies - BossManager.Instance.NumberOfAlliesToKill > 0)
+                AllyManager.Instance.allies[i].NumberOfAllies -= BossManager.Instance.NumberOfAlliesToKill;
+            else
+                AllyManager.Instance.allies[i].NumberOfAllies = 0;
+        }
     }
 }

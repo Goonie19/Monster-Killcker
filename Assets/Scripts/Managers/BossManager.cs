@@ -9,8 +9,12 @@ public class BossManager : MonoBehaviour
     public static BossManager Instance;
 
     public float BossHealth;
-    public int NumberOfAlliesToKill;
-    public float BossFightTime;
+    public int HeadsToUnlock;
+
+    [Title("Boss attacks")]
+    public int NumberOfAlliesToKill = 10;
+    public float BossFightTime = 60;
+    public float NumberOfAttacks = 6;
 
     [Title("Boss Messages")]
     public float TimeBetweenMessages;
@@ -22,6 +26,11 @@ public class BossManager : MonoBehaviour
     public List<string> BossDyingDialogs;
 
     private bool _bossSpeaking;
+
+    private void Awake()
+    {
+        Instance = this;
+    }
 
     [ContextMenu("StartBoss")]
     public void StartBoss()
