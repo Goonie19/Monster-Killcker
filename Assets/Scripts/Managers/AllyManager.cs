@@ -9,6 +9,8 @@ public class AllyManager : MonoBehaviour
 
     public List<AllyType> allies;
 
+    public bool canAttack;
+
     private Coroutine _alliesCoroutine;
 
     private void Awake()
@@ -36,11 +38,22 @@ public class AllyManager : MonoBehaviour
 
         while(PlayerManager.Instance.InBattle)
         {
-            foreach (AllyType ally in allies)
-                damage += ally.BaseDamage * ally.DamageMultiplier * ally.NumberOfAllies;
+            if(canAttack)
+            {
+                foreach (AllyType ally in allies)
+                    damage += ally.BaseDamage * ally.DamageMultiplier * ally.NumberOfAllies;
 
-            if(damage > 0)
-                UIManager.Instance.MonsterToClick.TakeDamage(damage * 0.1f);
+                if (!BossManager.Instance.InBossFight)
+                {
+                    if (damage > 0)
+                        UIManager.Instance.MonsterToClick.TakeDamage(damage * 0.1f);
+                }
+                else
+                {
+                    if (damage > 0)
+                        UIManager.Instance.BossToClick.TakeDamage(damage * 0.1f);
+                }
+            }
 
             damage = 0;
             yield return new WaitForSeconds(0.1f);

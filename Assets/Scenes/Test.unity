@@ -487,7 +487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012207031, y: -74.40991}
+  m_AnchoredPosition: {x: 0, y: -74.40991}
   m_SizeDelta: {x: 0.00012207031, y: 148.82623}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &120525596
@@ -2146,6 +2146,7 @@ MonoBehaviour:
     Description: 
     HeadsToUnlock: 300
     NumberOfAllies: 0
+  canAttack: 0
 --- !u!4 &485353349
 Transform:
   m_ObjectHideFlags: 0
@@ -6079,7 +6080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.00012207031, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 20, y: 0}
   m_Pivot: {x: 1, y: 1}
 --- !u!114 &1477659043
@@ -6393,9 +6394,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossHealth: 1000000
+  HeadsToUnlock: 400
   NumberOfAlliesToKill: 2
   BossFightTime: 60
-  HeadsToUnlock: 400
+  NumberOfAttacks: 6
   TimeBetweenMessages: 2
   MessageAppearTime: 1
   BossDialog:
@@ -6414,6 +6416,11 @@ MonoBehaviour:
   - Trapped here until someone like you comes to destroy you.
   - As always happens...
   - Enjoy your confinament.
+  BossBackDialogs:
+  - ha ha ha...
+  - you lack the power to stay here for long.
+  - Hope the death's of your commrades have taught you a lesson.
+  - Now get out of my sight.
 --- !u!1 &1588029332
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//I have to clean this code 
+
 public class BossManager : MonoBehaviour
 {
     public static BossManager Instance;
@@ -24,9 +26,18 @@ public class BossManager : MonoBehaviour
     public List<string> BossDialog;
     [TextArea(0, 3)]
     public List<string> BossDyingDialogs;
+    [TextArea(0, 3)]
+    public List<string> BossBackDialogs;
+
+    public bool InBossFight { 
+        get => _inBossFight;
+        set => _inBossFight = value; 
+    }
+
+
 
     private bool _bossSpeaking;
-
+    private bool _inBossFight;
     private void Awake()
     {
         Instance = this;
@@ -41,6 +52,8 @@ public class BossManager : MonoBehaviour
         UIManager.Instance.BossAppearingImage.raycastTarget = true;
 
         Sequence sq = DOTween.Sequence();
+
+        AllyManager.Instance.canAttack = false;
 
         sq.Append(UIManager.Instance.BossAppearingImage.DOFade(1, 1).SetEase(Ease.Linear));
 
@@ -83,8 +96,69 @@ public class BossManager : MonoBehaviour
 
         sq.OnComplete(() => {
             UIManager.Instance.BossAppearingImage.raycastTarget = false;
+            InBossFight = true;
+            AllyManager.Instance.canAttack = true;
+            UIManager.Instance.BossToClick.StartBattle();
         });
 
+    }
+
+    public void ComeBackToMonsterBattle()
+    {
+        //In Process
+        UIManager.Instance.BossAppearingImage.color = new Color(1, 1, 1, 0);
+        UIManager.Instance.BossAppearingPanel.SetActive(true);
+        _bossSpeaking = true;
+        UIManager.Instance.BossAppearingImage.raycastTarget = true;
+
+        Sequence sq = DOTween.Sequence();
+
+        AllyManager.Instance.canAttack = false;
+
+        sq.Append(UIManager.Instance.BossAppearingImage.DOFade(1, 1).SetEase(Ease.Linear));
+
+        sq.Play();
+
+        sq.OnComplete(() => {
+            StartCoroutine(ComeBackSpeakSequence());
+        });
+    }
+
+    IEnumerator ComeBackSpeakSequence()
+    {
+        int index = 0;
+        UIManager.Instance.MonsterToClick.gameObject.SetActive(true);
+        UIManager.Instance.BossToClick.gameObject.SetActive(false);
+        while (_bossSpeaking)
+        {
+
+            UIManager.Instance.BossSpeakingText.text = BossBackDialogs[index];
+
+            if (index >= BossBackDialogs.Count - 1)
+            {
+                _bossSpeaking = false;
+            }
+            UIManager.Instance.BossSpeakingText.DOFade(1, MessageAppearTime).SetEase(Ease.Linear).Play();
+
+            yield return new WaitForSeconds(TimeBetweenMessages);
+
+            UIManager.Instance.BossSpeakingText.DOFade(0, MessageAppearTime).SetEase(Ease.Linear).Play();
+
+            yield return new WaitForSeconds(MessageAppearTime);
+            ++index;
+        }
+
+        Sequence sq = DOTween.Sequence();
+
+        sq.Append(UIManager.Instance.BossAppearingImage.DOFade(0, 1).SetEase(Ease.Linear));
+
+        sq.Play();
+
+        sq.OnComplete(() => {
+            UIManager.Instance.BossAppearingImage.raycastTarget = false;
+            InBossFight = false;
+            AllyManager.Instance.canAttack = true;
+        });
     }
 
     public void EndBoss()
@@ -102,6 +176,7 @@ public class BossManager : MonoBehaviour
 
         sq.OnComplete(() => {
             StartCoroutine(EndingBossSpeakSequence());
+            AllyManager.Instance.canAttack = false;
         });
     }
 

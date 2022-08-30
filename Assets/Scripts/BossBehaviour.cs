@@ -20,6 +20,7 @@ public class BossBehaviour : MonoBehaviour
     {
         _timer = BossManager.Instance.BossFightTime;
         _actualHealth = BossManager.Instance.BossHealth;
+
     }
 
     public void ClickMonster()
@@ -59,7 +60,9 @@ public class BossBehaviour : MonoBehaviour
 
     private void Die()
     {
+        _dead = true;
 
+        BossManager.Instance.EndBoss();
     }
 
     public void Spawn()
@@ -86,6 +89,11 @@ public class BossBehaviour : MonoBehaviour
 
             yield return null;
         }
+
+        if(!_dead)
+        {
+            BossManager.Instance.ComeBackToMonsterBattle();
+        }
     }
 
     private void Attack()
@@ -98,6 +106,9 @@ public class BossBehaviour : MonoBehaviour
                 AllyManager.Instance.allies[i].NumberOfAllies -= BossManager.Instance.NumberOfAlliesToKill;
             else
                 AllyManager.Instance.allies[i].NumberOfAllies = 0;
+
+            ++i;
         }
+
     }
 }
