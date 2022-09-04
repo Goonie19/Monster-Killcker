@@ -31,7 +31,17 @@ public class AllyType
 
     [Space(20)]
     public int HeadsToUnlock;
-    public int NumberOfAllies;
+    public int NumberOfAllies
+    {
+        get => _numberOfAllies;
+        set
+        {
+            _numberOfAllies = value;
+            UIManager.Instance.UpdateAllyInfo(AllyId);
+        }
+    }
+
+    private int _numberOfAllies;
     
 
     public bool Unlocked
