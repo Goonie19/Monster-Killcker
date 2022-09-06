@@ -18,6 +18,8 @@ public class BuffButton : MonoBehaviour
     public TextMeshProUGUI NumberOfBuffs;
     public TextMeshProUGUI ExperienceText;
 
+    public Animator SlashAnim;
+
     public ButtonType Type;
 
     public float MouseMovementThreshold;
@@ -92,7 +94,7 @@ public class BuffButton : MonoBehaviour
 
     }
 
-    public void UpdateInfo()
+    public void UpdateInfo(bool attack = false)
     {
         if(Type == ButtonType.Buff)
         {
@@ -115,6 +117,9 @@ public class BuffButton : MonoBehaviour
             BuffName.text = _associatedAlly.AllyName;
             if (NumberOfBuffs)
                 NumberOfBuffs.text = "x" + _associatedAlly.NumberOfAllies.ToString();
+            if (attack)
+                TakeDamageAnim();
+
         }
 
     }
@@ -193,5 +198,21 @@ public class BuffButton : MonoBehaviour
         }
 
     }
+
+    #region Animation
+
+    public void TakeDamageAnim()
+    {
+        SlashAnim.gameObject.SetActive(true);
+        Invoke(nameof(DisableDamage), 1f);
+    }
+
+    void DisableDamage()
+    {
+        SlashAnim.gameObject.SetActive(false);
+    }
+
+    #endregion
+
 
 }

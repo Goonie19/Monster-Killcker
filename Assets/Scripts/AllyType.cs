@@ -36,8 +36,14 @@ public class AllyType
         get => _numberOfAllies;
         set
         {
+            //this is for when the boss attacks allies
+            bool attack = false;
+
+            if(value < _numberOfAllies)
+                attack = true;
+
             _numberOfAllies = value;
-            UIManager.Instance.UpdateAllyInfo(AllyId);
+            UIManager.Instance.UpdateAllyInfo(AllyId, attack);
         }
     }
 

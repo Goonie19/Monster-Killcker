@@ -158,9 +158,9 @@ public class UIManager : MonoBehaviour
 
     #region UPDATE BUTTONS
 
-    public void UpdateAllyInfo(int Id)
+    public void UpdateAllyInfo(int Id, bool attack = false)
     {
-        AllyButtons.Find((x) => x.GetBuffId() == Id).UpdateInfo();
+        AllyButtons.Find((x) => x.GetBuffId() == Id).UpdateInfo(attack);
     }
 
     public void UpdateAllyButtoninfo(int Id)
