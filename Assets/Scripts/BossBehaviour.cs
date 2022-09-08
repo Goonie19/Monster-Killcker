@@ -81,6 +81,17 @@ public class BossBehaviour : MonoBehaviour
         {
             _timer += Time.deltaTime;
 
+            if(_timer < BossManager.Instance.BossFightTime)
+            {
+                int minutes = 0;
+                int seconds = 0;
+
+                minutes = Mathf.FloorToInt(_timer / 60);
+                seconds = Mathf.FloorToInt(_timer % 60);
+
+                UIManager.Instance.BossTimer.text = String.Format("{0:00}:{1:00}", minutes, seconds);
+            }
+
             if(_timer >= timeOfNextAttack)
             {
                 Attack();

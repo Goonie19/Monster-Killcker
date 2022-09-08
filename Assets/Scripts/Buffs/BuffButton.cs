@@ -24,6 +24,8 @@ public class BuffButton : MonoBehaviour
 
     public float MouseMovementThreshold;
 
+    public float TimeToShowInfo = 0.5f;
+
     public enum ButtonType { Buff, Ally}
 
     private Buff _associatedBuff;
@@ -179,14 +181,15 @@ public class BuffButton : MonoBehaviour
     {
         float time = 0;
         MouseLastPosition = new Vector2(Input.mousePosition.x, Input.mousePosition.y);
-        while(_onButton)
+
+        while (_onButton)
         {
             if (Vector2.Distance(MouseLastPosition, Input.mousePosition) > MouseMovementThreshold)
                 time = 0;
             else
                 time += 0.01f;
 
-            if (time >= 1f)
+            if (time >= TimeToShowInfo)
             {
                 ShowInfo();
                 _onButton = false;

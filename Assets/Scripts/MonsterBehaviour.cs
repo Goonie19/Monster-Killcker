@@ -33,6 +33,8 @@ public class MonsterBehaviour : MonoBehaviour
 
             sq.Play();
 
+            AudioManager.Instance.PlayHitSound();
+
             TakeDamage(PlayerManager.Instance.BaseDamage * PlayerManager.Instance.DamageMultiplier);
            
         }

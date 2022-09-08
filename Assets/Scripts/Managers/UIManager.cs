@@ -15,6 +15,8 @@ public class UIManager : MonoBehaviour
     [Title("Boss")]
     public BossBehaviour BossToClick;
 
+    public TextMeshProUGUI BossTimer;
+
     [Title("Boss Appearing Parameters")]
     public GameObject BossAppearButton;
     public GameObject BossAppearingPanel;
@@ -109,6 +111,7 @@ public class UIManager : MonoBehaviour
         GameObject b;
 
         b = Instantiate(AllyButton, AlliesContentDisplay);
+        AudioManager.Instance.PlayUnlockedSound();
 
         b.GetComponent<BuffButton>().Setup(ally);
         AllyButtons.Add(b.GetComponent<BuffButton>());
@@ -122,7 +125,9 @@ public class UIManager : MonoBehaviour
             b = Instantiate(AllyBuffButtonOneUse, BuffContentDisplay);
         else
             b = Instantiate(AllyBuffButton, BuffContentDisplay);
-        
+
+        AudioManager.Instance.PlayUnlockedSound();
+
         b.GetComponent<BuffButton>().Setup(buff);
         UnlockedAllyBuffs.Add(b.GetComponent<BuffButton>());
     }
@@ -135,6 +140,8 @@ public class UIManager : MonoBehaviour
             b = Instantiate(MonsterBuffButtonOneUse, BuffContentDisplay);
         else
             b = Instantiate(MonsterBuffButton, BuffContentDisplay);
+
+        AudioManager.Instance.PlayUnlockedSound();
 
         b.GetComponent<BuffButton>().Setup(buff);
         UnlockedMonsterBuffs.Add(b.GetComponent<BuffButton>());
@@ -149,6 +156,7 @@ public class UIManager : MonoBehaviour
         else
             b = Instantiate(PlayerBuffButton, BuffContentDisplay);
 
+        AudioManager.Instance.PlayUnlockedSound();
         b.GetComponent<BuffButton>().Setup(buff);
         UnlockedPlayerBuffs.Add(b.GetComponent<BuffButton>());
 

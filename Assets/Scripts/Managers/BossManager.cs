@@ -69,6 +69,9 @@ public class BossManager : MonoBehaviour
         int index = 0;
         UIManager.Instance.MonsterToClick.gameObject.SetActive(false);
         UIManager.Instance.BossToClick.gameObject.SetActive(true);
+
+        UIManager.Instance.BossTimer.gameObject.SetActive(true);
+
         while (_bossSpeaking)
         {
 
@@ -177,6 +180,7 @@ public class BossManager : MonoBehaviour
         sq.OnComplete(() => {
             StartCoroutine(EndingBossSpeakSequence());
             AllyManager.Instance.canAttack = false;
+            UIManager.Instance.BossTimer.gameObject.SetActive(false);
         });
     }
 

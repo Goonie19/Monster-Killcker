@@ -85,6 +85,8 @@ public class AllyType
 
         _actualPrice *= PriceMultiplier;
 
+        AudioManager.Instance.PlayBuySound();
+
         UIManager.Instance.CheckButtonInteraction();
 
         UIManager.Instance.UpdateAllyInfo(AllyId);

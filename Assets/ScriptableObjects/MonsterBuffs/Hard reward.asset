@@ -20,7 +20,7 @@ MonoBehaviour:
   Price: 35
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 0

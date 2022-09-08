@@ -33,9 +33,11 @@ public class PlayerManager : MonoBehaviour
         get => _actualHeads;
         set
         {
+            int difference = value - _actualHeads;
+
             _actualHeads = value;
 
-            _totalHeadsAchieved += value;
+            _totalHeadsAchieved += difference;
 
             UIManager.Instance.HeadsDisplayText.text = _actualHeads.ToString();
 

@@ -62,6 +62,8 @@ public class AllyBuff : Buff
             
         }
 
+        AudioManager.Instance.PlayBuySound();
+
         UIManager.Instance.buffInfoPanel.Setup(this);
         UIManager.Instance.UpdateInfoPanels();
 

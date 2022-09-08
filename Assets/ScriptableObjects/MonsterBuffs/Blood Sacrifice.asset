@@ -15,16 +15,17 @@ MonoBehaviour:
   Id: 0
   Icon: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
   BuffName: Blood Sacrifice
-  BuffDescription: 
+  BuffDescription: Give the monster 5 extra points of life with this Blood Sacrifice
+    in his honor!
   HeadsToUnlock: 15
   Price: 20
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 0
+  NumberOfBuffs: 2
   addToHealth: 1
   addToHeads: 0
-  HealthAddToBase: 0
+  HealthAddToBase: 5
   HealthAddToMultiplier: 0
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0

@@ -43,7 +43,7 @@ public class MonsterManager : MonoBehaviour
 
     public int GetHeads()
     {
-        return BaseHeads;
+        return (int)(GetHealth() * HealthPercentageExp) + BaseHeads;
     }
 
     public string GetRandomPhrase()
