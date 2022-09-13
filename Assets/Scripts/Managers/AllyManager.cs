@@ -47,6 +47,7 @@ public class AllyManager : MonoBehaviour
                 {
                     if (damage > 0)
                         UIManager.Instance.MonsterToClick.TakeDamage(damage * 0.1f);
+                    
                 }
                 else
                 {

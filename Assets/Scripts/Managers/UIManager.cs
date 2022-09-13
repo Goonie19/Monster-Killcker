@@ -67,6 +67,9 @@ public class UIManager : MonoBehaviour
     public GameObject DialoguePanel;
     public TextMeshProUGUI DialogueText;
 
+    [Title("Health Info for monster")]
+    public Image fillHealthImage;
+
     private void Awake()
     {
         Instance = this;
@@ -90,18 +93,6 @@ public class UIManager : MonoBehaviour
         allyInfoPanel.Setup(a);
 
         allyInfoPanel.gameObject.SetActive(true);
-    }
-
-    public void UpdateInfoPanels()
-    {
-        MonsterMaximumHealth.text = MonsterManager.Instance.GetHealth().ToString();
-        MonsterDropingHeads.text = MonsterManager.Instance.GetHeads().ToString();
-        MonstersLifePercentageAddedToExp.text = (MonsterManager.Instance.HealthPercentageExp * 100).ToString() + "%";
-
-        PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
-        PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
-        PlayerTotalDamageText.text = (PlayerManager.Instance.DamageMultiplier * PlayerManager.Instance.BaseDamage).ToString();
-
     }
 
     #region INSTANTIATE BUTTONS
@@ -234,6 +225,27 @@ public class UIManager : MonoBehaviour
 
         foreach (BuffButton b in UnlockedMonsterBuffs)
             b.CheckInteractable();
+    }
+
+    #endregion
+
+    #region INFO UPDATING
+
+    public void UpdateInfoPanels()
+    {
+        MonsterMaximumHealth.text = string.Format("{0:0.00}", MonsterToClick.ActualHealth) + "/" + MonsterManager.Instance.GetHealth().ToString();
+        MonsterDropingHeads.text = MonsterManager.Instance.GetHeads().ToString();
+        MonstersLifePercentageAddedToExp.text = (MonsterManager.Instance.HealthPercentageExp * 100).ToString() + "%";
+
+        PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
+        PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
+        PlayerTotalDamageText.text = (PlayerManager.Instance.DamageMultiplier * PlayerManager.Instance.BaseDamage).ToString();
+
+    }
+
+    public void UpdateHealthBar(float actualHealth)
+    {
+        fillHealthImage.fillAmount = actualHealth / MonsterManager.Instance.GetHealth();
     }
 
     #endregion

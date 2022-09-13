@@ -11,6 +11,12 @@ public class MonsterBehaviour : MonoBehaviour
     private bool _speakSpawned;
 
     private bool _dead;
+
+    public float ActualHealth
+    {
+        get => _actualHealth;
+    }
+
     private float _actualHealth;
 
     private void Start()
@@ -47,7 +53,12 @@ public class MonsterBehaviour : MonoBehaviour
 
             _actualHealth -= damage;
 
-            if (_actualHealth <= 0)
+            if (_actualHealth > 0)
+            {
+                UIManager.Instance.UpdateInfoPanels();
+                UIManager.Instance.UpdateHealthBar(_actualHealth);
+            }
+            else
                 Die();
 
         }
@@ -56,6 +67,10 @@ public class MonsterBehaviour : MonoBehaviour
     void Die()
     {
         _dead = true;
+
+        _actualHealth = 0;
+        UIManager.Instance.UpdateInfoPanels();
+        UIManager.Instance.UpdateHealthBar(_actualHealth);
 
         StopSpeaking();
         CancelInvoke("StopSpeaking");
@@ -87,7 +102,10 @@ public class MonsterBehaviour : MonoBehaviour
             _dead = false;
 
             _actualHealth = MonsterManager.Instance.GetHealth();
-            
+
+            UIManager.Instance.UpdateInfoPanels();
+            UIManager.Instance.UpdateHealthBar(_actualHealth);
+
         });
     }
 
