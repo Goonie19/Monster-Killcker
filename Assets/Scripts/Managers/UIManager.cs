@@ -54,9 +54,20 @@ public class UIManager : MonoBehaviour
     public List<BuffButton> UnlockedMonsterBuffs;
 
     [Title("Monster Information UI Elements")]
-    public TextMeshProUGUI MonsterMaximumHealth;
-    public TextMeshProUGUI MonsterDropingHeads;
-    public TextMeshProUGUI MonstersLifePercentageAddedToExp;
+    public GameObject MonsterMaximumHealthObject;
+    public TextMeshProUGUI MonsterMaximumHealthValue;
+    public GameObject MonsterDropingHeadsObject;
+    public TextMeshProUGUI MonsterDropingHeadsValue;
+    public GameObject MonsterLifePercentageAddedToExpObject;
+    public TextMeshProUGUI MonstersLifePercentageAddedToExpValue;
+
+    [Title("Boss Information UI Elements")]
+    public GameObject BossMaxHealthObject;
+    public TextMeshProUGUI BossMaxHealthValue;
+    public GameObject BossLifeToGetExpObject;
+    public TextMeshProUGUI BossLifeToGetExpValue;
+    public GameObject BossDamageTakenObject;
+    public TextMeshProUGUI BossDamageTakenValue;
 
     [Title("Player Information UI Elements")]
     public TextMeshProUGUI PlayerBaseDamageText;
@@ -69,6 +80,7 @@ public class UIManager : MonoBehaviour
 
     [Title("Health Info for monster")]
     public Image fillHealthImage;
+    public TextMeshProUGUI CurrentHealthText;
 
     private void Awake()
     {
@@ -159,22 +171,22 @@ public class UIManager : MonoBehaviour
 
     public void UpdateAllyInfo(int Id, bool attack = false)
     {
-        AllyButtons.Find((x) => x.GetBuffId() == Id).UpdateInfo(attack);
+        AllyButtons.Find((x) => x.GetBuffId() == Id)?.UpdateInfo(attack);
     }
 
     public void UpdateAllyButtoninfo(int Id)
     {
-        UnlockedAllyBuffs.Find((x) => x.GetBuffId() == Id).UpdateInfo();
+        UnlockedAllyBuffs.Find((x) => x.GetBuffId() == Id)?.UpdateInfo();
     }
 
     public void UpdatePlayerButtoninfo(int Id)
     {
-        UnlockedPlayerBuffs.Find((x) => x.GetBuffId() == Id).UpdateInfo();
+        UnlockedPlayerBuffs.Find((x) => x.GetBuffId() == Id)?.UpdateInfo();
     }
 
     public void UpdateMonsterButtoninfo(int Id)
     {
-        UnlockedMonsterBuffs.Find((x) => x.GetBuffId() == Id).UpdateInfo();
+        UnlockedMonsterBuffs.Find((x) => x.GetBuffId() == Id)?.UpdateInfo();
     }
 
     #endregion
@@ -233,9 +245,9 @@ public class UIManager : MonoBehaviour
 
     public void UpdateInfoPanels()
     {
-        MonsterMaximumHealth.text = string.Format("{0:0.00}", MonsterToClick.ActualHealth) + "/" + MonsterManager.Instance.GetHealth().ToString();
-        MonsterDropingHeads.text = MonsterManager.Instance.GetHeads().ToString();
-        MonstersLifePercentageAddedToExp.text = (MonsterManager.Instance.HealthPercentageExp * 100).ToString() + "%";
+        MonsterMaximumHealthValue.text = MonsterManager.Instance.GetHealth().ToString();
+        MonsterDropingHeadsValue.text = MonsterManager.Instance.GetHeads().ToString();
+        MonstersLifePercentageAddedToExpValue.text = (MonsterManager.Instance.HealthPercentageExp * 100).ToString() + "%";
 
         PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
         PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
@@ -245,7 +257,14 @@ public class UIManager : MonoBehaviour
 
     public void UpdateHealthBar(float actualHealth)
     {
-        fillHealthImage.fillAmount = actualHealth / MonsterManager.Instance.GetHealth();
+        if(BossManager.Instance.InBossFight)
+        {
+            fillHealthImage.fillAmount = actualHealth / BossManager.Instance.GetMaxHealth();
+            CurrentHealthText.text = string.Format("{0:0.00}", actualHealth) + "/" + BossManager.Instance.GetMaxHealth().ToString();
+        } else {
+            fillHealthImage.fillAmount = actualHealth / MonsterManager.Instance.GetHealth();
+            CurrentHealthText.text = string.Format("{0:0.00}", actualHealth) + "/" + MonsterManager.Instance.GetHealth().ToString();
+        }
     }
 
     #endregion

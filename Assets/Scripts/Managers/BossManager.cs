@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using Sirenix.OdinInspector;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -29,11 +30,22 @@ public class BossManager : MonoBehaviour
     [TextArea(0, 3)]
     public List<string> BossBackDialogs;
 
+    [Title("Damage goals")]
+    public List<LifeGoal> Goals;
+
     public bool InBossFight { 
         get => _inBossFight;
         set => _inBossFight = value; 
     }
 
+    [Serializable]
+    public class LifeGoal
+    {
+        public float DamageGoal;
+        public float ExpToGive;
+
+        public bool achieved;
+    }
 
 
     private bool _bossSpeaking;
@@ -42,6 +54,8 @@ public class BossManager : MonoBehaviour
     {
         Instance = this;
     }
+
+    #region BOSS SEQUENCES
 
     [ContextMenu("StartBoss")]
     public void StartBoss()
@@ -219,4 +233,23 @@ public class BossManager : MonoBehaviour
         });
 
     }
+
+    #endregion
+
+    public int GetGoalCompleted(float DamageTaken)
+    {
+        int i = Goals.FindIndex((x) => !x.achieved && DamageTaken >= x.DamageGoal);
+
+        if (i >= 0)
+            return i;
+        else
+            return -1;
+    }
+
+    public float GetMaxHealth()
+    {
+        return BossHealth;
+    }
+
+    
 }

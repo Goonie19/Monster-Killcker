@@ -2,11 +2,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class MonsterBehaviour : MonoBehaviour
 {
 
     public float DyingTime = 0.2f;
+
+    public Image MonsterImage;
 
     private bool _speakSpawned;
 
@@ -91,6 +94,9 @@ public class MonsterBehaviour : MonoBehaviour
 
     void Spawn()
     {
+
+        MonsterImage.sprite = MonsterManager.Instance.MonsterSprites[Random.Range(0, MonsterManager.Instance.MonsterSprites.Count)];
+
         Sequence sq = DOTween.Sequence();
 
         sq.Append(transform.DOScale(1, DyingTime));

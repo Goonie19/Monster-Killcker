@@ -12,7 +12,9 @@ public class BossBehaviour : MonoBehaviour
     public Image BossImage;
 
     private float _actualHealth;
+    private float _damageTaken;
     private bool _dead;
+
 
     private float _timer;
 
@@ -46,9 +48,21 @@ public class BossBehaviour : MonoBehaviour
         {
 
             _actualHealth -= damage;
+            _damageTaken += damage;
 
-            if (_actualHealth <= 0)
+            int i = BossManager.Instance.GetGoalCompleted(_damageTaken);
+
+            if (i >= 0)
+                GetRewards(i);
+
+            if (_actualHealth > 0)
+            {
+                UIManager.Instance.UpdateInfoPanels();
+                UIManager.Instance.UpdateHealthBar(_actualHealth);
+            }
+            else
                 Die();
+
 
         }
     }
@@ -62,6 +76,9 @@ public class BossBehaviour : MonoBehaviour
     {
         _dead = true;
 
+        _actualHealth = 0;
+        UIManager.Instance.UpdateHealthBar(_actualHealth);
+
         BossManager.Instance.EndBoss();
     }
 
@@ -74,18 +91,18 @@ public class BossBehaviour : MonoBehaviour
     {
         _timer = 0;
 
-        int i = 1;
         float timeOfNextAttack = BossManager.Instance.BossFightTime / BossManager.Instance.NumberOfAttacks;
 
-        while(_timer < BossManager.Instance.BossFightTime)
+        int minutes = 0;
+        int seconds = 0;
+
+        while (_timer < BossManager.Instance.BossFightTime)
         {
             _timer += Time.deltaTime;
 
             if(_timer < BossManager.Instance.BossFightTime)
             {
-                int minutes = 0;
-                int seconds = 0;
-
+                
                 minutes = Mathf.FloorToInt(_timer / 60);
                 seconds = Mathf.FloorToInt(_timer % 60);
 
@@ -121,5 +138,10 @@ public class BossBehaviour : MonoBehaviour
             ++i;
         }
 
+    }
+
+    public void GetRewards(int goalIndex)
+    {
+        PlayerManager.Instance.ActualExperience += BossManager.Instance.Goals[goalIndex].ExpToGive;
     }
 }
