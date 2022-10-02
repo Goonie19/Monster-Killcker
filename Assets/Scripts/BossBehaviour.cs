@@ -50,7 +50,7 @@ public class BossBehaviour : MonoBehaviour
             _actualHealth -= damage;
             _damageTaken += damage;
 
-            int i = BossManager.Instance.GetGoalCompleted(_damageTaken);
+            int i = BossManager.Instance.GetGoalIndexCompleted(_damageTaken);
 
             if (i >= 0)
                 GetRewards(i);
@@ -142,6 +142,11 @@ public class BossBehaviour : MonoBehaviour
 
     public void GetRewards(int goalIndex)
     {
-        PlayerManager.Instance.ActualExperience += BossManager.Instance.Goals[goalIndex].ExpToGive;
+        PlayerManager.Instance.ActualExperience += BossManager.Instance.GetBossExpByGoal(goalIndex);
+    }
+
+    public float GetDamageTaken()
+    {
+        return _damageTaken;
     }
 }

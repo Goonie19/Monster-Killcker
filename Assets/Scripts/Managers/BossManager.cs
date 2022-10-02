@@ -75,6 +75,7 @@ public class BossManager : MonoBehaviour
 
         sq.OnComplete(() => {
             StartCoroutine(BossSpeakSequence());
+            
         });
     }
 
@@ -114,6 +115,8 @@ public class BossManager : MonoBehaviour
         sq.OnComplete(() => {
             UIManager.Instance.BossAppearingImage.raycastTarget = false;
             InBossFight = true;
+            UIManager.Instance.ChangeInfoPanel();
+            UIManager.Instance.UpdateInfoPanels();
             AllyManager.Instance.canAttack = true;
             UIManager.Instance.BossToClick.StartBattle();
         });
@@ -192,6 +195,8 @@ public class BossManager : MonoBehaviour
         sq.Play();
 
         sq.OnComplete(() => {
+            UIManager.Instance.ChangeInfoPanel();
+            UIManager.Instance.UpdateInfoPanels();
             StartCoroutine(EndingBossSpeakSequence());
             AllyManager.Instance.canAttack = false;
             UIManager.Instance.BossTimer.gameObject.SetActive(false);
@@ -236,7 +241,7 @@ public class BossManager : MonoBehaviour
 
     #endregion
 
-    public int GetGoalCompleted(float DamageTaken)
+    public int GetGoalIndexCompleted(float DamageTaken)
     {
         int i = Goals.FindIndex((x) => !x.achieved && DamageTaken >= x.DamageGoal);
 
@@ -244,6 +249,16 @@ public class BossManager : MonoBehaviour
             return i;
         else
             return -1;
+    }
+
+    public LifeGoal GetGoalCompleted()
+    {
+        return Goals.Find((x) => !x.achieved);
+    }
+
+    public float GetBossExpByGoal(int index)
+    {
+        return Goals[index].ExpToGive;
     }
 
     public float GetMaxHealth()

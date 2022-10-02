@@ -107,6 +107,27 @@ public class UIManager : MonoBehaviour
         allyInfoPanel.gameObject.SetActive(true);
     }
 
+    public void ChangeInfoPanel()
+    {
+        if(BossManager.Instance.InBossFight)
+        {
+            BossMaxHealthObject.SetActive(true);
+            BossLifeToGetExpObject.SetActive(true);
+            BossDamageTakenObject.SetActive(true);
+            MonsterDropingHeadsObject.SetActive(false);
+            MonsterLifePercentageAddedToExpObject.SetActive(false);
+            MonsterMaximumHealthObject.SetActive(false);
+        } else
+        {
+            BossMaxHealthObject.SetActive(false);
+            BossLifeToGetExpObject.SetActive(false);
+            BossDamageTakenObject.SetActive(false);
+            MonsterDropingHeadsObject.SetActive(true);
+            MonsterLifePercentageAddedToExpObject.SetActive(true);
+            MonsterMaximumHealthObject.SetActive(true);
+        }
+    }
+
     #region INSTANTIATE BUTTONS
 
     public void InstantiateAlly(AllyType ally)
@@ -245,9 +266,17 @@ public class UIManager : MonoBehaviour
 
     public void UpdateInfoPanels()
     {
-        MonsterMaximumHealthValue.text = MonsterManager.Instance.GetHealth().ToString();
-        MonsterDropingHeadsValue.text = MonsterManager.Instance.GetHeads().ToString();
-        MonstersLifePercentageAddedToExpValue.text = (MonsterManager.Instance.HealthPercentageExp * 100).ToString() + "%";
+        if(!BossManager.Instance.InBossFight)
+        {
+            MonsterMaximumHealthValue.text = MonsterManager.Instance.GetHealth().ToString();
+            MonsterDropingHeadsValue.text = MonsterManager.Instance.GetHeads().ToString();
+            MonstersLifePercentageAddedToExpValue.text = (MonsterManager.Instance.HealthPercentageExp * 100).ToString() + "%";
+        } else
+        {
+            BossMaxHealthValue.text = BossManager.Instance.GetMaxHealth().ToString();
+            BossLifeToGetExpValue.text = BossManager.Instance.GetGoalCompleted().DamageGoal.ToString();
+            BossDamageTakenValue.text = BossToClick.GetDamageTaken().ToString();
+        }
 
         PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
         PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
