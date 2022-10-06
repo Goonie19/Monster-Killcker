@@ -21,7 +21,12 @@ public class BossBehaviour : MonoBehaviour
     private void Awake()
     {
         _timer = BossManager.Instance.BossFightTime;
-        _actualHealth = BossManager.Instance.BossHealth;
+        
+        BossData parameters = SaveDataManager.Instance.GetBossParameters();
+
+        _actualHealth = parameters.actualHealth;
+
+        _damageTaken = parameters.DamageTaken;
 
     }
 

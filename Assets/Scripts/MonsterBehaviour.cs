@@ -87,6 +87,7 @@ public class MonsterBehaviour : MonoBehaviour
         sq.OnComplete(() => {
             GetRewards();
             PlayerManager.Instance.CheckBuffs();
+            SaveDataManager.Instance.SaveData();
             Spawn(); 
         });
         

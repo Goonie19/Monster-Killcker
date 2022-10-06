@@ -1,12 +1,16 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.IO;
+using System.Runtime.Serialization.Formatters.Binary;
 using UnityEngine;
 
 public class SaveDataManager : MonoBehaviour
 {
 
     public static SaveDataManager Instance;
+
+    public string FileName = "SaveData";
 
     private Data _saveData;
 
@@ -25,7 +29,48 @@ public class SaveDataManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+
+        if(File.Exists(Application.persistentDataPath + "/" + FileName + ".dat"))
+            DeserializeBinary();
+        else
+            _saveData = new Data();
     }
+
+    public void SaveData()
+    {
+        Serialize();
+    }
+
+    public bool CanGetData()
+    {
+        return File.Exists(Application.persistentDataPath + "/" + FileName + ".dat");
+    }
+
+    #region SERIALIZATION METHODS
+
+    public void Serialize()
+    {
+        FileStream fs = new FileStream(Application.persistentDataPath + "/" + FileName + ".dat", FileMode.Create);
+
+        BinaryFormatter formater = new BinaryFormatter();
+        formater.Serialize(fs, _saveData);
+
+        fs.Close();
+    }
+
+    void DeserializeBinary()
+    {
+        FileStream fs = new FileStream(Application.persistentDataPath + "/" + FileName + ".dat", FileMode.Open);
+
+        BinaryFormatter formater = new BinaryFormatter();
+
+        _saveData = (Data)formater.Deserialize(fs);
+
+        fs.Close();
+
+    }
+
+    #endregion
 
     #region SET METHODS
 
@@ -34,12 +79,12 @@ public class SaveDataManager : MonoBehaviour
         _saveData.PlayerParameters.ActualExperience = actualExperience;
     }
 
-    public void SetPlayerActualHeads(float actualHeads)
+    public void SetPlayerActualHeads(int actualHeads)
     {
         _saveData.PlayerParameters.ActualHeads = actualHeads;
     }
 
-    public void SetPlayerTotalHeads(float totalHeads)
+    public void SetPlayerTotalHeads(int totalHeads)
     {
         _saveData.PlayerParameters.TotalHeads = totalHeads;
     }

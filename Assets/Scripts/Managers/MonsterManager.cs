@@ -29,6 +29,20 @@ public class MonsterManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        if(SaveDataManager.Instance.CanGetData())
+        {
+            MonsterData parameters = SaveDataManager.Instance.GetMonsterParameters();
+            BaseHealth = parameters.BaseHealth;
+            HealthMultiplier = parameters.HealthMultiplier;
+            HealthPercentageExp = parameters.HealthPercentageMultiplier;
+
+            BaseHeads = parameters.BaseHeads;
+            MultiplierHeads = parameters.MultiplierHeads;
+
+            BaseExperience = parameters.BaseExperience;
+            ExperienceMultiplier = parameters.ExperienceMultiplier;
+        }
     }
 
     public float GetHealth()

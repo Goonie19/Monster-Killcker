@@ -7,4 +7,6 @@ using UnityEngine;
 public class BossData {
     public float DamageTaken;
     public float actualHealth;
+
+    public List<BossManager.LifeGoal> Goals;
 }

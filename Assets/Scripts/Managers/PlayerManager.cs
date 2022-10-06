@@ -21,6 +21,8 @@ public class PlayerManager : MonoBehaviour
         {
             _actualExperience = value;
 
+            SaveDataManager.Instance.SetPlayerActualExperience(_actualExperience);
+
             if (_actualExperience % 1 == 0)
                 UIManager.Instance.ExperienceDisplayText.text = _actualExperience.ToString();
             else
@@ -38,6 +40,10 @@ public class PlayerManager : MonoBehaviour
             _actualHeads = value;
 
             _totalHeadsAchieved += difference;
+
+            SaveDataManager.Instance.SetPlayerActualHeads(_actualHeads);
+
+            SaveDataManager.Instance.SetPlayerTotalHeads(_totalHeadsAchieved);
 
             UIManager.Instance.HeadsDisplayText.text = _actualHeads.ToString();
 
@@ -75,6 +81,19 @@ public class PlayerManager : MonoBehaviour
                 b.Reset();
             }
         }
+
+        if (SaveDataManager.Instance.CanGetData())
+        {
+            PlayerData parameters = SaveDataManager.Instance.GetPlayerParameters();
+            _actualExperience = parameters.ActualExperience;
+            _actualHeads = parameters.ActualHeads;
+
+            _totalHeadsAchieved = parameters.TotalHeads;
+
+            BaseDamage = parameters.BaseDamage;
+            DamageMultiplier = parameters.DamageMultiplier;
+        }
+
     }
 
     public void CheckBuffs()

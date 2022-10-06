@@ -53,6 +53,10 @@ public class BossManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
+        BossData parameters = SaveDataManager.Instance.GetBossParameters();
+
+        //Goals = parameters.Goals;
     }
 
     #region BOSS SEQUENCES

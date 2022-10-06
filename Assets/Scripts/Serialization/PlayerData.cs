@@ -3,6 +3,9 @@
 [Serializable]
 public class PlayerData {
     public float ActualExperience;
-    public float ActualHeads;
-    public float TotalHeads;
+    public int ActualHeads;
+    public int TotalHeads;
+
+    public float BaseDamage;
+    public float DamageMultiplier;
 }
