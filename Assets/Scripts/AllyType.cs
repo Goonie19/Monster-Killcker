@@ -63,6 +63,7 @@ public class AllyType
             }
 
             _unlocked = value;
+            AllyManager.Instance.UpdateAllies(AllyId);
         }
     }
 
@@ -92,6 +93,10 @@ public class AllyType
         UIManager.Instance.UpdateAllyInfo(AllyId);
 
         UIManager.Instance.allyInfoPanel.Setup(this);
+
+        AllyManager.Instance.UpdateAllies(AllyId);
+
+        SaveDataManager.Instance.SaveData();
 
     }
 

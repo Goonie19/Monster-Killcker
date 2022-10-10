@@ -54,9 +54,6 @@ public class BossManager : MonoBehaviour
     {
         Instance = this;
 
-        BossData parameters = SaveDataManager.Instance.GetBossParameters();
-
-        //Goals = parameters.Goals;
     }
 
     #region BOSS SEQUENCES

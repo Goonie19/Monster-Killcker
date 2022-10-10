@@ -1,0 +1,110 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4692913306296571978
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4692913306296572085}
+  - component: {fileID: 4692913306296572084}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4692913306296572085
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692913306296571978}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4692913306296572084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4692913306296571978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec87ce28ccaa42d4bb3c646da39b9a60, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartAgain: 0
+  DefaultPlayerData:
+    ActualExperience: 0
+    ActualHeads: 0
+    TotalHeads: 0
+    BaseDamage: 1
+    DamageMultiplier: 1
+  DefaultMonsterData:
+    BaseHealth: 15
+    HealthMultiplier: 1
+    HealthPercentageMultiplier: 0.05
+    BaseHeads: 1
+    MultiplierHeads: 1
+    BaseExperience: 10
+    ExperienceMultiplier: 1
+  DefaultBossData:
+    DamageTaken: 0
+    actualHealth: 1000000
+    Goals: []
+  DefaultAllies:
+  - AllyId: 0
+    AllyName: Archer
+    AllySprite: {fileID: 21300000, guid: 0dbf2724286d4bf4988dc9fcdb8d98da, type: 3}
+    Icon: {fileID: 21300000, guid: 94ac10234ef1c421aaf199c5b9844220, type: 3}
+    AllyImageReference: {fileID: 0}
+    BaseDamage: 0.25
+    DamageMultiplier: 1
+    Price: 20
+    PriceMultiplier: 1.15
+    Description: Archer assotiation brings you the possibility to hire some Archers
+      in exchange for experience. Who needs money when you can be an unpaid intern?
+    HeadsToUnlock: 3
+  - AllyId: 1
+    AllyName: Swords man
+    AllySprite: {fileID: 21300000, guid: 45048440b06aada4ebf5be5d13aeab3b, type: 3}
+    Icon: {fileID: 21300000, guid: 21cd4c9a521fb4aee958351c51a5c332, type: 3}
+    AllyImageReference: {fileID: 0}
+    BaseDamage: 1
+    DamageMultiplier: 1
+    Price: 200
+    PriceMultiplier: 1.15
+    Description: 
+    HeadsToUnlock: 50
+  - AllyId: 2
+    AllyName: Mage
+    AllySprite: {fileID: 21300000, guid: cd51bb6f1e053994db965c9036580899, type: 3}
+    Icon: {fileID: 21300000, guid: 535bf74c26d934953896a3a89298c314, type: 3}
+    AllyImageReference: {fileID: 0}
+    BaseDamage: 5
+    DamageMultiplier: 1
+    Price: 600
+    PriceMultiplier: 1.15
+    Description: 
+    HeadsToUnlock: 100
+  - AllyId: 3
+    AllyName: Rogue
+    AllySprite: {fileID: 21300000, guid: 3387debc1caf1dd4d95fea2167f6fd0a, type: 3}
+    Icon: {fileID: 21300000, guid: 93d97a4398691495c8a11dfc794b89e0, type: 3}
+    AllyImageReference: {fileID: 0}
+    BaseDamage: 20
+    DamageMultiplier: 1
+    Price: 1200
+    PriceMultiplier: 1.15
+    Description: 
+    HeadsToUnlock: 300

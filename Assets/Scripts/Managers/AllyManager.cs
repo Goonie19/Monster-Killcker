@@ -20,7 +20,40 @@ public class AllyManager : MonoBehaviour
 
     private void Start()
     {
+        InitializeParameters();
+
+        CheckAllies();
+
         _alliesCoroutine = StartCoroutine(AlliesBehaviour());
+    }
+
+    void InitializeParameters()
+    {
+        allies = GameManager.Instance.DefaultAllies;
+        if (SaveDataManager.Instance.CanGetData())
+            InitializeAllies(SaveDataManager.Instance.GetAllies());
+    }
+
+    void InitializeAllies(List<AlliesData> AlliesData)
+    {
+        allies = GameManager.Instance.DefaultAllies;
+
+        foreach (AlliesData data in AlliesData)
+        {
+            int index;
+            index = allies.FindIndex((x) => x.AllyId == data.Id);
+            allies[index].NumberOfAllies = data.NumberOfAllies;
+            allies[index].BaseDamage = data.BaseDamage;
+            allies[index].DamageMultiplier = data.DamageMultiplier;
+            allies[index].Price = data.Price;
+            allies[index].PriceMultiplier = data.PriceMultiplier;
+
+        }
+    }
+
+    public void UpdateAllies(int id)
+    {
+        SaveDataManager.Instance.UnlockAllies(id);
     }
 
     public void CheckAllies()

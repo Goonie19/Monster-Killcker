@@ -2341,52 +2341,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 014a1f8093ecbf24f8f57b3f4103b68c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  allies:
-  - AllyId: 0
-    AllyName: Archer
-    AllySprite: {fileID: 21300000, guid: 0dbf2724286d4bf4988dc9fcdb8d98da, type: 3}
-    Icon: {fileID: 21300000, guid: 94ac10234ef1c421aaf199c5b9844220, type: 3}
-    AllyImageReference: {fileID: 0}
-    BaseDamage: 0.25
-    DamageMultiplier: 1
-    Price: 20
-    PriceMultiplier: 1.15
-    Description: Archer assotiation brings you the possibility to hire some Archers
-      in exchange for experience. Who needs money when you can be an unpaid intern?
-    HeadsToUnlock: 3
-  - AllyId: 1
-    AllyName: Swords man
-    AllySprite: {fileID: 21300000, guid: 45048440b06aada4ebf5be5d13aeab3b, type: 3}
-    Icon: {fileID: 21300000, guid: 21cd4c9a521fb4aee958351c51a5c332, type: 3}
-    AllyImageReference: {fileID: 0}
-    BaseDamage: 1
-    DamageMultiplier: 1
-    Price: 200
-    PriceMultiplier: 1.15
-    Description: 
-    HeadsToUnlock: 50
-  - AllyId: 2
-    AllyName: Mage
-    AllySprite: {fileID: 21300000, guid: cd51bb6f1e053994db965c9036580899, type: 3}
-    Icon: {fileID: 21300000, guid: 535bf74c26d934953896a3a89298c314, type: 3}
-    AllyImageReference: {fileID: 0}
-    BaseDamage: 5
-    DamageMultiplier: 1
-    Price: 600
-    PriceMultiplier: 1.15
-    Description: 
-    HeadsToUnlock: 100
-  - AllyId: 3
-    AllyName: Rogue
-    AllySprite: {fileID: 21300000, guid: 3387debc1caf1dd4d95fea2167f6fd0a, type: 3}
-    Icon: {fileID: 21300000, guid: 93d97a4398691495c8a11dfc794b89e0, type: 3}
-    AllyImageReference: {fileID: 0}
-    BaseDamage: 20
-    DamageMultiplier: 1
-    Price: 1200
-    PriceMultiplier: 1.15
-    Description: 
-    HeadsToUnlock: 300
+  allies: []
   canAttack: 1
 --- !u!4 &485353349
 Transform:
@@ -5565,6 +5520,12 @@ MonoBehaviour:
   BaseDamagePerSecondText: {fileID: 981353500}
   MultiplierDamageText: {fileID: 729166319}
   TotalDamageText: {fileID: 658026311}
+--- !u!4 &1044906624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+    type: 3}
+  m_PrefabInstance: {fileID: 4692913305529539125}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1048742182
 GameObject:
   m_ObjectHideFlags: 0
@@ -5837,6 +5798,7 @@ Transform:
   - {fileID: 1712421265}
   - {fileID: 860686686}
   - {fileID: 2042503584}
+  - {fileID: 1044906624}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7139,7 +7101,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 208099174}
   m_HandleRect: {fileID: 208099173}
   m_Direction: 2
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -10597,3 +10559,77 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4692913305529539125
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1121734009}
+    m_Modifications:
+    - target: {fileID: 4692913306296571978, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_Name
+      value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: StartAgain
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c2e31b4190bb2964390c06db1bb3f291, type: 3}

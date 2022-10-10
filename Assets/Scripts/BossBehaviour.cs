@@ -22,12 +22,27 @@ public class BossBehaviour : MonoBehaviour
     {
         _timer = BossManager.Instance.BossFightTime;
         
-        BossData parameters = SaveDataManager.Instance.GetBossParameters();
+        
+
+    }
+
+    void Start()
+    {
+        InitializeParameters();
+    }
+
+    void InitializeParameters()
+    {
+        BossData parameters;
+
+        if (SaveDataManager.Instance.CanGetData())
+            parameters = SaveDataManager.Instance.GetBossParameters();
+        else
+            parameters = GameManager.Instance.DefaultBossData;
 
         _actualHealth = parameters.actualHealth;
 
         _damageTaken = parameters.DamageTaken;
-
     }
 
     public void ClickMonster()

@@ -22,18 +22,27 @@ public class SaveDataManager : MonoBehaviour
         public MonsterData MonsterParameters;
         public BossData BossParameters;
 
-        public List<AllyType> allies;
+        public List<AlliesData> allies;
         public List<Buff> buffs;
+
+        
     }
 
     void Awake()
     {
         Instance = this;
 
-        if(File.Exists(Application.persistentDataPath + "/" + FileName + ".dat"))
+        if (File.Exists(Application.persistentDataPath + "/" + FileName + ".dat") &&  !GameManager.Instance.StartAgain )
             DeserializeBinary();
         else
+        {
             _saveData = new Data();
+            _saveData.PlayerParameters = GameManager.Instance.DefaultPlayerData;
+            _saveData.MonsterParameters = GameManager.Instance.DefaultMonsterData;
+            _saveData.BossParameters = GameManager.Instance.DefaultBossData;
+
+            _saveData.allies = new List<AlliesData>();
+        }
     }
 
     public void SaveData()
@@ -43,7 +52,7 @@ public class SaveDataManager : MonoBehaviour
 
     public bool CanGetData()
     {
-        return File.Exists(Application.persistentDataPath + "/" + FileName + ".dat");
+        return File.Exists(Application.persistentDataPath + "/" + FileName + ".dat") && !GameManager.Instance.StartAgain;
     }
 
     #region SERIALIZATION METHODS
@@ -73,6 +82,30 @@ public class SaveDataManager : MonoBehaviour
     #endregion
 
     #region SET METHODS
+
+    public void UnlockAllies(int AllyId)
+    {
+        int index = -1;
+
+        Debug.Log(index);
+        if (_saveData.allies.Count > 0)
+            index = _saveData.allies.FindIndex(x => x.Id == AllyId);
+
+
+        if (index == -1)
+        {
+            _saveData.allies.Add(new AlliesData(AllyId, 0, AllyManager.Instance.allies[AllyId].BaseDamage, AllyManager.Instance.allies[AllyId].DamageMultiplier,
+                AllyManager.Instance.allies[AllyId].Price, AllyManager.Instance.allies[AllyId].PriceMultiplier));
+        } else
+        {
+            _saveData.allies[index].NumberOfAllies = AllyManager.Instance.allies[AllyId].NumberOfAllies;
+            _saveData.allies[index].Price = AllyManager.Instance.allies[AllyId].Price;
+            _saveData.allies[index].PriceMultiplier = AllyManager.Instance.allies[AllyId].PriceMultiplier;
+            _saveData.allies[index].BaseDamage = AllyManager.Instance.allies[AllyId].BaseDamage;
+            _saveData.allies[index].DamageMultiplier = AllyManager.Instance.allies[AllyId].DamageMultiplier;
+        }
+
+    }
 
     public void SetPlayerActualExperience(float actualExperience)
     {
@@ -137,6 +170,11 @@ public class SaveDataManager : MonoBehaviour
     #endregion
 
     #region GET METHODS
+
+    public List<AlliesData> GetAllies()
+    {
+        return _saveData.allies;
+    }
 
     public PlayerData GetPlayerParameters()
     {

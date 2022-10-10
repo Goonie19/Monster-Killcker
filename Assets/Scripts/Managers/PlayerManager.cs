@@ -82,18 +82,30 @@ public class PlayerManager : MonoBehaviour
             }
         }
 
+    }
+
+    void Start()
+    {
+        InitializeParameters();
+    }
+
+    void InitializeParameters()
+    {
+        PlayerData parameters;
+
         if (SaveDataManager.Instance.CanGetData())
-        {
-            PlayerData parameters = SaveDataManager.Instance.GetPlayerParameters();
-            _actualExperience = parameters.ActualExperience;
-            _actualHeads = parameters.ActualHeads;
+            parameters = SaveDataManager.Instance.GetPlayerParameters();
+        else
+            parameters = GameManager.Instance.DefaultPlayerData;
 
-            _totalHeadsAchieved = parameters.TotalHeads;
 
-            BaseDamage = parameters.BaseDamage;
-            DamageMultiplier = parameters.DamageMultiplier;
-        }
+        ActualExperience = parameters.ActualExperience;
+        ActualHeads = parameters.ActualHeads;
 
+        _totalHeadsAchieved = parameters.TotalHeads;
+
+        BaseDamage = parameters.BaseDamage;
+        DamageMultiplier = parameters.DamageMultiplier;
     }
 
     public void CheckBuffs()
