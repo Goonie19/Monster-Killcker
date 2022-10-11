@@ -28,8 +28,20 @@ public class MonsterBuff : Buff
         get => _unlocked;
         set
         {
+
             if (!_unlocked && value)
-                UIManager.Instance.InstantiateMonsterButton(this);
+            {
+                if (OneUseBuff)
+                {
+                    if (!Acquired)
+                        UIManager.Instance.InstantiateMonsterButton(this);
+                }
+                else
+                    UIManager.Instance.InstantiateMonsterButton(this);
+                
+
+
+            }
 
             _unlocked = value;
         }
@@ -68,7 +80,8 @@ public class MonsterBuff : Buff
         UIManager.Instance.buffInfoPanel.Setup(this);
         UIManager.Instance.UpdateInfoPanels();
 
-
+        SaveDataManager.Instance.SetBuff(this);
+        SaveDataManager.Instance.SaveData();
     }
 
 

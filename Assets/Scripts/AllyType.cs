@@ -44,6 +44,7 @@ public class AllyType
 
             _numberOfAllies = value;
             UIManager.Instance.UpdateAllyInfo(AllyId, attack);
+            AllyManager.Instance.UpdateAllies(AllyId);
         }
     }
 

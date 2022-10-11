@@ -8,8 +8,24 @@ public class PlayerManager : MonoBehaviour
     public static PlayerManager Instance;
 
     [Title("Damage of Player")]
-    public float BaseDamage = 1;
-    public float DamageMultiplier = 1;
+    public float BaseDamage
+    {
+        get => _baseDamage;
+        set
+        {
+            _baseDamage = value;
+
+            SaveDataManager.Instance.SetPlayerBaseDamage(_baseDamage);
+        }
+    }
+    public float DamageMultiplier { get => _damageMultiplier;
+        set
+        {
+            _damageMultiplier = value;
+
+            SaveDataManager.Instance.SetPlayerDamageMultiplier(_damageMultiplier);
+        }
+    }
 
     [Title("Buff List")]
     public List<Buff> buffs;
@@ -39,7 +55,8 @@ public class PlayerManager : MonoBehaviour
 
             _actualHeads = value;
 
-            _totalHeadsAchieved += difference;
+            if(difference > 0)
+                _totalHeadsAchieved += difference;
 
             SaveDataManager.Instance.SetPlayerActualHeads(_actualHeads);
 
@@ -62,6 +79,9 @@ public class PlayerManager : MonoBehaviour
         get => _inBattle;
         set => _inBattle = value;
     }
+
+    private float _baseDamage;
+    private float _damageMultiplier;
 
     private float _actualExperience;
     private int _actualHeads;
@@ -104,8 +124,23 @@ public class PlayerManager : MonoBehaviour
 
         _totalHeadsAchieved = parameters.TotalHeads;
 
-        BaseDamage = parameters.BaseDamage;
-        DamageMultiplier = parameters.DamageMultiplier;
+        _baseDamage = parameters.BaseDamage;
+        _damageMultiplier = parameters.DamageMultiplier;
+
+        List<BuffData> buffsAcquired = SaveDataManager.Instance.GetBuffsAcquired();
+
+        foreach(BuffData b in buffsAcquired)
+        {
+            Buff bufo = buffs.Find(X => X.Id == b.BuffId);
+
+            bufo.NumberOfBuffs = b.NumberOfBuffs;
+            bufo.Acquired = true;
+            bufo.SetActualPrice(b.ActualPrice);
+
+        }
+
+        CheckBuffs();
+
     }
 
     public void CheckBuffs()

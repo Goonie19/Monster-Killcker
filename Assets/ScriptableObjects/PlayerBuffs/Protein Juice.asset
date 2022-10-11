@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
   m_Name: Protein Juice
   m_EditorClassIdentifier: 
-  Id: 0
+  Id: 2
   Icon: {fileID: 21300000, guid: 9edd79fdf80f3420aa9396c83869cbf0, type: 3}
   BuffName: Protein Juice
   BuffDescription: 

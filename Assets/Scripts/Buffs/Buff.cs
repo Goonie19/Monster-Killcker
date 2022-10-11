@@ -60,4 +60,9 @@ public abstract class Buff : ScriptableObject
         return _actualPrice;
     }
 
+    public void SetActualPrice(float price)
+    {
+        _actualPrice = price;
+    }
+
 }

@@ -21,7 +21,18 @@ public class PlayerBuff : Buff {
         set
         {
             if (!_unlocked && value)
-                UIManager.Instance.InstantiatePlayerBuffButton(this);
+            {
+                if(OneUseBuff)
+                {
+                    if(!Acquired)
+                        UIManager.Instance.InstantiatePlayerBuffButton(this);
+                }
+                else
+                    UIManager.Instance.InstantiatePlayerBuffButton(this);
+                
+                    
+                
+            }
 
             _unlocked = value;
         }
@@ -44,7 +55,7 @@ public class PlayerBuff : Buff {
         } else
         {
             _actualPrice *= PriceMultiplier;
-
+            Acquired = true;
             ++NumberOfBuffs;
             UIManager.Instance.UpdatePlayerButtoninfo(Id);
         }
@@ -54,6 +65,9 @@ public class PlayerBuff : Buff {
         UIManager.Instance.CheckButtonInteraction();
         UIManager.Instance.buffInfoPanel.Setup(this);
         UIManager.Instance.UpdateInfoPanels();
+
+        SaveDataManager.Instance.SetBuff(this);
+        SaveDataManager.Instance.SaveData();
 
     }
 

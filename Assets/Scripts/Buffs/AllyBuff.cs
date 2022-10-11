@@ -24,7 +24,18 @@ public class AllyBuff : Buff
         set
         {
             if (!_unlocked && value)
-                UIManager.Instance.InstantiateAllyButton(this);
+            {
+                if (OneUseBuff)
+                {
+                    if (!Acquired)
+                        UIManager.Instance.InstantiateAllyButton(this);
+                }
+                else
+                    UIManager.Instance.InstantiateAllyButton(this);
+
+
+
+            }
 
             _unlocked = value;
         }
@@ -64,8 +75,12 @@ public class AllyBuff : Buff
 
         AudioManager.Instance.PlayBuySound();
 
+        UIManager.Instance.CheckButtonInteraction();
         UIManager.Instance.buffInfoPanel.Setup(this);
         UIManager.Instance.UpdateInfoPanels();
+
+        SaveDataManager.Instance.SetBuff(this);
+        SaveDataManager.Instance.SaveData();
 
     }
 
