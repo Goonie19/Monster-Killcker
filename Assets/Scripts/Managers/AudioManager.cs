@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,10 +8,15 @@ public class AudioManager : MonoBehaviour
 
     public static AudioManager Instance;
 
+    [Title("Music")]
+    public FMODUnity.EventReference AmbientMusic;
+
+    [Title("SFX")]
     public FMODUnity.EventReference hitSoundPath;
     public FMODUnity.EventReference UnlockSoundPath;
     public FMODUnity.EventReference BuySoundPath;
 
+    private FMOD.Studio.EventInstance _ambientMusicInstance;
     private FMOD.Studio.EventInstance _hitInstance;
     private FMOD.Studio.EventInstance _unlockInstance;
     private FMOD.Studio.EventInstance _buyInstance;
@@ -18,6 +24,13 @@ public class AudioManager : MonoBehaviour
     void Awake()
     {
         Instance = this;
+    }
+
+    [ContextMenu("PlayMusic1")]
+    public void PlayAmbientMusic()
+    {
+        _ambientMusicInstance = FMODUnity.RuntimeManager.CreateInstance(AmbientMusic);
+        _ambientMusicInstance.start();
     }
 
     public void PlayHitSound()

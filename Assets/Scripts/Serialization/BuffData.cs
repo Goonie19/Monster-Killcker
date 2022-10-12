@@ -6,10 +6,11 @@ using UnityEngine;
 [Serializable]
 public class BuffData
 {
-    public BuffData(int id, int numberOfBuffs)
+    public BuffData(int id, int numberOfBuffs, float actualPrice)
     {
         BuffId = id;
         NumberOfBuffs = numberOfBuffs;
+        ActualPrice = actualPrice;
     }
 
     public int BuffId;

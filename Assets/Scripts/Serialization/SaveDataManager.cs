@@ -115,7 +115,7 @@ public class SaveDataManager : MonoBehaviour
 
         if (index == -1)
         {
-            _saveData.buffs.Add(new BuffData(b.Id, 1));
+            _saveData.buffs.Add(new BuffData(b.Id, 1, b.GetPrice()));
         } else
         {
             _saveData.buffs[index].NumberOfBuffs = b.NumberOfBuffs;

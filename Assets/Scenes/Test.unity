@@ -4751,6 +4751,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e1ee2b94572184b469453a2a0b6660ec, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AmbientMusic:
+    Guid:
+      Data1: 1893768277
+      Data2: 1084532530
+      Data3: 1270337186
+      Data4: -1392078175
+    Path: event:/Music/Ambient music soul clean
   hitSoundPath:
     Guid:
       Data1: -1786700303
@@ -5949,8 +5956,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 53dabc514353c764a896daa87e376c47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseDamage: 1
-  DamageMultiplier: 1
   buffs:
   - {fileID: 11400000, guid: 06656ea2a522b8549ab5997b29438d3f, type: 2}
   - {fileID: 11400000, guid: 7f894bcaff160e64585084e6cb0d3e5d, type: 2}
@@ -5998,9 +6003,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9bb8ab9e27e92047a00d0b0a9f96343, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BaseHealth: 15
-  HealthMultiplier: 1
-  HealthPercentageExp: 0.05
   MonsterSprites:
   - {fileID: 21300000, guid: 09f9cbf2dbe012b43bf46ec815282b56, type: 3}
   - {fileID: 21300000, guid: 0e3c971bc7fa2df47bae97027e2adbb7, type: 3}
@@ -6009,10 +6011,6 @@ MonoBehaviour:
   - It's Nice day isn't it?
   - How are you feeling today?
   - You look cute today!
-  BaseHeads: 1
-  MultiplierHeads: 0
-  BaseExperience: 10
-  ExperienceMultiplier: 1
 --- !u!4 &1157476995
 Transform:
   m_ObjectHideFlags: 0

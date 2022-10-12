@@ -9,9 +9,36 @@ public class MonsterManager : MonoBehaviour
     public static MonsterManager Instance;
 
     [Title("Monster Health Related Atributes")]
-    public float BaseHealth = 5;
-    public float HealthMultiplier = 1;
-    public float HealthPercentageExp;
+    public float BaseHealth
+    {
+        get => _baseHealth;
+        set
+        {
+            _baseHealth = value;
+
+            SaveDataManager.Instance.SetMonsterBaseHealth(_baseHealth);
+        }
+    }
+    public float HealthMultiplier
+    {
+        get => _healthMultiplier;
+        set
+        {
+            _healthMultiplier = value;
+
+            SaveDataManager.Instance.SetMonsterHealthMultiplier(_healthMultiplier);
+        }
+    }
+    public float HealthPercentageExp
+    {
+        get => _healthPercentageExp;
+        set
+        {
+            _healthPercentageExp = value;
+
+            SaveDataManager.Instance.SetMonsterHealthPercentageMultiplier(_healthPercentageExp);
+        }
+    }
 
     [Title("Monster Possible Sprites")]
     public List<Sprite> MonsterSprites;
@@ -19,12 +46,60 @@ public class MonsterManager : MonoBehaviour
     public List<string> MonsterPhrases;
 
     [Title("Monster Heads Related Atributes")]
-    public int BaseHeads = 1;
-    public float MultiplierHeads;
+    public int BaseHeads
+    {
+        get => _baseHeads;
+        set
+        {
+            _baseHeads = value;
+
+            SaveDataManager.Instance.SetMonsterBaseHeads(_baseHeads);
+        }
+    }
+    public float MultiplierHeads
+    {
+        get => _multiplierHeads;
+        set
+        {
+            _multiplierHeads = value;
+
+            SaveDataManager.Instance.SetMonsterMultiplierHeads(_multiplierHeads);
+        }
+    }
 
     [Title("Monster Experience Related Atributes")]
-    public float BaseExperience = 10;
-    public float ExperienceMultiplier = 1;
+    public float BaseExperience
+    {
+        get => _baseExperience;
+        set
+        {
+            _baseExperience = value;
+
+            SaveDataManager.Instance.SetMonsterBaseExperience(_baseExperience);
+        }
+    }
+    public float ExperienceMultiplier
+    {
+        get => _experienceMultiplier;
+        set
+        {
+            _experienceMultiplier = value;
+
+            SaveDataManager.Instance.SetMonsterExperienceMultiplier(_experienceMultiplier);
+        }
+    }
+
+    private float _baseHealth;
+    private float _healthMultiplier;
+    private float _healthPercentageExp;
+
+    private int _baseHeads;
+    private float _multiplierHeads;
+
+    private float _baseExperience;
+    private float _experienceMultiplier;
+
+
 
     private void Awake()
     {
@@ -45,15 +120,15 @@ public class MonsterManager : MonoBehaviour
         else
             parameters = GameManager.Instance.DefaultMonsterData;
 
-        BaseHealth = parameters.BaseHealth;
-        HealthMultiplier = parameters.HealthMultiplier;
-        HealthPercentageExp = parameters.HealthPercentageMultiplier;
+        _baseHealth = parameters.BaseHealth;
+        _healthMultiplier = parameters.HealthMultiplier;
+        _healthPercentageExp = parameters.HealthPercentageMultiplier;
 
-        BaseHeads = parameters.BaseHeads;
-        MultiplierHeads = parameters.MultiplierHeads;
+        _baseHeads = parameters.BaseHeads;
+        _multiplierHeads = parameters.MultiplierHeads;
 
-        BaseExperience = parameters.BaseExperience;
-        ExperienceMultiplier = parameters.ExperienceMultiplier;
+        _baseExperience = parameters.BaseExperience;
+        _experienceMultiplier = parameters.ExperienceMultiplier;
     }
 
     public float GetHealth()
