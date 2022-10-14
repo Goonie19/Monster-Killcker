@@ -11,12 +11,20 @@ public class AudioManager : MonoBehaviour
     [Title("Music")]
     public FMODUnity.EventReference AmbientMusic;
 
-    [Title("SFX")]
+    [Title("MenuSFX")]
+    public FMODUnity.EventReference ClickButton;
+    public FMODUnity.EventReference ClickPlayButton;
+
+    [Title("Game SFX")]
     public FMODUnity.EventReference hitSoundPath;
     public FMODUnity.EventReference UnlockSoundPath;
     public FMODUnity.EventReference BuySoundPath;
 
     private FMOD.Studio.EventInstance _ambientMusicInstance;
+
+    private FMOD.Studio.EventInstance _clickButtonInstance;
+    private FMOD.Studio.EventInstance _clickPlayButtonInstance;
+
     private FMOD.Studio.EventInstance _hitInstance;
     private FMOD.Studio.EventInstance _unlockInstance;
     private FMOD.Studio.EventInstance _buyInstance;
@@ -35,6 +43,18 @@ public class AudioManager : MonoBehaviour
     {
         _ambientMusicInstance = FMODUnity.RuntimeManager.CreateInstance(AmbientMusic);
         _ambientMusicInstance.start();
+    }
+
+    public void PlayClickButtonSound()
+    {
+        _clickButtonInstance = FMODUnity.RuntimeManager.CreateInstance(ClickButton);
+        _clickButtonInstance.start();
+    }
+
+    public void PlayClickPlayButtonSound()
+    {
+        _clickPlayButtonInstance = FMODUnity.RuntimeManager.CreateInstance(ClickPlayButton);
+        _clickPlayButtonInstance.start();
     }
 
     public void PlayHitSound()

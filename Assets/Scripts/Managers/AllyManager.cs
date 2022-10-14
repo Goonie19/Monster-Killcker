@@ -22,7 +22,7 @@ public class AllyManager : MonoBehaviour
     {
         InitializeParameters();
 
-        CheckAllies();
+        UIManager.Instance.OnFadeOut.AddListener(CheckAllies);
 
         _alliesCoroutine = StartCoroutine(AlliesBehaviour());
     }

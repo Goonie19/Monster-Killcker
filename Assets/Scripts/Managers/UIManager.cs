@@ -1,14 +1,21 @@
-﻿using Sirenix.OdinInspector;
+﻿using DG.Tweening;
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
 
     public static UIManager Instance;
+
+    [Title("FadePanel")]
+    public Image FadePanel;
+    public float FadeTime = 2f;
+    public UnityEvent OnFadeOut;
 
     [Title("Monster")]
     public MonsterBehaviour MonsterToClick;
@@ -90,6 +97,17 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         UpdateInfoPanels();
+
+        Sequence sq = DOTween.Sequence();
+
+        sq.Append(FadePanel.DOFade(0f, FadeTime).SetEase(Ease.Linear));
+
+        sq.Play();
+
+        sq.OnComplete(() => {
+            FadePanel.raycastTarget = false;
+            OnFadeOut?.Invoke();
+        });
     }
 
     public void SpawnInfoPanel(Buff b)

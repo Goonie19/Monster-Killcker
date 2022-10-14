@@ -107,6 +107,7 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         InitializeParameters();
+        UIManager.Instance.OnFadeOut.AddListener(CheckBuffs);
     }
 
     void InitializeParameters()
@@ -138,8 +139,6 @@ public class PlayerManager : MonoBehaviour
             bufo.SetActualPrice(b.ActualPrice);
 
         }
-
-        CheckBuffs();
 
     }
 
