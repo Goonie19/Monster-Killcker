@@ -1,7 +1,9 @@
-﻿using System.Collections;
+﻿using Sirenix.OdinInspector;
+using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -9,6 +11,10 @@ public class GameManager : MonoBehaviour
 
     public bool StartAgain;
 
+    public string MenuSceneName;
+    public string GameSceneName;
+
+    [Title("Save Default Parameters")]
     public PlayerData DefaultPlayerData;
     public MonsterData DefaultMonsterData;
     public BossData DefaultBossData;
@@ -27,5 +33,16 @@ public class GameManager : MonoBehaviour
         
     }
 
+
+    public void ChangeToGameScene()
+    {
+        AudioManager.Instance.PlayAmbientMusic();
+        SceneManager.LoadScene(GameSceneName);
+    }
+
+    public void ChangeToMenuScene()
+    {
+        SceneManager.LoadScene(MenuSceneName);
+    }
 
 }

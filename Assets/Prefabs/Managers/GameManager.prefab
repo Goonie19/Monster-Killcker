@@ -44,6 +44,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   StartAgain: 0
+  MenuSceneName: MainMenu
+  GameSceneName: GameScene
   DefaultPlayerData:
     ActualExperience: 0
     ActualHeads: 0

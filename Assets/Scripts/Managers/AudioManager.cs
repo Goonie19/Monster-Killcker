@@ -23,7 +23,11 @@ public class AudioManager : MonoBehaviour
 
     void Awake()
     {
-        Instance = this;
+        if(Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+
     }
 
     [ContextMenu("PlayMusic1")]
