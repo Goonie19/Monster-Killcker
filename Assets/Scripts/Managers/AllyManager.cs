@@ -20,11 +20,10 @@ public class AllyManager : MonoBehaviour
 
     private void Start()
     {
-        InitializeParameters();
-
+        UIManager.Instance.OnFadeOut.AddListener(InitializeParameters);
         UIManager.Instance.OnFadeOut.AddListener(CheckAllies);
-
-        _alliesCoroutine = StartCoroutine(AlliesBehaviour());
+        UIManager.Instance.OnFadeOut.AddListener(() => _alliesCoroutine = StartCoroutine(AlliesBehaviour()));
+        
     }
 
     void InitializeParameters()
@@ -40,14 +39,16 @@ public class AllyManager : MonoBehaviour
 
         foreach (AlliesData data in AlliesData)
         {
+            
             int index;
             index = allies.FindIndex((x) => x.AllyId == data.Id);
-            allies[index].NumberOfAllies = data.NumberOfAllies;
+            
+            allies[index].SetSilentNumberOfAllies(data.NumberOfAllies);
             allies[index].BaseDamage = data.BaseDamage;
             allies[index].DamageMultiplier = data.DamageMultiplier;
             allies[index].Price = data.Price;
             allies[index].PriceMultiplier = data.PriceMultiplier;
-
+            
         }
     }
 

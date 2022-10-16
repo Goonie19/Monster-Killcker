@@ -58,7 +58,6 @@ public class AllyType
         {
             if (!_unlocked && value)
             {
-                _actualPrice = Price;
                 UIManager.Instance.InstantiateAlly(this);
                 
             }
@@ -69,12 +68,11 @@ public class AllyType
     }
 
     private bool _unlocked;
-    private float _actualPrice;
 
     public void BuyAlly()
     {
 
-        PlayerManager.Instance.ActualExperience -= _actualPrice;
+        PlayerManager.Instance.ActualExperience -= Price;
 
         /*if (NumberOfAllies == 0)
         {
@@ -85,7 +83,7 @@ public class AllyType
 
         ++NumberOfAllies;
 
-        _actualPrice *= PriceMultiplier;
+        Price *= PriceMultiplier;
 
         AudioManager.Instance.PlayBuySound();
 
@@ -106,14 +104,29 @@ public class AllyType
         Unlocked = true;
     }
 
+    public void SilentUnlock()
+    {
+        _unlocked = true;
+    }
+
     public float GetPrice()
     {
-        return _actualPrice;
+        return Price;
     }
 
     public float GetDamage()
     {
         return BaseDamage * DamageMultiplier * NumberOfAllies;
+    }
+
+    public void SetSilentNumberOfAllies(int number)
+    {
+        _numberOfAllies = number;
+    }
+
+    public void SetSilentActualPrice(float p)
+    {
+        Price = p;
     }
 
 }

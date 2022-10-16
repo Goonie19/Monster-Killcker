@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MonsterManager : MonoBehaviour
 {
@@ -89,6 +90,9 @@ public class MonsterManager : MonoBehaviour
         }
     }
 
+    [Title("Event for parameters initialized")]
+    public UnityEvent OnParametersInitialized;
+
     private float _baseHealth;
     private float _healthMultiplier;
     private float _healthPercentageExp;
@@ -129,6 +133,9 @@ public class MonsterManager : MonoBehaviour
 
         _baseExperience = parameters.BaseExperience;
         _experienceMultiplier = parameters.ExperienceMultiplier;
+
+        OnParametersInitialized?.Invoke();
+        UIManager.Instance.UpdateHealthBar(GetHealth());
     }
 
     public float GetHealth()

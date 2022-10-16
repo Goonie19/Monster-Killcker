@@ -22,12 +22,20 @@ public class MonsterBehaviour : MonoBehaviour
 
     private float _actualHealth;
 
+    private void Awake()
+    {
+        MonsterManager.Instance.OnParametersInitialized.AddListener(InitializeParameters);
+    }
+
     private void Start()
+    {
+        StartCoroutine(SpawnConversation());
+    }
+
+    void InitializeParameters()
     {
         _actualHealth = MonsterManager.Instance.GetHealth();
         _dead = false;
-
-        StartCoroutine(SpawnConversation());
     }
 
     public void ClickMonster()

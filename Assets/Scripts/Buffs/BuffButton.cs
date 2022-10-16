@@ -60,7 +60,7 @@ public class BuffButton : MonoBehaviour
         if (NumberOfBuffs)
             NumberOfBuffs.text = "x" + ally.NumberOfAllies.ToString();
 
-        ExperienceText.text = ally.Price.ToString();
+        ExperienceText.text = ally.GetPrice().ToString();
 
         GetComponent<Button>().onClick.RemoveAllListeners();
 

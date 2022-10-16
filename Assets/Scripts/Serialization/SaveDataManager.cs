@@ -99,7 +99,7 @@ public class SaveDataManager : MonoBehaviour
         } else
         {
             _saveData.allies[index].NumberOfAllies = AllyManager.Instance.allies[AllyId].NumberOfAllies;
-            _saveData.allies[index].Price = AllyManager.Instance.allies[AllyId].Price;
+            _saveData.allies[index].Price = AllyManager.Instance.allies[AllyId].GetPrice();
             _saveData.allies[index].PriceMultiplier = AllyManager.Instance.allies[AllyId].PriceMultiplier;
             _saveData.allies[index].BaseDamage = AllyManager.Instance.allies[AllyId].BaseDamage;
             _saveData.allies[index].DamageMultiplier = AllyManager.Instance.allies[AllyId].DamageMultiplier;

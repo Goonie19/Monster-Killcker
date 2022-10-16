@@ -88,7 +88,7 @@ public class PlayerManager : MonoBehaviour
 
     private int _totalHeadsAchieved;
 
-    private bool _inBattle = true;
+    private bool _inBattle;
 
     private void Awake()
     {
@@ -101,6 +101,8 @@ public class PlayerManager : MonoBehaviour
                 b.Reset();
             }
         }
+
+        UIManager.Instance.OnFadeOut.AddListener(() => _inBattle = true);
 
     }
 
@@ -139,6 +141,7 @@ public class PlayerManager : MonoBehaviour
             bufo.SetActualPrice(b.ActualPrice);
 
         }
+
 
     }
 

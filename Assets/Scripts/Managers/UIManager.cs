@@ -96,8 +96,7 @@ public class UIManager : MonoBehaviour
 
     private void Start()
     {
-        UpdateInfoPanels();
-
+        MonsterManager.Instance.OnParametersInitialized.AddListener(UpdateInfoPanels);
         Sequence sq = DOTween.Sequence();
 
         sq.Append(FadePanel.DOFade(0f, FadeTime).SetEase(Ease.Linear));
