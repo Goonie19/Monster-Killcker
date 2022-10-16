@@ -20,7 +20,7 @@ public class AudioManager : MonoBehaviour
     public FMODUnity.EventReference UnlockSoundPath;
     public FMODUnity.EventReference BuySoundPath;
 
-    private FMOD.Studio.EventInstance _ambientMusicInstance;
+    private FMOD.Studio.EventInstance _musicInstance;
 
     private FMOD.Studio.EventInstance _clickButtonInstance;
     private FMOD.Studio.EventInstance _clickPlayButtonInstance;
@@ -41,8 +41,8 @@ public class AudioManager : MonoBehaviour
     [ContextMenu("PlayMusic1")]
     public void PlayAmbientMusic()
     {
-        _ambientMusicInstance = FMODUnity.RuntimeManager.CreateInstance(AmbientMusic);
-        _ambientMusicInstance.start();
+        _musicInstance = FMODUnity.RuntimeManager.CreateInstance(AmbientMusic);
+        _musicInstance.start();
     }
 
     public void PlayClickButtonSound()

@@ -145,6 +145,24 @@ public class UIManager : MonoBehaviour
         }
     }
 
+    #region FADING METHODS
+
+    public void FadeToMainMenu()
+    {
+        FadePanel.raycastTarget = true;
+        Sequence sq = DOTween.Sequence();
+
+        sq.Append(FadePanel.DOFade(1f, FadeTime).SetEase(Ease.Linear));
+
+        sq.Play();
+
+        sq.OnComplete(() => {
+            GameManager.Instance.ChangeToMenuScene();
+        });
+    }
+
+    #endregion
+
     #region INSTANTIATE BUTTONS
 
     public void InstantiateAlly(AllyType ally)
