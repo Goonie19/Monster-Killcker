@@ -6175,7 +6175,7 @@ GameObject:
   - component: {fileID: 975018135}
   - component: {fileID: 975018134}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Heads Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7368,7 +7368,7 @@ GameObject:
   - component: {fileID: 1241828540}
   - component: {fileID: 1241828539}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: Experience value text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9879,7 +9879,7 @@ GameObject:
   - component: {fileID: 1674695934}
   - component: {fileID: 1674695933}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Experience Icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10461,6 +10461,8 @@ MonoBehaviour:
   BossSpeakingText: {fileID: 995503164}
   BuffContentDisplay: {fileID: 464229730}
   AlliesContentDisplay: {fileID: 355289954}
+  ExperienceIcon: {fileID: 1674695933}
+  HeadsIcon: {fileID: 975018134}
   ExperienceDisplayText: {fileID: 1241828539}
   HeadsDisplayText: {fileID: 410679128}
   AllyButton: {fileID: 7253001472102197220, guid: 22171f44b23b1204d94c7869ef1f16e6,

@@ -2458,6 +2458,9 @@ MonoBehaviour:
   - CreditHeader: Music
     CreditName: Kevin Macleod
     CreditSprite: {fileID: 21300000, guid: 1248ebbab3ac42b4eb71c55039be0754, type: 3}
+  MasterVolumeSlider: {fileID: 1677310330}
+  MusicVolumeSlider: {fileID: 714862623}
+  SFXVolumeSlider: {fileID: 309359198}
 --- !u!1 &988296410
 GameObject:
   m_ObjectHideFlags: 0

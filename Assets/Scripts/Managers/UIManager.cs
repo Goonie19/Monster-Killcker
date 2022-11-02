@@ -34,7 +34,9 @@ public class UIManager : MonoBehaviour
     public Transform BuffContentDisplay;
     public Transform AlliesContentDisplay;
 
-    [Title("Text References")]
+    [Title("Money References")]
+    public Image ExperienceIcon;
+    public Image HeadsIcon;
     public TextMeshProUGUI ExperienceDisplayText;
     public TextMeshProUGUI HeadsDisplayText;
 

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class PlayerManager : MonoBehaviour
 {
@@ -43,6 +44,13 @@ public class PlayerManager : MonoBehaviour
                 UIManager.Instance.ExperienceDisplayText.text = _actualExperience.ToString();
             else
                 UIManager.Instance.ExperienceDisplayText.text = string.Format("{0:0.00}", ActualExperience);
+
+            Sequence sq = DOTween.Sequence();
+
+            sq.Append(UIManager.Instance.ExperienceIcon.transform.DOScale(1.1f, 0.1f).SetEase(Ease.Linear));
+            sq.Append(UIManager.Instance.ExperienceIcon.transform.DOScale(1f, 0.1f).SetEase(Ease.Linear));
+
+            sq.Play();
         }
     }
 
@@ -66,6 +74,13 @@ public class PlayerManager : MonoBehaviour
 
             if (_totalHeadsAchieved >= BossManager.Instance.HeadsToUnlock)
                 UIManager.Instance.BossAppearButton.SetActive(true);
+
+            Sequence sq = DOTween.Sequence();
+
+            sq.Append(UIManager.Instance.HeadsIcon.transform.DOScale(1.1f, 0.1f).SetEase(Ease.Linear));
+            sq.Append(UIManager.Instance.HeadsIcon.transform.DOScale(1f, 0.1f).SetEase(Ease.Linear));
+
+            sq.Play();
         }
     }
 

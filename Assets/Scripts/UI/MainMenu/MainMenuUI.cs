@@ -1,4 +1,5 @@
 ﻿using DG.Tweening;
+using Sirenix.OdinInspector;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -12,17 +13,23 @@ public class MainMenuUI : MonoBehaviour
     public Image FadePanelImage;
     public float FadeTime = 2f;
 
-
+    [Title("Main Menu Buttons")]
     public Button ContinueButton;
     public Button NewGameButton;
     public Button OptionsButton;
     public Button ExitButton;
 
+    [Title("Credits")]
     public Image MonsterCredit;
     public TextMeshProUGUI CreditHeaderText;
     public TextMeshProUGUI CreditText;
 
     public List<Credit> CreditList;
+
+    [Title("Volume Sliders")]
+    public Slider MasterVolumeSlider;
+    public Slider MusicVolumeSlider;
+    public Slider SFXVolumeSlider;
 
     [Serializable]
     public class Credit
@@ -87,6 +94,10 @@ public class MainMenuUI : MonoBehaviour
         CreditHeaderText.text = CreditList[_creditIndex].CreditHeader;
         CreditText.text = CreditList[_creditIndex].CreditName;
         MonsterCredit.sprite = CreditList[_creditIndex].CreditSprite;
+
+        MasterVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetMasterVolume);
+        MusicVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
+        SFXVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetSFXVolume);
     }
 
     public void ClickOnCredit()
@@ -135,5 +146,4 @@ public class MainMenuUI : MonoBehaviour
         MonsterCredit.transform.DOScale(0.95f, 0.1f).SetEase(Ease.Linear).Play();
 
     }
-
 }

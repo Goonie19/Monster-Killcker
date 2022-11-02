@@ -50,6 +50,20 @@ MonoBehaviour:
       Data3: 1270337186
       Data4: -1392078175
     Path: event:/Music/Ambient music soul clean
+  ClickButton:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
+  ClickPlayButton:
+    Guid:
+      Data1: 0
+      Data2: 0
+      Data3: 0
+      Data4: 0
+    Path: 
   hitSoundPath:
     Guid:
       Data1: -1786700303
@@ -71,3 +85,6 @@ MonoBehaviour:
       Data3: -271927364
       Data4: 899365766
     Path: event:/SFX/Purchase
+  MasterVCAName: Master
+  MusicVCAName: Music
+  SFXVCAName: SFX

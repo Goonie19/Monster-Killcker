@@ -20,6 +20,11 @@ public class AudioManager : MonoBehaviour
     public FMODUnity.EventReference UnlockSoundPath;
     public FMODUnity.EventReference BuySoundPath;
 
+    [Title("Volume Sliders Parameters")]
+    public string MasterVCAName;
+    public string MusicVCAName;
+    public string SFXVCAName;
+
     private FMOD.Studio.EventInstance _musicInstance;
 
     private FMOD.Studio.EventInstance _clickButtonInstance;
@@ -29,6 +34,11 @@ public class AudioManager : MonoBehaviour
     private FMOD.Studio.EventInstance _unlockInstance;
     private FMOD.Studio.EventInstance _buyInstance;
 
+    //Volume VCAs
+    private FMOD.Studio.VCA _masterVCA;
+    private FMOD.Studio.VCA _musicVCA;
+    private FMOD.Studio.VCA _sfxVCA;
+
     void Awake()
     {
         if(Instance == null)
@@ -36,9 +46,13 @@ public class AudioManager : MonoBehaviour
         else
             Destroy(gameObject);
 
+        _masterVCA = FMODUnity.RuntimeManager.GetVCA("vca:/" + MasterVCAName);
+        _musicVCA = FMODUnity.RuntimeManager.GetVCA("vca:/" + MusicVCAName);
+        _sfxVCA = FMODUnity.RuntimeManager.GetVCA("vca:/" + SFXVCAName);
+
     }
 
-    [ContextMenu("PlayMusic1")]
+    [ContextMenu("PlayAmbientMusic1")]
     public void PlayAmbientMusic()
     {
         _musicInstance = FMODUnity.RuntimeManager.CreateInstance(AmbientMusic);
@@ -74,4 +88,22 @@ public class AudioManager : MonoBehaviour
         _buyInstance = FMODUnity.RuntimeManager.CreateInstance(BuySoundPath);
         _buyInstance.start();
     }
+
+    #region VOLUME SLIDERS
+
+    public void SetMasterVolume(float volume)
+    {
+        _masterVCA.setVolume(volume);
+    }
+
+    public void SetMusicVolume(float volume)
+    {
+        _musicVCA.setVolume(volume);
+    }
+
+    public void SetSFXVolume(float volume)
+    {
+        _sfxVCA.setVolume(volume);
+    }
+    #endregion
 }
