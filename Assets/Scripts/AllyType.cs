@@ -57,10 +57,8 @@ public class AllyType
         set
         {
             if (!_unlocked && value)
-            {
                 UIManager.Instance.InstantiateAlly(this);
                 
-            }
 
             _unlocked = value;
             AllyManager.Instance.UpdateAllies(AllyId);
@@ -129,4 +127,8 @@ public class AllyType
         Price = p;
     }
 
+    public void SetSilentUnlocked(bool u)
+    {
+        _unlocked = u;
+    }
 }

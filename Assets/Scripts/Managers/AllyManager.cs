@@ -48,6 +48,7 @@ public class AllyManager : MonoBehaviour
             allies[index].DamageMultiplier = data.DamageMultiplier;
             allies[index].Price = data.Price;
             allies[index].PriceMultiplier = data.PriceMultiplier;
+            allies[index].SetSilentUnlocked(false);
             
         }
     }

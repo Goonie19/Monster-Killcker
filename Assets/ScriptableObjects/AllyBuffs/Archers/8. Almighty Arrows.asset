@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
-  m_Name: 6. Obsidian Arrows
+  m_Name: 8. Almighty Arrows
   m_EditorClassIdentifier: 
-  Id: 5
+  Id: 7
   Icon: {fileID: 21300000, guid: f09a580652446474687c4dfb1fbab475, type: 3}
-  BuffName: Golden Arrows
-  BuffDescription: Some monsters dropped obsiddian rocks (believe me, you don't want
-    to know how they droped them) and with the enough experience you could add this
-    material to your arrows to make your archers a 100% stronger!
-  HeadsToUnlock: 6000
-  Price: 13000
+  BuffName: Alighty Arrows
+  BuffDescription: Mighty Arrows can be good, but Almighty arrows?! They are probably
+    better don't you think? This arrows will provide your archers with a 200% of
+    more power!
+  HeadsToUnlock: 29000
+  Price: 60000
   PriceMultiplier: 1.15
   OneUseBuff: 1
   Acquired: 0
@@ -28,4 +28,4 @@ MonoBehaviour:
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 1
+  MultiplierToAdd: 2

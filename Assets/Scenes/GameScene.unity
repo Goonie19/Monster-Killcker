@@ -3315,6 +3315,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -3335,6 +3336,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   attenuationObject: {fileID: 0}
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a79441f348de89743a2939f4d699eac1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RenderShadows: 1
+  m_RequiresDepthTextureOption: 2
+  m_RequiresOpaqueTextureOption: 2
+  m_CameraType: 0
+  m_Cameras: []
+  m_RendererIndex: -1
+  m_VolumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  m_VolumeTrigger: {fileID: 0}
+  m_RenderPostProcessing: 0
+  m_Antialiasing: 0
+  m_AntialiasingQuality: 2
+  m_StopNaN: 0
+  m_Dithering: 0
+  m_ClearDepth: 1
+  m_RequiresDepthTexture: 0
+  m_RequiresColorTexture: 0
+  m_Version: 2
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -7214,6 +7246,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: bb7ea7ad48ccc8841b78c5bdb754516c, type: 2}
   - {fileID: 11400000, guid: 7f40d289a800cc74aba8fdebeecffa8a, type: 2}
   - {fileID: 11400000, guid: 384a2f4b80609b34fa92900ab6fe6099, type: 2}
+  - {fileID: 11400000, guid: 2d4efd687adf4f647a2534ecf8caac61, type: 2}
+  - {fileID: 11400000, guid: 2282f5a9b4a418e42a0906c8e5140dac, type: 2}
+  - {fileID: 11400000, guid: 102d80eea2fc2ba45ae764875b9a0eba, type: 2}
+  - {fileID: 11400000, guid: b491ec6c1bf24454d99577f49e73fd16, type: 2}
+  - {fileID: 11400000, guid: 49809c7bd90c28f48b45722ad6ac92d3, type: 2}
+  - {fileID: 11400000, guid: b02ffb9b5598366498feee021b256a14, type: 2}
+  - {fileID: 11400000, guid: f697b8fe5a4f90c4c94fc3a19c09c5fa, type: 2}
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0
@@ -13400,11 +13439,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
-        type: 3}
-      propertyPath: StartAgain
-      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}

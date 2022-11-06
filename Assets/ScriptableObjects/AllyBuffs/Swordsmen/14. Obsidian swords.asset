@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
-  m_Name: 6. Obsidian Arrows
+  m_Name: 14. Obsidian swords
   m_EditorClassIdentifier: 
-  Id: 5
-  Icon: {fileID: 21300000, guid: f09a580652446474687c4dfb1fbab475, type: 3}
-  BuffName: Golden Arrows
-  BuffDescription: Some monsters dropped obsiddian rocks (believe me, you don't want
-    to know how they droped them) and with the enough experience you could add this
-    material to your arrows to make your archers a 100% stronger!
-  HeadsToUnlock: 6000
-  Price: 13000
+  Id: 13
+  Icon: {fileID: 21300000, guid: a5fc30f71fb854fbdb6fa55c19d87d2b, type: 3}
+  BuffName: Obsidian swords
+  BuffDescription: Miners have picked some obsidian stones from the mines and with
+    enough experience blacksmiths can craft obsidian swords so your swordsmen can
+    cause a 30% more damage!
+  HeadsToUnlock: 9000
+  Price: 30000
   PriceMultiplier: 1.15
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  AllyId: 0
+  AllyId: 1
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 1
+  MultiplierToAdd: 0.3
