@@ -28,10 +28,10 @@ public class AllyBuff : Buff
                 if (OneUseBuff)
                 {
                     if (!Acquired)
-                        UIManager.Instance.InstantiateAllyButton(this);
+                        Instantiate();
                 }
                 else
-                    UIManager.Instance.InstantiateAllyButton(this);
+                    Instantiate();
 
 
 
@@ -82,6 +82,11 @@ public class AllyBuff : Buff
         SaveDataManager.Instance.SetBuff(this);
         SaveDataManager.Instance.SaveData();
 
+    }
+
+    public override void Instantiate()
+    {
+        UIManager.Instance.InstantiateAllyButton(this);
     }
 
     public override void Unlock()

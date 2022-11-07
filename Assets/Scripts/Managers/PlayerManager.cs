@@ -108,6 +108,7 @@ public class PlayerManager : MonoBehaviour
     private void Awake()
     {
         Instance = this;
+
         if (buffs.Count != 0)
         {
             foreach (Buff b in buffs)
@@ -136,11 +137,10 @@ public class PlayerManager : MonoBehaviour
         else
             parameters = GameManager.Instance.DefaultPlayerData;
 
+        _totalHeadsAchieved = parameters.TotalHeads;
 
         ActualExperience = parameters.ActualExperience;
         ActualHeads = parameters.ActualHeads;
-
-        _totalHeadsAchieved = parameters.TotalHeads;
 
         _baseDamage = parameters.BaseDamage;
         _damageMultiplier = parameters.DamageMultiplier;
@@ -157,6 +157,7 @@ public class PlayerManager : MonoBehaviour
 
         }
 
+        
 
     }
 
@@ -170,10 +171,38 @@ public class PlayerManager : MonoBehaviour
             if (b.HeadsToUnlock <= TotalHeads)
             {
                 b.Unlock();
+            }
+            
+        }
+
+        UIManager.Instance.CheckButtonInteraction();
+    }
+
+    /*void SilentInitBuffs()
+    {
+        AllyManager.Instance.CheckAllies();
+
+        foreach (Buff b in buffs)
+        {
+            if (b.HeadsToUnlock <= TotalHeads)
+            {
+                if (b.GetUnlocked())
+                {
+                    if (b.OneUseBuff)
+                    {
+                        if (!b.Acquired)
+                            b.Instantiate();
+                    }
+                    else
+                        b.Instantiate();
+
+                }
+                else
+                    b.Unlock();
 
             }
         }
 
         UIManager.Instance.CheckButtonInteraction();
-    }
+    }*/
 }

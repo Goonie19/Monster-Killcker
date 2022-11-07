@@ -7253,7 +7253,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 49809c7bd90c28f48b45722ad6ac92d3, type: 2}
   - {fileID: 11400000, guid: b02ffb9b5598366498feee021b256a14, type: 2}
   - {fileID: 11400000, guid: f697b8fe5a4f90c4c94fc3a19c09c5fa, type: 2}
+  - {fileID: 11400000, guid: 5e49ca0bd8d6c9f4fba35f29a0bc4dcb, type: 2}
+  - {fileID: 11400000, guid: 0b785b6ccc30e6d4e9053885664319db, type: 2}
+  - {fileID: 11400000, guid: be03ddc38e745a1449b4f49b9b4e87f7, type: 2}
+  - {fileID: 11400000, guid: 7ab7a3c5c4940fe4c8b3025869fec0a7, type: 2}
   - {fileID: 11400000, guid: c606a494832b309438569d02f7fa2654, type: 2}
+  - {fileID: 11400000, guid: 46f1a4988e3dbf04793846633e09de52, type: 2}
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0
@@ -13440,6 +13445,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: GameManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultMonsterData.BaseHealth
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}

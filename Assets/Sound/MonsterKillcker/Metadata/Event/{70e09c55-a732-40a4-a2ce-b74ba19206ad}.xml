@@ -60,7 +60,7 @@
 	<object class="MarkerTrack" id="{e374b429-0248-4b29-a032-5764cd0d969e}" />
 	<object class="GroupTrack" id="{255398a3-0e62-4504-a8d2-8cf3c6cc61c9}">
 		<relationship name="automationTracks">
-			<destination>{a5e57558-f9a8-4492-8138-d5e55130c2cf}</destination>
+			<destination>{61766936-0b60-4fe3-83b8-617a21e96d50}</destination>
 		</relationship>
 		<relationship name="modules">
 			<destination>{39654619-389a-4b2a-b3db-d80112c7e1e3}</destination>
@@ -94,7 +94,7 @@
 		</relationship>
 	</object>
 	<object class="MixerBusPanner" id="{c190d25e-81d8-40f3-9fd2-373acbe44957}" />
-	<object class="AutomationTrack" id="{a5e57558-f9a8-4492-8138-d5e55130c2cf}">
+	<object class="AutomationTrack" id="{61766936-0b60-4fe3-83b8-617a21e96d50}">
 		<relationship name="automator">
 			<destination>{984af1f3-e8d5-409e-a2f3-9aaacf83bc48}</destination>
 		</relationship>
@@ -113,6 +113,9 @@
 		</property>
 		<relationship name="automators">
 			<destination>{984af1f3-e8d5-409e-a2f3-9aaacf83bc48}</destination>
+		</relationship>
+		<relationship name="modulators">
+			<destination>{c9e29d07-1716-4306-bd89-31d7513277d0}</destination>
 		</relationship>
 		<relationship name="effectChain">
 			<destination>{ae675c30-d940-4db0-a4b7-6fd9b0ec9426}</destination>
@@ -152,6 +155,17 @@
 		<relationship name="automationCurves">
 			<destination>{cdfca037-8ef9-4753-ba5f-e980aee42a58}</destination>
 		</relationship>
+	</object>
+	<object class="ADSRModulator" id="{c9e29d07-1716-4306-bd89-31d7513277d0}">
+		<property name="nameOfPropertyBeingModulated">
+			<value>volume</value>
+		</property>
+		<property name="initialValue">
+			<value>-80</value>
+		</property>
+		<property name="finalValue">
+			<value>-80</value>
+		</property>
 	</object>
 	<object class="MixerBusEffectChain" id="{ae675c30-d940-4db0-a4b7-6fd9b0ec9426}">
 		<relationship name="effects">

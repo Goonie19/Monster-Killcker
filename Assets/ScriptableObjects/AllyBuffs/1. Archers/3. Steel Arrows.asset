@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
+  m_Name: 3. Steel Arrows
+  m_EditorClassIdentifier: 
+  Id: 2
+  Icon: {fileID: 21300000, guid: f09a580652446474687c4dfb1fbab475, type: 3}
+  BuffName: Steel Arrows
+  BuffDescription: Sticks and stones might break monsters bones, but ssticks with
+    steel will break even more monster bones! This arrows will make your archers
+    cause 1 damage point more per second!
+  HeadsToUnlock: 400
+  Price: 800
+  PriceMultiplier: 1.15
+  OneUseBuff: 1
+  Acquired: 0
+  NumberOfBuffs: 0
+  AllyId: 0
+  addToBaseDamage: 1
+  addToMultiplierDamage: 0
+  DamageAddToBase: 1
+  MultiplierToAdd: 0.25

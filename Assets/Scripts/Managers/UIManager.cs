@@ -152,6 +152,7 @@ public class UIManager : MonoBehaviour
     public void FadeToMainMenu()
     {
         FadePanel.raycastTarget = true;
+        AudioManager.Instance.StopAmbientMusic();
         Sequence sq = DOTween.Sequence();
 
         sq.Append(FadePanel.DOFade(1f, FadeTime).SetEase(Ease.Linear));

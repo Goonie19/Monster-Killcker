@@ -59,6 +59,11 @@ public class AudioManager : MonoBehaviour
         _musicInstance.start();
     }
 
+    public void StopAmbientMusic()
+    {
+        _musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+    }
+
     public void PlayClickButtonSound()
     {
         _clickButtonInstance = FMODUnity.RuntimeManager.CreateInstance(ClickButton);

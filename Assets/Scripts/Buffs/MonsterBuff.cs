@@ -34,10 +34,10 @@ public class MonsterBuff : Buff
                 if (OneUseBuff)
                 {
                     if (!Acquired)
-                        UIManager.Instance.InstantiateMonsterButton(this);
+                        Instantiate();
                 }
                 else
-                    UIManager.Instance.InstantiateMonsterButton(this);
+                    Instantiate();
                 
 
 
@@ -84,10 +84,13 @@ public class MonsterBuff : Buff
         SaveDataManager.Instance.SaveData();
     }
 
-
-
     public override void Unlock()
     {
         Unlocked = true;
+    }
+
+    public override void Instantiate()
+    {
+        UIManager.Instance.InstantiateMonsterButton(this);
     }
 }

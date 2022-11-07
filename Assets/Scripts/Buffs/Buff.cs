@@ -47,6 +47,8 @@ public abstract class Buff : ScriptableObject
 
     public abstract void ApplyBuff();
 
+    public abstract void Instantiate();
+
     public void Reset()
     {
         _unlocked = false;
@@ -63,6 +65,11 @@ public abstract class Buff : ScriptableObject
     public void SetActualPrice(float price)
     {
         _actualPrice = price;
+    }
+
+    public bool GetUnlocked()
+    {
+        return _unlocked;
     }
 
 }

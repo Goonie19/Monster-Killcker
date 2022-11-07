@@ -24,11 +24,11 @@ public class PlayerBuff : Buff {
             {
                 if(OneUseBuff)
                 {
-                    if(!Acquired)
-                        UIManager.Instance.InstantiatePlayerBuffButton(this);
+                    if (!Acquired)
+                        Instantiate();
                 }
                 else
-                    UIManager.Instance.InstantiatePlayerBuffButton(this);
+                    Instantiate();
                 
                     
                 
@@ -71,7 +71,10 @@ public class PlayerBuff : Buff {
 
     }
 
-
+    public override void Instantiate()
+    {
+        UIManager.Instance.InstantiatePlayerBuffButton(this);
+    }
 
     public override void Unlock()
     {
