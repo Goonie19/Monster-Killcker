@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
+  m_Name: 19. Magic steel staffs
+  m_EditorClassIdentifier: 
+  Id: 18
+  Icon: {fileID: 21300000, guid: 2055fd42ce4d8486295b232b0f3db096, type: 3}
+  BuffName: Magic steel Staffs
+  BuffDescription: A wandering merchant has passed by your side and can sell you
+    these new staffs for your mages. He says it will give them 5 more base damage
+    per second. With the enough experience you will be able to convince the mages
+    to buy their own staffs.
+  HeadsToUnlock: 1600
+  Price: 3000
+  PriceMultiplier: 0
+  OneUseBuff: 1
+  Acquired: 0
+  NumberOfBuffs: 0
+  AllyId: 2
+  addToBaseDamage: 1
+  addToMultiplierDamage: 0
+  DamageAddToBase: 5
+  MultiplierToAdd: 0
