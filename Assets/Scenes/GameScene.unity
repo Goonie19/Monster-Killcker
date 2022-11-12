@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6251,7 +6251,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 6980abda02f3f46c7a9ceef8df7e4048, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -7258,6 +7258,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: be03ddc38e745a1449b4f49b9b4e87f7, type: 2}
   - {fileID: 11400000, guid: 7ab7a3c5c4940fe4c8b3025869fec0a7, type: 2}
   - {fileID: 11400000, guid: 0cfaebe5456c2a143be8badb3521600e, type: 2}
+  - {fileID: 11400000, guid: ec4dd0bf77e13c246acc7b59a3061d49, type: 2}
+  - {fileID: 11400000, guid: e605aa0f05b5f4547a5da36379d924e9, type: 2}
+  - {fileID: 11400000, guid: 81f4b753219ca0d4dabef6425720780d, type: 2}
+  - {fileID: 11400000, guid: 79ace569c02cdc9479be3615f06b61f5, type: 2}
+  - {fileID: 11400000, guid: 707344bcb43bad94fab77dcb35211611, type: 2}
+  - {fileID: 11400000, guid: 488f041ae168cdc46a10057399e5895f, type: 2}
+  - {fileID: 11400000, guid: f95f6effdeea71748a5ca50a338434c8, type: 2}
   - {fileID: 11400000, guid: c606a494832b309438569d02f7fa2654, type: 2}
   - {fileID: 11400000, guid: 46f1a4988e3dbf04793846633e09de52, type: 2}
 --- !u!4 &1145537450
@@ -13452,6 +13459,12 @@ PrefabInstance:
       propertyPath: DefaultMonsterData.BaseHealth
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[3].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 6980abda02f3f46c7a9ceef8df7e4048,
+        type: 3}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
       propertyPath: m_LocalPosition.x

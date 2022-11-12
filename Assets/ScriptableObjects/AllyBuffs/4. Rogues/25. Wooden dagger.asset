@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
+  m_Name: 25. Wooden dagger
+  m_EditorClassIdentifier: 
+  Id: 24
+  Icon: {fileID: 21300000, guid: 93d97a4398691495c8a11dfc794b89e0, type: 3}
+  BuffName: Wooden dagger
+  BuffDescription: With enough experience, rogues will be able to steal some wooden
+    daggers (Aparently iron has not yet arrived to to the daggers industry). With
+    this daggers your rogues will cause 4 more base damage per second.
+  HeadsToUnlock: 500
+  Price: 1300
+  PriceMultiplier: 0
+  OneUseBuff: 1
+  Acquired: 0
+  NumberOfBuffs: 0
+  AllyId: 3
+  addToBaseDamage: 1
+  addToMultiplierDamage: 0
+  DamageAddToBase: 4
+  MultiplierToAdd: 0
