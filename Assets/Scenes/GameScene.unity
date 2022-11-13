@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -7265,6 +7265,14 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 707344bcb43bad94fab77dcb35211611, type: 2}
   - {fileID: 11400000, guid: 488f041ae168cdc46a10057399e5895f, type: 2}
   - {fileID: 11400000, guid: f95f6effdeea71748a5ca50a338434c8, type: 2}
+  - {fileID: 11400000, guid: acf0d08c0cc0e3c46a67a5a993a28679, type: 2}
+  - {fileID: 11400000, guid: c7a0c83058dcb1e4ab044d7caa0fbaaa, type: 2}
+  - {fileID: 11400000, guid: a64cf08ae675b274c9b56f5d33cbd880, type: 2}
+  - {fileID: 11400000, guid: d80e269c12d2e2042bbd84d5342f63be, type: 2}
+  - {fileID: 11400000, guid: 3cfe1befb52a896418bb39dd1873461f, type: 2}
+  - {fileID: 11400000, guid: 889965d7f00295a4eab8e983c3229414, type: 2}
+  - {fileID: 11400000, guid: 4f6d9ad344d92ab4e94e1052d7363e45, type: 2}
+  - {fileID: 11400000, guid: 83ede17438b10c041ba7bd4a314c3c0e, type: 2}
   - {fileID: 11400000, guid: c606a494832b309438569d02f7fa2654, type: 2}
   - {fileID: 11400000, guid: 46f1a4988e3dbf04793846633e09de52, type: 2}
 --- !u!4 &1145537450
@@ -13456,14 +13464,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
-      propertyPath: DefaultMonsterData.BaseHealth
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
-        type: 3}
-      propertyPath: DefaultAllies.Array.data[3].Icon
+      propertyPath: DefaultAllies.Array.data[4].Icon
       value: 
-      objectReference: {fileID: 21300000, guid: 6980abda02f3f46c7a9ceef8df7e4048,
+      objectReference: {fileID: 21300000, guid: dccb42b4691c341c3a63ad5d35a58e4e,
         type: 3}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
