@@ -13464,10 +13464,234 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
+      propertyPath: DefaultAllies.Array.size
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
       propertyPath: DefaultAllies.Array.data[4].Icon
       value: 
       objectReference: {fileID: 21300000, guid: dccb42b4691c341c3a63ad5d35a58e4e,
         type: 3}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].AllyId
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].AllyName
+      value: Witches
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: b91cf1dbd490c41aab12079d0311cdf5,
+        type: 3}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].BaseDamage
+      value: 80
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].DamageMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].Price
+      value: 4800
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].PriceMultiplier
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].Description
+      value: Wizardry is always usefull, they are always sacrificing animals for
+        their rituals. So what will they acomplish sacrificing monsters? You can
+        discover it with enough experience!
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].HeadsToUnlock
+      value: 1500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].AllyId
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].AllyName
+      value: Druids
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: e64001f43e5cc4ce5a2f9180a4134551,
+        type: 3}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].BaseDamage
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].DamageMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].Price
+      value: 8500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].PriceMultiplier
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].Description
+      value: Druids know that death is part of the mother nature and is inevitable...
+        But nothing says they cannot anticipate it for those monsters. With enough
+        experience you will be able to convince them of that.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].HeadsToUnlock
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].AllyId
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].AllyName
+      value: Gladiator
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 068f39a5261e94c84a25db700fa75af3,
+        type: 3}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].BaseDamage
+      value: 220
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].DamageMultiplier
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].Price
+      value: 12000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].PriceMultiplier
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].HeadsToUnlock
+      value: 3000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].AllyId
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 011a9b808bdd7493db5b80fcb0bcc68b,
+        type: 3}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].AllyName
+      value: Knight
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].BaseDamage
+      value: 360
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].DamageMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].Price
+      value: 20000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].PriceMultiplier
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].HeadsToUnlock
+      value: 4500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].AllyId
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].Icon
+      value: 
+      objectReference: {fileID: 21300000, guid: 9eca797aa990c44a0a1d11f290e1d63d,
+        type: 3}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].AllyName
+      value: Angel Warriors
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].BaseDamage
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].DamageMultiplier
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].Price
+      value: 36000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].PriceMultiplier
+      value: 1.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].HeadsToUnlock
+      value: 7000
+      objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
       propertyPath: m_LocalPosition.x
