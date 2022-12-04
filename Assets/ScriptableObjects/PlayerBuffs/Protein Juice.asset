@@ -19,12 +19,12 @@ MonoBehaviour:
     you will cook a better protein juice and each time you have one you gain 0.05
     damage per Attack!
   HeadsToUnlock: 1
-  Price: 20
+  Price: 10
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 0
+  NumberOfBuffs: 16
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 0.05
+  DamageAddToBase: 0.2
   MultiplierToAdd: 0

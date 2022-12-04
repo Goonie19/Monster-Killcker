@@ -148,6 +148,7 @@ MonoBehaviour:
   SlashAnim: {fileID: 0}
   Type: 0
   MouseMovementThreshold: 0.5
+  TimeToShowInfo: 0.1
 --- !u!114 &5191559904411888357
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -60,7 +60,10 @@ public class BuffButton : MonoBehaviour
         if (NumberOfBuffs)
             NumberOfBuffs.text = "x" + ally.NumberOfAllies.ToString();
 
-        ExperienceText.text = ally.GetPrice().ToString();
+        if(ally.GetPrice() % 1 == 0)
+            ExperienceText.text = ally.GetPrice().ToString();
+        else
+            ExperienceText.text = string.Format("{0:0.00}", ally.GetPrice());
 
         GetComponent<Button>().onClick.RemoveAllListeners();
 
@@ -86,7 +89,10 @@ public class BuffButton : MonoBehaviour
         if (NumberOfBuffs)
             NumberOfBuffs.text = "x" + b.NumberOfBuffs.ToString();
 
-        ExperienceText.text = b.GetPrice().ToString();
+        if(b.GetPrice() % 1 == 0)
+            ExperienceText.text = b.GetPrice().ToString();
+        else
+            ExperienceText.text = string.Format("{0:0.00}", b.GetPrice());
 
         GetComponent<Button>().onClick.RemoveAllListeners();
 
@@ -103,7 +109,10 @@ public class BuffButton : MonoBehaviour
             IconRender.sprite = _associatedBuff.Icon;
             IconShadow.sprite = _associatedBuff.Icon;
 
-            ExperienceText.text = _associatedBuff.GetPrice().ToString();
+            if (_associatedBuff.GetPrice() % 1 == 0)
+                ExperienceText.text = _associatedBuff.GetPrice().ToString();
+            else
+                ExperienceText.text = string.Format("{0:0.00}", _associatedBuff.GetPrice());
 
             BuffName.text = _associatedBuff.BuffName;
             if (NumberOfBuffs)
@@ -114,7 +123,10 @@ public class BuffButton : MonoBehaviour
             IconRender.sprite = _associatedAlly.Icon;
             IconShadow.sprite = _associatedAlly.Icon;
 
-            ExperienceText.text = _associatedAlly.GetPrice().ToString();
+            if(_associatedAlly.GetPrice() % 1 == 0)
+                ExperienceText.text = _associatedAlly.GetPrice().ToString();
+            else
+                ExperienceText.text = string.Format("{0:0.00}", _associatedAlly.GetPrice());
 
             BuffName.text = _associatedAlly.AllyName;
             if (NumberOfBuffs)

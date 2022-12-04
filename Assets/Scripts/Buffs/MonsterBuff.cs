@@ -9,7 +9,7 @@ public class MonsterBuff : Buff
     [Title("Monster parameters")]
     public bool addToHealth;
     public bool addToHeads;
-
+    public bool addToExperience;
     
     [ShowIf("addToHealth")]
     public float HealthAddToBase;
@@ -22,6 +22,11 @@ public class MonsterBuff : Buff
     public int HeadsToAdd;
     [ShowIf("addToHeads")]
     public int MultiplierAdd;
+
+    [ShowIf("addToExperience")]
+    public float BaseExperienceToAdd;
+    [ShowIf("addToExperience")]
+    public float MultiplierExperienceToAdd;
 
     public bool Unlocked
     {
@@ -61,13 +66,25 @@ public class MonsterBuff : Buff
         if (addToHeads)
             MonsterManager.Instance.BaseHeads += HeadsToAdd;
 
+        if(addToExperience)
+        {
+            MonsterManager.Instance.BaseExperience += BaseExperienceToAdd;
+            MonsterManager.Instance.ExperienceMultiplier += MultiplierExperienceToAdd;
+        }
+
         if (OneUseBuff)
         {
             Acquired = true;
             UIManager.Instance.DeleteMonsterBuff(Id);
         } else
         {
-            _actualPrice *= PriceMultiplier;
+            //In case the multiplier is so little, it adds 1 to the price
+            int newPrice = (int)(_actualPrice * PriceMultiplier);
+            int difference = newPrice - (int)_actualPrice;
+            if (difference == 0)
+                difference = 1;
+
+            _actualPrice += difference;
             _actualPrice = (int)_actualPrice;
 
             ++NumberOfBuffs;

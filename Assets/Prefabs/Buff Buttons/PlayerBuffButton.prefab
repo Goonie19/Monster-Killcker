@@ -354,8 +354,10 @@ MonoBehaviour:
   BuffName: {fileID: 5696241476414836148}
   NumberOfBuffs: {fileID: 5696241476100602075}
   ExperienceText: {fileID: 1613047425385201379}
+  SlashAnim: {fileID: 0}
   Type: 0
   MouseMovementThreshold: 0.5
+  TimeToShowInfo: 0.1
 --- !u!114 &6236971674223817524
 MonoBehaviour:
   m_ObjectHideFlags: 0

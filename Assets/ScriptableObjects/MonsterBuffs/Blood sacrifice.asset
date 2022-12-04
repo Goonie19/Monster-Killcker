@@ -21,10 +21,10 @@ MonoBehaviour:
     monsters will gain 1 extra point of Life.
   HeadsToUnlock: 15
   Price: 5
-  PriceMultiplier: 1.5
+  PriceMultiplier: 1.15
   OneUseBuff: 0
-  Acquired: 1
-  NumberOfBuffs: 3
+  Acquired: 0
+  NumberOfBuffs: 6
   addToHealth: 1
   addToHeads: 0
   HealthAddToBase: 1
