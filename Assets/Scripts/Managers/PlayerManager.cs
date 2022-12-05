@@ -19,14 +19,6 @@ public class PlayerManager : MonoBehaviour
             SaveDataManager.Instance.SetPlayerBaseDamage(_baseDamage);
         }
     }
-    public float DamageMultiplier { get => _damageMultiplier;
-        set
-        {
-            _damageMultiplier = value;
-
-            SaveDataManager.Instance.SetPlayerDamageMultiplier(_damageMultiplier);
-        }
-    }
 
     [Title("Buff List")]
     public List<Buff> buffs;
@@ -96,7 +88,6 @@ public class PlayerManager : MonoBehaviour
     }
 
     private float _baseDamage;
-    private float _damageMultiplier;
 
     private float _actualExperience;
     private int _actualHeads;
@@ -143,7 +134,6 @@ public class PlayerManager : MonoBehaviour
         ActualHeads = parameters.ActualHeads;
 
         _baseDamage = parameters.BaseDamage;
-        _damageMultiplier = parameters.DamageMultiplier;
 
         List<BuffData> buffsAcquired = SaveDataManager.Instance.GetBuffsAcquired();
 

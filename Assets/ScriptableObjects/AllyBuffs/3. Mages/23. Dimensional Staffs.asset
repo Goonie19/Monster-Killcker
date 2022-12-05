@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: A crack in the dimenssional walls is opening and some mage staffs
     are coming out of it. With enough experience the mages will be able to use them
     and cause 6 more base damage per second!
-  HeadsToUnlock: 30000
+  HeadsToUnlock: 90000
   Price: 80000
   PriceMultiplier: 0
   OneUseBuff: 1

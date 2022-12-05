@@ -19,7 +19,7 @@ MonoBehaviour:
     convice the clerics to pray for those knives. With enough experience you can
     make those clerics forget that those knives were stolen from them and cause a
     30% more damage with your rogues!
-  HeadsToUnlock: 120000
+  HeadsToUnlock: 900000
   Price: 400000
   PriceMultiplier: 0
   OneUseBuff: 1

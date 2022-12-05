@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Blacksmiths have discovered an amazing material... Steel! And
     with enough experience they can use it to craft new swords, providing swordsmen
     with 7 more damage per second.
-  HeadsToUnlock: 1500
+  HeadsToUnlock: 90000
   Price: 5000
   PriceMultiplier: 1.15
   OneUseBuff: 1

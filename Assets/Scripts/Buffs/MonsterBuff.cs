@@ -12,11 +12,11 @@ public class MonsterBuff : Buff
     public bool addToExperience;
     
     [ShowIf("addToHealth")]
-    public float HealthAddToBase;
+    public float HealthAddToBase = 0;
     [ShowIf("addToHealth")]
-    public float HealthAddToMultiplier;
+    public float MultiplyHealth = 1;
     [ShowIf("addToHealth")]
-    public float HealthAddToMultiplierEXP;
+    public float HealthAddToMultiplierEXP = 0;
 
     [ShowIf("addToHeads")]
     public int HeadsToAdd;
@@ -24,9 +24,9 @@ public class MonsterBuff : Buff
     public int MultiplierAdd;
 
     [ShowIf("addToExperience")]
-    public float BaseExperienceToAdd;
+    public float BaseExperienceToAdd = 0;
     [ShowIf("addToExperience")]
-    public float MultiplierExperienceToAdd;
+    public float MultiplyExperienceValue = 1;
 
     public bool Unlocked
     {
@@ -59,7 +59,7 @@ public class MonsterBuff : Buff
 
         if (addToHealth) {
             MonsterManager.Instance.BaseHealth += HealthAddToBase;
-            MonsterManager.Instance.HealthMultiplier += HealthAddToMultiplier;
+            MonsterManager.Instance.BaseHealth *= MultiplyHealth;
             MonsterManager.Instance.HealthPercentageExp += HealthAddToMultiplierEXP;
         }
 
@@ -69,7 +69,7 @@ public class MonsterBuff : Buff
         if(addToExperience)
         {
             MonsterManager.Instance.BaseExperience += BaseExperienceToAdd;
-            MonsterManager.Instance.ExperienceMultiplier += MultiplierExperienceToAdd;
+            MonsterManager.Instance.BaseExperience *= MultiplyExperienceValue;
         }
 
         if (OneUseBuff)

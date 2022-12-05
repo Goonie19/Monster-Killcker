@@ -57,7 +57,7 @@ public class BossBehaviour : MonoBehaviour
 
             sq.Play();
 
-            TakeDamage(PlayerManager.Instance.BaseDamage * PlayerManager.Instance.DamageMultiplier);
+            TakeDamage(PlayerManager.Instance.BaseDamage);
 
         }
     }

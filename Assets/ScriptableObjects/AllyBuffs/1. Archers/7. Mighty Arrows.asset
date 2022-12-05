@@ -19,7 +19,7 @@ MonoBehaviour:
     could pray for their god to turn the arrows of your archers into mighty arrows.
     With some experience you could teach them how to do it. This will make your arrows
     to cause 3 more of damage per second!
-  HeadsToUnlock: 14500
+  HeadsToUnlock: 90000
   Price: 30000
   PriceMultiplier: 1.15
   OneUseBuff: 1

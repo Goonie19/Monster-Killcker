@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: You've discovered that if you attach an spiky stone to the end
     of your arrows you actually increase the damage by a 25%!  But you need experience
     to know how to actually atack the stones to the sticks!
-  HeadsToUnlock: 150
+  HeadsToUnlock: 90000
   Price: 300
   PriceMultiplier: 1.15
   OneUseBuff: 1
@@ -28,4 +28,4 @@ MonoBehaviour:
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 0.25
+  MultiplierToAdd: 1.25

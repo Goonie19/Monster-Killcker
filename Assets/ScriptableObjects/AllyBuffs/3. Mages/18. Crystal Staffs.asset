@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: You found some magic cristals in a cave nearby and with enough
     experience you could attach some cristals to the mages staffs and make them a
     25% more powerfull!
-  HeadsToUnlock: 400
+  HeadsToUnlock: 90000
   Price: 1200
   PriceMultiplier: 0
   OneUseBuff: 1

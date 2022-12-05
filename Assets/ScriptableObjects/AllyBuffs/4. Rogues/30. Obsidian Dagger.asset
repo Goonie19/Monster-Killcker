@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Ok... The rogues have brought you an obsidian beta... Just don't
     ask how they got it. With the necessary experience you can create Obsidian daggers
     that cause a 25% more damage!
-  HeadsToUnlock: 30000
+  HeadsToUnlock: 900000
   Price: 120000
   PriceMultiplier: 0
   OneUseBuff: 1

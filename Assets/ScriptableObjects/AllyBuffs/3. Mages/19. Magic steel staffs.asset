@@ -19,7 +19,7 @@ MonoBehaviour:
     these new staffs for your mages. He says it will give them 5 more base damage
     per second. With the enough experience you will be able to convince the mages
     to buy their own staffs.
-  HeadsToUnlock: 1600
+  HeadsToUnlock: 90000
   Price: 3000
   PriceMultiplier: 0
   OneUseBuff: 1

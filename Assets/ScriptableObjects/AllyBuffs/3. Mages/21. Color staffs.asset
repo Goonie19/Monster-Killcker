@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Color have always existed, but they can be created or changed
     without you even noticing. This power can be achieved with these staffs that
     causes another 5 base damage with your mages.
-  HeadsToUnlock: 7000
+  HeadsToUnlock: 90000
   Price: 20000
   PriceMultiplier: 0
   OneUseBuff: 1

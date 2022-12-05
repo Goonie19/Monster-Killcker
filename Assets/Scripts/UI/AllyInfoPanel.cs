@@ -24,7 +24,6 @@ public class AllyInfoPanel : MonoBehaviour
         {
             StatsDisplay.gameObject.SetActive(true);
             BaseDamagePerSecondText.text = ally.BaseDamage.ToString();
-            MultiplierDamageText.text = ally.DamageMultiplier.ToString();
             TotalDamageText.text = ally.GetDamage().ToString();
         } else
             StatsDisplay.gameObject.SetActive(false);

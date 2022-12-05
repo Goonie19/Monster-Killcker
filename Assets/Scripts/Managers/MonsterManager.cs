@@ -20,16 +20,7 @@ public class MonsterManager : MonoBehaviour
             SaveDataManager.Instance.SetMonsterBaseHealth(_baseHealth);
         }
     }
-    public float HealthMultiplier
-    {
-        get => _healthMultiplier;
-        set
-        {
-            _healthMultiplier = value;
-
-            SaveDataManager.Instance.SetMonsterHealthMultiplier(_healthMultiplier);
-        }
-    }
+   
     public float HealthPercentageExp
     {
         get => _healthPercentageExp;
@@ -57,16 +48,6 @@ public class MonsterManager : MonoBehaviour
             SaveDataManager.Instance.SetMonsterBaseHeads(_baseHeads);
         }
     }
-    public float MultiplierHeads
-    {
-        get => _multiplierHeads;
-        set
-        {
-            _multiplierHeads = value;
-
-            SaveDataManager.Instance.SetMonsterMultiplierHeads(_multiplierHeads);
-        }
-    }
 
     [Title("Monster Experience Related Atributes")]
     public float BaseExperience
@@ -79,29 +60,16 @@ public class MonsterManager : MonoBehaviour
             SaveDataManager.Instance.SetMonsterBaseExperience(_baseExperience);
         }
     }
-    public float ExperienceMultiplier
-    {
-        get => _experienceMultiplier;
-        set
-        {
-            _experienceMultiplier = value;
-
-            SaveDataManager.Instance.SetMonsterExperienceMultiplier(_experienceMultiplier);
-        }
-    }
 
     [Title("Event for parameters initialized")]
     public UnityEvent OnParametersInitialized;
 
     private float _baseHealth;
-    private float _healthMultiplier;
     private float _healthPercentageExp;
 
     private int _baseHeads;
-    private float _multiplierHeads;
 
     private float _baseExperience;
-    private float _experienceMultiplier;
 
 
 
@@ -125,14 +93,11 @@ public class MonsterManager : MonoBehaviour
             parameters = GameManager.Instance.DefaultMonsterData;
 
         _baseHealth = parameters.BaseHealth;
-        _healthMultiplier = parameters.HealthMultiplier;
         _healthPercentageExp = parameters.HealthPercentageMultiplier;
 
         _baseHeads = parameters.BaseHeads;
-        _multiplierHeads = parameters.MultiplierHeads;
 
         _baseExperience = parameters.BaseExperience;
-        _experienceMultiplier = parameters.ExperienceMultiplier;
 
         OnParametersInitialized?.Invoke();
         UIManager.Instance.UpdateHealthBar(GetHealth());
@@ -140,12 +105,12 @@ public class MonsterManager : MonoBehaviour
 
     public float GetHealth()
     {
-        return BaseHealth * HealthMultiplier;
+        return BaseHealth;
     }
 
     public float GetExperience()
     {
-        return BaseExperience * ExperienceMultiplier + (GetHealth() * HealthPercentageExp);
+        return BaseExperience + (GetHealth() * HealthPercentageExp);
     }
 
     public int GetHeads()

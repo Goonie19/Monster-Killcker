@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Rogues have stolen the knifes clerics used to cut the holy bread
     in a cathedral nearby... For some reason it causes 10 more base damage per second!
     With enough experience they can get used to this knives!
-  HeadsToUnlock: 60000
+  HeadsToUnlock: 900000
   Price: 200000
   PriceMultiplier: 0
   OneUseBuff: 1

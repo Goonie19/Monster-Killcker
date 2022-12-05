@@ -94,7 +94,7 @@ public class SaveDataManager : MonoBehaviour
 
         if (index == -1)
         {
-            _saveData.allies.Add(new AlliesData(AllyId, 0, AllyManager.Instance.allies[AllyId].BaseDamage, AllyManager.Instance.allies[AllyId].DamageMultiplier,
+            _saveData.allies.Add(new AlliesData(AllyId, 0, AllyManager.Instance.allies[AllyId].BaseDamage,
                 AllyManager.Instance.allies[AllyId].Price, AllyManager.Instance.allies[AllyId].PriceMultiplier));
         } else
         {
@@ -102,7 +102,6 @@ public class SaveDataManager : MonoBehaviour
             _saveData.allies[index].Price = AllyManager.Instance.allies[AllyId].GetPrice();
             _saveData.allies[index].PriceMultiplier = AllyManager.Instance.allies[AllyId].PriceMultiplier;
             _saveData.allies[index].BaseDamage = AllyManager.Instance.allies[AllyId].BaseDamage;
-            _saveData.allies[index].DamageMultiplier = AllyManager.Instance.allies[AllyId].DamageMultiplier;
         }
 
     }

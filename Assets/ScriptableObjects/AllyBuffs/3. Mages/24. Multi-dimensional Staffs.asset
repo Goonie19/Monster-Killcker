@@ -17,7 +17,7 @@ MonoBehaviour:
   BuffName: Multi-dimensional staffs
   BuffDescription: Look these are the same as the last ones... but they are MULTI
     dimensional. That's why they cause a 30% more damage!
-  HeadsToUnlock: 70000
+  HeadsToUnlock: 90000
   Price: 150000
   PriceMultiplier: 0
   OneUseBuff: 1

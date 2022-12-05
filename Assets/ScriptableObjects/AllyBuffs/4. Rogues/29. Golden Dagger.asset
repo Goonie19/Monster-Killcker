@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: The rogues have... look don't ask but now you have tones of gold.
     You don't believe in gold value so you can melt it and use it to create daggers
     that cause 8 more base damage per second!
-  HeadsToUnlock: 15000
+  HeadsToUnlock: 900000
   Price: 50000
   PriceMultiplier: 0
   OneUseBuff: 1

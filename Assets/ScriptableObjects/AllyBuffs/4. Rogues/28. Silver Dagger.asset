@@ -17,7 +17,7 @@ MonoBehaviour:
   BuffName: Silver Dagger
   BuffDescription: The rogues that are helping you have stolen a beta of silver and
     with enough experience you can gain 25% more of damage with your rogues.
-  HeadsToUnlock: 7000
+  HeadsToUnlock: 900000
   Price: 20000
   PriceMultiplier: 0
   OneUseBuff: 1

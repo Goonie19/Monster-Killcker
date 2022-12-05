@@ -20,15 +20,18 @@ MonoBehaviour:
     will give you more experience in how to kill monsters I supose... With this sacrifice
     monsters will gain 1 extra point of Life.
   HeadsToUnlock: 15
-  Price: 5
+  Price: 15
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 6
+  NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 0
-  HealthAddToBase: 1
-  HealthAddToMultiplier: 0
+  addToExperience: 0
+  HealthAddToBase: 5
+  MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
   MultiplierAdd: 0
+  BaseExperienceToAdd: 0
+  MultiplyExperienceValue: 1

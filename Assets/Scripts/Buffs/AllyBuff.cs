@@ -54,7 +54,7 @@ public class AllyBuff : Buff
         if (addToBaseDamage)
             AllyManager.Instance.allies[i].BaseDamage += DamageAddToBase;
         if(addToMultiplierDamage)
-            AllyManager.Instance.allies[i].DamageMultiplier += MultiplierToAdd;
+            AllyManager.Instance.allies[i].BaseDamage *= MultiplierToAdd;
         
         
 

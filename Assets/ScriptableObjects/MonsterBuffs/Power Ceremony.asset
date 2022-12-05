@@ -15,18 +15,18 @@ MonoBehaviour:
   Id: 52
   Icon: {fileID: 21300000, guid: c11d2849b15c64c11a6673cb63329c93, type: 3}
   BuffName: Power Ceremony
-  BuffDescription: 
+  BuffDescription: Now you will double the base life of the monsters!
   HeadsToUnlock: 650
   Price: 150
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 0
   addToExperience: 0
   HealthAddToBase: 0
-  HealthAddToMultiplier: 0.2
+  HealthAddToMultiplier: 1
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
   MultiplierAdd: 0

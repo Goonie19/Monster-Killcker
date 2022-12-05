@@ -19,7 +19,6 @@ public class AllyType
 
     [Title("Ally Damage Parameters")]
     public float BaseDamage;
-    public float DamageMultiplier;
 
     [Title("Ally Price Parameters")]
     public float Price;
@@ -114,7 +113,7 @@ public class AllyType
 
     public float GetDamage()
     {
-        return BaseDamage * DamageMultiplier * NumberOfAllies;
+        return BaseDamage * NumberOfAllies;
     }
 
     public void SetSilentNumberOfAllies(int number)

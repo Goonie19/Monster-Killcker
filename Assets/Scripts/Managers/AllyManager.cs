@@ -45,7 +45,6 @@ public class AllyManager : MonoBehaviour
             
             allies[index].SetSilentNumberOfAllies(data.NumberOfAllies);
             allies[index].BaseDamage = data.BaseDamage;
-            allies[index].DamageMultiplier = data.DamageMultiplier;
             allies[index].Price = data.Price;
             allies[index].PriceMultiplier = data.PriceMultiplier;
             allies[index].SetSilentUnlocked(false);
@@ -76,7 +75,7 @@ public class AllyManager : MonoBehaviour
             if(canAttack)
             {
                 foreach (AllyType ally in allies)
-                    damage += ally.BaseDamage * ally.DamageMultiplier * ally.NumberOfAllies;
+                    damage += ally.GetDamage();
 
                 if (!BossManager.Instance.InBossFight)
                 {

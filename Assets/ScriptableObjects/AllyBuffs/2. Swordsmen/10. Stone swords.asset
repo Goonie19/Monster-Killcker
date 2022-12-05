@@ -19,7 +19,7 @@ MonoBehaviour:
     to craft some swords with stones and they will now be able to cause a 25% more
     damage per second. They can't pay their bills but they are absolutely learning
     a lot with you.
-  HeadsToUnlock: 300
+  HeadsToUnlock: 90000
   Price: 800
   PriceMultiplier: 1.15
   OneUseBuff: 1

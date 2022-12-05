@@ -317,8 +317,8 @@ public class UIManager : MonoBehaviour
         }
 
         PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
-        PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
-        PlayerTotalDamageText.text = (PlayerManager.Instance.DamageMultiplier * PlayerManager.Instance.BaseDamage).ToString();
+        //PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
+        PlayerTotalDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
 
     }
 
