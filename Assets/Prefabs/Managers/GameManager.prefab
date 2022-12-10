@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec87ce28ccaa42d4bb3c646da39b9a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartAgain: 0
+  StartAgain: 1
   MenuSceneName: MainMenu
   GameSceneName: GameScene
   DefaultPlayerData:
@@ -71,122 +71,112 @@ MonoBehaviour:
     Icon: {fileID: 21300000, guid: 94ac10234ef1c421aaf199c5b9844220, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 0.25
-    DamageMultiplier: 1
     Price: 20
     PriceMultiplier: 1.15
     Description: Archer assotiation brings you the possibility to hire some Archers
       in exchange for experience. Who needs money when you can be an unpaid intern?
-    HeadsToUnlock: 3
+    HeadsToUnlock: 2
   - AllyId: 1
     AllyName: Swords man
     AllySprite: {fileID: 21300000, guid: 45048440b06aada4ebf5be5d13aeab3b, type: 3}
     Icon: {fileID: 21300000, guid: 21cd4c9a521fb4aee958351c51a5c332, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 1
-    DamageMultiplier: 1
     Price: 100
     PriceMultiplier: 1.15
     Description: Men and women known for their skills as swordsmen are willing to
       help you in exchange for monet... Of course you won't pay them, you will give
       them experience which is more valuable.
-    HeadsToUnlock: 50
+    HeadsToUnlock: 70
   - AllyId: 2
     AllyName: Mage
     AllySprite: {fileID: 21300000, guid: cd51bb6f1e053994db965c9036580899, type: 3}
     Icon: {fileID: 21300000, guid: 535bf74c26d934953896a3a89298c314, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 5
-    DamageMultiplier: 1
-    Price: 600
+    Price: 300
     PriceMultiplier: 1.15
     Description: Some mages in the zone are going to help you destroy the monsters,
       those creatures are ugly and are covering the beautiful views of their houses.
       So they must die!
-    HeadsToUnlock: 150
+    HeadsToUnlock: 200
   - AllyId: 3
     AllyName: Rogue
     AllySprite: {fileID: 21300000, guid: 3387debc1caf1dd4d95fea2167f6fd0a, type: 3}
     Icon: {fileID: 21300000, guid: 6980abda02f3f46c7a9ceef8df7e4048, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 20
-    DamageMultiplier: 1
-    Price: 1200
+    Price: 800
     PriceMultiplier: 1.15
     Description: Some thieves and rogues heard about your cause and wanted to help...
       if you pay them. Of course you convince them to accept the experience only
       and learn a lot with you! For some reason your wallet feels lighter, but that
       doesn't matter.
-    HeadsToUnlock: 300
+    HeadsToUnlock: 1500
   - AllyId: 4
     AllyName: Paladin
     AllySprite: {fileID: 21300000, guid: 1d1dd2c630f4d6d4eb2f8853b85ad4ea, type: 3}
     Icon: {fileID: 21300000, guid: dccb42b4691c341c3a63ad5d35a58e4e, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 40
-    DamageMultiplier: 1
     Price: 2400
     PriceMultiplier: 1.15
     Description: Clerics are starting to hate those monsters as much as you do cause...
       well because they are there. They have started to use actual weapons and have
       turned into holy warriors! They are going to help you so they can kill monsters
       with you!
-    HeadsToUnlock: 600
+    HeadsToUnlock: 2500
   - AllyId: 5
     AllyName: Witches
     AllySprite: {fileID: 0}
     Icon: {fileID: 21300000, guid: b91cf1dbd490c41aab12079d0311cdf5, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 80
-    DamageMultiplier: 1
     Price: 4800
     PriceMultiplier: 1.15
     Description: Wizardry is always usefull, they are always sacrificing animals
       for their rituals. So what will they acomplish sacrificing monsters? You can
       discover it with enough experience!
-    HeadsToUnlock: 1500
+    HeadsToUnlock: 999999
   - AllyId: 6
     AllyName: Druids
     AllySprite: {fileID: 0}
     Icon: {fileID: 21300000, guid: e64001f43e5cc4ce5a2f9180a4134551, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 160
-    DamageMultiplier: 1
     Price: 8500
     PriceMultiplier: 1.15
     Description: Druids know that death is part of the mother nature and is inevitable...
       But nothing says they cannot anticipate it for those monsters. With enough
       experience you will be able to convince them of that.
-    HeadsToUnlock: 2000
+    HeadsToUnlock: 999999
   - AllyId: 7
     AllyName: Gladiator
     AllySprite: {fileID: 0}
     Icon: {fileID: 21300000, guid: 068f39a5261e94c84a25db700fa75af3, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 220
-    DamageMultiplier: 1.15
     Price: 12000
     PriceMultiplier: 1.15
     Description: 
-    HeadsToUnlock: 3000
+    HeadsToUnlock: 9999999
   - AllyId: 8
     AllyName: Knight
     AllySprite: {fileID: 0}
     Icon: {fileID: 21300000, guid: 011a9b808bdd7493db5b80fcb0bcc68b, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 360
-    DamageMultiplier: 1
     Price: 20000
     PriceMultiplier: 1.15
     Description: 
-    HeadsToUnlock: 4500
+    HeadsToUnlock: 99999999
   - AllyId: 9
     AllyName: Angel Warriors
     AllySprite: {fileID: 0}
     Icon: {fileID: 21300000, guid: 9eca797aa990c44a0a1d11f290e1d63d, type: 3}
     AllyImageReference: {fileID: 0}
     BaseDamage: 500
-    DamageMultiplier: 1
     Price: 36000
     PriceMultiplier: 1.15
     Description: 
-    HeadsToUnlock: 7000
+    HeadsToUnlock: 9999999

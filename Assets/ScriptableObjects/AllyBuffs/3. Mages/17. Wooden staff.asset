@@ -19,8 +19,8 @@ MonoBehaviour:
     experience you could craft some magic staffs for your magues that makes them
     cause 3 more damage per second... Maybe makes them forget that you won't pay
     them.
-  HeadsToUnlock: 90000
-  Price: 600
+  HeadsToUnlock: 1400
+  Price: 850
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

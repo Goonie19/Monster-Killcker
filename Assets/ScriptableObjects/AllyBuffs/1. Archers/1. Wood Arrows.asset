@@ -19,10 +19,10 @@ MonoBehaviour:
     and can start shooting arrows to the enemy! An awesome technological advance
     that will provide your archer 0.25 more damage per second!
   HeadsToUnlock: 100
-  Price: 500
+  Price: 200
   PriceMultiplier: 1.15
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   AllyId: 0
   addToBaseDamage: 1

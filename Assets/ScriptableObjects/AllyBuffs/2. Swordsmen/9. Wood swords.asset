@@ -20,13 +20,13 @@ MonoBehaviour:
     can teach them what a wood sword can do to those monsters and it will add 2 more
     damage per second to your swordsmen!
   HeadsToUnlock: 350
-  Price: 900
+  Price: 500
   PriceMultiplier: 1.15
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   AllyId: 1
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 2
-  MultiplierToAdd: 0
+  DamageAddToBase: 1
+  MultiplierToAdd: 2

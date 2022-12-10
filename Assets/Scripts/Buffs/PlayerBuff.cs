@@ -13,7 +13,7 @@ public class PlayerBuff : Buff {
     [ShowIf("addToBaseDamage")]
     public float DamageAddToBase = 0;
     [ShowIf("addToMultiplierDamage")]
-    public float MultiplierToAdd = 1;
+    public float MultiplierDamage = 1;
 
     public bool Unlocked
     {
@@ -46,7 +46,7 @@ public class PlayerBuff : Buff {
         if (addToBaseDamage)
             PlayerManager.Instance.BaseDamage += DamageAddToBase;
         if (addToMultiplierDamage)
-            PlayerManager.Instance.BaseDamage *= MultiplierToAdd;
+            PlayerManager.Instance.BaseDamage *= MultiplierDamage;
 
         if (OneUseBuff)
         {

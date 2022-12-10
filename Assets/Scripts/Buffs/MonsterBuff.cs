@@ -21,7 +21,7 @@ public class MonsterBuff : Buff
     [ShowIf("addToHeads")]
     public int HeadsToAdd;
     [ShowIf("addToHeads")]
-    public int MultiplierAdd;
+    public int MultiplierHeads;
 
     [ShowIf("addToExperience")]
     public float BaseExperienceToAdd = 0;

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: Blood sacrifice
+  m_Name: 50. Blood sacrifice
   m_EditorClassIdentifier: 
   Id: 50
   Icon: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
@@ -18,20 +18,21 @@ MonoBehaviour:
   BuffDescription: Sacrifice one living creature and use the heads you have collected
     to make the monsters more powerfull. Why would you want to do that? Well... They
     will give you more experience in how to kill monsters I supose... With this sacrifice
-    monsters will gain 1 extra point of Life.
+    monsters will gain 5 extra point of Life but you will gain 3 more experience
+    points for every monster.
   HeadsToUnlock: 15
   Price: 15
-  PriceMultiplier: 1.15
+  PriceMultiplier: 1.2
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 0
-  addToExperience: 0
+  addToExperience: 1
   HealthAddToBase: 5
   MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
-  MultiplierAdd: 0
-  BaseExperienceToAdd: 0
+  MultiplierHeads: 0
+  BaseExperienceToAdd: 2
   MultiplyExperienceValue: 1

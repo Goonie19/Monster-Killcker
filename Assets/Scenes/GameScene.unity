@@ -7070,6 +7070,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 022279866062ec4469c4f034064b45a8, type: 2}
   - {fileID: 11400000, guid: 6f8cda0d9fc821e4f9abb6f25a8ee6dc, type: 2}
   - {fileID: 11400000, guid: 46f1a4988e3dbf04793846633e09de52, type: 2}
+  - {fileID: 11400000, guid: 0cab4f77d92076e4ba217a3758d76396, type: 2}
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0
@@ -9069,7 +9070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossHealth: 1000000
-  HeadsToUnlock: 500
+  HeadsToUnlock: 5000
   NumberOfAlliesToKill: 10
   BossFightTime: 60
   NumberOfAttacks: 6
@@ -13257,33 +13258,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
-      propertyPath: StartAgain
-      value: 1
+      propertyPath: DefaultAllies.Array.data[2].HeadsToUnlock
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
       propertyPath: DefaultAllies.Array.data[3].HeadsToUnlock
-      value: 600
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
       propertyPath: DefaultAllies.Array.data[4].HeadsToUnlock
-      value: 2000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
-        type: 3}
-      propertyPath: DefaultAllies.Array.data[6].HeadsToUnlock
-      value: 4500
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
-        type: 3}
-      propertyPath: DefaultAllies.Array.data[8].HeadsToUnlock
-      value: 9000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
-        type: 3}
-      propertyPath: DefaultAllies.Array.data[9].HeadsToUnlock
-      value: 15000
+      value: 3000
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}

@@ -10,26 +10,26 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: Head Study
+  m_Name: 51. Head Study
   m_EditorClassIdentifier: 
   Id: 51
   Icon: {fileID: 21300000, guid: a4ffdf3090d844d40856024a95e484bf, type: 3}
   BuffName: Head Study
   BuffDescription: You decide to study the heads you have. Doing this will make you
     get 10 more of base experience from monsters
-  HeadsToUnlock: 200
-  Price: 100
-  PriceMultiplier: 1
+  HeadsToUnlock: 150
+  Price: 50
+  PriceMultiplier: 1.2
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   addToHealth: 0
   addToHeads: 0
   addToExperience: 1
   HealthAddToBase: 0
-  HealthAddToMultiplier: 0
+  MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
-  MultiplierAdd: 0
+  MultiplierHeads: 0
   BaseExperienceToAdd: 10
-  MultiplierExperienceToAdd: 0
+  MultiplyExperienceValue: 1
