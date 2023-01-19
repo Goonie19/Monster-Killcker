@@ -13259,17 +13259,7 @@ PrefabInstance:
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
       propertyPath: DefaultAllies.Array.data[2].HeadsToUnlock
-      value: 300
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
-        type: 3}
-      propertyPath: DefaultAllies.Array.data[3].HeadsToUnlock
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
-        type: 3}
-      propertyPath: DefaultAllies.Array.data[4].HeadsToUnlock
-      value: 3000
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}

@@ -87,7 +87,7 @@ MonoBehaviour:
     Description: Men and women known for their skills as swordsmen are willing to
       help you in exchange for monet... Of course you won't pay them, you will give
       them experience which is more valuable.
-    HeadsToUnlock: 70
+    HeadsToUnlock: 50
   - AllyId: 2
     AllyName: Mage
     AllySprite: {fileID: 21300000, guid: cd51bb6f1e053994db965c9036580899, type: 3}
@@ -99,7 +99,7 @@ MonoBehaviour:
     Description: Some mages in the zone are going to help you destroy the monsters,
       those creatures are ugly and are covering the beautiful views of their houses.
       So they must die!
-    HeadsToUnlock: 200
+    HeadsToUnlock: 300
   - AllyId: 3
     AllyName: Rogue
     AllySprite: {fileID: 21300000, guid: 3387debc1caf1dd4d95fea2167f6fd0a, type: 3}
@@ -112,7 +112,7 @@ MonoBehaviour:
       if you pay them. Of course you convince them to accept the experience only
       and learn a lot with you! For some reason your wallet feels lighter, but that
       doesn't matter.
-    HeadsToUnlock: 1500
+    HeadsToUnlock: 1000
   - AllyId: 4
     AllyName: Paladin
     AllySprite: {fileID: 21300000, guid: 1d1dd2c630f4d6d4eb2f8853b85ad4ea, type: 3}
@@ -125,7 +125,7 @@ MonoBehaviour:
       well because they are there. They have started to use actual weapons and have
       turned into holy warriors! They are going to help you so they can kill monsters
       with you!
-    HeadsToUnlock: 2500
+    HeadsToUnlock: 3000
   - AllyId: 5
     AllyName: Witches
     AllySprite: {fileID: 0}

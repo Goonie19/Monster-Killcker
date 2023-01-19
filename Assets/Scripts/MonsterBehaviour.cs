@@ -15,6 +15,8 @@ public class MonsterBehaviour : MonoBehaviour
 
     private bool _dead;
 
+    private bool _autoClick;
+
     public float ActualHealth
     {
         get => _actualHealth;
@@ -178,4 +180,30 @@ public class MonsterBehaviour : MonoBehaviour
             _speakSpawned = false;
         });
     }
+
+    #region TESTING
+    [ContextMenu("Start AutoClick")]
+    public void StartAutoClick()
+    {
+        _autoClick = true;
+        StartCoroutine(AutoClick());
+    }
+
+    IEnumerator AutoClick()
+    {
+        while (_autoClick)
+        {
+            ClickMonster();
+
+            yield return new WaitForSeconds(0.25f);
+        }
+    }
+
+    [ContextMenu("Stop AutoClick")]
+    public void StopAutoClick()
+    {
+        _autoClick = false;
+    }
+
+    #endregion
 }

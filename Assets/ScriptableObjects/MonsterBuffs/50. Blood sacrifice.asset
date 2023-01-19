@@ -18,14 +18,14 @@ MonoBehaviour:
   BuffDescription: Sacrifice one living creature and use the heads you have collected
     to make the monsters more powerfull. Why would you want to do that? Well... They
     will give you more experience in how to kill monsters I supose... With this sacrifice
-    monsters will gain 5 extra point of Life but you will gain 3 more experience
+    monsters will gain 5 extra point of Life but you will gain 2 more experience
     points for every monster.
   HeadsToUnlock: 15
   Price: 15
   PriceMultiplier: 1.2
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 0
+  NumberOfBuffs: 7
   addToHealth: 1
   addToHeads: 0
   addToExperience: 1
