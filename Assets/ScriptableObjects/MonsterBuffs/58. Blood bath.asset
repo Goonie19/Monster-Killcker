@@ -10,26 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 53. Bloody Study
+  m_Name: 58. Blood bath
   m_EditorClassIdentifier: 
-  Id: 53
-  Icon: {fileID: 21300000, guid: 62ccc79667caf4300ad03d3cf8f40523, type: 3}
-  BuffName: Bloody Study
-  BuffDescription: A 10% of the monster's total life points will transform into heads
-    and experience. This will also duplicate monsters life points.
-  HeadsToUnlock: 1900
-  Price: 1000
+  Id: 58
+  Icon: {fileID: 0}
+  BuffName: Blood bath
+  BuffDescription: Prepare a hot bath with the blood spilled in this endless war
+    and make those monsters give you 3 times the experience they give you and make
+    them drop 20% more experience from the life they have... although they will triplicate
+    the health they have now.
+  HeadsToUnlock: 0
+  Price: 0
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 0
-  addToExperience: 0
+  addToExperience: 1
   HealthAddToBase: 0
   MultiplyHealth: 2
-  HealthAddToMultiplierEXP: 0.05
+  HealthAddToMultiplierEXP: 0.2
   HeadsToAdd: 0
   MultiplierHeads: 0
   BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 1
+  MultiplyExperienceValue: 3

@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 53. Bloody Study
+  m_Name: 59. Ultimate Deadpool
   m_EditorClassIdentifier: 
-  Id: 53
-  Icon: {fileID: 21300000, guid: 62ccc79667caf4300ad03d3cf8f40523, type: 3}
-  BuffName: Bloody Study
-  BuffDescription: A 10% of the monster's total life points will transform into heads
-    and experience. This will also duplicate monsters life points.
-  HeadsToUnlock: 1900
-  Price: 1000
+  Id: 59
+  Icon: {fileID: 0}
+  BuffName: Ultimate deadpool
+  BuffDescription: There is an ultimate sacrifice which will triplicate the experience
+    monster's give you, duplicate the heads they drop and quintuple the life of this
+    monsters. Therte is no buff for those monsters like this one.
+  HeadsToUnlock: 0
+  Price: 0
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   addToHealth: 1
-  addToHeads: 0
-  addToExperience: 0
+  addToHeads: 1
+  addToExperience: 1
   HealthAddToBase: 0
-  MultiplyHealth: 2
-  HealthAddToMultiplierEXP: 0.05
+  MultiplyHealth: 5
+  HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
-  MultiplierHeads: 0
+  MultiplierHeads: 2
   BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 1
+  MultiplyExperienceValue: 3

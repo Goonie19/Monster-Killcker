@@ -64,8 +64,10 @@ public class MonsterBuff : Buff
         }
 
         if (addToHeads)
+        {
             MonsterManager.Instance.BaseHeads += HeadsToAdd;
-
+            MonsterManager.Instance.BaseHeads *= MultiplierHeads;
+        }
         if(addToExperience)
         {
             MonsterManager.Instance.BaseExperience += BaseExperienceToAdd;
