@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
+  m_Name: 80. Truth
+  m_EditorClassIdentifier: 
+  Id: 80
+  Icon: {fileID: 0}
+  BuffName: Truth
+  BuffDescription: You may loose a part of your body, but you will become 10% stronger
+    than before. Are you experienced enough to see the Truth?
+  HeadsToUnlock: 0
+  Price: 0
+  PriceMultiplier: 0
+  OneUseBuff: 1
+  Acquired: 0
+  NumberOfBuffs: 0
+  addToBaseDamage: 0
+  addToMultiplierDamage: 1
+  DamageAddToBase: 0
+  MultiplierDamage: 1.1

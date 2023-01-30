@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
+  m_Name: 81. Awakening
+  m_EditorClassIdentifier: 
+  Id: 81
+  Icon: {fileID: 0}
+  BuffName: Awakening
+  BuffDescription: You discovered your true self... It's pretty disgusting and you
+    are full of hatred for thes harmless monsters. Embracing this part of you will
+    make you cause 30 more damage.
+  HeadsToUnlock: 0
+  Price: 0
+  PriceMultiplier: 0
+  OneUseBuff: 1
+  Acquired: 0
+  NumberOfBuffs: 0
+  addToBaseDamage: 1
+  addToMultiplierDamage: 0
+  DamageAddToBase: 30
+  MultiplierDamage: 1
