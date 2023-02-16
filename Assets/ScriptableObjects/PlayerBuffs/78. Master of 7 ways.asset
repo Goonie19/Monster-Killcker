@@ -17,7 +17,7 @@ MonoBehaviour:
   BuffName: Master of 7 ways
   BuffDescription: 7 ways to create destruction and despair... and to not pay your
     workers a single coin. With this knowledge you'll be able to make 150 more damage.
-  HeadsToUnlock: 0
+  HeadsToUnlock: 800
   Price: 0
   PriceMultiplier: 0
   OneUseBuff: 1

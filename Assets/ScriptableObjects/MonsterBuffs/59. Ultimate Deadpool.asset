@@ -18,8 +18,8 @@ MonoBehaviour:
   BuffDescription: There is an ultimate sacrifice which will triplicate the experience
     monster's give you, duplicate the heads they drop and quintuple the life of this
     monsters. Therte is no buff for those monsters like this one.
-  HeadsToUnlock: 0
-  Price: 0
+  HeadsToUnlock: 6000
+  Price: 3000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

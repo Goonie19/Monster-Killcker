@@ -10,16 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
-  m_Name: 77. Heroic fury
+  m_Name: 86. True names
   m_EditorClassIdentifier: 
-  Id: 77
+  Id: 86
   Icon: {fileID: 0}
-  BuffName: Heroic fury
-  BuffDescription: 'You have killed so many monsters and yet it''s no use, they keep
-    reappearing... With enough experience you can use this frustration and anger
-    towards becoming stronger and be 25% stronger. '
-  HeadsToUnlock: 700
-  Price: 0
+  BuffName: True names
+  BuffDescription: Teh things surrounding you are whispering you their true names.
+    With enough experience you can gain the power those names have and you will increase
+    your power 15% more power.
+  HeadsToUnlock: 540
+  Price: 750
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
@@ -27,4 +27,4 @@ MonoBehaviour:
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierDamage: 1.25
+  MultiplierDamage: 1.15

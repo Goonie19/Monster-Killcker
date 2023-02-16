@@ -3,10 +3,10 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class BuffButton : MonoBehaviour
-{
+public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler {
     public Image IconRender;
     public Image IconShadow;
 
@@ -225,6 +225,16 @@ public class BuffButton : MonoBehaviour
     void DisableDamage()
     {
         SlashAnim.gameObject.SetActive(false);
+    }
+
+    public void OnPointerExit(PointerEventData eventData)
+    {
+        OnButton(false);
+    }
+
+    public void OnPointerEnter(PointerEventData eventData)
+    {
+        OnButton(true);
     }
 
     #endregion

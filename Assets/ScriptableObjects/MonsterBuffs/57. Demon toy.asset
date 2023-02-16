@@ -18,8 +18,8 @@ MonoBehaviour:
   BuffDescription: Monsters and demons play a lot. It tires them up but make them
     stronger, what will give you twice the experience for killing them... summon
     this toy for those monsters using your heads.
-  HeadsToUnlock: 0
-  Price: 0
+  HeadsToUnlock: 3000
+  Price: 1400
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

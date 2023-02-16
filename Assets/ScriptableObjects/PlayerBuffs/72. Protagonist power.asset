@@ -17,11 +17,11 @@ MonoBehaviour:
   BuffName: Protagonist power
   BuffDescription: Your experience as the protagonist of this massacre has given
     you the possibility to cause 2 more damage per click!
-  HeadsToUnlock: 600
+  HeadsToUnlock: 330
   Price: 1500
   PriceMultiplier: 1
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0

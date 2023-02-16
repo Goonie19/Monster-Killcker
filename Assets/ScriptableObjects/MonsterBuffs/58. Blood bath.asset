@@ -19,8 +19,8 @@ MonoBehaviour:
     and make those monsters give you 3 times the experience they give you and make
     them drop 20% more experience from the life they have... although they will triplicate
     the health they have now.
-  HeadsToUnlock: 0
-  Price: 0
+  HeadsToUnlock: 3500
+  Price: 2000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

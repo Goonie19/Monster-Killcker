@@ -7068,9 +7068,30 @@ MonoBehaviour:
   - {fileID: 11400000, guid: c606a494832b309438569d02f7fa2654, type: 2}
   - {fileID: 11400000, guid: e85b70cb0958e18459806e2ae4b43c99, type: 2}
   - {fileID: 11400000, guid: 022279866062ec4469c4f034064b45a8, type: 2}
-  - {fileID: 11400000, guid: 6f8cda0d9fc821e4f9abb6f25a8ee6dc, type: 2}
+  - {fileID: 11400000, guid: 192047e07914c794d9c4c2f5759affb0, type: 2}
+  - {fileID: 11400000, guid: d058494f82f2d3744a04cdabacaea782, type: 2}
+  - {fileID: 11400000, guid: 16886f8c0b82e38489eccbf2752fa01d, type: 2}
+  - {fileID: 11400000, guid: 1ad379530b6ad344ba35f596ee61a924, type: 2}
+  - {fileID: 11400000, guid: 8c0d419d9d03e5040bbf074b9c80ff13, type: 2}
+  - {fileID: 11400000, guid: a9b2d194fb14f3d41a4bdae2cd3e73f5, type: 2}
+  - {fileID: 11400000, guid: 95ac7e3d5ec62d74f8b5f88a59acb632, type: 2}
   - {fileID: 11400000, guid: 46f1a4988e3dbf04793846633e09de52, type: 2}
+  - {fileID: 11400000, guid: 6f8cda0d9fc821e4f9abb6f25a8ee6dc, type: 2}
   - {fileID: 11400000, guid: 0cab4f77d92076e4ba217a3758d76396, type: 2}
+  - {fileID: 11400000, guid: 4002ef8b1c182ab4a9e59c1448b8e955, type: 2}
+  - {fileID: 11400000, guid: 7c0b822d44e79c94cb9ec373c97f7f5f, type: 2}
+  - {fileID: 11400000, guid: 08a3776f6236d08408b9b067f5e590e9, type: 2}
+  - {fileID: 11400000, guid: 05050dd55e852ff4eadee0553e89255e, type: 2}
+  - {fileID: 11400000, guid: 0e7a660cb12dc4540b9d5858aeab4343, type: 2}
+  - {fileID: 11400000, guid: 77942134709544c4aada31feb58089fc, type: 2}
+  - {fileID: 11400000, guid: 454e0aa5f14a07d47b641eb9522c89a1, type: 2}
+  - {fileID: 11400000, guid: da104a3a64500634c8b4adaf9d28150f, type: 2}
+  - {fileID: 11400000, guid: b72b7bc4183c93a4d8d782e694d654b7, type: 2}
+  - {fileID: 11400000, guid: 33e5d7862303f234f8d001e78e2ccf9e, type: 2}
+  - {fileID: 11400000, guid: 06c2cb22b780aa946aa28fd1d2d38555, type: 2}
+  - {fileID: 11400000, guid: 0636465b0b65a1e42b4f2dc8c19012cd, type: 2}
+  - {fileID: 11400000, guid: b012205abc1f27d449f75bf1accb7934, type: 2}
+  - {fileID: 11400000, guid: 74eb0467b4fe9ed42ade5f6279013f0e, type: 2}
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0
@@ -9070,8 +9091,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossHealth: 1000000
-  HeadsToUnlock: 5000
-  NumberOfAlliesToKill: 10
+  HeadsToUnlock: 6000
+  NumberOfAlliesToKill: 5
   BossFightTime: 60
   NumberOfAttacks: 6
   TimeBetweenMessages: 2

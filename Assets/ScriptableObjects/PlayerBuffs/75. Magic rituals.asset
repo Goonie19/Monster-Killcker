@@ -18,9 +18,9 @@ MonoBehaviour:
   BuffDescription: This rituals will make you stronger everytime, but they will be
     more dificult every time too, which means more experience to give. These rituals
     will make you cause 15 more damage per attack.
-  HeadsToUnlock: 0
+  HeadsToUnlock: 400
   Price: 0
-  PriceMultiplier: 0
+  PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0

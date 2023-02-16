@@ -18,8 +18,8 @@ MonoBehaviour:
   BuffDescription: Dark magic can summon demons that offer you to double the experience
     those monsters will give you... but they will triplicate their health. Will you
     take it?
-  HeadsToUnlock: 0
-  Price: 0
+  HeadsToUnlock: 2200
+  Price: 1100
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

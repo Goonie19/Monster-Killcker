@@ -163,6 +163,7 @@ public class BossBehaviour : MonoBehaviour
     public void GetRewards(int goalIndex)
     {
         PlayerManager.Instance.ActualExperience += BossManager.Instance.GetBossExpByGoal(goalIndex);
+        BossManager.Instance.Goals[goalIndex].achieved = true;
     }
 
     public float GetDamageTaken()

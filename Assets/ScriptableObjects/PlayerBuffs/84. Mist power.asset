@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
-  m_Name: 77. Heroic fury
+  m_Name: 84. Mist power
   m_EditorClassIdentifier: 
-  Id: 77
+  Id: 84
   Icon: {fileID: 0}
-  BuffName: Heroic fury
-  BuffDescription: 'You have killed so many monsters and yet it''s no use, they keep
-    reappearing... With enough experience you can use this frustration and anger
-    towards becoming stronger and be 25% stronger. '
-  HeadsToUnlock: 700
-  Price: 0
+  BuffName: Mist power
+  BuffDescription: A misterious mist travels around you and you sense a source of
+    power in it. With enough experience you can take that power and cause 45 more
+    damage to your enemies.
+  HeadsToUnlock: 1000
+  Price: 2000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  addToBaseDamage: 0
-  addToMultiplierDamage: 1
-  DamageAddToBase: 0
-  MultiplierDamage: 1.25
+  addToBaseDamage: 1
+  addToMultiplierDamage: 0
+  DamageAddToBase: 45
+  MultiplierDamage: 1

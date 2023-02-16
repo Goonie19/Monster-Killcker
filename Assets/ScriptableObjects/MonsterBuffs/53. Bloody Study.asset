@@ -18,10 +18,10 @@ MonoBehaviour:
   BuffDescription: A 10% of the monster's total life points will transform into heads
     and experience. This will also duplicate monsters life points.
   HeadsToUnlock: 1900
-  Price: 1000
+  Price: 500
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 0

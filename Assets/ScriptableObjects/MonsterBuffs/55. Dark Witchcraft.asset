@@ -17,8 +17,8 @@ MonoBehaviour:
   BuffName: Dark Witchcraft
   BuffDescription: Witches are willing to increase the heads monsters drop for a
     head price... Although it will increase monsters life by 150.
-  HeadsToUnlock: 0
-  Price: 0
+  HeadsToUnlock: 1500
+  Price: 1200
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

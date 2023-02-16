@@ -18,11 +18,11 @@ MonoBehaviour:
   BuffDescription: Some weird clerics are telling you that if they pray really hard
     they will awake your true hero power. This will increase your base damage by
     5 and add a 50% more damage.
-  HeadsToUnlock: 0
-  Price: 0
+  HeadsToUnlock: 200
+  Price: 800
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 1
