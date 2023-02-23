@@ -15,12 +15,13 @@ MonoBehaviour:
   Id: 71
   Icon: {fileID: 21300000, guid: 9eca797aa990c44a0a1d11f290e1d63d, type: 3}
   BuffName: Double Click
-  BuffDescription: 
-  HeadsToUnlock: 50
-  Price: 500
+  BuffDescription: You gain an extra attack when you attack a monster. This will
+    double the actual damage.
+  HeadsToUnlock: 15
+  Price: 75
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 0
   addToMultiplierDamage: 1

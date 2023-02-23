@@ -78,6 +78,7 @@ public class MonsterBuff : Buff
         {
             Acquired = true;
             UIManager.Instance.DeleteMonsterBuff(Id);
+            UIManager.Instance.buffInfoPanel.gameObject.SetActive(false);
         } else
         {
             //In case the multiplier is so little, it adds 1 to the price

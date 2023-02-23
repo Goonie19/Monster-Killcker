@@ -97,6 +97,7 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         GetComponent<Button>().onClick.RemoveAllListeners();
 
         GetComponent<Button>().onClick.AddListener(b.ApplyBuff);
+        
 
         _associatedBuff = b;
 

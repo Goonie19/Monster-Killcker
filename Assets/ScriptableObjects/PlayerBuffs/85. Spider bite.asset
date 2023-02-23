@@ -17,8 +17,8 @@ MonoBehaviour:
   BuffName: Spider bite
   BuffDescription: A spider bit you and you are experimenting some changes. Once
     you gain experience with this sensations, you'll cause 38 more damage.
-  HeadsToUnlock: 750
-  Price: 1250
+  HeadsToUnlock: 1500
+  Price: 3000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

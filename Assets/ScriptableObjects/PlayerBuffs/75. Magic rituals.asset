@@ -19,11 +19,11 @@ MonoBehaviour:
     more dificult every time too, which means more experience to give. These rituals
     will make you cause 15 more damage per attack.
   HeadsToUnlock: 400
-  Price: 0
+  Price: 1500
   PriceMultiplier: 1.15
   OneUseBuff: 0
-  Acquired: 0
-  NumberOfBuffs: 0
+  Acquired: 1
+  NumberOfBuffs: 11
   addToBaseDamage: 1
   addToMultiplierDamage: 0
   DamageAddToBase: 15

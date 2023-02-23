@@ -63,6 +63,7 @@ public class AllyBuff : Buff
         {
             Acquired = true;
             UIManager.Instance.DeleteAllyBuff(Id);
+            UIManager.Instance.buffInfoPanel.gameObject.SetActive(false);
 
         } else
         {
@@ -70,7 +71,6 @@ public class AllyBuff : Buff
 
             ++NumberOfBuffs;
             UIManager.Instance.UpdateAllyButtoninfo(Id);
-            
         }
 
         AudioManager.Instance.PlayBuySound();

@@ -52,6 +52,7 @@ public class PlayerBuff : Buff {
         {
             Acquired = true;
             UIManager.Instance.DeletePlayerBuff(Id);
+            UIManager.Instance.buffInfoPanel.gameObject.SetActive(false);
         } else
         {
             _actualPrice *= PriceMultiplier;

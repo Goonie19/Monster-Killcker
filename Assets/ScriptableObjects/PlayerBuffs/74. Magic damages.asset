@@ -15,15 +15,15 @@ MonoBehaviour:
   Id: 74
   Icon: {fileID: 0}
   BuffName: Magic damages
-  BuffDescription: Now your sword will apply magical damage, this will duplicate
-    your actual damage and will make look so cool.
+  BuffDescription: Now your sword will apply magical damage, this will increase your
+    actual damage by 20% and will make look so cool.
   HeadsToUnlock: 125
-  Price: 200
+  Price: 500
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierDamage: 2
+  MultiplierDamage: 1.2
