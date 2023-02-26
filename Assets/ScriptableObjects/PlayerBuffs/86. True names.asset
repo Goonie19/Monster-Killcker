@@ -19,10 +19,10 @@ MonoBehaviour:
     With enough experience you can gain the power those names have and you will increase
     your power 15% more power.
   HeadsToUnlock: 540
-  Price: 750
+  Price: 1000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   addToBaseDamage: 0
   addToMultiplierDamage: 1

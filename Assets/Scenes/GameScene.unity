@@ -7139,6 +7139,9 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 09f9cbf2dbe012b43bf46ec815282b56, type: 3}
   - {fileID: 21300000, guid: 0e3c971bc7fa2df47bae97027e2adbb7, type: 3}
   - {fileID: 21300000, guid: 4c05ca5342e371342b3b7769b60e6b08, type: 3}
+  - {fileID: 21300000, guid: 1cb6155fbea5e0a44a9e8558c679e72f, type: 3}
+  - {fileID: 21300000, guid: ddd156a2a6264714b86e6ec8465a27d0, type: 3}
+  - {fileID: 21300000, guid: 942713af999c12244af2cc86ce6d3d85, type: 3}
   MonsterPhrases:
   - It's Nice day isn't it?
   - How are you feeling today?
@@ -9124,6 +9127,24 @@ MonoBehaviour:
     achieved: 0
   - DamageGoal: 1000
     ExpToGive: 1500
+    achieved: 0
+  - DamageGoal: 5000
+    ExpToGive: 0
+    achieved: 0
+  - DamageGoal: 15000
+    ExpToGive: 0
+    achieved: 0
+  - DamageGoal: 30000
+    ExpToGive: 0
+    achieved: 0
+  - DamageGoal: 80000
+    ExpToGive: 0
+    achieved: 0
+  - DamageGoal: 150000
+    ExpToGive: 0
+    achieved: 0
+  - DamageGoal: 500000
+    ExpToGive: 0
     achieved: 0
 --- !u!1 &1588029332
 GameObject:
@@ -13280,7 +13301,37 @@ PrefabInstance:
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
       propertyPath: DefaultAllies.Array.data[2].HeadsToUnlock
-      value: 200
+      value: 700
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[3].HeadsToUnlock
+      value: 2000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[4].HeadsToUnlock
+      value: 8000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[5].HeadsToUnlock
+      value: 30000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[7].HeadsToUnlock
+      value: 100000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[8].HeadsToUnlock
+      value: 450000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].HeadsToUnlock
+      value: 1000000
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}

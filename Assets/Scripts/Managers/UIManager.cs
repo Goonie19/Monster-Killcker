@@ -312,7 +312,7 @@ public class UIManager : MonoBehaviour
         } else
         {
             BossMaxHealthValue.text = BossManager.Instance.GetMaxHealth().ToString();
-            BossLifeToGetExpValue.text = BossManager.Instance.GetGoalCompleted().DamageGoal.ToString();
+            BossLifeToGetExpValue.text = BossManager.Instance.GetGoalCompleted()?.DamageGoal.ToString();
             BossDamageTakenValue.text = BossToClick.GetDamageTaken().ToString();
         }
 

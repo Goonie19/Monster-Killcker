@@ -99,7 +99,7 @@ MonoBehaviour:
     Description: Some mages in the zone are going to help you destroy the monsters,
       those creatures are ugly and are covering the beautiful views of their houses.
       So they must die!
-    HeadsToUnlock: 300
+    HeadsToUnlock: 500
   - AllyId: 3
     AllyName: Rogue
     AllySprite: {fileID: 21300000, guid: 3387debc1caf1dd4d95fea2167f6fd0a, type: 3}

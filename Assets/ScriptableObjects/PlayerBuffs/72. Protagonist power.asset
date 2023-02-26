@@ -18,12 +18,12 @@ MonoBehaviour:
   BuffDescription: Your experience as the protagonist of this massacre has given
     you the possibility to cause 7 more damage per click!
   HeadsToUnlock: 330
-  Price: 1500
+  Price: 780
   PriceMultiplier: 1
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 7
+  DamageAddToBase: 4
   MultiplierDamage: 1

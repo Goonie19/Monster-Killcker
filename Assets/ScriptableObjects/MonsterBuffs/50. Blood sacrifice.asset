@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 50. Blood sacrifice
   m_EditorClassIdentifier: 
   Id: 50
-  Icon: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
+  Icon: {fileID: 21300000, guid: 8c39525751a764a7fb43886d24bf97de, type: 3}
   BuffName: Blood Sacrifice
   BuffDescription: Sacrifice one living creature and use the heads you have collected
     to make the monsters more powerfull. Why would you want to do that? Well... They
@@ -25,7 +25,7 @@ MonoBehaviour:
   PriceMultiplier: 1.2
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 7
+  NumberOfBuffs: 1
   addToHealth: 1
   addToHeads: 0
   addToExperience: 1

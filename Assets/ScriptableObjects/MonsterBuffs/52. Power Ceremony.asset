@@ -15,8 +15,9 @@ MonoBehaviour:
   Id: 52
   Icon: {fileID: 21300000, guid: c11d2849b15c64c11a6673cb63329c93, type: 3}
   BuffName: Power Ceremony
-  BuffDescription: You will multiply the experience you gain by 1.5 but you'll triplicate
-    monster's life.
+  BuffDescription: Sacrifice the blood and heads gained by slaughtering monsters
+    in a blood bath. You will multiply the experience you gain by 1.5 but you'll
+    triplicate monster's life.
   HeadsToUnlock: 200
   Price: 150
   PriceMultiplier: 0

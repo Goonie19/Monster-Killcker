@@ -18,8 +18,8 @@ MonoBehaviour:
   BuffDescription: Now your archers will stop hitting the monsters with their bow
     and can start shooting arrows to the enemy! An awesome technological advance
     that will provide your archer 0.25 more damage per second!
-  HeadsToUnlock: 100
-  Price: 200
+  HeadsToUnlock: 200
+  Price: 300
   PriceMultiplier: 1.15
   OneUseBuff: 1
   Acquired: 0

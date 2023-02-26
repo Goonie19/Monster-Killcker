@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 76. Sword sharpener
   m_EditorClassIdentifier: 
   Id: 76
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: e0ce19fb28bf442ba9bf51a6dcb291c6, type: 3}
   BuffName: Sword sharpener
   BuffDescription: A blacksmith offered to sharpen your sword if you became an experimented
     warrior. This will increase your attacks by 50 health points and it will make
     them 25% more effective.
-  HeadsToUnlock: 1000
+  HeadsToUnlock: 5000
   Price: 10000
   PriceMultiplier: 0
   OneUseBuff: 1

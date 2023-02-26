@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 53. Bloody Study
   m_EditorClassIdentifier: 
   Id: 53
-  Icon: {fileID: 21300000, guid: 62ccc79667caf4300ad03d3cf8f40523, type: 3}
+  Icon: {fileID: 21300000, guid: a4ffdf3090d844d40856024a95e484bf, type: 3}
   BuffName: Bloody Study
   BuffDescription: A 10% of the monster's total life points will transform into heads
     and experience. This will also duplicate monsters life points.

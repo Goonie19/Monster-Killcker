@@ -29,6 +29,11 @@ public class AllyInfoPanel : MonoBehaviour
             StatsDisplay.gameObject.SetActive(false);
 
 
+        if (Input.mousePosition.y > Screen.height / 2)
+            GetComponent<RectTransform>().pivot = new Vector2(1, 1);
+        else
+            GetComponent<RectTransform>().pivot = new Vector2(1, 0);
+
         transform.position = Input.mousePosition;
     }
 }

@@ -13,13 +13,13 @@ MonoBehaviour:
   m_Name: 79. Dark impulse
   m_EditorClassIdentifier: 
   Id: 79
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: e6aa1e82035f94643be4f2f651e6b403, type: 3}
   BuffName: Dark impulse
   BuffDescription: Killing this much can make you receive a curse... a curse that
     will make you 30% stronger... this curse doesn't seem to make you travel in time
     though.
-  HeadsToUnlock: 900
-  Price: 0
+  HeadsToUnlock: 15000
+  Price: 22000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
