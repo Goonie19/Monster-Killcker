@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 55. Dark Witchcraft
+  m_Name: Ultimate. Ultimate Deadpool
   m_EditorClassIdentifier: 
-  Id: 55
-  Icon: {fileID: 21300000, guid: b91cf1dbd490c41aab12079d0311cdf5, type: 3}
-  BuffName: Dark Witchcraft
-  BuffDescription: Witches are willing to increase the heads monsters drop by a 10%
-    for a head price... Although it will increase monsters life by 150.
-  HeadsToUnlock: 5000
-  Price: 1200
+  Id: 59
+  Icon: {fileID: 21300000, guid: fb719f9257eba4963aaf94397b2844b1, type: 3}
+  BuffName: Ultimate deadpool
+  BuffDescription: There is an ultimate sacrifice which will triplicate the experience
+    monster's give you, duplicate the heads they drop and quintuple the life of this
+    monsters. Therte is no buff for those monsters like this one.
+  HeadsToUnlock: 6000
+  Price: 3000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 1
-  addToExperience: 0
-  HealthAddToBase: 150
-  MultiplyHealth: 1
+  addToExperience: 1
+  HealthAddToBase: 0
+  MultiplyHealth: 5
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
-  MultiplierHeads: 1.1
+  MultiplierHeads: 2
   BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 1
+  MultiplyExperienceValue: 3

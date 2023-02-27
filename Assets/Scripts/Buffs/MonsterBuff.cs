@@ -21,7 +21,7 @@ public class MonsterBuff : Buff
     [ShowIf("addToHeads")]
     public int HeadsToAdd;
     [ShowIf("addToHeads")]
-    public int MultiplierHeads;
+    public float MultiplierHeads;
 
     [ShowIf("addToExperience")]
     public float BaseExperienceToAdd = 0;
@@ -66,7 +66,7 @@ public class MonsterBuff : Buff
         if (addToHeads)
         {
             MonsterManager.Instance.BaseHeads += HeadsToAdd;
-            MonsterManager.Instance.BaseHeads *= MultiplierHeads;
+            MonsterManager.Instance.BaseHeads = (int)(MonsterManager.Instance.BaseHeads * MultiplierHeads);
         }
         if(addToExperience)
         {
