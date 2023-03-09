@@ -308,12 +308,12 @@ public class UIManager : MonoBehaviour
         {
             MonsterMaximumHealthValue.text = MonsterManager.Instance.GetHealth().ToString();
             MonsterDropingHeadsValue.text = MonsterManager.Instance.GetHeads().ToString();
-            MonstersLifePercentageAddedToExpValue.text = (MonsterManager.Instance.HealthPercentageExp * 100).ToString() + "%";
+            MonstersLifePercentageAddedToExpValue.text = string.Format("{0:0.00}", MonsterManager.Instance.GetExperience());
         } else
         {
             BossMaxHealthValue.text = BossManager.Instance.GetMaxHealth().ToString();
             BossLifeToGetExpValue.text = BossManager.Instance.GetGoalCompleted()?.DamageGoal.ToString();
-            BossDamageTakenValue.text = BossToClick.GetDamageTaken().ToString();
+            BossDamageTakenValue.text = string.Format("{0:0.00}",BossToClick.GetDamageTaken());
         }
 
         PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
