@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Did you know that monsters are weak to silver?! Well you do now
     and with the right amount of experience your archer will take that in their advantage
     and will Duplicate it's damage!
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 12300
   Price: 2000
   PriceMultiplier: 1.15
   OneUseBuff: 1

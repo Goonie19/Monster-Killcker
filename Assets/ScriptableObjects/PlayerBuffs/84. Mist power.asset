@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: A misterious mist travels around you and you sense a source of
     power in it. With enough experience you can take that power and cause 45 more
     damage to your enemies.
-  HeadsToUnlock: 780000
+  HeadsToUnlock: 200000
   Price: 25000
   PriceMultiplier: 0
   OneUseBuff: 1

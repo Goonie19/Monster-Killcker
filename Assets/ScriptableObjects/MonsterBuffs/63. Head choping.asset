@@ -10,27 +10,25 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: Ultimate. Ultimate Deadpool
+  m_Name: 63. Head choping
   m_EditorClassIdentifier: 
-  Id: 59
-  Icon: {fileID: 21300000, guid: fb719f9257eba4963aaf94397b2844b1, type: 3}
-  BuffName: Ultimate deadpool
-  BuffDescription: There is an ultimate sacrifice which will triplicate the experience
-    monster's give you, duplicate the heads they drop and quintuple the life of this
-    monsters. Therte is no buff for those monsters like this one.
-  HeadsToUnlock: 400000
-  Price: 56200
-  PriceMultiplier: 0
+  Id: 63
+  Icon: {fileID: 0}
+  BuffName: Head choping
+  BuffDescription: 
+  HeadsToUnlock: 65000
+  Price: 40000
+  PriceMultiplier: 1.2
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 1
-  addToExperience: 1
-  HealthAddToBase: 0
-  MultiplyHealth: 5
+  addToExperience: 0
+  HealthAddToBase: 1000
+  MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
   MultiplierHeads: 2
   BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 3
+  MultiplyExperienceValue: 1

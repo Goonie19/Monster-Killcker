@@ -18,8 +18,8 @@ MonoBehaviour:
   BuffDescription: With enough experience, rogues will be able to steal some wooden
     daggers (Aparently iron has not yet arrived to to the daggers industry). With
     this daggers your rogues will cause 4 more base damage per second.
-  HeadsToUnlock: 900000
-  Price: 1300
+  HeadsToUnlock: 25000
+  Price: 15000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

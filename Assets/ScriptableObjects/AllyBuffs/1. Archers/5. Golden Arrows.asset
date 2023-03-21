@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: These are not actual golden arrows. They are silver arrows with
     a golden surface, which makes your archer cause 2 of damage more per second due
     to their feeling of status increase!
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 23100
   Price: 6000
   PriceMultiplier: 1.15
   OneUseBuff: 1

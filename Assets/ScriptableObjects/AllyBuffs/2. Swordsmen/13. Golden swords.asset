@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Look, gold is not a good material to create weapons, but your
     swordsmen don't know that and they will probably do more damage if you give them
     those swords... They will increase in 5 their damage per second
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 29000
   Price: 16000
   PriceMultiplier: 1.15
   OneUseBuff: 1

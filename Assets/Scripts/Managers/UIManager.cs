@@ -80,7 +80,7 @@ public class UIManager : MonoBehaviour
 
     [Title("Player Information UI Elements")]
     public TextMeshProUGUI PlayerBaseDamageText;
-    public TextMeshProUGUI PlayerDamageMultiplierText;
+    public TextMeshProUGUI AlliesDamageText;
     public TextMeshProUGUI PlayerTotalDamageText;
 
     [Title("Conversations UI Elements")]
@@ -318,7 +318,7 @@ public class UIManager : MonoBehaviour
 
         PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
         //PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
-        PlayerTotalDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
+        //PlayerTotalDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
 
     }
 

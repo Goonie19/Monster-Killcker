@@ -77,6 +77,8 @@ public class AllyManager : MonoBehaviour
                 foreach (AllyType ally in allies)
                     damage += ally.GetDamage();
 
+                UIManager.Instance.AlliesDamageText.text = string.Format("{0:0.00}", damage);
+
                 if (!BossManager.Instance.InBossFight)
                 {
                     if (damage > 0)

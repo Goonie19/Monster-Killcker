@@ -17,7 +17,7 @@ MonoBehaviour:
   BuffName: Mighty swords
   BuffDescription: Clerics have prayed so hard that now swords are getting mighty
     power. With experience they will gain 10 more base damage per second!
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 120000
   Price: 60000
   PriceMultiplier: 1.15
   OneUseBuff: 1

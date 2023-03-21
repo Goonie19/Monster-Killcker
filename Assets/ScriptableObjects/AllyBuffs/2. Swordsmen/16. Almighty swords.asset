@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Clerics have prayed with the same strength as before, but now
     there were more clerics and your swords can gain more power. With enough experience
     you can gain a 100% more damage!
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 180000
   Price: 100000
   PriceMultiplier: 1.15
   OneUseBuff: 1

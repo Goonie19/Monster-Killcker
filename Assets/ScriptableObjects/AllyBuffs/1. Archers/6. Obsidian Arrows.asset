@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Some monsters dropped obsiddian rocks (believe me, you don't want
     to know how they droped them) and with the enough experience you could add this
     material to your arrows to make your archers duplicate it's damage
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 40800
   Price: 13000
   PriceMultiplier: 1.15
   OneUseBuff: 1

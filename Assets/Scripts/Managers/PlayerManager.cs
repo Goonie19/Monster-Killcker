@@ -116,6 +116,9 @@ public class PlayerManager : MonoBehaviour
     void Start()
     {
         InitializeParameters();
+
+        buffs.Sort((x, y) => x.HeadsToUnlock.CompareTo(y.HeadsToUnlock));
+
         UIManager.Instance.OnFadeOut.AddListener(CheckBuffs);
     }
 
