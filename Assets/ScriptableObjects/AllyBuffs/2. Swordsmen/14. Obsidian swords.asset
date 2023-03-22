@@ -22,10 +22,10 @@ MonoBehaviour:
   Price: 30000
   PriceMultiplier: 1.15
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   AllyId: 1
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 0.3
+  MultiplierToAdd: 1.3

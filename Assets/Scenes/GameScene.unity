@@ -6959,6 +6959,12 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b012205abc1f27d449f75bf1accb7934, type: 2}
   - {fileID: 11400000, guid: 74eb0467b4fe9ed42ade5f6279013f0e, type: 2}
   - {fileID: 11400000, guid: a4657efc9ef32c64396c5d4d2d3a83e3, type: 2}
+  - {fileID: 11400000, guid: a721a67b335c93849b53c06d7e3bc6bc, type: 2}
+  - {fileID: 11400000, guid: bbfdc6e523489394285d1c131700a80e, type: 2}
+  - {fileID: 11400000, guid: c48ce2c4240937f4baf48bf73bfa403f, type: 2}
+  - {fileID: 11400000, guid: 616cf04b574d3944c81710e353dcef02, type: 2}
+  - {fileID: 11400000, guid: 1edbfbb37e809e341bfd7ccdbbc76091, type: 2}
+  - {fileID: 11400000, guid: bbf3bbc9fe7673841911dd2e7cc524e7, type: 2}
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0
@@ -8961,7 +8967,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   BossHealth: 1000000
-  HeadsToUnlock: 6000
+  HeadsToUnlock: 1000000
   NumberOfAlliesToKill: 2
   BossFightTime: 60
   NumberOfAttacks: 6

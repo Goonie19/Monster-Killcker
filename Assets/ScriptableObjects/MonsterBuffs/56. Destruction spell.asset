@@ -20,10 +20,10 @@ MonoBehaviour:
     but it will increase monsters'' health by 20 everytime. '
   HeadsToUnlock: 700
   Price: 70
-  PriceMultiplier: 2
+  PriceMultiplier: 1.2
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 0
+  NumberOfBuffs: 19
   addToHealth: 1
   addToHeads: 1
   addToExperience: 1

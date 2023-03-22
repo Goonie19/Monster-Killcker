@@ -18,14 +18,14 @@ MonoBehaviour:
   BuffDescription: Silver can project magic in ways you can't imagine, but with enough
     experience you will be able to figure it out. These staffs will make you cause
     25% more damage with your mages.
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 46000
   Price: 9000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   AllyId: 2
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 0.25
+  MultiplierToAdd: 1.25

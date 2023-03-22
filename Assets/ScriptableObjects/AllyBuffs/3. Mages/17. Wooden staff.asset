@@ -20,10 +20,10 @@ MonoBehaviour:
     cause 3 more damage per second... Maybe makes them forget that you won't pay
     them.
   HeadsToUnlock: 1400
-  Price: 850
+  Price: 3000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   AllyId: 2
   addToBaseDamage: 1

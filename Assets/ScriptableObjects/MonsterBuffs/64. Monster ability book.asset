@@ -10,26 +10,27 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 63. Head choping
+  m_Name: 64. Monster ability book
   m_EditorClassIdentifier: 
-  Id: 63
+  Id: 64
   Icon: {fileID: 0}
-  BuffName: Head choping
-  BuffDescription: Chop those heads and turn them into a little head invoker. Equiping
-    this item will duplicate the heads those monsters drop.
-  HeadsToUnlock: 65000
-  Price: 40000
-  PriceMultiplier: 1.2
+  BuffName: Monster ability book
+  BuffDescription: You give those monsters some books you found so they can become
+    stronger. This will duplicate the experience monsters give you when you kill
+    them, but they will also duplicate their health.
+  HeadsToUnlock: 90000
+  Price: 16000
+  PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   addToHealth: 1
-  addToHeads: 1
-  addToExperience: 0
-  HealthAddToBase: 1000
-  MultiplyHealth: 1
+  addToHeads: 0
+  addToExperience: 1
+  HealthAddToBase: 0
+  MultiplyHealth: 2
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 0
-  MultiplierHeads: 2
+  MultiplierHeads: 0
   BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 1
+  MultiplyExperienceValue: 2

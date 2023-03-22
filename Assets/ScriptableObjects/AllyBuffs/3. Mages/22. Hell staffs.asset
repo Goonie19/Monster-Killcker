@@ -19,14 +19,14 @@ MonoBehaviour:
     living thing... And to sell some staffs from down there. Gladly they also use
     experience as a pay method. If you give this to your mages they will cause a
     25% more damage!
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 180000
   Price: 50000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
+  Acquired: 1
   NumberOfBuffs: 0
   AllyId: 2
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 0.25
+  MultiplierToAdd: 1.25
