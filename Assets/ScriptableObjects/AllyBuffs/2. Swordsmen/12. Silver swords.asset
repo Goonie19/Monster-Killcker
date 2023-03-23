@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Monsters are alergic to Silver! and to weapons! Imagine having
     those to things together! With the correct amount of experience you can mix those
     2 things together and provoke a 60% more of damage!
-  HeadsToUnlock: 18000
+  HeadsToUnlock: 108000
   Price: 12000
   PriceMultiplier: 1.15
   OneUseBuff: 1
@@ -28,4 +28,4 @@ MonoBehaviour:
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 1.6
+  MultiplierToAdd: 2

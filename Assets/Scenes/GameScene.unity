@@ -6901,34 +6901,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3f06e228ec5072645903bee46b6f7c9f, type: 2}
   - {fileID: 11400000, guid: b8b1979e9debf5f40bf3a73da4997dac, type: 2}
   - {fileID: 11400000, guid: 20b49e7431fc09942a3f4877a40582da, type: 2}
-  - {fileID: 11400000, guid: bb7ea7ad48ccc8841b78c5bdb754516c, type: 2}
-  - {fileID: 11400000, guid: 7f40d289a800cc74aba8fdebeecffa8a, type: 2}
-  - {fileID: 11400000, guid: 384a2f4b80609b34fa92900ab6fe6099, type: 2}
-  - {fileID: 11400000, guid: 2d4efd687adf4f647a2534ecf8caac61, type: 2}
   - {fileID: 11400000, guid: 2282f5a9b4a418e42a0906c8e5140dac, type: 2}
   - {fileID: 11400000, guid: 102d80eea2fc2ba45ae764875b9a0eba, type: 2}
   - {fileID: 11400000, guid: b491ec6c1bf24454d99577f49e73fd16, type: 2}
   - {fileID: 11400000, guid: 49809c7bd90c28f48b45722ad6ac92d3, type: 2}
-  - {fileID: 11400000, guid: b02ffb9b5598366498feee021b256a14, type: 2}
-  - {fileID: 11400000, guid: f697b8fe5a4f90c4c94fc3a19c09c5fa, type: 2}
-  - {fileID: 11400000, guid: 5e49ca0bd8d6c9f4fba35f29a0bc4dcb, type: 2}
-  - {fileID: 11400000, guid: 0b785b6ccc30e6d4e9053885664319db, type: 2}
   - {fileID: 11400000, guid: be03ddc38e745a1449b4f49b9b4e87f7, type: 2}
   - {fileID: 11400000, guid: 7ab7a3c5c4940fe4c8b3025869fec0a7, type: 2}
   - {fileID: 11400000, guid: 0cfaebe5456c2a143be8badb3521600e, type: 2}
   - {fileID: 11400000, guid: ec4dd0bf77e13c246acc7b59a3061d49, type: 2}
-  - {fileID: 11400000, guid: e605aa0f05b5f4547a5da36379d924e9, type: 2}
-  - {fileID: 11400000, guid: 81f4b753219ca0d4dabef6425720780d, type: 2}
-  - {fileID: 11400000, guid: 79ace569c02cdc9479be3615f06b61f5, type: 2}
-  - {fileID: 11400000, guid: 707344bcb43bad94fab77dcb35211611, type: 2}
   - {fileID: 11400000, guid: 488f041ae168cdc46a10057399e5895f, type: 2}
   - {fileID: 11400000, guid: f95f6effdeea71748a5ca50a338434c8, type: 2}
   - {fileID: 11400000, guid: acf0d08c0cc0e3c46a67a5a993a28679, type: 2}
   - {fileID: 11400000, guid: c7a0c83058dcb1e4ab044d7caa0fbaaa, type: 2}
-  - {fileID: 11400000, guid: a64cf08ae675b274c9b56f5d33cbd880, type: 2}
-  - {fileID: 11400000, guid: d80e269c12d2e2042bbd84d5342f63be, type: 2}
-  - {fileID: 11400000, guid: 3cfe1befb52a896418bb39dd1873461f, type: 2}
-  - {fileID: 11400000, guid: 889965d7f00295a4eab8e983c3229414, type: 2}
   - {fileID: 11400000, guid: 4f6d9ad344d92ab4e94e1052d7363e45, type: 2}
   - {fileID: 11400000, guid: 83ede17438b10c041ba7bd4a314c3c0e, type: 2}
   - {fileID: 11400000, guid: c606a494832b309438569d02f7fa2654, type: 2}
@@ -13037,6 +13021,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
+      propertyPath: DefaultAllies.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
       propertyPath: DefaultAllies.Array.data[2].HeadsToUnlock
       value: 700
       objectReference: {fileID: 0}
@@ -13053,22 +13042,22 @@ PrefabInstance:
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
       propertyPath: DefaultAllies.Array.data[5].HeadsToUnlock
-      value: 30000
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
       propertyPath: DefaultAllies.Array.data[7].HeadsToUnlock
-      value: 100000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
-        type: 3}
-      propertyPath: DefaultAllies.Array.data[8].HeadsToUnlock
       value: 450000
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
-      propertyPath: DefaultAllies.Array.data[9].HeadsToUnlock
+      propertyPath: DefaultAllies.Array.data[8].HeadsToUnlock
       value: 1000000
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[9].HeadsToUnlock
+      value: 2500000
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}
@@ -13079,6 +13068,11 @@ PrefabInstance:
         type: 3}
       propertyPath: DefaultPlayerData.ActualHeads
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4692913306296572084, guid: c2e31b4190bb2964390c06db1bb3f291,
+        type: 3}
+      propertyPath: DefaultAllies.Array.data[6].HeadsToUnlock
+      value: 150000
       objectReference: {fileID: 0}
     - target: {fileID: 4692913306296572085, guid: c2e31b4190bb2964390c06db1bb3f291,
         type: 3}

@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
-  m_Name: 14. Obsidian swords
+  m_Name: 38. Cauldron remix
   m_EditorClassIdentifier: 
-  Id: 13
-  Icon: {fileID: 21300000, guid: a5fc30f71fb854fbdb6fa55c19d87d2b, type: 3}
-  BuffName: Obsidian swords
-  BuffDescription: Miners have picked some obsidian stones from the mines and with
-    enough experience blacksmiths can craft obsidian swords so your swordsmen can
-    cause a 30% more damage!
-  HeadsToUnlock: 62000
-  Price: 30000
-  PriceMultiplier: 1.15
+  Id: 38
+  Icon: {fileID: 21300000, guid: 189bd693244f64679955fbc349725b37, type: 3}
+  BuffName: New cauldron
+  BuffDescription: With enough experience you can cut a cauldron inhalf and attach
+    it to other cauldron's half. This for some reason you are not gonna ask makes
+    your witches cause 50 more base damage.
+  HeadsToUnlock: 1800000
+  Price: 24000
+  PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
-  AllyId: 1
+  AllyId: 5
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 1.3
+  MultiplierToAdd: 2

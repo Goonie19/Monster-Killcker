@@ -10,23 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
-  m_Name: 32. Almighty Daggers
+  m_Name: 40. Magic Cauldron
   m_EditorClassIdentifier: 
-  Id: 31
-  Icon: {fileID: 21300000, guid: 93d97a4398691495c8a11dfc794b89e0, type: 3}
-  BuffName: Almighty Daggers
-  BuffDescription: Those knives the rogues stolen can be more powerfull if you can
-    convice the clerics to pray for those knives. With enough experience you can
-    make those clerics forget that those knives were stolen from them and cause a
-    30% more damage with your rogues!
-  HeadsToUnlock: 900000
-  Price: 400000
+  Id: 40
+  Icon: {fileID: 21300000, guid: 189bd693244f64679955fbc349725b37, type: 3}
+  BuffName: Magic cauldron
+  BuffDescription: How can Witches have worked all this time without a magic cauldron?
+    Nevermind, they will duplicate their damage now.
+  HeadsToUnlock: 64800000
+  Price: 216000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  AllyId: 3
+  AllyId: 5
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 1.3
+  MultiplierToAdd: 2

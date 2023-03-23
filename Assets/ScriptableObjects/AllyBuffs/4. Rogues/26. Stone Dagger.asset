@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: It's unbelievable. Your rogues still haven't got iron dagger yet...
     Well they now can use the stone ones to ambush their victims and cause a 25%
     more damage.
-  HeadsToUnlock: 900000
+  HeadsToUnlock: 72000
   Price: 3000
   PriceMultiplier: 0
   OneUseBuff: 1

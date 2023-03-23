@@ -16,10 +16,10 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: a5fc30f71fb854fbdb6fa55c19d87d2b, type: 3}
   BuffName: Stone swords
   BuffDescription: With the enough amount of experience you can teach the swordsmen
-    to craft some swords with stones and they will now be able to cause a 25% more
-    damage per second. They can't pay their bills but they are absolutely learning
-    a lot with you.
-  HeadsToUnlock: 1800
+    to craft some swords with stones and they will now be able to cause2 times damage
+    per second. They can't pay their bills but they are absolutely learning a lot
+    with you.
+  HeadsToUnlock: 3000
   Price: 2000
   PriceMultiplier: 1.15
   OneUseBuff: 1
@@ -29,4 +29,4 @@ MonoBehaviour:
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 1.25
+  MultiplierToAdd: 2

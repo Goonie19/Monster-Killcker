@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Sticks and stones might break monsters bones, but ssticks with
     steel will break even more monster bones! This arrows will make your archers
     cause 1 damage point more per second!
-  HeadsToUnlock: 5600
+  HeadsToUnlock: 7200
   Price: 800
   PriceMultiplier: 1.15
   OneUseBuff: 1

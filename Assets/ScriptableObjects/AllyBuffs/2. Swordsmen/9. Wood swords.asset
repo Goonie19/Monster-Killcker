@@ -19,7 +19,7 @@ MonoBehaviour:
     an stick instead of an actual sword. With the right amount of experience you
     can teach them what a wood sword can do to those monsters and it will add 2 more
     damage per second to your swordsmen!
-  HeadsToUnlock: 400
+  HeadsToUnlock: 500
   Price: 600
   PriceMultiplier: 1.15
   OneUseBuff: 1

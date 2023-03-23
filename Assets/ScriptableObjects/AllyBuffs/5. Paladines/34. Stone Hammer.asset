@@ -15,8 +15,10 @@ MonoBehaviour:
   Id: 33
   Icon: {fileID: 21300000, guid: d0eb0a9b0830b4c0bbc18dfa164f2492, type: 3}
   BuffName: Stone Hammer
-  BuffDescription: 
-  HeadsToUnlock: 90000
+  BuffDescription: Exahusting researches have brought the ultimate weapon. A stick
+    with a rock attached to it. This upgrade will make your Paladins 2 times more
+    powerfull.
+  HeadsToUnlock: 288000
   Price: 6200
   PriceMultiplier: 1.15
   OneUseBuff: 1
@@ -26,4 +28,4 @@ MonoBehaviour:
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0
-  MultiplierToAdd: 1.25
+  MultiplierToAdd: 2

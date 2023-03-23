@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
-  m_Name: 21. Color staffs
+  m_Name: 39. Golden Cauldron
   m_EditorClassIdentifier: 
-  Id: 20
-  Icon: {fileID: 21300000, guid: 2055fd42ce4d8486295b232b0f3db096, type: 3}
-  BuffName: Color staffs
-  BuffDescription: Color have always existed, but they can be created or changed
-    without you even noticing. This power can be achieved with these staffs that
-    causes another 5 base damage with your mages.
-  HeadsToUnlock: 90000
-  Price: 20000
+  Id: 39
+  Icon: {fileID: 21300000, guid: 189bd693244f64679955fbc349725b37, type: 3}
+  BuffName: Golden cauldron
+  BuffDescription: 'It''s a cauldron made of golden. This luxury object makes your
+    witches cause 2 times more damage. '
+  HeadsToUnlock: 10800000
+  Price: 72000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  AllyId: 2
+  AllyId: 5
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 5
-  MultiplierToAdd: 0
+  DamageAddToBase: 150
+  MultiplierToAdd: 2

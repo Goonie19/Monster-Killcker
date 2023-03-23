@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d87de3b3e33b9b14dae2f584328477c1, type: 3}
-  m_Name: 31. Mighty Daggers
+  m_Name: 37. New cauldron
   m_EditorClassIdentifier: 
-  Id: 30
-  Icon: {fileID: 21300000, guid: 93d97a4398691495c8a11dfc794b89e0, type: 3}
-  BuffName: Mighty Daggers
-  BuffDescription: Rogues have stolen the knifes clerics used to cut the holy bread
-    in a cathedral nearby... For some reason it causes 10 more base damage per second!
-    With enough experience they can get used to this knives!
-  HeadsToUnlock: 900000
-  Price: 200000
+  Id: 37
+  Icon: {fileID: 21300000, guid: 189bd693244f64679955fbc349725b37, type: 3}
+  BuffName: New cauldron
+  BuffDescription: Witchcraft can't be done eficiently without a good cauldron and
+    with enough experience you can design a good one that will duplicate witches
+    damage per second.
+  HeadsToUnlock: 300000
+  Price: 8000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  AllyId: 3
+  AllyId: 5
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 10
+  DamageAddToBase: 50
   MultiplierToAdd: 0

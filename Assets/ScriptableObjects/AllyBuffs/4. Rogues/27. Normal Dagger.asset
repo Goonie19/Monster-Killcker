@@ -17,7 +17,7 @@ MonoBehaviour:
   BuffName: Normal Dagger
   BuffDescription: It's literally a dagger. Now you can cause 7 more base damage
     per seconds with your rogues!
-  HeadsToUnlock: 900000
+  HeadsToUnlock: 432000
   Price: 10000
   PriceMultiplier: 0
   OneUseBuff: 1
