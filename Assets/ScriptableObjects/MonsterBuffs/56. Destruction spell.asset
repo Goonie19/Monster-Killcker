@@ -16,14 +16,14 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: 57c4a2470afed42ed8c7b1f84cde3cb3, type: 3}
   BuffName: Destruction Spell
   BuffDescription: 'You cast a destruction spell that will increase the experience 
-    monsters will give you by a 5% and will increase by 5 the heads monsters drop,
+    monsters will give you by a 15% and will increase by 5 the heads monsters drop,
     but it will increase monsters'' health by 20 everytime. '
   HeadsToUnlock: 700
   Price: 70
   PriceMultiplier: 1.2
   OneUseBuff: 0
   Acquired: 0
-  NumberOfBuffs: 19
+  NumberOfBuffs: 9
   addToHealth: 1
   addToHeads: 1
   addToExperience: 1
@@ -33,4 +33,4 @@ MonoBehaviour:
   HeadsToAdd: 5
   MultiplierHeads: 1
   BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 1.05
+  MultiplyExperienceValue: 1.15
