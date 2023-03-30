@@ -22,8 +22,8 @@ MonoBehaviour:
   Price: 70
   PriceMultiplier: 1.2
   OneUseBuff: 0
-  Acquired: 0
-  NumberOfBuffs: 9
+  Acquired: 1
+  NumberOfBuffs: 20
   addToHealth: 1
   addToHeads: 1
   addToExperience: 1
@@ -32,5 +32,5 @@ MonoBehaviour:
   HealthAddToMultiplierEXP: 0
   HeadsToAdd: 5
   MultiplierHeads: 1
-  BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 1.15
+  BaseExperienceToAdd: 50
+  MultiplyExperienceValue: 1

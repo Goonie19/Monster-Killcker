@@ -19,7 +19,7 @@ MonoBehaviour:
     your body. The last one had an star with 2 eyes. With enough experience you can
     increase your attack power by 35 each time... Or maybe open doors in a castle,
     I don't know.
-  HeadsToUnlock: 8000
+  HeadsToUnlock: 128000
   Price: 15000
   PriceMultiplier: 1.15
   OneUseBuff: 0

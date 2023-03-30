@@ -43,7 +43,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec87ce28ccaa42d4bb3c646da39b9a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartAgain: 1
+  StartAgain: 0
   MenuSceneName: MainMenu
   GameSceneName: GameScene
   DefaultPlayerData:
@@ -87,7 +87,7 @@ MonoBehaviour:
     Description: Men and women known for their skills as swordsmen are willing to
       help you in exchange for monet... Of course you won't pay them, you will give
       them experience which is more valuable.
-    HeadsToUnlock: 50
+    HeadsToUnlock: 75
   - AllyId: 2
     AllyName: Mage
     AllySprite: {fileID: 21300000, guid: cd51bb6f1e053994db965c9036580899, type: 3}
@@ -99,7 +99,7 @@ MonoBehaviour:
     Description: Some mages in the zone are going to help you destroy the monsters,
       those creatures are ugly and are covering the beautiful views of their houses.
       So they must die!
-    HeadsToUnlock: 500
+    HeadsToUnlock: 1000
   - AllyId: 3
     AllyName: Rogue
     AllySprite: {fileID: 21300000, guid: 3387debc1caf1dd4d95fea2167f6fd0a, type: 3}
@@ -112,7 +112,7 @@ MonoBehaviour:
       if you pay them. Of course you convince them to accept the experience only
       and learn a lot with you! For some reason your wallet feels lighter, but that
       doesn't matter.
-    HeadsToUnlock: 1000
+    HeadsToUnlock: 2000
   - AllyId: 4
     AllyName: Paladin
     AllySprite: {fileID: 21300000, guid: 1d1dd2c630f4d6d4eb2f8853b85ad4ea, type: 3}
@@ -125,7 +125,7 @@ MonoBehaviour:
       well because they are there. They have started to use actual weapons and have
       turned into holy warriors! They are going to help you so they can kill monsters
       with you!
-    HeadsToUnlock: 3000
+    HeadsToUnlock: 16000
   - AllyId: 5
     AllyName: Witches
     AllySprite: {fileID: 0}
@@ -137,7 +137,7 @@ MonoBehaviour:
     Description: Wizardry is always usefull, they are always sacrificing animals
       for their rituals. So what will they acomplish sacrificing monsters? You can
       discover it with enough experience!
-    HeadsToUnlock: 999999
+    HeadsToUnlock: 75000
   - AllyId: 6
     AllyName: Druids
     AllySprite: {fileID: 0}
@@ -149,34 +149,4 @@ MonoBehaviour:
     Description: Druids know that death is part of the mother nature and is inevitable...
       But nothing says they cannot anticipate it for those monsters. With enough
       experience you will be able to convince them of that.
-    HeadsToUnlock: 999999
-  - AllyId: 7
-    AllyName: Gladiator
-    AllySprite: {fileID: 0}
-    Icon: {fileID: 21300000, guid: 068f39a5261e94c84a25db700fa75af3, type: 3}
-    AllyImageReference: {fileID: 0}
-    BaseDamage: 220
-    Price: 12000
-    PriceMultiplier: 1.15
-    Description: 
-    HeadsToUnlock: 9999999
-  - AllyId: 8
-    AllyName: Knight
-    AllySprite: {fileID: 0}
-    Icon: {fileID: 21300000, guid: 011a9b808bdd7493db5b80fcb0bcc68b, type: 3}
-    AllyImageReference: {fileID: 0}
-    BaseDamage: 360
-    Price: 20000
-    PriceMultiplier: 1.15
-    Description: 
-    HeadsToUnlock: 99999999
-  - AllyId: 9
-    AllyName: Angel Warriors
-    AllySprite: {fileID: 0}
-    Icon: {fileID: 21300000, guid: 9eca797aa990c44a0a1d11f290e1d63d, type: 3}
-    AllyImageReference: {fileID: 0}
-    BaseDamage: 500
-    Price: 36000
-    PriceMultiplier: 1.15
-    Description: 
-    HeadsToUnlock: 9999999
+    HeadsToUnlock: 300000

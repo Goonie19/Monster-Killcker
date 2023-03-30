@@ -18,11 +18,11 @@ MonoBehaviour:
   BuffDescription: You discovered your true self... It's pretty disgusting and you
     are full of hatred for these harmless monsters. Embracing this part of you will
     make you cause 70 more damage.
-  HeadsToUnlock: 4500
+  HeadsToUnlock: 72000
   Price: 8000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0
