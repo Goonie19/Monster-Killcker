@@ -38,11 +38,12 @@ public class BossBehaviour : MonoBehaviour
         if (SaveDataManager.Instance.CanGetData())
             parameters = SaveDataManager.Instance.GetBossParameters();
         else
-            parameters = GameManager.Instance.DefaultBossData;
+            parameters = new BossData(GameManager.Instance.DefaultBossData);
 
         _actualHealth = parameters.actualHealth;
 
         _damageTaken = parameters.DamageTaken;
+
     }
 
     public void ClickMonster()

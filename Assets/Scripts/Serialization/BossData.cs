@@ -8,5 +8,9 @@ public class BossData {
     public float DamageTaken;
     public float actualHealth;
 
-    public List<BossManager.LifeGoal> Goals;
+    public BossData(BossData data)
+    {
+        DamageTaken = data.DamageTaken;
+        actualHealth = data.actualHealth;
+    }
 }

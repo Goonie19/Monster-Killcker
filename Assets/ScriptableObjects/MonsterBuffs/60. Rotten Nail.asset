@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: You have discovered that if you feed those Monster heads with
     experienced warrior's nails, they will get 40% more health, and you will receive
     20% more experience and 7% more heads.
-  HeadsToUnlock: 25000
+  HeadsToUnlock: 400000
   Price: 7800
   PriceMultiplier: 0
   OneUseBuff: 1

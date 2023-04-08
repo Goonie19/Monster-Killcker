@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: You give those monsters some books you found so they can become
     stronger. This will duplicate the experience monsters give you when you kill
     them, but they will also duplicate their health.
-  HeadsToUnlock: 90000
+  HeadsToUnlock: 1440000
   Price: 16000
   PriceMultiplier: 0
   OneUseBuff: 1

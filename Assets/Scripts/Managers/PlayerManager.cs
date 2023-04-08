@@ -129,7 +129,7 @@ public class PlayerManager : MonoBehaviour
         if (SaveDataManager.Instance.CanGetData())
             parameters = SaveDataManager.Instance.GetPlayerParameters();
         else
-            parameters = GameManager.Instance.DefaultPlayerData;
+            parameters = new PlayerData(GameManager.Instance.DefaultPlayerData);
 
         _totalHeadsAchieved = parameters.TotalHeads;
 

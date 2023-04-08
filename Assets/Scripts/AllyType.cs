@@ -66,6 +66,22 @@ public class AllyType
 
     private bool _unlocked;
 
+    public AllyType(AllyType a)
+    {
+        AllyId = a.AllyId;
+        AllyName = a.AllyName;
+        AllySprite = a.AllySprite;
+        Icon = a.Icon;
+        AllyImageReference = a.AllyImageReference;
+        BaseDamage = a.BaseDamage;
+        Price = a.Price;
+        PriceMultiplier = a.PriceMultiplier;
+        Description = a.Description;
+        HeadsToUnlock = a.HeadsToUnlock;
+        _numberOfAllies = a.NumberOfAllies;
+        _unlocked = a.Unlocked;
+    }
+
     public void BuyAlly()
     {
 

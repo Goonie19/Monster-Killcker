@@ -28,14 +28,19 @@ public class AllyManager : MonoBehaviour
 
     void InitializeParameters()
     {
-        allies = GameManager.Instance.DefaultAllies;
+
+        for (int i = 0; i < GameManager.Instance.DefaultAllies.Count; ++i)
+        {
+            allies.Add(new AllyType(GameManager.Instance.DefaultAllies[i]));
+        }
+
         if (SaveDataManager.Instance.CanGetData())
             InitializeAllies(SaveDataManager.Instance.GetAllies());
     }
 
     void InitializeAllies(List<AlliesData> AlliesData)
     {
-        allies = GameManager.Instance.DefaultAllies;
+        
 
         foreach (AlliesData data in AlliesData)
         {

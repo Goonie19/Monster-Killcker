@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: They can see on the darkness, but after this, you will too. Use
     those heads to get their eyes and see their more internal weak points. You will
     start getting a 25% more experience from them.
-  HeadsToUnlock: 86000
+  HeadsToUnlock: 800000
   Price: 14300
   PriceMultiplier: 0
   OneUseBuff: 1

@@ -14,4 +14,14 @@ public class MonsterData {
 
     public float BaseExperience;
     public float ExperienceMultiplier;
+
+    public MonsterData(MonsterData data) { 
+        BaseHealth = data.BaseHealth;
+        HealthMultiplier = data.HealthMultiplier;
+        HealthPercentageMultiplier = data.HealthPercentageMultiplier;
+        BaseHeads = data.BaseHeads;
+        MultiplierHeads = data.MultiplierHeads;
+        ExperienceMultiplier = data.ExperienceMultiplier;
+        BaseExperience = data.BaseExperience;
+    }
 }

@@ -90,7 +90,7 @@ public class MonsterManager : MonoBehaviour
         if (SaveDataManager.Instance.CanGetData())
             parameters = SaveDataManager.Instance.GetMonsterParameters();
         else
-            parameters = GameManager.Instance.DefaultMonsterData;
+            parameters = new MonsterData(GameManager.Instance.DefaultMonsterData);
 
         _baseHealth = parameters.BaseHealth;
         _healthPercentageExp = parameters.HealthPercentageMultiplier;

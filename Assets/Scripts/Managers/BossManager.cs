@@ -56,6 +56,30 @@ public class BossManager : MonoBehaviour
 
     }
 
+    void Start()
+    {
+        InitializeGoals();
+    }
+
+    void InitializeGoals()
+    {
+        BossData parameters;
+
+        if (SaveDataManager.Instance.CanGetData())
+            parameters = SaveDataManager.Instance.GetBossParameters();
+        else
+            parameters = new BossData(GameManager.Instance.DefaultBossData);
+
+        foreach(LifeGoal goal in Goals)
+        {
+            if (goal.DamageGoal <= parameters.DamageTaken)
+                goal.achieved = true;
+            else
+                break;
+        }
+            
+    }
+
     #region BOSS SEQUENCES
 
     [ContextMenu("StartBoss")]
@@ -177,7 +201,9 @@ public class BossManager : MonoBehaviour
 
         sq.OnComplete(() => {
             UIManager.Instance.BossAppearingImage.raycastTarget = false;
+            UIManager.Instance.BossTimer.gameObject.SetActive(false);
             InBossFight = false;
+            UIManager.Instance.ChangeInfoPanel();
             AllyManager.Instance.canAttack = true;
         });
     }

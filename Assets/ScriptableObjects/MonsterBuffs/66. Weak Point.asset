@@ -19,7 +19,7 @@ MonoBehaviour:
     monsters nicely which is their weak point. Of course it's only for researching
     purposes. This will increase by 10000 the heads they drop and by 6000 the experience
     you receive.
-  HeadsToUnlock: 96000
+  HeadsToUnlock: 1536000
   Price: 36000
   PriceMultiplier: 0
   OneUseBuff: 1

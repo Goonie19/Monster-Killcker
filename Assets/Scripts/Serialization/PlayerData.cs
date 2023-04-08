@@ -8,4 +8,13 @@ public class PlayerData {
 
     public float BaseDamage;
     public float DamageMultiplier;
+
+    public PlayerData(PlayerData data)
+    {
+        ActualExperience = data.ActualExperience;
+        ActualHeads = data.ActualHeads;
+        TotalHeads = data.TotalHeads;
+        BaseDamage = data.BaseDamage;
+        DamageMultiplier = data.DamageMultiplier;
+    }
 }
