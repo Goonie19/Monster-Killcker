@@ -52,9 +52,10 @@ public class UIManager : MonoBehaviour
     public GameObject MonsterBuffButton;
     public GameObject MonsterBuffButtonOneUse;
 
-    [Title("Buffs Info Panel")]
+    [Title("Buffs Info Panel Hover")]
     public AllyInfoPanel allyInfoPanel;
     public BuffInfoPanel buffInfoPanel;
+    public HoverPanel hoverPanel;
 
     [Title("List of Buffs")]
     public List<BuffButton> AllyButtons;
@@ -90,6 +91,8 @@ public class UIManager : MonoBehaviour
     [Title("Health Info for monster")]
     public Image fillHealthImage;
     public TextMeshProUGUI CurrentHealthText;
+
+    
 
     private void Awake()
     {
