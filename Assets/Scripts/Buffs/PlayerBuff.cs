@@ -64,7 +64,8 @@ public class PlayerBuff : Buff {
         AudioManager.Instance.PlayBuySound();
 
         UIManager.Instance.CheckButtonInteraction();
-        UIManager.Instance.buffInfoPanel.Setup(this);
+        if(GameManager.Instance.GetAlliesHovers())
+            UIManager.Instance.buffInfoPanel.Setup(this);
         UIManager.Instance.UpdateInfoPanels();
 
         SaveDataManager.Instance.SetBuff(this);

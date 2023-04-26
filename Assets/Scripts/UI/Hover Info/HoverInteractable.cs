@@ -11,9 +11,12 @@ public class HoverInteractable : MonoBehaviour
 
     public void ShowInfo()
     {
-        UIManager.Instance.hoverPanel.Setup(Interactablename, Information);
+        if(GameManager.Instance.GetStatHovers())
+        {
+            UIManager.Instance.hoverPanel.Setup(Interactablename, Information);
 
-        UIManager.Instance.hoverPanel.gameObject.SetActive(true);
+            UIManager.Instance.hoverPanel.gameObject.SetActive(true);
+        }
 
     }
 

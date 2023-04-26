@@ -901,7 +901,7 @@ GameObject:
   - component: {fileID: 104013080}
   - component: {fileID: 104013081}
   m_Layer: 5
-  m_Name: Volume Slider
+  m_Name: Music Volume Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4359,7 +4359,7 @@ GameObject:
   - component: {fileID: 494249695}
   - component: {fileID: 494249694}
   m_Layer: 5
-  m_Name: Checkmark
+  m_Name: Window Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4566,7 +4566,7 @@ GameObject:
   - component: {fileID: 513217190}
   - component: {fileID: 513217191}
   m_Layer: 5
-  m_Name: Volume Slider
+  m_Name: General Volume Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6109,7 +6109,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &699028681
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6493,7 +6493,7 @@ GameObject:
   - component: {fileID: 773211446}
   - component: {fileID: 773211447}
   m_Layer: 5
-  m_Name: Volume Slider
+  m_Name: SFX Volume Slider
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -8120,7 +8120,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -10631,7 +10631,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -12226,7 +12226,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -1.7000732, y: -66.600006}
+  m_AnchoredPosition: {x: -1.7001953, y: -66.599976}
   m_SizeDelta: {x: 135.87195, y: 133.10541}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1363812970
@@ -14487,7 +14487,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.91962564}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -375, y: 5.972229}
+  m_AnchoredPosition: {x: -375, y: 5.972168}
   m_SizeDelta: {x: -1208.8733, y: -11.944458}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1676304614
@@ -14636,7 +14636,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_RaycastTarget: 1
+  m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -15374,6 +15374,16 @@ MonoBehaviour:
   DialogueText: {fileID: 629925342}
   fillHealthImage: {fileID: 201689870}
   CurrentHealthText: {fileID: 1296333406}
+  StatsHoverToggle: {fileID: 1575362482}
+  StatsHoverCheckmark: {fileID: 2022412124}
+  AlliesHoverToggle: {fileID: 81313827}
+  AlliesHoverCheckmark: {fileID: 1781186274}
+  WindowModeToggle: {fileID: 378347836}
+  WindowModeCheckmark: {fileID: 494249692}
+  ResolutionDropdown: {fileID: 855294009}
+  MasterVolumeSlider: {fileID: 513217191}
+  MusicVolumeSlider: {fileID: 104013081}
+  SFXVolumeSlider: {fileID: 773211447}
 --- !u!224 &1722954845 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
@@ -15751,12 +15761,12 @@ GameObject:
   - component: {fileID: 1781186277}
   - component: {fileID: 1781186276}
   m_Layer: 5
-  m_Name: Checkmark
+  m_Name: Buffs and allies Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1781186275
 RectTransform:
   m_ObjectHideFlags: 0
@@ -18769,12 +18779,12 @@ GameObject:
   - component: {fileID: 2022412127}
   - component: {fileID: 2022412126}
   m_Layer: 5
-  m_Name: Checkmark
+  m_Name: Stats Checkmark
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &2022412125
 RectTransform:
   m_ObjectHideFlags: 0

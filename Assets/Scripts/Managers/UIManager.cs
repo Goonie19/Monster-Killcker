@@ -92,6 +92,19 @@ public class UIManager : MonoBehaviour
     public Image fillHealthImage;
     public TextMeshProUGUI CurrentHealthText;
 
+    [Title("Pause Panel")]
+    public Toggle StatsHoverToggle;
+    public GameObject StatsHoverCheckmark;
+    public Toggle AlliesHoverToggle;
+    public GameObject AlliesHoverCheckmark;
+    public Toggle WindowModeToggle;
+    public GameObject WindowModeCheckmark;
+
+    public TMP_Dropdown ResolutionDropdown;
+
+    public Slider MasterVolumeSlider;
+    public Slider MusicVolumeSlider;
+    public Slider SFXVolumeSlider;
     
 
     private void Awake()
@@ -107,6 +120,24 @@ public class UIManager : MonoBehaviour
         sq.Append(FadePanel.DOFade(0f, FadeTime).SetEase(Ease.Linear));
 
         sq.Play();
+
+        bool stats = GameManager.Instance.GetStatHovers();
+        bool allies = GameManager.Instance.GetAlliesHovers();
+        bool window = GameManager.Instance.GetWindowMode();
+        
+        StatsHoverToggle.isOn = stats;
+        StatsHoverCheckmark.SetActive(stats);
+
+        AlliesHoverToggle.isOn = allies;
+        AlliesHoverCheckmark.SetActive(allies);
+
+        WindowModeToggle.isOn = window;
+        WindowModeCheckmark.SetActive(window);
+        
+
+        WindowModeToggle.onValueChanged.AddListener(GameManager.Instance.SetFullScreen);
+        StatsHoverToggle.onValueChanged.AddListener(GameManager.Instance.ShowStatHovers);
+        AlliesHoverToggle.onValueChanged.AddListener(GameManager.Instance.ShowAlliesHovers);
 
         sq.OnComplete(() => {
             FadePanel.raycastTarget = false;

@@ -204,7 +204,8 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
             if (time >= TimeToShowInfo)
             {
-                ShowInfo();
+                if(GameManager.Instance.GetAlliesHovers())
+                    ShowInfo();
                 _onButton = false;
             }
 
