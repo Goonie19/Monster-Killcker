@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 
     [Title("Music")]
     public FMODUnity.EventReference AmbientMusic;
+    public FMODUnity.EventReference MainMenuMusic;
 
     [Title("MenuSFX")]
     public FMODUnity.EventReference ClickButton;
@@ -50,6 +51,21 @@ public class AudioManager : MonoBehaviour
         _musicVCA = FMODUnity.RuntimeManager.GetVCA("vca:/" + MusicVCAName);
         _sfxVCA = FMODUnity.RuntimeManager.GetVCA("vca:/" + SFXVCAName);
 
+        if(PlayerPrefs.HasKey("MasterVolume"))
+            _masterVCA.setVolume(PlayerPrefs.GetFloat("MasterVolume"));
+        else
+            _masterVCA.setVolume(0.5f);
+
+        if(PlayerPrefs.HasKey("MusicVolume"))
+            _masterVCA.setVolume(PlayerPrefs.GetFloat("MusicVolume"));
+        else
+            _musicVCA.setVolume(0.5f);
+
+        if (PlayerPrefs.HasKey("SFXVolume"))
+            _sfxVCA.setVolume(PlayerPrefs.GetFloat("SFXVolume"));
+        else
+            _sfxVCA.setVolume(0.5f);
+
     }
 
     [ContextMenu("PlayAmbientMusic1")]
@@ -59,7 +75,13 @@ public class AudioManager : MonoBehaviour
         _musicInstance.start();
     }
 
-    public void StopAmbientMusic()
+    public void PlayMainMenuMusic()
+    {
+        _musicInstance = FMODUnity.RuntimeManager.CreateInstance(MainMenuMusic);
+        _musicInstance.start();
+    }
+
+    public void StopMusic()
     {
         _musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
     }
@@ -99,16 +121,43 @@ public class AudioManager : MonoBehaviour
     public void SetMasterVolume(float volume)
     {
         _masterVCA.setVolume(volume);
+        PlayerPrefs.SetFloat("MasterVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void SetMusicVolume(float volume)
     {
         _musicVCA.setVolume(volume);
+        PlayerPrefs.SetFloat("MusicVolume", volume);
+        PlayerPrefs.Save();
     }
 
     public void SetSFXVolume(float volume)
     {
         _sfxVCA.setVolume(volume);
+        PlayerPrefs.SetFloat("SFXVolume", volume);
+        PlayerPrefs.Save();
+    }
+
+    public float GetMasterVolume()
+    {
+        float volume = 0;
+        _masterVCA.getVolume(out volume);
+        return volume;
+    }
+
+    public float GetMusicVolume()
+    {
+        float volume = 0;
+        _musicVCA.getVolume(out volume);
+        return volume;
+    }
+
+    public float GetSFXVolume()
+    {
+        float volume = 0;
+        _sfxVCA.getVolume(out volume);
+        return volume;
     }
     #endregion
 }

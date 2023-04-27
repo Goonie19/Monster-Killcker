@@ -31,6 +31,18 @@ public class MainMenuUI : MonoBehaviour
     public Slider MusicVolumeSlider;
     public Slider SFXVolumeSlider;
 
+    [Title("Settings Elements")]
+    public Toggle StatsHoverToggle;
+    public GameObject StatsHoverCheckmark;
+    public Toggle AlliesHoverToggle;
+    public GameObject AlliesHoverCheckmark;
+    public Toggle WindowModeToggle;
+    public GameObject WindowModeCheckmark;
+
+    public TMP_Dropdown ResolutionDropdown;
+
+    public Button ExitSettingsButton;
+
     [Serializable]
     public class Credit
     {
@@ -47,10 +59,58 @@ public class MainMenuUI : MonoBehaviour
     {
         FadeOutPanel();
 
-        Setup();
         _creditIndex = 0;
 
         NonSelectedAnimation();
+    }
+
+    void Start()
+    {
+        Setup();
+        AudioManager.Instance.PlayMainMenuMusic();
+        
+    }
+
+    void SetSettingsBehaviour()
+    {
+        bool stats = GameManager.Instance.GetStatHovers();
+        bool allies = GameManager.Instance.GetAlliesHovers();
+        bool window = GameManager.Instance.GetWindowMode();
+
+        StatsHoverToggle.isOn = stats;
+        StatsHoverCheckmark.SetActive(stats);
+
+        AlliesHoverToggle.isOn = allies;
+        AlliesHoverCheckmark.SetActive(allies);
+
+        WindowModeToggle.isOn = window;
+        WindowModeCheckmark.SetActive(window);
+
+        ResolutionDropdown.ClearOptions();
+
+        List<string> resOptions = new List<string>();
+        foreach (Vector2Int res in GameManager.Instance.Resolutions)
+        {
+            resOptions.Add((res.x + " x " + res.y).ToString());
+        }
+
+        ResolutionDropdown.AddOptions(resOptions);
+        ResolutionDropdown.value = GameManager.Instance.GetResolutionIndex();
+
+        WindowModeToggle.onValueChanged.AddListener(GameManager.Instance.SetFullScreen);
+        StatsHoverToggle.onValueChanged.AddListener(GameManager.Instance.ShowStatHovers);
+        AlliesHoverToggle.onValueChanged.AddListener(GameManager.Instance.ShowAlliesHovers);
+        ResolutionDropdown.onValueChanged.AddListener(GameManager.Instance.SetScreenResolution);
+
+        MasterVolumeSlider.value = AudioManager.Instance.GetMasterVolume();
+        MusicVolumeSlider.value = AudioManager.Instance.GetMusicVolume();
+        SFXVolumeSlider.value = AudioManager.Instance.GetSFXVolume();
+
+        MasterVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetMasterVolume);
+        MusicVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
+        SFXVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetSFXVolume);
+
+
     }
 
     void FadeOutPanel()
@@ -89,15 +149,14 @@ public class MainMenuUI : MonoBehaviour
             GoToGameScene();
         });
         OptionsButton.onClick.AddListener(() => { AudioManager.Instance.PlayClickButtonSound(); });
+        ExitSettingsButton.onClick.AddListener(() => { AudioManager.Instance.PlayClickButtonSound(); });
         ExitButton.onClick.AddListener(() => { AudioManager.Instance.PlayClickButtonSound(); Application.Quit(); });
 
         CreditHeaderText.text = CreditList[_creditIndex].CreditHeader;
         CreditText.text = CreditList[_creditIndex].CreditName;
         MonsterCredit.sprite = CreditList[_creditIndex].CreditSprite;
 
-        MasterVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetMasterVolume);
-        MusicVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetMusicVolume);
-        SFXVolumeSlider.onValueChanged.AddListener(AudioManager.Instance.SetSFXVolume);
+        SetSettingsBehaviour();
     }
 
     public void ClickOnCredit()

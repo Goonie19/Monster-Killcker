@@ -93,6 +93,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI CurrentHealthText;
 
     [Title("Pause Panel")]
+    public List<Button> ButtonsToAssignSound;
     public Toggle StatsHoverToggle;
     public GameObject StatsHoverCheckmark;
     public Toggle AlliesHoverToggle;
@@ -133,11 +134,25 @@ public class UIManager : MonoBehaviour
 
         WindowModeToggle.isOn = window;
         WindowModeCheckmark.SetActive(window);
-        
+
+        ResolutionDropdown.ClearOptions();
+
+        List<string> resOptions = new List<string>();
+        foreach(Vector2Int res in GameManager.Instance.Resolutions)
+        {
+            resOptions.Add((res.x + " x " + res.y).ToString());
+        }
+
+        foreach (Button b in ButtonsToAssignSound)
+            b.onClick.AddListener(() => { AudioManager.Instance.PlayClickButtonSound(); });
+
+        ResolutionDropdown.AddOptions(resOptions);
+        ResolutionDropdown.value = GameManager.Instance.GetResolutionIndex();
 
         WindowModeToggle.onValueChanged.AddListener(GameManager.Instance.SetFullScreen);
         StatsHoverToggle.onValueChanged.AddListener(GameManager.Instance.ShowStatHovers);
         AlliesHoverToggle.onValueChanged.AddListener(GameManager.Instance.ShowAlliesHovers);
+        ResolutionDropdown.onValueChanged.AddListener(GameManager.Instance.SetScreenResolution);
 
         sq.OnComplete(() => {
             FadePanel.raycastTarget = false;
@@ -186,7 +201,7 @@ public class UIManager : MonoBehaviour
     public void FadeToMainMenu()
     {
         FadePanel.raycastTarget = true;
-        AudioManager.Instance.StopAmbientMusic();
+        AudioManager.Instance.StopMusic();
         Sequence sq = DOTween.Sequence();
 
         sq.Append(FadePanel.DOFade(1f, FadeTime).SetEase(Ease.Linear));

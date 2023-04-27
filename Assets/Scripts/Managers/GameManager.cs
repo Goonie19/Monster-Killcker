@@ -21,9 +21,13 @@ public class GameManager : MonoBehaviour
 
     public List<AllyType> DefaultAllies;
 
+    public List<Vector2Int> Resolutions;
+
     private bool StatHovers = true;
     private bool AlliesHovers = true;
     private bool WindowMode = false;
+
+    private int _resolutionIndex;
 
     void Awake()
     {
@@ -34,11 +38,16 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(gameObject);
 
+        WindowMode = !Screen.fullScreen;
+
         if(PlayerPrefs.HasKey("StatHovers"))
             StatHovers = PlayerPrefs.GetInt("StatHovers") > 0 ? true : false;
 
         if(PlayerPrefs.HasKey("AlliesHovers"))
             AlliesHovers = PlayerPrefs.GetInt("AlliesHovers") > 0 ? true : false;
+
+        if (PlayerPrefs.HasKey("ScreenIndex"))
+            _resolutionIndex = PlayerPrefs.GetInt("ScreenIndex");
         
     }
 
@@ -61,10 +70,26 @@ public class GameManager : MonoBehaviour
     public void SetFullScreen(bool windowMode)
     {
         WindowMode = windowMode;
-        Screen.fullScreen = WindowMode;
+        Screen.fullScreen = !WindowMode;
 
         PlayerPrefs.SetInt("WindowMode", WindowMode ? 1 : 0);
         PlayerPrefs.Save();
+    }
+
+    public void SetScreenResolution(int resIndex)
+    {
+        _resolutionIndex = resIndex;
+
+        PlayerPrefs.SetInt("ScreenIndex", resIndex);
+
+        PlayerPrefs.Save();
+
+        Screen.SetResolution(Resolutions[_resolutionIndex].x, Resolutions[_resolutionIndex].y, Screen.fullScreen);
+    }
+
+    public int GetResolutionIndex()
+    {
+        return _resolutionIndex;
     }
 
     public bool GetStatHovers()
@@ -84,12 +109,14 @@ public class GameManager : MonoBehaviour
 
     public void ChangeToGameScene()
     {
+        AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlayAmbientMusic();
         SceneManager.LoadScene(GameSceneName);
     }
 
     public void ChangeToMenuScene()
     {
+        AudioManager.Instance.StopMusic();
         SceneManager.LoadScene(MenuSceneName);
     }
 

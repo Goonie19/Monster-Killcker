@@ -63,7 +63,6 @@ MonoBehaviour:
   DefaultBossData:
     DamageTaken: 0
     actualHealth: 1000000
-    Goals: []
   DefaultAllies:
   - AllyId: 0
     AllyName: Archer
@@ -150,3 +149,10 @@ MonoBehaviour:
       But nothing says they cannot anticipate it for those monsters. With enough
       experience you will be able to convince them of that.
     HeadsToUnlock: 300000
+  Resolutions:
+  - {x: 426, y: 240}
+  - {x: 640, y: 360}
+  - {x: 854, y: 480}
+  - {x: 1280, y: 720}
+  - {x: 1920, y: 1080}
+  - {x: 2560, y: 1440}

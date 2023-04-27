@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -206,6 +206,17 @@ MonoBehaviour:
       - m_Target: {fileID: 928788545}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6490924329589324506}
+        m_MethodName: PlayClickButtonSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -3526,6 +3537,17 @@ MonoBehaviour:
       - m_Target: {fileID: 559149693}
         m_MethodName: SetActive
         m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6490924329589324506}
+        m_MethodName: PlayClickButtonSound
+        m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -14297,6 +14319,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 6490924329589324506}
+        m_MethodName: PlayClickButtonSound
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1656285778
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15374,6 +15407,12 @@ MonoBehaviour:
   DialogueText: {fileID: 629925342}
   fillHealthImage: {fileID: 201689870}
   CurrentHealthText: {fileID: 1296333406}
+  ButtonsToAssignSound:
+  - {fileID: 1293594599}
+  - {fileID: 46516084}
+  - {fileID: 1656285777}
+  - {fileID: 1888965448}
+  - {fileID: 409296973}
   StatsHoverToggle: {fileID: 1575362482}
   StatsHoverCheckmark: {fileID: 2022412124}
   AlliesHoverToggle: {fileID: 81313827}
@@ -17268,6 +17307,17 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1712421266}
         m_MethodName: FadeToMainMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 6490924329589324506}
+        m_MethodName: PlayClickButtonSound
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20097,3 +20147,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 483507b778b133143a2324f764f93314, type: 3}
+--- !u!114 &6490924329589324506 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
+    type: 3}
+  m_PrefabInstance: {fileID: 6490924329589324505}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e1ee2b94572184b469453a2a0b6660ec, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
