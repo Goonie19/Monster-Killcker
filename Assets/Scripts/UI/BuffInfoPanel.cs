@@ -25,8 +25,6 @@ public class BuffInfoPanel : MonoBehaviour
         else
             GetComponent<RectTransform>().pivot = new Vector2(1, 0);
 
-        transform.position = Input.mousePosition;
-
     }
 
 }

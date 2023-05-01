@@ -59,7 +59,22 @@ public abstract class Buff : ScriptableObject
 
     public float GetPrice()
     {
+        
         return _actualPrice;
+    }
+
+    public float GetTenPrice()
+    {
+        float price = _actualPrice;
+        if (GameManager.Instance.TenShopMode)
+        {
+
+
+            for (int i = 0; i < 10; i++)
+                price *= PriceMultiplier;
+        }
+
+        return price;
     }
 
     public void SetActualPrice(float price)

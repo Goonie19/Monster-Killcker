@@ -122,6 +122,12 @@ public class PlayerManager : MonoBehaviour
         UIManager.Instance.OnFadeOut.AddListener(CheckBuffs);
     }
 
+    void Update()
+    {
+        if (Input.GetMouseButtonDown(1))
+            GameManager.Instance.TenShopMode = !GameManager.Instance.TenShopMode;
+    }
+
     void InitializeParameters()
     {
         PlayerData parameters;

@@ -26,6 +26,8 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public float TimeToShowInfo = 0.5f;
 
+    public Transform HoverPosition;
+
     public enum ButtonType { Buff, Ally}
 
     private Buff _associatedBuff;
@@ -67,7 +69,15 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         GetComponent<Button>().onClick.RemoveAllListeners();
 
-        GetComponent<Button>().onClick.AddListener(ally.BuyAlly);
+        GetComponent<Button>().onClick.AddListener(() =>
+        {
+            if (GameManager.Instance.TenCursor)
+                BuyTenAllies();
+            else
+                ally.BuyAlly();
+        });
+        GetComponent<Button>().onClick.AddListener(AudioManager.Instance.PlayBuySound);
+
     }
 
     public void Setup(Buff b)
@@ -96,11 +106,44 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         GetComponent<Button>().onClick.RemoveAllListeners();
 
-        GetComponent<Button>().onClick.AddListener(b.ApplyBuff);
-        
+        GetComponent<Button>().onClick.AddListener(() =>
+        {
+            if (GameManager.Instance.TenCursor)
+                BuyTenBuffs();
+            else
+                b.ApplyBuff();
+        });
+        GetComponent<Button>().onClick.AddListener(AudioManager.Instance.PlayBuySound);
 
+        
         _associatedBuff = b;
 
+    }
+
+    //You can buy allies and buffs in packs of 10.
+    public void BuyTenBuffs()
+    {
+        int i = 0;
+
+        while(i < 10 && ((_associatedBuff is MonsterBuff && _associatedBuff.GetPrice() <= PlayerManager.Instance.ActualHeads) ||
+            PlayerManager.Instance.ActualExperience >= _associatedBuff.GetPrice() && !(_associatedBuff is MonsterBuff)))
+        {
+            _associatedBuff.ApplyBuff();
+
+            ++i;
+        }
+    }
+
+    public void BuyTenAllies()
+    {
+        int i = 0;
+
+        while (i < 10 && _associatedAlly.GetPrice() <= PlayerManager.Instance.ActualExperience)
+        {
+            _associatedAlly.BuyAlly();
+
+            ++i;
+        }
     }
 
     public void UpdateInfo(bool attack = false)
@@ -110,10 +153,19 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             IconRender.sprite = _associatedBuff.Icon;
             IconShadow.sprite = _associatedBuff.Icon;
 
-            if (_associatedBuff.GetPrice() % 1 == 0)
-                ExperienceText.text = _associatedBuff.GetPrice().ToString();
-            else
-                ExperienceText.text = string.Format("{0:0.00}", _associatedBuff.GetPrice());
+            if(!GameManager.Instance.TenShopMode) // Muestra la compra de 10 en 10 o de 1 en 1
+            {
+                if (_associatedBuff.GetPrice() % 1 == 0)
+                    ExperienceText.text = _associatedBuff.GetPrice().ToString();
+                else
+                    ExperienceText.text = string.Format("{0:0.00}", _associatedBuff.GetPrice());
+            }else
+            {
+                if (_associatedBuff.GetTenPrice() % 1 == 0)
+                    ExperienceText.text = _associatedBuff.GetTenPrice().ToString();
+                else
+                    ExperienceText.text = string.Format("{0:0.00}", _associatedBuff.GetTenPrice());
+            }
 
             BuffName.text = _associatedBuff.BuffName;
             if (NumberOfBuffs)
@@ -124,10 +176,10 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             IconRender.sprite = _associatedAlly.Icon;
             IconShadow.sprite = _associatedAlly.Icon;
 
-            if(_associatedAlly.GetPrice() % 1 == 0)
-                ExperienceText.text = _associatedAlly.GetPrice().ToString();
+            if(_associatedAlly.GetTenPrice() % 1 == 0)
+                ExperienceText.text = _associatedAlly.GetTenPrice().ToString();
             else
-                ExperienceText.text = string.Format("{0:0.00}", _associatedAlly.GetPrice());
+                ExperienceText.text = string.Format("{0:0.00}", _associatedAlly.GetTenPrice());
 
             BuffName.text = _associatedAlly.AllyName;
             if (NumberOfBuffs)
@@ -141,19 +193,65 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
     public void CheckInteractable()
     {
-        if(Type == ButtonType.Buff)
+        if (!GameManager.Instance.TenShopMode)
+            CheckDefaultInteractable();
+        else
         {
-            if ((PlayerManager.Instance.ActualHeads < _associatedBuff.GetPrice() && _associatedBuff is MonsterBuff) ||
-            PlayerManager.Instance.ActualExperience < _associatedBuff.GetPrice() && !(_associatedBuff is MonsterBuff))
+            if(Type == ButtonType.Buff)
+            {
+                if (_associatedBuff.OneUseBuff)
+                    CheckDefaultInteractable();
+                else
+                    CheckTenModeInteractable();
+            } else
+            {
+                CheckTenModeInteractable();
+            }
+            
+
+        }
+        
+    }
+
+    void CheckDefaultInteractable()
+    {
+        if (Type == ButtonType.Buff)
+        {
+            if ((PlayerManager.Instance.ActualHeads <= _associatedBuff.GetPrice() && _associatedBuff is MonsterBuff) ||
+            PlayerManager.Instance.ActualExperience <= _associatedBuff.GetPrice() && !(_associatedBuff is MonsterBuff))
                 GetComponent<Button>().interactable = false;
             else
                 GetComponent<Button>().interactable = true;
-        } else
+
+        }
+        else
         {
-            if (PlayerManager.Instance.ActualExperience < _associatedAlly.GetPrice())
+            if (PlayerManager.Instance.ActualExperience <= _associatedAlly.GetPrice())
                 GetComponent<Button>().interactable = false;
             else
                 GetComponent<Button>().interactable = true;
+
+        }
+    }
+   
+    void CheckTenModeInteractable()
+    {
+        if (Type == ButtonType.Buff)
+        {
+            if ((PlayerManager.Instance.ActualHeads <= _associatedBuff.GetTenPrice() && _associatedBuff is MonsterBuff) ||
+            PlayerManager.Instance.ActualExperience <= _associatedBuff.GetTenPrice() && !(_associatedBuff is MonsterBuff))
+                GetComponent<Button>().interactable = false;
+            else
+                GetComponent<Button>().interactable = true;
+
+        }
+        else
+        {
+            if (PlayerManager.Instance.ActualExperience <= _associatedAlly.GetTenPrice())
+                GetComponent<Button>().interactable = false;
+            else
+                GetComponent<Button>().interactable = true;
+
         }
     }
 
@@ -168,9 +266,15 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     public void ShowInfo()
     {
         if (Type == ButtonType.Buff)
+        {
             UIManager.Instance.SpawnInfoPanel(_associatedBuff);
+            UIManager.Instance.buffInfoPanel.transform.position = HoverPosition.position;
+        }
         else
+        {
             UIManager.Instance.SpawnInfoPanel(_associatedAlly);
+            UIManager.Instance.allyInfoPanel.transform.position = HoverPosition.position;
+        }
     }
 
     public void OnButton(bool onButton)

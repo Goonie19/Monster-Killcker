@@ -43,6 +43,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ec87ce28ccaa42d4bb3c646da39b9a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DefaultCursor: {fileID: 2800000, guid: f594c6026571f3944ab769e145453ca0, type: 3}
+  TenCursor: {fileID: 2800000, guid: 2ae8cacc456296b4c8ef56400f10ce2f, type: 3}
   StartAgain: 0
   MenuSceneName: MainMenu
   GameSceneName: GameScene

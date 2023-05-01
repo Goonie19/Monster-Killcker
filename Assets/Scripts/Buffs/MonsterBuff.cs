@@ -94,8 +94,6 @@ public class MonsterBuff : Buff
             UIManager.Instance.UpdateMonsterButtoninfo(Id);
         }
 
-        AudioManager.Instance.PlayBuySound();
-
         UIManager.Instance.CheckButtonInteraction();
         if(GameManager.Instance.GetAlliesHovers())
             UIManager.Instance.buffInfoPanel.Setup(this);

@@ -98,8 +98,6 @@ public class AllyType
 
         Price *= PriceMultiplier;
 
-        AudioManager.Instance.PlayBuySound();
-
         UIManager.Instance.CheckButtonInteraction();
 
         UIManager.Instance.UpdateAllyInfo(AllyId);
@@ -125,6 +123,16 @@ public class AllyType
     public float GetPrice()
     {
         return Price;
+    }
+
+    public float GetTenPrice()
+    {
+        float price = Price;
+
+        for(int i = 0; i < 10; i++)
+            price *= PriceMultiplier;
+
+        return price;
     }
 
     public float GetDamage()

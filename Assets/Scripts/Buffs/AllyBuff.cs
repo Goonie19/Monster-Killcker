@@ -73,7 +73,7 @@ public class AllyBuff : Buff
             UIManager.Instance.UpdateAllyButtoninfo(Id);
         }
 
-        AudioManager.Instance.PlayBuySound();
+        
 
         UIManager.Instance.CheckButtonInteraction();
         if(GameManager.Instance.GetAlliesHovers())

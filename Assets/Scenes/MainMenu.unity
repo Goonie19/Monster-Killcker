@@ -4808,6 +4808,9 @@ MonoBehaviour:
   - CreditHeader: Music
     CreditName: Kevin Macleod
     CreditSprite: {fileID: 21300000, guid: 1248ebbab3ac42b4eb71c55039be0754, type: 3}
+  - CreditHeader: Constant Support
+    CreditName: "Pablo L\xF3pez"
+    CreditSprite: {fileID: 21300000, guid: e5f3d782b717e264b928baae3cd6006f, type: 3}
   MasterVolumeSlider: {fileID: 839367583}
   MusicVolumeSlider: {fileID: 880425429}
   SFXVolumeSlider: {fileID: 1994421676}

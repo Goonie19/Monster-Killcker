@@ -9,7 +9,26 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
 
+    public Texture2D DefaultCursor;
+    public Texture2D TenCursor;
+
     public bool StartAgain;
+    public bool TenShopMode
+    {
+        get => _tenShopMode;
+        set
+        {
+            _tenShopMode = value;
+
+            if (_tenShopMode)
+                Cursor.SetCursor(TenCursor, Vector2.zero, CursorMode.Auto);
+            else
+                Cursor.SetCursor(DefaultCursor, Vector2.zero, CursorMode.Auto);
+
+            if(SceneManager.GetSceneByName(GameSceneName) == SceneManager.GetActiveScene())
+                UIManager.Instance.CheckButtonInteraction();
+        }
+    }
 
     public string MenuSceneName;
     public string GameSceneName;
@@ -28,6 +47,8 @@ public class GameManager : MonoBehaviour
     private bool WindowMode = false;
 
     private int _resolutionIndex;
+
+    private bool _tenShopMode;
 
     void Awake()
     {
@@ -111,12 +132,15 @@ public class GameManager : MonoBehaviour
     {
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlayAmbientMusic();
+        TenShopMode = false;
+        Debug.Log("Ola");
         SceneManager.LoadScene(GameSceneName);
     }
 
     public void ChangeToMenuScene()
     {
         AudioManager.Instance.StopMusic();
+        TenShopMode = false;
         SceneManager.LoadScene(MenuSceneName);
     }
 
