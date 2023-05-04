@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 81. Awakening
   m_EditorClassIdentifier: 
   Id: 81
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: 62e9347c13b144b04be777bb8ff4bc26, type: 3}
   BuffName: Awakening
   BuffDescription: You discovered your true self... It's pretty disgusting and you
     are full of hatred for these harmless monsters. Embracing this part of you will

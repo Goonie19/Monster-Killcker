@@ -10,7 +10,9 @@ public class MonsterBuff : Buff
     public bool addToHealth;
     public bool addToHeads;
     public bool addToExperience;
-    
+
+    [ShowIf("addToHealth")]
+    public float DefaultBaseHealthToAdd;
     [ShowIf("addToHealth")]
     public float HealthAddToBase = 0;
     [ShowIf("addToHealth")]
@@ -18,6 +20,8 @@ public class MonsterBuff : Buff
     [ShowIf("addToHealth")]
     public float HealthAddToMultiplierEXP = 0;
 
+    [ShowIf("addToHeads")]
+    public float DefaultBaseHeadsToAdd;
     [ShowIf("addToHeads")]
     public int HeadsToAdd;
     [ShowIf("addToHeads")]
@@ -27,6 +31,11 @@ public class MonsterBuff : Buff
     public float BaseExperienceToAdd = 0;
     [ShowIf("addToExperience")]
     public float MultiplyExperienceValue = 1;
+
+    public float DefaultBaseExperienceToAdd;
+
+    
+
 
     public bool Unlocked
     {

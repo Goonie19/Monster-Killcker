@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.IO;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
@@ -11,6 +12,8 @@ public class GameManager : MonoBehaviour
 
     public Texture2D DefaultCursor;
     public Texture2D TenCursor;
+
+    public UnityEvent OnTenShopModeChanged;
 
     public bool StartAgain;
     public bool TenShopMode
@@ -25,8 +28,7 @@ public class GameManager : MonoBehaviour
             else
                 Cursor.SetCursor(DefaultCursor, Vector2.zero, CursorMode.Auto);
 
-            if(SceneManager.GetSceneByName(GameSceneName) == SceneManager.GetActiveScene())
-                UIManager.Instance.CheckButtonInteraction();
+            OnTenShopModeChanged?.Invoke();
         }
     }
 
@@ -58,6 +60,8 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
 
         DontDestroyOnLoad(gameObject);
+
+        OnTenShopModeChanged = new UnityEvent();
 
         WindowMode = !Screen.fullScreen;
 
@@ -133,7 +137,6 @@ public class GameManager : MonoBehaviour
         AudioManager.Instance.StopMusic();
         AudioManager.Instance.PlayAmbientMusic();
         TenShopMode = false;
-        Debug.Log("Ola");
         SceneManager.LoadScene(GameSceneName);
     }
 

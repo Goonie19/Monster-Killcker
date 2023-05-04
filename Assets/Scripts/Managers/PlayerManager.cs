@@ -32,10 +32,7 @@ public class PlayerManager : MonoBehaviour
 
             SaveDataManager.Instance.SetPlayerActualExperience(_actualExperience);
 
-            if (_actualExperience % 1 == 0)
-                UIManager.Instance.ExperienceDisplayText.text = _actualExperience.ToString();
-            else
-                UIManager.Instance.ExperienceDisplayText.text = string.Format("{0:0.00}", ActualExperience);
+            UIManager.Instance.ExperienceDisplayText.text = UIManager.Instance.SimplifyNumber(_actualExperience);
 
             Sequence sq = DOTween.Sequence();
 
@@ -62,7 +59,7 @@ public class PlayerManager : MonoBehaviour
 
             SaveDataManager.Instance.SetPlayerTotalHeads(_totalHeadsAchieved);
 
-            UIManager.Instance.HeadsDisplayText.text = _actualHeads.ToString();
+            UIManager.Instance.HeadsDisplayText.text = UIManager.Instance.SimplifyNumber(_actualHeads);
 
             if (_totalHeadsAchieved >= BossManager.Instance.HeadsToUnlock)
                 UIManager.Instance.BossAppearButton.SetActive(true);
@@ -124,8 +121,10 @@ public class PlayerManager : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(1)) { 
             GameManager.Instance.TenShopMode = !GameManager.Instance.TenShopMode;
+
+        }
     }
 
     void InitializeParameters()

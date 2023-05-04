@@ -19,7 +19,7 @@ public class UIDamagePool : MonoBehaviour
         instance = this;
     }
 
-    public void ShowDamage(int Dmg)
+    public void ShowDamage(float Dmg)
     {
         UIDamage dmgText = UIDmgs.Find(x => x.gameObject.activeInHierarchy == false);
 
@@ -30,7 +30,7 @@ public class UIDamagePool : MonoBehaviour
             UIDmgs.Add(dmgText);
         }
 
-        dmgText.ShowText(Dmg.ToString(), Speed);
+        dmgText.ShowText(UIManager.Instance.SimplifyNumber(Dmg), Speed);
 
         dmgText.gameObject.SetActive(true);
     }

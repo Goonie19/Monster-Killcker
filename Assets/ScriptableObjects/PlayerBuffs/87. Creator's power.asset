@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
-  m_Name: 82. Star
+  m_Name: 87. Creator's power
   m_EditorClassIdentifier: 
-  Id: 82
-  Icon: {fileID: 21300000, guid: 01ca35bdd2cfb4b77b20e5aad2aea342, type: 3}
-  BuffName: Star
-  BuffDescription: When you kill so many monsters you find interesting things in
-    your body. The last one had an star with 2 eyes. With enough experience you can
-    increase your attack power by 35 each time... Or maybe open doors in a castle,
-    I don't know.
-  HeadsToUnlock: 128000
-  Price: 15000
+  Id: 87
+  Icon: {fileID: 21300000, guid: b618859ac341149769df1e8dbf5dc01f, type: 3}
+  BuffName: Creator's power
+  BuffDescription: You have started to learn how to get power from the original spell
+    that created this world. Every time you get power from this spell, you gain 3000
+    of pure power.
+  HeadsToUnlock: 2304000
+  Price: 132000
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 35
+  DamageAddToBase: 3000
   MultiplierDamage: 1

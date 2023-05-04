@@ -70,8 +70,8 @@ public abstract class Buff : ScriptableObject
         {
 
 
-            for (int i = 0; i < 10; i++)
-                price *= PriceMultiplier;
+            for (int i = 0; i < 9; i++)
+                price += (price * PriceMultiplier);
         }
 
         return price;

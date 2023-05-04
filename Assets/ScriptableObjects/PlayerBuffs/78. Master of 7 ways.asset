@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 78. Master of 7 ways
   m_EditorClassIdentifier: 
   Id: 78
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: e64001f43e5cc4ce5a2f9180a4134551, type: 3}
   BuffName: Master of 7 ways
   BuffDescription: 7 ways to create destruction and despair... and to not pay your
     workers a single coin. With this knowledge you'll be able to make 150 more damage.

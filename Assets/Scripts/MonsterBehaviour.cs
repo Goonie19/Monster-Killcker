@@ -54,7 +54,7 @@ public class MonsterBehaviour : MonoBehaviour
 
             AudioManager.Instance.PlayHitSound();
 
-            UIDamagePool.instance.ShowDamage((int) Mathf.Round(PlayerManager.Instance.BaseDamage));
+            UIDamagePool.instance.ShowDamage(PlayerManager.Instance.BaseDamage);
 
             TakeDamage(PlayerManager.Instance.BaseDamage);
            

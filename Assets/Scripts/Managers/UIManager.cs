@@ -12,6 +12,9 @@ public class UIManager : MonoBehaviour
 
     public static UIManager Instance;
 
+    [Title("Number Formats")]
+    public List<string> NumberFormat;
+
     [Title("FadePanel")]
     public Image FadePanel;
     public float FadeTime = 2f;
@@ -69,7 +72,7 @@ public class UIManager : MonoBehaviour
     public GameObject MonsterDropingHeadsObject;
     public TextMeshProUGUI MonsterDropingHeadsValue;
     public GameObject MonsterLifePercentageAddedToExpObject;
-    public TextMeshProUGUI MonstersLifePercentageAddedToExpValue;
+    public TextMeshProUGUI MonsterExpDrop;
 
     [Title("Boss Information UI Elements")]
     public GameObject BossMaxHealthObject;
@@ -108,9 +111,22 @@ public class UIManager : MonoBehaviour
     public Slider SFXVolumeSlider;
     
 
+
     private void Awake()
     {
         Instance = this;
+    }
+
+    void OnEnable()
+    {
+        GameManager.Instance.OnTenShopModeChanged.AddListener(CheckButtonInteraction);
+        GameManager.Instance.OnTenShopModeChanged.AddListener(UpdateAllButtons);
+    }
+
+    void OnDisable()
+    {
+        GameManager.Instance.OnTenShopModeChanged.RemoveListener(CheckButtonInteraction);
+        GameManager.Instance.OnTenShopModeChanged.RemoveListener(UpdateAllButtons);
     }
 
     private void Start()
@@ -277,6 +293,21 @@ public class UIManager : MonoBehaviour
 
     #region UPDATE BUTTONS
 
+    public void UpdateAllButtons()
+    {
+        foreach(BuffButton b in AllyButtons)
+            b.UpdateInfo();
+
+        foreach (BuffButton b in UnlockedPlayerBuffs)
+            b.UpdateInfo();
+
+        foreach (BuffButton b in UnlockedAllyBuffs)
+            b.UpdateInfo();
+
+        foreach (BuffButton b in UnlockedMonsterBuffs)
+            b.UpdateInfo();
+    }
+
     public void UpdateAllyInfo(int Id, bool attack = false)
     {
         AllyButtons.Find((x) => x.GetBuffId() == Id)?.UpdateInfo(attack);
@@ -355,17 +386,20 @@ public class UIManager : MonoBehaviour
     {
         if(!BossManager.Instance.InBossFight)
         {
-            MonsterMaximumHealthValue.text = MonsterManager.Instance.GetHealth().ToString();
-            MonsterDropingHeadsValue.text = MonsterManager.Instance.GetHeads().ToString();
-            MonstersLifePercentageAddedToExpValue.text = string.Format("{0:0.00}", MonsterManager.Instance.GetExperience());
+            MonsterMaximumHealthValue.text = SimplifyNumber(MonsterManager.Instance.GetHealth());
+            MonsterDropingHeadsValue.text = SimplifyNumber(MonsterManager.Instance.GetHeads());
+            MonsterExpDrop.text = SimplifyNumber(MonsterManager.Instance.GetExperience());
         } else
         {
-            BossMaxHealthValue.text = BossManager.Instance.GetMaxHealth().ToString();
-            BossLifeToGetExpValue.text = BossManager.Instance.GetGoalCompleted()?.DamageGoal.ToString();
-            BossDamageTakenValue.text = string.Format("{0:0.00}",BossToClick.GetDamageTaken());
+            BossMaxHealthValue.text = SimplifyNumber(BossManager.Instance.GetMaxHealth());
+            if (BossManager.Instance.GetGoalCompleted() != null)
+                BossLifeToGetExpValue.text = SimplifyNumber(BossManager.Instance.GetGoalCompleted().DamageGoal);
+            else
+                BossLifeToGetExpValue.text = "none";
+            BossDamageTakenValue.text = SimplifyNumber(BossToClick.GetDamageTaken());
         }
 
-        PlayerBaseDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
+        PlayerBaseDamageText.text = SimplifyNumber(PlayerManager.Instance.BaseDamage);
         //PlayerDamageMultiplierText.text = PlayerManager.Instance.DamageMultiplier.ToString();
         //PlayerTotalDamageText.text = PlayerManager.Instance.BaseDamage.ToString();
 
@@ -384,5 +418,26 @@ public class UIManager : MonoBehaviour
     }
 
     #endregion
+
+    public string SimplifyNumber(float number)
+    {
+        string numberString;
+        if (number % 1 == 0)
+            numberString = number.ToString();
+        else
+            numberString = string.Format("{0:0.00}", number);
+
+        int i = 0;
+
+        while(i < NumberFormat.Count && number > 1000)
+        {
+            number /= 1000f;
+            numberString = string.Format("{0:0.000}", number) + NumberFormat[i];
+
+            i++;
+        }
+
+        return numberString;
+    }
 
 }

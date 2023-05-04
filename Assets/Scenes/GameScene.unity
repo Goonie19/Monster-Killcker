@@ -10242,6 +10242,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ed9be5e1de09004bac1edcb9e1f3713, type: 2}
   - {fileID: 11400000, guid: a64a8905468ade1479099944c516b3da, type: 2}
   - {fileID: 11400000, guid: 54866bd0303ba0b4086fbe603ace0eb0, type: 2}
+  - {fileID: 11400000, guid: e040e8399c9ca14428ec7a811f3ed893, type: 2}
 --- !u!4 &1145537450
 Transform:
   m_ObjectHideFlags: 0
@@ -15375,6 +15376,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d8a05d4b945fa264e8b92f4a96d125c6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  NumberFormat:
+  - K
+  - M
+  - B
   FadePanel: {fileID: 699028683}
   FadeTime: 2
   OnFadeOut:
@@ -15419,7 +15424,7 @@ MonoBehaviour:
   MonsterDropingHeadsObject: {fileID: 1607504671}
   MonsterDropingHeadsValue: {fileID: 1307900611}
   MonsterLifePercentageAddedToExpObject: {fileID: 1703860031}
-  MonstersLifePercentageAddedToExpValue: {fileID: 523355831}
+  MonsterExpDrop: {fileID: 523355831}
   BossMaxHealthObject: {fileID: 372492465}
   BossMaxHealthValue: {fileID: 664065321}
   BossLifeToGetExpObject: {fileID: 1899600146}

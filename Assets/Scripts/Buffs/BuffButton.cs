@@ -71,7 +71,7 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         GetComponent<Button>().onClick.AddListener(() =>
         {
-            if (GameManager.Instance.TenCursor)
+            if (GameManager.Instance.TenShopMode)
                 BuyTenAllies();
             else
                 ally.BuyAlly();
@@ -108,7 +108,7 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
 
         GetComponent<Button>().onClick.AddListener(() =>
         {
-            if (GameManager.Instance.TenCursor)
+            if (GameManager.Instance.TenShopMode)
                 BuyTenBuffs();
             else
                 b.ApplyBuff();
@@ -138,7 +138,7 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         int i = 0;
 
-        while (i < 10 && _associatedAlly.GetPrice() <= PlayerManager.Instance.ActualExperience)
+        while (i < 10)
         {
             _associatedAlly.BuyAlly();
 
@@ -176,10 +176,19 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             IconRender.sprite = _associatedAlly.Icon;
             IconShadow.sprite = _associatedAlly.Icon;
 
-            if(_associatedAlly.GetTenPrice() % 1 == 0)
-                ExperienceText.text = _associatedAlly.GetTenPrice().ToString();
-            else
-                ExperienceText.text = string.Format("{0:0.00}", _associatedAlly.GetTenPrice());
+            if(!GameManager.Instance.TenShopMode)
+            {
+                if (_associatedAlly.GetPrice() % 1 == 0)
+                    ExperienceText.text = _associatedAlly.GetPrice().ToString();
+                else
+                    ExperienceText.text = string.Format("{0:0.00}", _associatedAlly.GetPrice());
+            } else
+            {
+                if (_associatedAlly.GetTenPrice() % 1 == 0)
+                    ExperienceText.text = _associatedAlly.GetTenPrice().ToString();
+                else
+                    ExperienceText.text = string.Format("{0:0.00}", _associatedAlly.GetTenPrice());
+            }
 
             BuffName.text = _associatedAlly.AllyName;
             if (NumberOfBuffs)
