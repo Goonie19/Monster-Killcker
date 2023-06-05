@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 64. Monster ability book
+  m_Name: 65. Monster ability book
   m_EditorClassIdentifier: 
-  Id: 64
+  Id: 65
   Icon: {fileID: 0}
   BuffName: Monster ability book
   BuffDescription: You give those monsters some books you found so they can become
@@ -27,10 +27,13 @@ MonoBehaviour:
   addToHealth: 1
   addToHeads: 0
   addToExperience: 1
+  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 0
   MultiplyHealth: 2
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
   MultiplierHeads: 0
   BaseExperienceToAdd: 0
   MultiplyExperienceValue: 2
+  DefaultBaseExperienceToAdd: 0

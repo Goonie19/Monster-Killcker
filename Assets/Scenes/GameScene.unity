@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -6337,7 +6337,7 @@ PrefabInstance:
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 90.54797
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
@@ -7491,7 +7491,7 @@ PrefabInstance:
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 90.54797
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
@@ -10180,6 +10180,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffs:
+  - {fileID: 11400000, guid: 7c8e6ae12f833c547a50da3ea1b643f7, type: 2}
+  - {fileID: 11400000, guid: 31c5595e7c5934347b824f0460d91b04, type: 2}
   - {fileID: 11400000, guid: a7cac84e3ee0d9c4097f13bf64a431b5, type: 2}
   - {fileID: 11400000, guid: 3f06e228ec5072645903bee46b6f7c9f, type: 2}
   - {fileID: 11400000, guid: b8b1979e9debf5f40bf3a73da4997dac, type: 2}
@@ -11298,7 +11300,7 @@ PrefabInstance:
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 90.54797
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
@@ -13333,7 +13335,7 @@ PrefabInstance:
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 90.54797
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
@@ -13529,7 +13531,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f887f18aa30983468606e90f7eb1ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BossHealth: 1000000
+  BossHealth: 5000000
   HeadsToUnlock: 1000000
   NumberOfAlliesToKill: 2
   BossFightTime: 60
@@ -20001,7 +20003,7 @@ PrefabInstance:
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 105.8009
+      value: 300
       objectReference: {fileID: 0}
     - target: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,
         type: 3}

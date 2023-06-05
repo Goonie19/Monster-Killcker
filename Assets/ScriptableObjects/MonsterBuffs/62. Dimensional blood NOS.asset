@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
+  m_Name: 62. Dimensional blood NOS
+  m_EditorClassIdentifier: 
+  Id: 62
+  Icon: {fileID: 21300000, guid: ba21e48f675c44360ab2f2adf0f09a65, type: 3}
+  BuffName: Dimensional blood
+  BuffDescription: Did you know that with enough experience you can get blood from
+    other dimensions and give it to these monsters? No? Well you know now. Doing
+    this will increase their life by 500, the heads they drop by 60 and the experience
+    they give you by 100.
+  HeadsToUnlock: 700000
+  Price: 14000
+  PriceMultiplier: 1.2
+  OneUseBuff: 0
+  Acquired: 0
+  NumberOfBuffs: 0
+  addToHealth: 1
+  addToHeads: 1
+  addToExperience: 1
+  DefaultBaseHealthToAdd: 500
+  HealthAddToBase: 0
+  MultiplyHealth: 1
+  HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
+  HeadsToAdd: 60
+  MultiplierHeads: 0
+  BaseExperienceToAdd: 100
+  MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

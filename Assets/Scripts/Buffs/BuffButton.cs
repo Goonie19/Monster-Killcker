@@ -226,8 +226,8 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (Type == ButtonType.Buff)
         {
-            if ((PlayerManager.Instance.ActualHeads <= _associatedBuff.GetPrice() && _associatedBuff is MonsterBuff) ||
-            PlayerManager.Instance.ActualExperience <= _associatedBuff.GetPrice() && !(_associatedBuff is MonsterBuff))
+            if ((PlayerManager.Instance.ActualHeads < _associatedBuff.GetPrice() && _associatedBuff is MonsterBuff) ||
+            PlayerManager.Instance.ActualExperience < _associatedBuff.GetPrice() && !(_associatedBuff is MonsterBuff))
                 GetComponent<Button>().interactable = false;
             else
                 GetComponent<Button>().interactable = true;
@@ -235,7 +235,7 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
         else
         {
-            if (PlayerManager.Instance.ActualExperience <= _associatedAlly.GetPrice())
+            if (PlayerManager.Instance.ActualExperience < _associatedAlly.GetPrice())
                 GetComponent<Button>().interactable = false;
             else
                 GetComponent<Button>().interactable = true;
@@ -247,8 +247,8 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
     {
         if (Type == ButtonType.Buff)
         {
-            if ((PlayerManager.Instance.ActualHeads <= _associatedBuff.GetTenPrice() && _associatedBuff is MonsterBuff) ||
-            PlayerManager.Instance.ActualExperience <= _associatedBuff.GetTenPrice() && !(_associatedBuff is MonsterBuff))
+            if ((PlayerManager.Instance.ActualHeads < _associatedBuff.GetTenPrice() && _associatedBuff is MonsterBuff) ||
+            PlayerManager.Instance.ActualExperience < _associatedBuff.GetTenPrice() && !(_associatedBuff is MonsterBuff))
                 GetComponent<Button>().interactable = false;
             else
                 GetComponent<Button>().interactable = true;
@@ -256,7 +256,7 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         }
         else
         {
-            if (PlayerManager.Instance.ActualExperience <= _associatedAlly.GetTenPrice())
+            if (PlayerManager.Instance.ActualExperience < _associatedAlly.GetTenPrice())
                 GetComponent<Button>().interactable = false;
             else
                 GetComponent<Button>().interactable = true;

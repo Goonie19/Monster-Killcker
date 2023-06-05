@@ -10,21 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
-  m_Name: 75. Magic rituals
+  m_Name: 87. Creator's power NOS
   m_EditorClassIdentifier: 
-  Id: 75
-  Icon: {fileID: 21300000, guid: a4ffdf3090d844d40856024a95e484bf, type: 3}
-  BuffName: Magic rituals
-  BuffDescription: This rituals will make you stronger everytime, but they will be
-    more dificult every time too, which means more experience to give. These rituals
-    will make you cause 15 more damage per attack.
-  HeadsToUnlock: 7000
-  Price: 2400
+  Id: 87
+  Icon: {fileID: 21300000, guid: b618859ac341149769df1e8dbf5dc01f, type: 3}
+  BuffName: Creator's power
+  BuffDescription: You have started to learn how to get power from the original spell
+    that created this world. Every time you get power from this spell, you gain 3000
+    of pure power.
+  HeadsToUnlock: 2304000
+  Price: 132000
   PriceMultiplier: 1.15
   OneUseBuff: 0
-  Acquired: 1
-  NumberOfBuffs: 4
+  Acquired: 0
+  NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 15
+  DamageAddToBase: 3000
   MultiplierDamage: 1

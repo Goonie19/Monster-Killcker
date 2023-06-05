@@ -10,26 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 65. Monster power potion
+  m_Name: 64. Head choping
   m_EditorClassIdentifier: 
-  Id: 65
-  Icon: {fileID: 21300000, guid: 2ca4bb8a4afd7459682a33a0153b5b85, type: 3}
-  BuffName: Monster power potion
-  BuffDescription: Alchemist found the ultimate potion for monsters. This will give
-    them 20000 more health. This also means they will give you 40000 more experience.
-  HeadsToUnlock: 2880000
-  Price: 95000
-  PriceMultiplier: 0
+  Id: 64
+  Icon: {fileID: 0}
+  BuffName: Head choping
+  BuffDescription: Chop those heads and turn them into a little head invoker. Equiping
+    this item will duplicate the heads those monsters drop.
+  HeadsToUnlock: 1040000
+  Price: 20000
+  PriceMultiplier: 1.2
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
   addToHealth: 1
-  addToHeads: 0
-  addToExperience: 1
-  HealthAddToBase: 20000
+  addToHeads: 1
+  addToExperience: 0
+  DefaultBaseHealthToAdd: 0
+  HealthAddToBase: 1000
   MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
-  MultiplierHeads: 0
-  BaseExperienceToAdd: 40000
+  MultiplierHeads: 2
+  BaseExperienceToAdd: 0
   MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
-  m_Name: 82. Star
+  m_Name: 82. Star NOS
   m_EditorClassIdentifier: 
   Id: 82
   Icon: {fileID: 21300000, guid: 01ca35bdd2cfb4b77b20e5aad2aea342, type: 3}

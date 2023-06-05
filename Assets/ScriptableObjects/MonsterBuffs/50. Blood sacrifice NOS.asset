@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 50. Blood sacrifice
+  m_Name: 50. Blood sacrifice NOS
   m_EditorClassIdentifier: 
   Id: 50
   Icon: {fileID: 21300000, guid: 8c39525751a764a7fb43886d24bf97de, type: 3}
@@ -24,15 +24,18 @@ MonoBehaviour:
   Price: 15
   PriceMultiplier: 1.2
   OneUseBuff: 0
-  Acquired: 0
-  NumberOfBuffs: 1
+  Acquired: 1
+  NumberOfBuffs: 3
   addToHealth: 1
   addToHeads: 0
   addToExperience: 1
+  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 5
   MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
   MultiplierHeads: 0
   BaseExperienceToAdd: 2
   MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

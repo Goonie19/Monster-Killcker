@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
+  m_Name: 68. Stones of Demon's crown NOS
+  m_EditorClassIdentifier: 
+  Id: 68
+  Icon: {fileID: 21300000, guid: 2fddfc54a383741c8b6d236468e33eee, type: 3}
+  BuffName: Stones of Demon's crown
+  BuffDescription: You can actually summon the stones of the king of hell's crown
+    and give them to those monsters in order to make them gain 3000 health points,
+    drop 400 more heads and give you 1000 more experience with every stone you give
+    them. The king of hell will end really tired of replacing those stones constantly.
+  HeadsToUnlock: 1996800
+  Price: 40000
+  PriceMultiplier: 1.2
+  OneUseBuff: 0
+  Acquired: 0
+  NumberOfBuffs: 0
+  addToHealth: 1
+  addToHeads: 1
+  addToExperience: 1
+  DefaultBaseHealthToAdd: 3000
+  HealthAddToBase: 0
+  MultiplyHealth: 1
+  HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
+  HeadsToAdd: 400
+  MultiplierHeads: 0
+  BaseExperienceToAdd: 1000
+  MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

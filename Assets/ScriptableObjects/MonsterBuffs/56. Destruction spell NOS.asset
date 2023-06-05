@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 56. Destruction spell
+  m_Name: 56. Destruction spell NOS
   m_EditorClassIdentifier: 
   Id: 56
   Icon: {fileID: 21300000, guid: 57c4a2470afed42ed8c7b1f84cde3cb3, type: 3}
@@ -22,15 +22,18 @@ MonoBehaviour:
   Price: 70
   PriceMultiplier: 1.2
   OneUseBuff: 0
-  Acquired: 1
-  NumberOfBuffs: 20
+  Acquired: 0
+  NumberOfBuffs: 0
   addToHealth: 1
   addToHeads: 1
   addToExperience: 1
+  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 20
   MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 5
   MultiplierHeads: 1
   BaseExperienceToAdd: 50
   MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

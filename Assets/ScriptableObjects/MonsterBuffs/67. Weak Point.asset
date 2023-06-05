@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 66. Weak Point
+  m_Name: 67. Weak Point
   m_EditorClassIdentifier: 
-  Id: 66
+  Id: 67
   Icon: {fileID: 21300000, guid: 0878993f0de9b4d68aba1d8fbec8c9fe, type: 3}
   BuffName: Weak point
   BuffDescription: Recolecting so many heads has given you an idea. You can ask those
@@ -28,10 +28,13 @@ MonoBehaviour:
   addToHealth: 0
   addToHeads: 1
   addToExperience: 1
+  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 0
   MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 10000
   MultiplierHeads: 0
   BaseExperienceToAdd: 6000
   MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0
