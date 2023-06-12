@@ -19,7 +19,7 @@ MonoBehaviour:
     so you can invoke monster stylists. They can make monsters have 40% more health
     but will increase a 20% of the experience and heads youa chieve from their health.
   HeadsToUnlock: 960000
-  Price: 13200
+  Price: 105000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
@@ -27,10 +27,13 @@ MonoBehaviour:
   addToHealth: 1
   addToHeads: 0
   addToExperience: 0
+  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 0
   MultiplyHealth: 1.4
   HealthAddToMultiplierEXP: 0.2
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
   MultiplierHeads: 0
   BaseExperienceToAdd: 0
   MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

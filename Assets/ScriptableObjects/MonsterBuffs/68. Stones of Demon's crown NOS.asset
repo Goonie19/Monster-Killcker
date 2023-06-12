@@ -20,7 +20,7 @@ MonoBehaviour:
     drop 400 more heads and give you 1000 more experience with every stone you give
     them. The king of hell will end really tired of replacing those stones constantly.
   HeadsToUnlock: 1996800
-  Price: 40000
+  Price: 600000
   PriceMultiplier: 1.2
   OneUseBuff: 0
   Acquired: 0

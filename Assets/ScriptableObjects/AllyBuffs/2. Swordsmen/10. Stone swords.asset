@@ -24,7 +24,7 @@ MonoBehaviour:
   PriceMultiplier: 1.15
   OneUseBuff: 1
   Acquired: 1
-  NumberOfBuffs: 0
+  NumberOfBuffs: 1
   AllyId: 1
   addToBaseDamage: 0
   addToMultiplierDamage: 1

@@ -18,18 +18,21 @@ MonoBehaviour:
   BuffDescription: Witches are willing to increase the heads monsters drop by a 10%
     for a head price... Although it will increase monsters life by 150.
   HeadsToUnlock: 5000
-  Price: 1200
+  Price: 3000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
-  NumberOfBuffs: 0
+  Acquired: 1
+  NumberOfBuffs: 1
   addToHealth: 1
   addToHeads: 1
   addToExperience: 0
+  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 150
   MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
   MultiplierHeads: 1.1
   BaseExperienceToAdd: 0
   MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

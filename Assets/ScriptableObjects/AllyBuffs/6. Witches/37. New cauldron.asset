@@ -19,7 +19,7 @@ MonoBehaviour:
     with enough experience you can design a good one that will duplicate witches
     damage per second.
   HeadsToUnlock: 300000
-  Price: 8000
+  Price: 240000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

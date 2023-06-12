@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Did you know druids get their powers from nature? Plant some trees
     with some experience and add 100 damage per second to their attacks!
   HeadsToUnlock: 900000
-  Price: 51000
+  Price: 480000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

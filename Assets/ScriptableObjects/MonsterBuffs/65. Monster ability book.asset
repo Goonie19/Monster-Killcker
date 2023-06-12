@@ -19,7 +19,7 @@ MonoBehaviour:
     stronger. This will duplicate the experience monsters give you when you kill
     them, but they will also duplicate their health.
   HeadsToUnlock: 1440000
-  Price: 16000
+  Price: 200000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

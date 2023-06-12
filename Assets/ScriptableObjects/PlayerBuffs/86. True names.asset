@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: 86. True names
   m_EditorClassIdentifier: 
   Id: 86
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: fff8fd5fc19284f81a735c1edc86f4a2, type: 3}
   BuffName: True names
   BuffDescription: Teh things surrounding you are whispering you their true names.
     With enough experience you can gain the power those names have and you will increase
@@ -23,7 +23,7 @@ MonoBehaviour:
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 1
-  NumberOfBuffs: 0
+  NumberOfBuffs: 1
   addToBaseDamage: 0
   addToMultiplierDamage: 1
   DamageAddToBase: 0

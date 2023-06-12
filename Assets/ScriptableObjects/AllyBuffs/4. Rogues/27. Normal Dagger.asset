@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: It's literally a dagger. Now you can cause 7 more base damage
     per seconds with your rogues!
   HeadsToUnlock: 432000
-  Price: 10000
+  Price: 960000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

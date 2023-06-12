@@ -20,7 +20,7 @@ MonoBehaviour:
     this will increase their life by 500, the heads they drop by 60 and the experience
     they give you by 100.
   HeadsToUnlock: 700000
-  Price: 14000
+  Price: 100000
   PriceMultiplier: 1.2
   OneUseBuff: 0
   Acquired: 0

@@ -207,7 +207,7 @@ public class BossManager : MonoBehaviour
             AllyManager.Instance.canAttack = true;
         });
     }
-
+    [ContextMenu("EndBoss")]
     public void EndBoss()
     {
         UIManager.Instance.BossAppearingImage.color = new Color(1, 1, 1, 0);

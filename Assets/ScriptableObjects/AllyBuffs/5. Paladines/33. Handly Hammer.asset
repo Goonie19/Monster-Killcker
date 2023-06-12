@@ -19,11 +19,11 @@ MonoBehaviour:
     experience you can teach your paladins to use them. They will cause 4 more base
     damage per second!
   HeadsToUnlock: 48000
-  Price: 3100
+  Price: 120000
   PriceMultiplier: 1.15
   OneUseBuff: 1
-  Acquired: 0
-  NumberOfBuffs: 0
+  Acquired: 1
+  NumberOfBuffs: 1
   AllyId: 4
   addToBaseDamage: 1
   addToMultiplierDamage: 0

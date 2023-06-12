@@ -19,18 +19,21 @@ MonoBehaviour:
     giving them a crown. They will get 15% more health points but you will get 20%
     more heads from them due to kings' habit to drop their heads off.
   HeadsToUnlock: 240000
-  Price: 3000
+  Price: 50000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
-  NumberOfBuffs: 0
+  Acquired: 1
+  NumberOfBuffs: 1
   addToHealth: 1
   addToHeads: 1
   addToExperience: 0
+  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 0
   MultiplyHealth: 1.15
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
   MultiplierHeads: 1.2
   BaseExperienceToAdd: 0
   MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

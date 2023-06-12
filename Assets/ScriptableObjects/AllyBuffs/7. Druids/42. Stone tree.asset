@@ -20,7 +20,7 @@ MonoBehaviour:
     Druids can be really simple. With this trees your Druids start duplicating their
     damage.
   HeadsToUnlock: 5400000
-  Price: 306000
+  Price: 3840000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
     will be useful. Your Paladins will cause 2 times more damage per second with
     theese hammers.
   HeadsToUnlock: 1728000
-  Price: 54000
+  Price: 61440000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

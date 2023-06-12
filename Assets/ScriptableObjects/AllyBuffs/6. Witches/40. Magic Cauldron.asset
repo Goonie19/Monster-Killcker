@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: How can Witches have worked all this time without a magic cauldron?
     Nevermind, they will duplicate their damage now.
   HeadsToUnlock: 64800000
-  Price: 216000
+  Price: 122880000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

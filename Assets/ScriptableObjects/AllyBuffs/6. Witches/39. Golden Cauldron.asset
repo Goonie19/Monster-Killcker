@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: 'It''s a cauldron made of golden. This luxury object makes your
     witches cause 2 times more damage. '
   HeadsToUnlock: 10800000
-  Price: 72000
+  Price: 15360000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

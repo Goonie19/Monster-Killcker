@@ -20,7 +20,7 @@ MonoBehaviour:
     purposes. This will increase by 10000 the heads they drop and by 6000 the experience
     you receive.
   HeadsToUnlock: 1536000
-  Price: 36000
+  Price: 400000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

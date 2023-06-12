@@ -19,10 +19,10 @@ MonoBehaviour:
     experience you will be able to figure it out. These staffs will make you cause
     25% more damage with your mages.
   HeadsToUnlock: 907000
-  Price: 9000
+  Price: 2000000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 1
+  Acquired: 0
   NumberOfBuffs: 0
   AllyId: 2
   addToBaseDamage: 0

@@ -19,7 +19,7 @@ MonoBehaviour:
     experienced warrior's nails, they will get 40% more health, and you will receive
     20% more experience and 7% more heads.
   HeadsToUnlock: 400000
-  Price: 7800
+  Price: 250000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
@@ -27,10 +27,13 @@ MonoBehaviour:
   addToHealth: 1
   addToHeads: 1
   addToExperience: 1
+  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 0
   MultiplyHealth: 1.4
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
   MultiplierHeads: 1.07
   BaseExperienceToAdd: 0
   MultiplyExperienceValue: 1.2
+  DefaultBaseExperienceToAdd: 0

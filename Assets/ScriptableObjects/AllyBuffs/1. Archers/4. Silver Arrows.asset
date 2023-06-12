@@ -19,11 +19,11 @@ MonoBehaviour:
     and with the right amount of experience your archer will take that in their advantage
     and will Duplicate it's damage!
   HeadsToUnlock: 43200
-  Price: 2000
+  Price: 153000
   PriceMultiplier: 1.15
   OneUseBuff: 1
-  Acquired: 0
-  NumberOfBuffs: 0
+  Acquired: 1
+  NumberOfBuffs: 1
   AllyId: 0
   addToBaseDamage: 0
   addToMultiplierDamage: 1

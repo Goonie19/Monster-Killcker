@@ -18,7 +18,7 @@ MonoBehaviour:
   BuffDescription: Alchemist found the ultimate potion for monsters. This will give
     them 20000 more health. This also means they will give you 40000 more experience.
   HeadsToUnlock: 2880000
-  Price: 95000
+  Price: 760000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

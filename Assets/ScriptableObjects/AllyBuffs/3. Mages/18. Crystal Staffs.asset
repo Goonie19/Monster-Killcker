@@ -19,11 +19,11 @@ MonoBehaviour:
     experience you could attach some cristals to the mages staffs and make 2 times
     more powerfull!
   HeadsToUnlock: 25200
-  Price: 1200
+  Price: 32000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 1
-  NumberOfBuffs: 0
+  NumberOfBuffs: 1
   AllyId: 2
   addToBaseDamage: 0
   addToMultiplierDamage: 1

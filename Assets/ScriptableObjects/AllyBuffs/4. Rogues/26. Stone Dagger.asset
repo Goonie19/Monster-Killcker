@@ -19,11 +19,11 @@ MonoBehaviour:
     Well they now can use the stone ones to ambush their victims and cause a 25%
     more damage.
   HeadsToUnlock: 72000
-  Price: 3000
+  Price: 120000
   PriceMultiplier: 0
   OneUseBuff: 1
-  Acquired: 0
-  NumberOfBuffs: 0
+  Acquired: 1
+  NumberOfBuffs: 1
   AllyId: 3
   addToBaseDamage: 0
   addToMultiplierDamage: 1

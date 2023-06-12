@@ -19,7 +19,7 @@ MonoBehaviour:
     monster's give you, duplicate the heads they drop and quintuple the life of this
     monsters. Therte is no buff for those monsters like this one.
   HeadsToUnlock: 6400000
-  Price: 56200
+  Price: 1000000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

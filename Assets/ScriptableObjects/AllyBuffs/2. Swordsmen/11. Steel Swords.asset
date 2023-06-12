@@ -19,11 +19,11 @@ MonoBehaviour:
     with enough experience they can use it to craft new swords, providing swordsmen
     with 3 more damage per second.
   HeadsToUnlock: 18000
-  Price: 5000
+  Price: 16000
   PriceMultiplier: 1.15
   OneUseBuff: 1
   Acquired: 1
-  NumberOfBuffs: 0
+  NumberOfBuffs: 1
   AllyId: 1
   addToBaseDamage: 1
   addToMultiplierDamage: 0

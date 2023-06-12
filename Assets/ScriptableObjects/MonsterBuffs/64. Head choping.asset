@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: 64. Head choping
   m_EditorClassIdentifier: 
   Id: 64
-  Icon: {fileID: 0}
+  Icon: {fileID: 21300000, guid: e95eefadc4ac24d55ad7695fedf1a22a, type: 3}
   BuffName: Head choping
   BuffDescription: Chop those heads and turn them into a little head invoker. Equiping
     this item will duplicate the heads those monsters drop.
   HeadsToUnlock: 1040000
-  Price: 20000
+  Price: 160000
   PriceMultiplier: 1.2
   OneUseBuff: 1
   Acquired: 0
