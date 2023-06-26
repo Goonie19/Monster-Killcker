@@ -10,22 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
-  m_Name: 82. Star NOS
+  m_Name: 90. Void power NOS
   m_EditorClassIdentifier: 
-  Id: 82
-  Icon: {fileID: 21300000, guid: 01ca35bdd2cfb4b77b20e5aad2aea342, type: 3}
-  BuffName: Star
-  BuffDescription: When you kill so many monsters you find interesting things in
-    your body. The last one had an star with 2 eyes. With enough experience you can
-    increase your attack power by 35 each time... Or maybe open doors in a castle,
-    I don't know.
-  HeadsToUnlock: 35000
-  Price: 15000
+  Id: 90
+  Icon: {fileID: 21300000, guid: dbaf2f34e4d01479caf7ac1069de1193, type: 3}
+  BuffName: Void Power
+  BuffDescription: The whole emptiness of the void can start feeding your power by
+    absorving the power of the not filling space or something like that. Somehow
+    the empty space is really powerfull and will give you 4000 more power for every
+    time you look into the void.
+  HeadsToUnlock: 3000000
+  Price: 1230000
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 35
+  DamageAddToBase: 4000
   MultiplierDamage: 1

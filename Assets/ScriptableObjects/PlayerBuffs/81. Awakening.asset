@@ -17,14 +17,14 @@ MonoBehaviour:
   BuffName: Awakening
   BuffDescription: You discovered your true self... It's pretty disgusting and you
     are full of hatred for these harmless monsters. Embracing this part of you will
-    make you cause 70 more damage.
-  HeadsToUnlock: 72000
-  Price: 8000
+    make you cause 30% more damage.
+  HeadsToUnlock: 15360000
+  Price: 4000000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  addToBaseDamage: 1
-  addToMultiplierDamage: 0
-  DamageAddToBase: 70
-  MultiplierDamage: 1
+  addToBaseDamage: 0
+  addToMultiplierDamage: 1
+  DamageAddToBase: 0
+  MultiplierDamage: 1.3

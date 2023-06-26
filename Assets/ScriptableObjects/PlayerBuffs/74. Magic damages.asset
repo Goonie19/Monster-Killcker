@@ -17,8 +17,8 @@ MonoBehaviour:
   BuffName: Magic damages
   BuffDescription: Now your sword will apply magical damage, this will increase your
     actual damage by 20% and will make look so cool.
-  HeadsToUnlock: 125
-  Price: 500
+  HeadsToUnlock: 4096
+  Price: 2400
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 1

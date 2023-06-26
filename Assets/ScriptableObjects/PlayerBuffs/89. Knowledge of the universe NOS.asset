@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
-  m_Name: 82. Star NOS
+  m_Name: 89. Knowledge of the universe NOS
   m_EditorClassIdentifier: 
-  Id: 82
-  Icon: {fileID: 21300000, guid: 01ca35bdd2cfb4b77b20e5aad2aea342, type: 3}
-  BuffName: Star
-  BuffDescription: When you kill so many monsters you find interesting things in
-    your body. The last one had an star with 2 eyes. With enough experience you can
-    increase your attack power by 35 each time... Or maybe open doors in a castle,
-    I don't know.
-  HeadsToUnlock: 35000
-  Price: 15000
+  Id: 89
+  Icon: {fileID: 21300000, guid: 1badda957419446e5b2f5e8134bafc35, type: 3}
+  BuffName: Knowledge of the Universe
+  BuffDescription: You have convinced some withces to let you have a sip from the
+    sacred fountain. Every sip you take from this fountain will require more and
+    more experience, but it will give you 1500 more damage for each sip.
+  HeadsToUnlock: 1000000
+  Price: 800000
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 35
+  DamageAddToBase: 1500
   MultiplierDamage: 1

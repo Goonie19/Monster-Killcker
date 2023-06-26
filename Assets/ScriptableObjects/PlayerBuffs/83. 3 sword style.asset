@@ -18,8 +18,8 @@ MonoBehaviour:
   BuffDescription: You remember how your favourite swordsman used to battle and start
     training that way. It will require experience to master that style, but will
     increase your damage by 25%.
-  HeadsToUnlock: 950
-  Price: 1000
+  HeadsToUnlock: 122880000
+  Price: 18600030
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

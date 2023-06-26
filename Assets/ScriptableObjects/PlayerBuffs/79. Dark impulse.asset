@@ -18,8 +18,8 @@ MonoBehaviour:
   BuffDescription: Killing this much can make you receive a curse... a curse that
     will make you 30% stronger... this curse doesn't seem to make you travel in time
     though.
-  HeadsToUnlock: 200000
-  Price: 22000
+  HeadsToUnlock: 960000
+  Price: 307000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

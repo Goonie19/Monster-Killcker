@@ -16,15 +16,15 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: d7d3a080ded1f4d6d896c42322e1124f, type: 3}
   BuffName: Mist power
   BuffDescription: A misterious mist travels around you and you sense a source of
-    power in it. With enough experience you can take that power and cause 45 more
+    power in it. With enough experience you can take that power and cause 36% more
     damage to your enemies.
-  HeadsToUnlock: 200000
-  Price: 25000
+  HeadsToUnlock: 491520000
+  Price: 78.6432
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  addToBaseDamage: 1
-  addToMultiplierDamage: 0
+  addToBaseDamage: 0
+  addToMultiplierDamage: 1
   DamageAddToBase: 45
-  MultiplierDamage: 1
+  MultiplierDamage: 1.36

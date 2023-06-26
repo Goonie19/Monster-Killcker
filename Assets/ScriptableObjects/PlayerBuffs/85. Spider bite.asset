@@ -16,14 +16,14 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: b8f69031008394f21912534a3ac20502, type: 3}
   BuffName: Spider bite
   BuffDescription: A spider bit you and you are experimenting some changes. Once
-    you gain experience with this sensations, you'll cause 38 more damage.
-  HeadsToUnlock: 130000
-  Price: 15000
+    you gain experience with this sensations, you'll cause 50% more damage.
+  HeadsToUnlock: 800000000
+  Price: 314572000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  addToBaseDamage: 1
-  addToMultiplierDamage: 0
+  addToBaseDamage: 0
+  addToMultiplierDamage: 1
   DamageAddToBase: 38
-  MultiplierDamage: 1
+  MultiplierDamage: 1.5

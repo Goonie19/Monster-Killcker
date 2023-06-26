@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e3cc04189035fd549b0652ba78c9514f, type: 3}
-  m_Name: 82. Star NOS
+  m_Name: 88. Moonlight essence NOS
   m_EditorClassIdentifier: 
-  Id: 82
-  Icon: {fileID: 21300000, guid: 01ca35bdd2cfb4b77b20e5aad2aea342, type: 3}
-  BuffName: Star
-  BuffDescription: When you kill so many monsters you find interesting things in
-    your body. The last one had an star with 2 eyes. With enough experience you can
-    increase your attack power by 35 each time... Or maybe open doors in a castle,
-    I don't know.
-  HeadsToUnlock: 35000
-  Price: 15000
+  Id: 88
+  Icon: {fileID: 21300000, guid: aebcdfd45683e4895b8081d7bef80ed8, type: 3}
+  BuffName: Moon Light Esence
+  BuffDescription: You have discovered some rocks from the moon that gives you a
+    big amount of power. Every time you eat one of these rocks you earn 700 more
+    power... and the possibility to develop a stone in your kidney.
+  HeadsToUnlock: 500000
+  Price: 400000
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 35
+  DamageAddToBase: 700
   MultiplierDamage: 1

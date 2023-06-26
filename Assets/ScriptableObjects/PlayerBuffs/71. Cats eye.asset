@@ -17,7 +17,7 @@ MonoBehaviour:
   BuffName: Cat's eye
   BuffDescription: You have trained your eyes and can see monster's weak points.
     This will make you cause 20% more damage.
-  HeadsToUnlock: 20
+  HeadsToUnlock: 16
   Price: 150
   PriceMultiplier: 0
   OneUseBuff: 1

@@ -18,8 +18,8 @@ MonoBehaviour:
   BuffDescription: 'You have killed so many monsters and yet it''s no use, they keep
     reappearing... With enough experience you can use this frustration and anger
     towards becoming stronger and be 25% stronger. '
-  HeadsToUnlock: 3000
-  Price: 2000
+  HeadsToUnlock: 60000
+  Price: 38000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0

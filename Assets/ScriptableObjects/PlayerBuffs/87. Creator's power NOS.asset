@@ -16,15 +16,15 @@ MonoBehaviour:
   Icon: {fileID: 21300000, guid: b618859ac341149769df1e8dbf5dc01f, type: 3}
   BuffName: Creator's power
   BuffDescription: You have started to learn how to get power from the original spell
-    that created this world. Every time you get power from this spell, you gain 3000
+    that created this world. Every time you get power from this spell, you gain 200
     of pure power.
-  HeadsToUnlock: 2304000
-  Price: 132000
+  HeadsToUnlock: 100000
+  Price: 75000
   PriceMultiplier: 1.15
   OneUseBuff: 0
   Acquired: 0
   NumberOfBuffs: 0
   addToBaseDamage: 1
   addToMultiplierDamage: 0
-  DamageAddToBase: 3000
+  DamageAddToBase: 200
   MultiplierDamage: 1
