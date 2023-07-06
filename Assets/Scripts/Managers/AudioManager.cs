@@ -10,6 +10,7 @@ public class AudioManager : MonoBehaviour
 
     [Title("Music")]
     public FMODUnity.EventReference AmbientMusic;
+    public FMODUnity.EventReference EndingWindMusic;
     public FMODUnity.EventReference MainMenuMusic;
 
     [Title("MenuSFX")]
@@ -72,6 +73,12 @@ public class AudioManager : MonoBehaviour
     public void PlayAmbientMusic()
     {
         _musicInstance = FMODUnity.RuntimeManager.CreateInstance(AmbientMusic);
+        _musicInstance.start();
+    }
+
+    public void PlayEndingWind()
+    {
+        _musicInstance = FMODUnity.RuntimeManager.CreateInstance(EndingWindMusic);
         _musicInstance.start();
     }
 

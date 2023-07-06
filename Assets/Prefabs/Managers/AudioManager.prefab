@@ -50,20 +50,34 @@ MonoBehaviour:
       Data3: 1270337186
       Data4: -1392078175
     Path: event:/Music/Ambient music soul clean
+  EndingWindMusic:
+    Guid:
+      Data1: -569082016
+      Data2: 1177044974
+      Data3: -2085969479
+      Data4: 1109292291
+    Path: event:/Music/Wind
+  MainMenuMusic:
+    Guid:
+      Data1: 1224300514
+      Data2: 1207589576
+      Data3: 1554777016
+      Data4: 1110281413
+    Path: event:/Music/Main Menu Music
   ClickButton:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -1518608573
+      Data2: 1171969313
+      Data3: 1337615767
+      Data4: 191507585
+    Path: event:/SFX/MainMenu/ClickButton
   ClickPlayButton:
     Guid:
-      Data1: 0
-      Data2: 0
-      Data3: 0
-      Data4: 0
-    Path: 
+      Data1: -136080246
+      Data2: 1089204736
+      Data3: -416727398
+      Data4: 1776764123
+    Path: event:/SFX/MainMenu/ClickPlay
   hitSoundPath:
     Guid:
       Data1: -1786700303

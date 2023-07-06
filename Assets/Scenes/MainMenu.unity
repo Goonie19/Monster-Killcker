@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3718,81 +3718,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: AudioManager
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickButton.Guid.Data1
-      value: -1518608573
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickButton.Guid.Data2
-      value: 1171969313
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickButton.Guid.Data3
-      value: 1337615767
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickButton.Guid.Data4
-      value: 191507585
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickButton.Path
-      value: event:/SFX/MainMenu/ClickButton
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickPlayButton.Guid.Data1
-      value: -136080246
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickPlayButton.Guid.Data2
-      value: 1089204736
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickPlayButton.Guid.Data3
-      value: -416727398
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickPlayButton.Guid.Data4
-      value: 1776764123
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: ClickPlayButton.Path
-      value: event:/SFX/MainMenu/ClickPlay
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: MainMenuMusic.Guid.Data1
-      value: 1224300514
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: MainMenuMusic.Guid.Data2
-      value: 1207589576
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: MainMenuMusic.Guid.Data3
-      value: 1554777016
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: MainMenuMusic.Guid.Data4
-      value: 1110281413
-      objectReference: {fileID: 0}
-    - target: {fileID: 6490924329878008710, guid: 483507b778b133143a2324f764f93314,
-        type: 3}
-      propertyPath: MainMenuMusic.Path
-      value: event:/Music/Main Menu Music
       objectReference: {fileID: 0}
     - target: {fileID: 6490924329878008711, guid: 483507b778b133143a2324f764f93314,
         type: 3}

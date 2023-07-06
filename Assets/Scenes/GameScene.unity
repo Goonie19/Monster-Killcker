@@ -10302,6 +10302,16 @@ MonoBehaviour:
   - It's Nice day isn't it?
   - How are you feeling today?
   - You look cute today!
+  - 'Those eyes of your''s are sparkling today!
+
+'
+  - You come around here often?
+  - We could hang out sometime!
+  - Has someone told you that your haircut is really cool?
+  - Have you always been this cute?
+  - I think I got lost. Do you know how to get to the Princess' Castle?
+  - Are you the one who gives the sandwiches around here? I'd really love to have
+    one.
   OnParametersInitialized:
     m_PersistentCalls:
       m_Calls: []

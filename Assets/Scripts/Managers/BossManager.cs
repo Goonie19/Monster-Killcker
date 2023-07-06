@@ -210,6 +210,7 @@ public class BossManager : MonoBehaviour
     [ContextMenu("EndBoss")]
     public void EndBoss()
     {
+        AudioManager.Instance.PlayEndingWind();
         UIManager.Instance.BossAppearingImage.color = new Color(1, 1, 1, 0);
         UIManager.Instance.BossAppearingPanel.SetActive(true);
         _bossSpeaking = true;
