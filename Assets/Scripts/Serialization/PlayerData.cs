@@ -5,6 +5,9 @@ public class PlayerData {
     public float ActualExperience;
     public int ActualHeads;
     public int TotalHeads;
+    public float TotalDamage;
+    public float TotalExperience;
+    public float GameTime;
 
     public float BaseDamage;
     public float DamageMultiplier;
@@ -16,5 +19,8 @@ public class PlayerData {
         TotalHeads = data.TotalHeads;
         BaseDamage = data.BaseDamage;
         DamageMultiplier = data.DamageMultiplier;
+        TotalExperience = data.TotalExperience;
+        TotalDamage = data.TotalDamage;
+        GameTime = data.GameTime;
     }
 }

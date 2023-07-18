@@ -15,6 +15,7 @@ public class PlayerManager : MonoBehaviour
         set
         {
             _baseDamage = value;
+            
 
             SaveDataManager.Instance.SetPlayerBaseDamage(_baseDamage);
         }
@@ -29,8 +30,10 @@ public class PlayerManager : MonoBehaviour
         set
         {
             _actualExperience = value;
+            _totalExperienceAchieved += value;
 
             SaveDataManager.Instance.SetPlayerActualExperience(_actualExperience);
+            SaveDataManager.Instance.SetPlayerTotalExperience(_totalExperienceAchieved);
 
             UIManager.Instance.ExperienceDisplayText.text = UIManager.Instance.SimplifyNumber(_actualExperience);
 
@@ -78,10 +81,37 @@ public class PlayerManager : MonoBehaviour
         get => _totalHeadsAchieved;
     }
 
+    public float TotalExperience
+    {
+        get => _totalExperienceAchieved;
+    }
+
+    public float GameTime
+    {
+        get => _gameTime;
+    }
+
+    public float TotalDamage
+    {
+        get => _totalDamage;
+        set
+        {
+            _totalDamage = value;
+
+            SaveDataManager.Instance.SetPlayerTotalDamage(_totalDamage);
+        }
+    }
+
     public bool InBattle
     {
         get => _inBattle;
         set => _inBattle = value;
+    }
+
+    public bool PassTime
+    {
+        get => _passTime;
+        set => _passTime = value;
     }
 
     private float _baseDamage;
@@ -90,8 +120,12 @@ public class PlayerManager : MonoBehaviour
     private int _actualHeads;
 
     private int _totalHeadsAchieved;
+    private float _totalExperienceAchieved;
+    private float _totalDamage;
+    private float _gameTime;
 
     private bool _inBattle;
+    private bool _passTime;
 
     private void Awake()
     {
@@ -125,6 +159,12 @@ public class PlayerManager : MonoBehaviour
             GameManager.Instance.TenShopMode = !GameManager.Instance.TenShopMode;
 
         }
+
+        if(_passTime)
+        {
+            _gameTime += Time.deltaTime;
+            SaveDataManager.Instance.SetPlayerGameTime(_gameTime);
+        }
     }
 
     void InitializeParameters()
@@ -137,6 +177,9 @@ public class PlayerManager : MonoBehaviour
             parameters = new PlayerData(GameManager.Instance.DefaultPlayerData);
 
         _totalHeadsAchieved = parameters.TotalHeads;
+        _totalDamage = parameters.TotalDamage;
+        _totalExperienceAchieved = parameters.TotalExperience;
+        _gameTime = parameters.GameTime;
 
         ActualExperience = parameters.ActualExperience;
         ActualHeads = parameters.ActualHeads;

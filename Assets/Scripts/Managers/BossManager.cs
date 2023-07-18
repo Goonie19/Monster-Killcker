@@ -263,6 +263,8 @@ public class BossManager : MonoBehaviour
 
         sq.OnComplete(() => {
             UIManager.Instance.BossAppearingImage.raycastTarget = false;
+            PlayerManager.Instance.PassTime = false;
+            UIManager.Instance.CreditsSequence();
         });
 
     }

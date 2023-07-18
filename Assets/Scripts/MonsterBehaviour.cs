@@ -67,6 +67,7 @@ public class MonsterBehaviour : MonoBehaviour
         {
 
             _actualHealth -= damage;
+            PlayerManager.Instance.TotalDamage += damage;
 
             if (_actualHealth > 0)
             {

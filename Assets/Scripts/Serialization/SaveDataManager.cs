@@ -147,6 +147,21 @@ public class SaveDataManager : MonoBehaviour
         _saveData.PlayerParameters.TotalHeads = totalHeads;
     }
 
+    public void SetPlayerTotalExperience(float totalExperience)
+    {
+        _saveData.PlayerParameters.TotalExperience = totalExperience;
+    }
+
+    public void SetPlayerTotalDamage(float totalDamage)
+    {
+        _saveData.PlayerParameters.TotalDamage = totalDamage;
+    }
+
+    public void SetPlayerGameTime(float time)
+    {
+        _saveData.PlayerParameters.GameTime = time;
+    }
+
     public void SetMonsterBaseHealth(float baseHealth)
     {
         _saveData.MonsterParameters.BaseHealth = baseHealth;

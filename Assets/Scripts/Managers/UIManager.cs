@@ -109,7 +109,12 @@ public class UIManager : MonoBehaviour
     public Slider MasterVolumeSlider;
     public Slider MusicVolumeSlider;
     public Slider SFXVolumeSlider;
-    
+
+    [Header("Credits")]
+    public GameObject CreditsPanel;
+    public TextMeshProUGUI FinalAchievementsLabel;
+    public TextMeshProUGUI FinalAchievementsText;
+    public FinalCredits Credits;
 
 
     private void Awake()
@@ -173,6 +178,7 @@ public class UIManager : MonoBehaviour
         sq.OnComplete(() => {
             FadePanel.raycastTarget = false;
             OnFadeOut?.Invoke();
+            PlayerManager.Instance.PassTime = true;
         });
     }
 
@@ -216,6 +222,7 @@ public class UIManager : MonoBehaviour
 
     public void FadeToMainMenu()
     {
+        PlayerManager.Instance.PassTime = false;
         FadePanel.raycastTarget = true;
         AudioManager.Instance.StopMusic();
         Sequence sq = DOTween.Sequence();
@@ -227,6 +234,23 @@ public class UIManager : MonoBehaviour
         sq.OnComplete(() => {
             GameManager.Instance.ChangeToMenuScene();
         });
+    }
+
+    public void CreditsSequence()
+    {
+        FinalAchievementsText.text = "Total Heads achieved: " + PlayerManager.Instance.TotalHeads + "\n" +
+            "Damage made: " + PlayerManager.Instance.TotalDamage + "\n" +
+        "Total Experience Achieved: " + PlayerManager.Instance.TotalExperience + "\n" +
+        "Game time: " + PlayerManager.Instance.GameTime + "\n";
+
+        CreditsPanel.SetActive(true);
+
+        Sequence sq = DOTween.Sequence();
+
+        sq.Append(Credits.transform.DOScale(1, 0.1f).SetEase(Ease.Linear));
+
+        sq.Append(FinalAchievementsLabel.DOFade(1, 1f).SetEase(Ease.Linear));
+        sq.Join(FinalAchievementsText.DOFade(1, 1f).SetEase(Ease.Linear));
     }
 
     #endregion

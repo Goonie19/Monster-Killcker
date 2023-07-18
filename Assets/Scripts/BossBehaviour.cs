@@ -70,6 +70,7 @@ public class BossBehaviour : MonoBehaviour
 
             _actualHealth -= damage;
             _damageTaken += damage;
+            PlayerManager.Instance.TotalDamage += damage;
 
             int i = BossManager.Instance.GetGoalIndexCompleted(_damageTaken);
 
