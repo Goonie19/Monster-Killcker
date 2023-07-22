@@ -94,6 +94,7 @@ public class BossBehaviour : MonoBehaviour
         StartCoroutine(BossAttackBehaviour());
     }
 
+    [ContextMenu("Die")]
     private void Die()
     {
         _dead = true;

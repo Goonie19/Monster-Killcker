@@ -38,6 +38,7 @@ public class UIManager : MonoBehaviour
     public Transform AlliesContentDisplay;
 
     [Title("Money References")]
+    public GameObject GameInfoHUD;
     public Image ExperienceIcon;
     public Image HeadsIcon;
     public TextMeshProUGUI ExperienceDisplayText;

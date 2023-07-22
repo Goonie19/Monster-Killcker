@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -10181,7 +10181,7 @@ RectTransform:
   m_GameObject: {fileID: 1094717703}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 492053189}
   - {fileID: 2103722824}
@@ -15942,6 +15942,7 @@ MonoBehaviour:
   BossSpeakingText: {fileID: 995503164}
   BuffContentDisplay: {fileID: 464229730}
   AlliesContentDisplay: {fileID: 355289954}
+  GameHUD: {fileID: 1675634776}
   ExperienceIcon: {fileID: 1674695933}
   HeadsIcon: {fileID: 975018134}
   ExperienceDisplayText: {fileID: 1241828539}
@@ -16002,9 +16003,10 @@ MonoBehaviour:
   MasterVolumeSlider: {fileID: 513217191}
   MusicVolumeSlider: {fileID: 104013081}
   SFXVolumeSlider: {fileID: 773211447}
-  FinalAchievementsLabel: {fileID: 0}
-  FinalAchievementsText: {fileID: 0}
-  Credits: {fileID: 0}
+  CreditsPanel: {fileID: 421596858}
+  FinalAchievementsLabel: {fileID: 2146617217}
+  FinalAchievementsText: {fileID: 1673103439}
+  Credits: {fileID: 819110497}
 --- !u!224 &1722954845 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3899370264064737835, guid: dfec0407e3030a145bdf6ee3590d8d64,

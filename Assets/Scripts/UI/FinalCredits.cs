@@ -20,7 +20,7 @@ public class FinalCredits : MonoBehaviour
 
     void OnEnable()
     {
-        NonSelectedAnimation();
+        transform.DOScale(1, 0.5f).SetEase(Ease.InBounce).Play().OnComplete(() => NonSelectedAnimation());
     }
 
     public void ClickOnCredit()

@@ -255,6 +255,10 @@ public class BossManager : MonoBehaviour
             ++index;
         }
 
+        UIManager.Instance.BossToClick.gameObject.gameObject.SetActive(false);
+
+        UIManager.Instance.GameInfoHUD.SetActive(false);
+
         Sequence sq = DOTween.Sequence();
 
         sq.Append(UIManager.Instance.BossAppearingImage.DOFade(0, 1).SetEase(Ease.Linear));
