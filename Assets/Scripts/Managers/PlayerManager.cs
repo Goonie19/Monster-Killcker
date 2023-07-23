@@ -219,6 +219,60 @@ public class PlayerManager : MonoBehaviour
         UIManager.Instance.CheckButtonInteraction();
     }
 
+    public int GetTotalMonsterBuffs()
+    {
+        int numberOfBuffs = 0;
+
+        foreach(Buff b in buffs)
+        {
+            if( b is MonsterBuff)
+            {
+                if(b.OneUseBuff)
+                    numberOfBuffs++;
+                else
+                    numberOfBuffs += b.NumberOfBuffs;
+            }
+        }
+
+        return numberOfBuffs;
+    }
+
+    public int GetTotalPlayerBuffs()
+    {
+        int numberOfBuffs = 0;
+
+        foreach (Buff b in buffs)
+        {
+            if (b is PlayerBuff)
+            {
+                if (b.OneUseBuff)
+                    numberOfBuffs++;
+                else
+                    numberOfBuffs += b.NumberOfBuffs;
+            }
+        }
+
+        return numberOfBuffs;
+    }
+
+    public int GetTotalAlliesBuffs()
+    {
+        int numberOfBuffs = 0;
+
+        foreach (Buff b in buffs)
+        {
+            if (b is AllyBuff)
+            {
+                if (b.OneUseBuff)
+                    numberOfBuffs++;
+                else
+                    numberOfBuffs += b.NumberOfBuffs;
+            }
+        }
+
+        return numberOfBuffs;
+    }
+
     /*void SilentInitBuffs()
     {
         AllyManager.Instance.CheckAllies();

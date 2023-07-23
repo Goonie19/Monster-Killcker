@@ -102,6 +102,8 @@ public class BossBehaviour : MonoBehaviour
         _actualHealth = 0;
         UIManager.Instance.UpdateHealthBar(_actualHealth);
 
+        transform.DOShakePosition(5f).SetEase(Ease.Linear).Play();
+
         BossManager.Instance.EndBoss();
     }
 

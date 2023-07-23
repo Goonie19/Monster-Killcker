@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -3846,6 +3846,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 819110493}
+  - {fileID: 1094717704}
   - {fileID: 1849156218}
   m_Father: {fileID: 1588704298}
   m_RootOrder: 2
@@ -4477,10 +4478,10 @@ RectTransform:
   m_Father: {fileID: 1094717704}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 62.01899, y: 377.6083}
-  m_SizeDelta: {x: 400, y: 69.23918}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 35, y: -50}
+  m_SizeDelta: {x: 400, y: 69.2392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492053190
 MonoBehaviour:
@@ -7544,14 +7545,13 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
-  m_Children:
-  - {fileID: 1094717704}
+  m_Children: []
   m_Father: {fileID: 421596859}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0, y: 229.6}
+  m_AnchoredPosition: {x: 0, y: 256}
   m_SizeDelta: {x: 441, y: 355}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &819110494
@@ -7573,36 +7573,6 @@ MonoBehaviour:
         m_Calls:
         - m_Target: {fileID: 819110497}
           m_MethodName: ClickOnCredit
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 0
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 819110497}
-          m_MethodName: StopNonSlectedAnimation
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - eventID: 1
-    callback:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 819110497}
-          m_MethodName: NonSelectedAnimation
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -7661,7 +7631,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 924054bbdbde15b4693c2d1fe5006637, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  credits: []
+  credits:
+  - CreditHeader: Game Art
+    CreditName: Aekashicks on Itch.io
+    CreditSprite: {fileID: 21300000, guid: edfaa35477b9681429640fd812b0daa5, type: 3}
+  - CreditHeader: Music
+    CreditName: Kevin Macleod
+    CreditSprite: {fileID: 21300000, guid: 1248ebbab3ac42b4eb71c55039be0754, type: 3}
+  - CreditHeader: Constant Support
+    CreditName: "Pablo L\xF3pez"
+    CreditSprite: {fileID: 21300000, guid: e5f3d782b717e264b928baae3cd6006f, type: 3}
   CreditHeaderText: {fileID: 492053190}
   CreditText: {fileID: 2103722825}
   MonsterCredit: {fileID: 819110495}
@@ -10185,13 +10164,13 @@ RectTransform:
   m_Children:
   - {fileID: 492053189}
   - {fileID: 2103722824}
-  m_Father: {fileID: 819110493}
-  m_RootOrder: 0
+  m_Father: {fileID: 421596859}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -24.019958, y: -120.399994}
-  m_SizeDelta: {x: 677.155, y: 725}
+  m_AnchoredPosition: {x: 0, y: -189.95508}
+  m_SizeDelta: {x: -48.092896, y: 240.8899}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1096096156
 GameObject:
@@ -14874,8 +14853,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -14892,8 +14871,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 24
-  m_fontSizeBase: 24
+  m_fontSize: 20
+  m_fontSizeBase: 20
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -14928,7 +14907,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 164.2162, y: 0, z: 0, w: 0}
+  m_margin: {x: 78.89748, y: 0, z: 0, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -15942,7 +15921,7 @@ MonoBehaviour:
   BossSpeakingText: {fileID: 995503164}
   BuffContentDisplay: {fileID: 464229730}
   AlliesContentDisplay: {fileID: 355289954}
-  GameHUD: {fileID: 1675634776}
+  GameInfoHUD: {fileID: 1676304612}
   ExperienceIcon: {fileID: 1674695933}
   HeadsIcon: {fileID: 975018134}
   ExperienceDisplayText: {fileID: 1241828539}
@@ -15985,6 +15964,7 @@ MonoBehaviour:
   PlayerTotalDamageText: {fileID: 0}
   DialoguePanel: {fileID: 1325310859}
   DialogueText: {fileID: 629925342}
+  HealthBarObject: {fileID: 622949468}
   fillHealthImage: {fileID: 201689870}
   CurrentHealthText: {fileID: 1296333406}
   ButtonsToAssignSound:
@@ -17483,7 +17463,7 @@ RectTransform:
   - {fileID: 2146617216}
   - {fileID: 1673103438}
   m_Father: {fileID: 421596859}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -20272,10 +20252,10 @@ RectTransform:
   m_Father: {fileID: 1094717704}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 61.999954, y: 268.5083}
-  m_SizeDelta: {x: 400, y: 149.02379}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 34.981003, y: -158.99998}
+  m_SizeDelta: {x: 400, y: 149.0238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103722825
 MonoBehaviour:
@@ -20720,8 +20700,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294967295
-  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+    rgba: 16777215
+  m_fontColor: {r: 1, g: 1, b: 1, a: 0}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -20738,14 +20718,14 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 51.66
-  m_fontSizeBase: 51.66
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0

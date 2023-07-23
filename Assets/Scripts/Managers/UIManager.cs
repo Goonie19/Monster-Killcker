@@ -93,6 +93,7 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI DialogueText;
 
     [Title("Health Info for monster")]
+    public GameObject HealthBarObject;
     public Image fillHealthImage;
     public TextMeshProUGUI CurrentHealthText;
 
@@ -180,7 +181,14 @@ public class UIManager : MonoBehaviour
             FadePanel.raycastTarget = false;
             OnFadeOut?.Invoke();
             PlayerManager.Instance.PassTime = true;
+
+            if(SaveDataManager.Instance.GetGameCompleted())
+                CreditsSequence();
         });
+
+        if (SaveDataManager.Instance.GetGameCompleted())
+            ActivateCreditsScreen();
+            
     }
 
     public void SpawnInfoPanel(Buff b)
@@ -239,12 +247,26 @@ public class UIManager : MonoBehaviour
 
     public void CreditsSequence()
     {
-        FinalAchievementsText.text = "Total Heads achieved: " + PlayerManager.Instance.TotalHeads + "\n" +
-            "Damage made: " + PlayerManager.Instance.TotalDamage + "\n" +
-        "Total Experience Achieved: " + PlayerManager.Instance.TotalExperience + "\n" +
-        "Game time: " + PlayerManager.Instance.GameTime + "\n";
+
+        BossAppearingImage.raycastTarget = false;
+        PlayerManager.Instance.PassTime = false;
+
+        int h = Mathf.FloorToInt(PlayerManager.Instance.GameTime / 3600);
+        int m = (Mathf.FloorToInt(PlayerManager.Instance.GameTime) - (3600 * h)) / 60;
+        int s = (Mathf.FloorToInt(PlayerManager.Instance.GameTime) - (3600 * h) - (m * 60));
+
+
+        FinalAchievementsText.text = "Total Heads achieved: " + SimplifyNumber(PlayerManager.Instance.TotalHeads) + "\n" +
+            "Damage made: " + SimplifyNumber(PlayerManager.Instance.TotalDamage) + "\n" +
+        "Total Experience Achieved: " + SimplifyNumber(PlayerManager.Instance.TotalExperience) + "\n" + 
+        "Total Allies: " + AllyManager.Instance.GetTotalAllies() + "\n" +
+        "Total Monster Buffs: " + PlayerManager.Instance.GetTotalMonsterBuffs() + "\n" + 
+        "Total Player Buffs: " + PlayerManager.Instance.GetTotalPlayerBuffs() + "\n" + 
+        "Total Allies Buffs: " + PlayerManager.Instance.GetTotalAlliesBuffs() + "\n" +
+        "Game time: " + h + ":" + m + ":" + s + " hours";
 
         CreditsPanel.SetActive(true);
+        DeactivateInteraction();
 
         Sequence sq = DOTween.Sequence();
 
@@ -255,6 +277,34 @@ public class UIManager : MonoBehaviour
     }
 
     #endregion
+
+    public void ActivateCreditsScreen()
+    {
+        BossToClick.gameObject.gameObject.SetActive(false);
+        MonsterToClick.gameObject.SetActive(false);
+        PlayerManager.Instance.InBattle = false;
+        BossManager.Instance.InBossFight = false;
+
+        GameInfoHUD.SetActive(false);
+        HealthBarObject.SetActive(false);
+
+        SaveDataManager.Instance.SetGameCompleted();
+    }
+
+    void DeactivateInteraction()
+    {
+        foreach (BuffButton b in AllyButtons)
+            b.gameObject.GetComponent<Button>().interactable = false;
+
+        foreach (BuffButton b in UnlockedPlayerBuffs)
+            b.gameObject.GetComponent<Button>().interactable = false;
+
+        foreach (BuffButton b in UnlockedAllyBuffs)
+            b.gameObject.GetComponent<Button>().interactable = false;
+
+        foreach (BuffButton b in UnlockedMonsterBuffs)
+            b.gameObject.GetComponent<Button>().interactable = false;
+    }
 
     #region INSTANTIATE BUTTONS
 
@@ -390,17 +440,22 @@ public class UIManager : MonoBehaviour
     }
 
     public void CheckButtonInteraction() {
-        foreach (BuffButton b in AllyButtons)
-            b.CheckInteractable();
+        if(SaveDataManager.Instance.GetGameCompleted())
+            DeactivateInteraction();
+        else
+        {
+            foreach (BuffButton b in AllyButtons)
+                b.CheckInteractable();
 
-        foreach (BuffButton b in UnlockedAllyBuffs)
-            b.CheckInteractable();
+            foreach (BuffButton b in UnlockedAllyBuffs)
+                b.CheckInteractable();
 
-        foreach (BuffButton b in UnlockedPlayerBuffs)
-            b.CheckInteractable();
+            foreach (BuffButton b in UnlockedPlayerBuffs)
+                b.CheckInteractable();
 
-        foreach (BuffButton b in UnlockedMonsterBuffs)
-            b.CheckInteractable();
+            foreach (BuffButton b in UnlockedMonsterBuffs)
+                b.CheckInteractable();
+        }
     }
 
     #endregion

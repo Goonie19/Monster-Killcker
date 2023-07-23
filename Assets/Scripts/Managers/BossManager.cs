@@ -255,9 +255,7 @@ public class BossManager : MonoBehaviour
             ++index;
         }
 
-        UIManager.Instance.BossToClick.gameObject.gameObject.SetActive(false);
-
-        UIManager.Instance.GameInfoHUD.SetActive(false);
+        UIManager.Instance.ActivateCreditsScreen();
 
         Sequence sq = DOTween.Sequence();
 
@@ -266,8 +264,6 @@ public class BossManager : MonoBehaviour
         sq.Play();
 
         sq.OnComplete(() => {
-            UIManager.Instance.BossAppearingImage.raycastTarget = false;
-            PlayerManager.Instance.PassTime = false;
             UIManager.Instance.CreditsSequence();
         });
 

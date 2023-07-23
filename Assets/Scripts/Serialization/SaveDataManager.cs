@@ -25,6 +25,7 @@ public class SaveDataManager : MonoBehaviour
         public List<AlliesData> allies;
         public List<BuffData> buffs;
 
+        public bool completed;
         
     }
 
@@ -43,6 +44,8 @@ public class SaveDataManager : MonoBehaviour
 
             _saveData.allies = new List<AlliesData>();
             _saveData.buffs = new List<BuffData>();
+
+            _saveData.completed = false;
         }
     }
 
@@ -120,6 +123,12 @@ public class SaveDataManager : MonoBehaviour
             _saveData.buffs[index].NumberOfBuffs = b.NumberOfBuffs;
             _saveData.buffs[index].ActualPrice = b.GetPrice();
         }
+    }
+
+    public void CompleteGame()
+    {
+        _saveData.completed = true;
+        SaveData();
     }
 
     public void SetPlayerBaseDamage(float baseDamage)
@@ -207,6 +216,12 @@ public class SaveDataManager : MonoBehaviour
         _saveData.BossParameters.actualHealth = actualHealth;
     }
 
+    public void SetGameCompleted()
+    {
+        _saveData.completed = true;
+        SaveData();
+    }
+
     #endregion
 
     #region GET METHODS
@@ -234,6 +249,11 @@ public class SaveDataManager : MonoBehaviour
     public BossData GetBossParameters()
     {
         return _saveData.BossParameters;
+    }
+
+    public bool GetGameCompleted()
+    {
+        return _saveData.completed;
     }
 
     #endregion

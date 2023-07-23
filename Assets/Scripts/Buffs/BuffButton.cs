@@ -62,10 +62,7 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (NumberOfBuffs)
             NumberOfBuffs.text = "x" + ally.NumberOfAllies.ToString();
 
-        if(ally.GetPrice() % 1 == 0)
-            ExperienceText.text = ally.GetPrice().ToString();
-        else
-            ExperienceText.text = string.Format("{0:0.00}", ally.GetPrice());
+        ExperienceText.text = UIManager.Instance.SimplifyNumber(ally.GetPrice());
 
         GetComponent<Button>().onClick.RemoveAllListeners();
 
@@ -99,10 +96,7 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
         if (NumberOfBuffs)
             NumberOfBuffs.text = "x" + b.NumberOfBuffs.ToString();
 
-        if(b.GetPrice() % 1 == 0)
-            ExperienceText.text = b.GetPrice().ToString();
-        else
-            ExperienceText.text = string.Format("{0:0.00}", b.GetPrice());
+        ExperienceText.text = UIManager.Instance.SimplifyNumber(b.GetPrice());
 
         GetComponent<Button>().onClick.RemoveAllListeners();
 

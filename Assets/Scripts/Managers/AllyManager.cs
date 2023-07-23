@@ -101,4 +101,14 @@ public class AllyManager : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
         }
     }
+
+    public int GetTotalAllies()
+    {
+        int numberOfAllies = 0;
+
+        foreach(AllyType ally in allies)
+            numberOfAllies += ally.NumberOfAllies;
+        
+        return numberOfAllies;
+    }
 }

@@ -20,7 +20,10 @@ public class FinalCredits : MonoBehaviour
 
     void OnEnable()
     {
-        transform.DOScale(1, 0.5f).SetEase(Ease.InBounce).Play().OnComplete(() => NonSelectedAnimation());
+        CreditHeaderText.text = credits[_creditIndex].CreditHeader;
+        CreditText.text = credits[_creditIndex].CreditName;
+        MonsterCredit.sprite = credits[_creditIndex].CreditSprite;
+        transform.DOScale(1, 0.5f).SetEase(Ease.InBounce).Play();
     }
 
     public void ClickOnCredit()
@@ -48,25 +51,5 @@ public class FinalCredits : MonoBehaviour
 
 
         AudioManager.Instance.PlayHitSound();
-    }
-
-    public void NonSelectedAnimation()
-    {
-        _nonSelectedTween = DOTween.Sequence();
-
-        _nonSelectedTween.Append(transform.DOScale(1f, 1f).SetEase(Ease.Linear));
-        _nonSelectedTween.Append(transform.DOScale(0.95f, 1f).SetEase(Ease.Linear));
-
-        _nonSelectedTween.SetLoops(-1);
-
-        _nonSelectedTween.Play();
-    }
-
-    public void StopNonSlectedAnimation()
-    {
-        _nonSelectedTween.Kill();
-
-        transform.DOScale(0.95f, 0.1f).SetEase(Ease.Linear).Play();
-
     }
 }
