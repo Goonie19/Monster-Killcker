@@ -11,6 +11,7 @@ public class AudioManager : MonoBehaviour
     [Title("Music")]
     public FMODUnity.EventReference AmbientMusic;
     public FMODUnity.EventReference EndingWindMusic;
+    public FMODUnity.EventReference BossFightMusic;
     public FMODUnity.EventReference MainMenuMusic;
 
     [Title("MenuSFX")]
@@ -19,6 +20,7 @@ public class AudioManager : MonoBehaviour
 
     [Title("Game SFX")]
     public FMODUnity.EventReference hitSoundPath;
+    public FMODUnity.EventReference killAllySoundPath;
     public FMODUnity.EventReference UnlockSoundPath;
     public FMODUnity.EventReference BuySoundPath;
 
@@ -33,6 +35,7 @@ public class AudioManager : MonoBehaviour
     private FMOD.Studio.EventInstance _clickPlayButtonInstance;
 
     private FMOD.Studio.EventInstance _hitInstance;
+    private FMOD.Studio.EventInstance _killAllyInstance;
     private FMOD.Studio.EventInstance _unlockInstance;
     private FMOD.Studio.EventInstance _buyInstance;
 
@@ -69,10 +72,15 @@ public class AudioManager : MonoBehaviour
 
     }
 
-    [ContextMenu("PlayAmbientMusic1")]
     public void PlayAmbientMusic()
     {
         _musicInstance = FMODUnity.RuntimeManager.CreateInstance(AmbientMusic);
+        _musicInstance.start();
+    }
+
+    public void PlayBossMusic()
+    {
+        _musicInstance = FMODUnity.RuntimeManager.CreateInstance(BossFightMusic);
         _musicInstance.start();
     }
 
@@ -91,36 +99,49 @@ public class AudioManager : MonoBehaviour
     public void StopMusic()
     {
         _musicInstance.stop(FMOD.Studio.STOP_MODE.ALLOWFADEOUT);
+        _musicInstance.release();
     }
 
     public void PlayClickButtonSound()
     {
         _clickButtonInstance = FMODUnity.RuntimeManager.CreateInstance(ClickButton);
         _clickButtonInstance.start();
+        _clickButtonInstance.release();
     }
 
     public void PlayClickPlayButtonSound()
     {
         _clickPlayButtonInstance = FMODUnity.RuntimeManager.CreateInstance(ClickPlayButton);
         _clickPlayButtonInstance.start();
+        _clickPlayButtonInstance.release();
     }
 
     public void PlayHitSound()
     {
         _hitInstance = FMODUnity.RuntimeManager.CreateInstance(hitSoundPath);
         _hitInstance.start();
+        _hitInstance.release();
+    }
+
+    public void PlayKillAllySound()
+    {
+        _killAllyInstance = FMODUnity.RuntimeManager.CreateInstance(killAllySoundPath);
+        _killAllyInstance.start();
+        _killAllyInstance.release();
     }
 
     public void PlayUnlockedSound()
     {
         _unlockInstance = FMODUnity.RuntimeManager.CreateInstance(UnlockSoundPath);
         _unlockInstance.start();
+        _unlockInstance.release();
     }
 
     public void PlayBuySound()
     {
         _buyInstance = FMODUnity.RuntimeManager.CreateInstance(BuySoundPath);
         _buyInstance.start();
+        _buyInstance.release();
     }
 
     #region VOLUME SLIDERS
@@ -167,4 +188,9 @@ public class AudioManager : MonoBehaviour
         return volume;
     }
     #endregion
+
+    public void SetBossLifeParameter(float lifePercentage)
+    {
+        FMODUnity.RuntimeManager.StudioSystem.setParameterByName("BossLife", lifePercentage);
+    }
 }

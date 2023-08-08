@@ -42,6 +42,8 @@ public class BossBehaviour : MonoBehaviour
 
         _actualHealth = parameters.actualHealth;
 
+        AudioManager.Instance.SetBossLifeParameter(_actualHealth/BossManager.Instance.GetMaxHealth());
+
         _damageTaken = parameters.DamageTaken;
 
     }
@@ -69,6 +71,9 @@ public class BossBehaviour : MonoBehaviour
         {
 
             _actualHealth -= damage;
+            AudioManager.Instance.SetBossLifeParameter(_actualHealth / BossManager.Instance.GetMaxHealth());
+
+            Debug.Log("Boss life per is: " + _actualHealth / BossManager.Instance.GetMaxHealth());
             _damageTaken += damage;
             PlayerManager.Instance.TotalDamage += damage;
 
@@ -115,6 +120,8 @@ public class BossBehaviour : MonoBehaviour
     IEnumerator BossAttackBehaviour()
     {
         _timer = 0;
+
+        AudioManager.Instance.PlayBossMusic();
 
         float timeOfNextAttack = BossManager.Instance.BossFightTime / BossManager.Instance.NumberOfAttacks;
 
@@ -163,6 +170,7 @@ public class BossBehaviour : MonoBehaviour
             ++i;
         }
 
+        AudioManager.Instance.PlayKillAllySound();
     }
 
     public void GetRewards(int goalIndex)

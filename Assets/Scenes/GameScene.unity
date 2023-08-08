@@ -10689,6 +10689,7 @@ MonoBehaviour:
   - I think I got lost. Do you know how to get to the Princess' Castle?
   - Are you the one who gives the sandwiches around here? I'd really love to have
     one.
+  - You know you can use the Right click button to buy staff 10 by 10 right?
   OnParametersInitialized:
     m_PersistentCalls:
       m_Calls: []

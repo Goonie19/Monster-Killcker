@@ -57,6 +57,13 @@ MonoBehaviour:
       Data3: -2085969479
       Data4: 1109292291
     Path: event:/Music/Wind
+  BossFightMusic:
+    Guid:
+      Data1: -1568909594
+      Data2: 1170594296
+      Data3: 1308129947
+      Data4: -1742990364
+    Path: event:/Music/BossFight
   MainMenuMusic:
     Guid:
       Data1: 1224300514

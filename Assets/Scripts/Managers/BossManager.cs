@@ -90,6 +90,8 @@ public class BossManager : MonoBehaviour
         _bossSpeaking = true;
         UIManager.Instance.BossAppearingImage.raycastTarget = true;
 
+        AudioManager.Instance.StopMusic();
+
         Sequence sq = DOTween.Sequence();
 
         AllyManager.Instance.canAttack = false;
@@ -154,6 +156,8 @@ public class BossManager : MonoBehaviour
         UIManager.Instance.BossAppearingImage.color = new Color(1, 1, 1, 0);
         UIManager.Instance.BossAppearingPanel.SetActive(true);
         _bossSpeaking = true;
+
+        AudioManager.Instance.StopMusic();
         UIManager.Instance.BossAppearingImage.raycastTarget = true;
 
         Sequence sq = DOTween.Sequence();
