@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 0
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -5624,7 +5624,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 1
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 30, y: 30, z: 30, w: 50}
+  m_margin: {x: 50, y: 40, z: 50, w: 60}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -10690,6 +10690,29 @@ MonoBehaviour:
   - Are you the one who gives the sandwiches around here? I'd really love to have
     one.
   - You know you can use the Right click button to buy staff 10 by 10 right?
+  - You are so cute your name should be "Cutie".
+  - Are you eating enough vegetables? I don't want you to be sick due to a lack of
+    green on your diet!
+  - I keep being stabbed by humans but your smile keeps me alive.
+  - Could you tell your friends to stop hitting me? It's not that isn't funny, is
+    just that I could die of that.
+  - I hope you haven't forgotten about drinking water, mate.
+  - How are you able to walk after that fall from the sky my angel?
+  - Hope you don't forget you can operate with buffs for us monsters 10 by 10 if
+    you right click!
+  - Your eyes are like the moon... because the moon is pretty.
+  - Did you know the life expectancy of us monsters goes around 2 seconds?
+  - I'm an advice monster and I'm here to remind you that you can right click to
+    buy buffs and allies 10 by 10.
+  - Wow you really seem like a nice non monster-slaughter person!
+  - Do you hear that? Is my heart beating for you!
+  - 'There are 3 things that can kill us monsters: Clicking us enough, poison and
+    of course, weapons.'
+  - I'm the comunist monster. I'm not going to comment anything to not make this
+    even more political.
+  - Seriously, drink enough water, It's important to be hydrated.
+  - We monstes have a type and it's people that actually want to murder us.
+  - Facing death telling you how cute you are makes the existencial crisis go away!
   OnParametersInitialized:
     m_PersistentCalls:
       m_Calls: []
