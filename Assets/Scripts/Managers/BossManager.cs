@@ -166,6 +166,8 @@ public class BossManager : MonoBehaviour
 
         AllyManager.Instance.canAttack = false;
 
+        AudioManager.Instance.StopMusic();
+
         sq.Append(UIManager.Instance.BossAppearingImage.DOFade(1, 1).SetEase(Ease.Linear));
 
         sq.Play();
