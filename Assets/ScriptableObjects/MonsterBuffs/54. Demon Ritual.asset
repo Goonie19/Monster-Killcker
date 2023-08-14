@@ -30,7 +30,9 @@ MonoBehaviour:
   HealthAddToBase: 0
   MultiplyHealth: 3
   HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
   MultiplierHeads: 0
   BaseExperienceToAdd: 0
   MultiplyExperienceValue: 2
+  DefaultBaseExperienceToAdd: 0

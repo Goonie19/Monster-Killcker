@@ -10,30 +10,29 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 63. Eyes on the darkness
+  m_Name: 66. Monster ability book
   m_EditorClassIdentifier: 
-  Id: 63
-  Icon: {fileID: 21300000, guid: a48b33b9638b44bef8c4763a4f3226d4, type: 3}
-  BuffName: Eyes on the darkness
-  BuffDescription: They can see on the darkness, but after this, you will too. Use
-    those heads to get their eyes and see their more internal weak points. You will
-    start getting a 25% more experience from them.
-  HeadsToUnlock: 800000
-  Price: 130000
+  Id: 66
+  Icon: {fileID: 21300000, guid: a4ffdf3090d844d40856024a95e484bf, type: 3}
+  BuffName: Monster ability book
+  BuffDescription: You give those monsters some books you found so they can become
+    stronger. This will duplicate the experience monsters give you when you kill
+    them, but they will also duplicate their health.
+  HeadsToUnlock: 1440000
+  Price: 200000
   PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  addToHealth: 0
+  addToHealth: 1
   addToHeads: 0
   addToExperience: 1
-  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 0
-  MultiplyHealth: 1
+  MultiplyHealth: 2
   HealthAddToMultiplierEXP: 0
   DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
   MultiplierHeads: 0
   BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 1.25
+  MultiplyExperienceValue: 2
   DefaultBaseExperienceToAdd: 0

@@ -148,18 +148,9 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             IconShadow.sprite = _associatedBuff.Icon;
 
             if(!GameManager.Instance.TenShopMode) // Muestra la compra de 10 en 10 o de 1 en 1
-            {
-                if (_associatedBuff.GetPrice() % 1 == 0)
-                    ExperienceText.text = _associatedBuff.GetPrice().ToString();
-                else
-                    ExperienceText.text = string.Format("{0:0.00}", _associatedBuff.GetPrice());
-            }else
-            {
-                if (_associatedBuff.GetTenPrice() % 1 == 0)
-                    ExperienceText.text = _associatedBuff.GetTenPrice().ToString();
-                else
-                    ExperienceText.text = string.Format("{0:0.00}", _associatedBuff.GetTenPrice());
-            }
+                ExperienceText.text = UIManager.Instance.SimplifyNumber(_associatedBuff.GetPrice());
+            else
+                ExperienceText.text = UIManager.Instance.SimplifyNumber(_associatedBuff.GetTenPrice());
 
             BuffName.text = _associatedBuff.BuffName;
             if (NumberOfBuffs)
@@ -170,19 +161,10 @@ public class BuffButton : MonoBehaviour, IPointerEnterHandler, IPointerExitHandl
             IconRender.sprite = _associatedAlly.Icon;
             IconShadow.sprite = _associatedAlly.Icon;
 
-            if(!GameManager.Instance.TenShopMode)
-            {
-                if (_associatedAlly.GetPrice() % 1 == 0)
-                    ExperienceText.text = _associatedAlly.GetPrice().ToString();
-                else
-                    ExperienceText.text = string.Format("{0:0.00}", _associatedAlly.GetPrice());
-            } else
-            {
-                if (_associatedAlly.GetTenPrice() % 1 == 0)
-                    ExperienceText.text = _associatedAlly.GetTenPrice().ToString();
-                else
-                    ExperienceText.text = string.Format("{0:0.00}", _associatedAlly.GetTenPrice());
-            }
+            if (!GameManager.Instance.TenShopMode) // Muestra la compra de 10 en 10 o de 1 en 1
+                ExperienceText.text = UIManager.Instance.SimplifyNumber(_associatedAlly.GetPrice());
+            else
+                ExperienceText.text = UIManager.Instance.SimplifyNumber(_associatedAlly.GetTenPrice());
 
             BuffName.text = _associatedAlly.AllyName;
             if (NumberOfBuffs)

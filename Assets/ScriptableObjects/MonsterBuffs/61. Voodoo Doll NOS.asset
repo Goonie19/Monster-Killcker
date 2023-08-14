@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
+  m_Name: 61. Voodoo Doll NOS
+  m_EditorClassIdentifier: 
+  Id: 61
+  Icon: {fileID: 21300000, guid: deca537e8770146128538c7469ce9439, type: 3}
+  BuffName: Voodoo doll
+  BuffDescription: You found multiple voodoo dolls of the monsters your killing and
+    you can rip off their heads multiple times so they will drop 750 more heads!
+    Although they will become more resistent and will gain 5000 Health each time.
+  HeadsToUnlock: 40000
+  Price: 40000
+  PriceMultiplier: 1.2
+  OneUseBuff: 0
+  Acquired: 0
+  NumberOfBuffs: 0
+  addToHealth: 1
+  addToHeads: 1
+  addToExperience: 0
+  HealthAddToBase: 5000
+  MultiplyHealth: 1
+  HealthAddToMultiplierEXP: 0
+  DefaultBaseHeadsToAdd: 0
+  HeadsToAdd: 750
+  MultiplierHeads: 1
+  BaseExperienceToAdd: 0
+  MultiplyExperienceValue: 1
+  DefaultBaseExperienceToAdd: 0

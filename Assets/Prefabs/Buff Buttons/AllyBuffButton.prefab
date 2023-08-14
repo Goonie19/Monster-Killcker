@@ -211,7 +211,7 @@ MonoBehaviour:
   IconShadow: {fileID: 3553399410766512938}
   MoneyImage: {fileID: 0}
   MoneyAlly: {fileID: 0}
-  MoneyMonster: {fileID: 0}
+  MoneyMonster: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
   BuffName: {fileID: 3553399409851852428}
   NumberOfBuffs: {fileID: 3553399410166748131}
   ExperienceText: {fileID: 7511892615977080283}

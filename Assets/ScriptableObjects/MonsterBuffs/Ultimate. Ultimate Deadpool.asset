@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
   m_Name: Ultimate. Ultimate Deadpool
   m_EditorClassIdentifier: 
-  Id: 69
+  Id: 91
   Icon: {fileID: 21300000, guid: fb719f9257eba4963aaf94397b2844b1, type: 3}
   BuffName: Ultimate deadpool
   BuffDescription: There is an ultimate sacrifice which will triplicate the experience
@@ -27,7 +27,6 @@ MonoBehaviour:
   addToHealth: 1
   addToHeads: 1
   addToExperience: 1
-  DefaultBaseHealthToAdd: 0
   HealthAddToBase: 0
   MultiplyHealth: 5
   HealthAddToMultiplierEXP: 0

@@ -98,7 +98,7 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_UseShadowmask: 1
+  m_UseShadowmask: 0
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -420,8 +420,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 12
@@ -4481,7 +4481,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 35, y: -50}
-  m_SizeDelta: {x: 400, y: 69.2392}
+  m_SizeDelta: {x: 700, y: 69.2392}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &492053190
 MonoBehaviour:
@@ -4530,8 +4530,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -4738,8 +4738,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 12
@@ -5081,8 +5081,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 12
@@ -5952,10 +5952,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 14.2
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
-  m_enableAutoSizing: 1
+  m_enableAutoSizing: 0
   m_fontSizeMin: 12
   m_fontSizeMax: 24
   m_fontStyle: 0
@@ -6984,8 +6984,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 7.18
@@ -7641,6 +7641,18 @@ MonoBehaviour:
   - CreditHeader: Constant Support
     CreditName: "Pablo L\xF3pez"
     CreditSprite: {fileID: 21300000, guid: e5f3d782b717e264b928baae3cd6006f, type: 3}
+  - CreditHeader: '"Wind, Synthesized, A.wav" sound'
+    CreditName: InspectorJ (www.jshaw.co.uk) of Freesound.org
+    CreditSprite: {fileID: 21300000, guid: ef183165d54404f4896b2282c6565142, type: 3}
+  - CreditHeader: Sound of FreeSound,org
+    CreditName: martian
+    CreditSprite: {fileID: 21300000, guid: d4bcbb438cde0ce42ad8b4fe287c362b, type: 3}
+  - CreditHeader: Sound of FreeSound,org
+    CreditName: DWOBoyle
+    CreditSprite: {fileID: 21300000, guid: aaa777a6f166a2b46af7c514ea35a986, type: 3}
+  - CreditHeader: Sound of FreeSound,org
+    CreditName: CrazyFrog249
+    CreditSprite: {fileID: 21300000, guid: c9137ed93f82d954cb1163f409170eab, type: 3}
   CreditHeaderText: {fileID: 492053190}
   CreditText: {fileID: 2103722825}
   MonsterCredit: {fileID: 819110495}
@@ -10557,6 +10569,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   buffs:
+  - {fileID: 11400000, guid: a7a30046c006be942b5ec0090b78ad71, type: 2}
   - {fileID: 11400000, guid: cd670d8ebc7afd84fb09126f6e15304e, type: 2}
   - {fileID: 11400000, guid: cde7285ada1981d488d11d3297576447, type: 2}
   - {fileID: 11400000, guid: c265da484826fc841a5a73a394b5e99b, type: 2}
@@ -10675,6 +10688,13 @@ MonoBehaviour:
   - {fileID: 21300000, guid: 1cb6155fbea5e0a44a9e8558c679e72f, type: 3}
   - {fileID: 21300000, guid: ddd156a2a6264714b86e6ec8465a27d0, type: 3}
   - {fileID: 21300000, guid: 942713af999c12244af2cc86ce6d3d85, type: 3}
+  - {fileID: 21300000, guid: 92fc8c8bd95f06b4aaf55aa161dccefd, type: 3}
+  - {fileID: 21300000, guid: e83f74e3ecf543640b31cd74992a370b, type: 3}
+  - {fileID: 21300000, guid: 153ba570c063e9d43a1b9a489e6ef936, type: 3}
+  - {fileID: 21300000, guid: e497811c43b5fbf4e9abad5d3151ac1c, type: 3}
+  - {fileID: 21300000, guid: ff7949c4532dfa2498f3a61074eaf378, type: 3}
+  - {fileID: 21300000, guid: 3e8f52c12749c5c40a99a0375b52cf8c, type: 3}
+  - {fileID: 21300000, guid: 29a87eb588bbf884ca6b835533694c89, type: 3}
   MonsterPhrases:
   - It's Nice day isn't it?
   - How are you feeling today?
@@ -10713,6 +10733,11 @@ MonoBehaviour:
   - Seriously, drink enough water, It's important to be hydrated.
   - We monstes have a type and it's people that actually want to murder us.
   - Facing death telling you how cute you are makes the existencial crisis go away!
+  - You're are not being paid enough for being that cute.
+  - Play Breathless High, not related with anything happening here.
+  - Don't ask the developer about this game. Believe me.
+  - I love the smile on your face while you destroy me...
+  - Click me like one of your french monsters!
   OnParametersInitialized:
     m_PersistentCalls:
       m_Calls: []
@@ -12316,8 +12341,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 12
@@ -13945,9 +13970,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f887f18aa30983468606e90f7eb1ae2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BossHealth: 5000000
+  BossHealth: 7000000
   HeadsToUnlock: 1000000
-  NumberOfAlliesToKill: 2
+  NumberOfAlliesToKill: 3
   BossFightTime: 60
   NumberOfAttacks: 6
   TimeBetweenMessages: 2
@@ -13981,22 +14006,31 @@ MonoBehaviour:
     ExpToGive: 1500
     achieved: 0
   - DamageGoal: 5000
-    ExpToGive: 0
+    ExpToGive: 10000
     achieved: 0
   - DamageGoal: 15000
-    ExpToGive: 0
+    ExpToGive: 20000
     achieved: 0
   - DamageGoal: 30000
-    ExpToGive: 0
+    ExpToGive: 60000
     achieved: 0
   - DamageGoal: 80000
-    ExpToGive: 0
+    ExpToGive: 160000
     achieved: 0
   - DamageGoal: 150000
-    ExpToGive: 0
+    ExpToGive: 300000
     achieved: 0
   - DamageGoal: 500000
-    ExpToGive: 0
+    ExpToGive: 1000000
+    achieved: 0
+  - DamageGoal: 1500000
+    ExpToGive: 3000000
+    achieved: 0
+  - DamageGoal: 3000000
+    ExpToGive: 6000000
+    achieved: 0
+  - DamageGoal: 6000000
+    ExpToGive: 12000000
     achieved: 0
 --- !u!1 &1588029332
 GameObject:
@@ -16818,8 +16852,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 12
@@ -18932,8 +18966,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 60.67, y: 0.0000045897}
-  m_SizeDelta: {x: 80, y: 40.000015}
+  m_AnchoredPosition: {x: 59.527, y: 0.0000045897}
+  m_SizeDelta: {x: 82.286255, y: 40.000015}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1995934447
 MonoBehaviour:
@@ -18982,8 +19016,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 18
-  m_fontSizeBase: 18
+  m_fontSize: 14
+  m_fontSizeBase: 14
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 12
@@ -20279,7 +20313,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 34.981003, y: -158.99998}
-  m_SizeDelta: {x: 400, y: 149.0238}
+  m_SizeDelta: {x: 700, y: 149.0238}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2103722825
 MonoBehaviour:
@@ -20328,8 +20362,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 42
-  m_fontSizeBase: 42
+  m_fontSize: 32
+  m_fontSizeBase: 32
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18

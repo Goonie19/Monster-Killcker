@@ -164,7 +164,7 @@ public class MonsterBehaviour : MonoBehaviour
             sq.OnComplete(() => {
                 _speakSpawned = true;
                 
-                Invoke("StopSpeaking", 2f);
+                Invoke("StopSpeaking", 6f);
             });
 
            

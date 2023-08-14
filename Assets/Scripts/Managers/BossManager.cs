@@ -108,6 +108,7 @@ public class BossManager : MonoBehaviour
 
     IEnumerator BossSpeakSequence()
     {
+        UIManager.Instance.BossAppearButton.SetActive(false);
         int index = 0;
         UIManager.Instance.MonsterToClick.gameObject.SetActive(false);
         UIManager.Instance.BossToClick.gameObject.SetActive(true);
@@ -152,6 +153,7 @@ public class BossManager : MonoBehaviour
 
     public void ComeBackToMonsterBattle()
     {
+        InBossFight = false;
         //In Process
         UIManager.Instance.BossAppearingImage.color = new Color(1, 1, 1, 0);
         UIManager.Instance.BossAppearingPanel.SetActive(true);
@@ -178,6 +180,7 @@ public class BossManager : MonoBehaviour
         int index = 0;
         UIManager.Instance.MonsterToClick.gameObject.SetActive(true);
         UIManager.Instance.BossToClick.gameObject.SetActive(false);
+        UIManager.Instance.BossAppearButton.SetActive(false);
         while (_bossSpeaking)
         {
 
@@ -204,9 +207,9 @@ public class BossManager : MonoBehaviour
         sq.Play();
 
         sq.OnComplete(() => {
+            AudioManager.Instance.PlayAmbientMusic();
             UIManager.Instance.BossAppearingImage.raycastTarget = false;
             UIManager.Instance.BossTimer.gameObject.SetActive(false);
-            InBossFight = false;
             UIManager.Instance.ChangeInfoPanel();
             AllyManager.Instance.canAttack = true;
         });
@@ -227,6 +230,7 @@ public class BossManager : MonoBehaviour
         sq.Play();
 
         sq.OnComplete(() => {
+            InBossFight = false;
             UIManager.Instance.ChangeInfoPanel();
             UIManager.Instance.UpdateInfoPanels();
             StartCoroutine(EndingBossSpeakSequence());

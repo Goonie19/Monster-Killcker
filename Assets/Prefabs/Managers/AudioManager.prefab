@@ -92,6 +92,13 @@ MonoBehaviour:
       Data3: 673304498
       Data4: 848430191
     Path: event:/SFX/hit
+  killAllySoundPath:
+    Guid:
+      Data1: 1369805862
+      Data2: 1199878398
+      Data3: -1217454929
+      Data4: -745227450
+    Path: event:/SFX/AllyKill
   UnlockSoundPath:
     Guid:
       Data1: -1790527626

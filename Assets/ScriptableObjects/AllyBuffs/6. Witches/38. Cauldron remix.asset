@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Id: 38
   Icon: {fileID: 21300000, guid: 189bd693244f64679955fbc349725b37, type: 3}
-  BuffName: New cauldron
+  BuffName: Cauldron remix
   BuffDescription: With enough experience you can cut a cauldron inhalf and attach
     it to other cauldron's half. This for some reason you are not gonna ask makes
     your witches cause 50 more base damage.

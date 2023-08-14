@@ -10,29 +10,30 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 64. Head choping
+  m_Name: 64. Eyes on the darkness
   m_EditorClassIdentifier: 
   Id: 64
-  Icon: {fileID: 21300000, guid: e95eefadc4ac24d55ad7695fedf1a22a, type: 3}
-  BuffName: Head choping
-  BuffDescription: Chop those heads and turn them into a little head invoker. Equiping
-    this item will duplicate the heads those monsters drop.
-  HeadsToUnlock: 1040000
-  Price: 160000
-  PriceMultiplier: 1.2
+  Icon: {fileID: 21300000, guid: a48b33b9638b44bef8c4763a4f3226d4, type: 3}
+  BuffName: Eyes on the darkness
+  BuffDescription: They can see on the darkness, but after this, you will too. Use
+    those heads to get their eyes and see their more internal weak points. You will
+    start getting a 25% more experience from them.
+  HeadsToUnlock: 800000
+  Price: 130000
+  PriceMultiplier: 0
   OneUseBuff: 1
   Acquired: 0
   NumberOfBuffs: 0
-  addToHealth: 1
-  addToHeads: 1
-  addToExperience: 0
+  addToHealth: 0
+  addToHeads: 0
+  addToExperience: 1
   DefaultBaseHealthToAdd: 0
-  HealthAddToBase: 1000
+  HealthAddToBase: 0
   MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
   DefaultBaseHeadsToAdd: 0
   HeadsToAdd: 0
-  MultiplierHeads: 2
+  MultiplierHeads: 0
   BaseExperienceToAdd: 0
-  MultiplyExperienceValue: 1
+  MultiplyExperienceValue: 1.25
   DefaultBaseExperienceToAdd: 0

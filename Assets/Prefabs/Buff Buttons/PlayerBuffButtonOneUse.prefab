@@ -143,7 +143,7 @@ RectTransform:
   m_GameObject: {fileID: 3475111640562871835}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
   - {fileID: 4645424121962675671}
   - {fileID: 300622595}
@@ -251,7 +251,7 @@ MonoBehaviour:
   IconShadow: {fileID: 3475111641557870166}
   MoneyImage: {fileID: 6948802824586993179}
   MoneyAlly: {fileID: 21300000, guid: 82b8b2544f0ce4164a31119e70601d03, type: 3}
-  MoneyMonster: {fileID: 21300000, guid: 6980abda02f3f46c7a9ceef8df7e4048, type: 3}
+  MoneyMonster: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
   BuffName: {fileID: 3475111642323141616}
   NumberOfBuffs: {fileID: 0}
   ExperienceText: {fileID: 6948802823456428720}
@@ -260,7 +260,6 @@ MonoBehaviour:
   MouseMovementThreshold: 0.5
   TimeToShowInfo: 0.1
   HoverPosition: {fileID: 300622595}
-  BuyTenButton: {fileID: 0}
 --- !u!1 &3475111640676293509
 GameObject:
   m_ObjectHideFlags: 0

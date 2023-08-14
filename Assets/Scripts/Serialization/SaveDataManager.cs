@@ -37,15 +37,7 @@ public class SaveDataManager : MonoBehaviour
             DeserializeBinary();
         else
         {
-            _saveData = new Data();
-            _saveData.PlayerParameters = GameManager.Instance.DefaultPlayerData;
-            _saveData.MonsterParameters = GameManager.Instance.DefaultMonsterData;
-            _saveData.BossParameters = GameManager.Instance.DefaultBossData;
-
-            _saveData.allies = new List<AlliesData>();
-            _saveData.buffs = new List<BuffData>();
-
-            _saveData.completed = false;
+            ResetData();
         }
     }
 
@@ -57,6 +49,19 @@ public class SaveDataManager : MonoBehaviour
     public bool CanGetData()
     {
         return File.Exists(Application.persistentDataPath + "/" + FileName + ".dat") && !GameManager.Instance.StartAgain;
+    }
+
+    public void ResetData()
+    {
+        _saveData = new Data();
+        _saveData.PlayerParameters = GameManager.Instance.DefaultPlayerData;
+        _saveData.MonsterParameters = GameManager.Instance.DefaultMonsterData;
+        _saveData.BossParameters = GameManager.Instance.DefaultBossData;
+
+        _saveData.allies = new List<AlliesData>();
+        _saveData.buffs = new List<BuffData>();
+
+        _saveData.completed = false;
     }
 
     #region SERIALIZATION METHODS

@@ -45,6 +45,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   DefaultCursor: {fileID: 2800000, guid: f594c6026571f3944ab769e145453ca0, type: 3}
   TenCursor: {fileID: 2800000, guid: 2ae8cacc456296b4c8ef56400f10ce2f, type: 3}
+  OnTenShopModeChanged:
+    m_PersistentCalls:
+      m_Calls: []
   StartAgain: 0
   MenuSceneName: MainMenu
   GameSceneName: GameScene
@@ -52,6 +55,9 @@ MonoBehaviour:
     ActualExperience: 0
     ActualHeads: 0
     TotalHeads: 0
+    TotalDamage: 0
+    TotalExperience: 0
+    GameTime: 0
     BaseDamage: 1
     DamageMultiplier: 1
   DefaultMonsterData:
@@ -64,7 +70,7 @@ MonoBehaviour:
     ExperienceMultiplier: 1
   DefaultBossData:
     DamageTaken: 0
-    actualHealth: 1000000
+    actualHealth: 7000000
   DefaultAllies:
   - AllyId: 0
     AllyName: Archer

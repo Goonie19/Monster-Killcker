@@ -533,7 +533,7 @@ MonoBehaviour:
   IconShadow: {fileID: 3109870038274211350}
   MoneyImage: {fileID: 8898394507597989467}
   MoneyAlly: {fileID: 21300000, guid: 82b8b2544f0ce4164a31119e70601d03, type: 3}
-  MoneyMonster: {fileID: 21300000, guid: 6980abda02f3f46c7a9ceef8df7e4048, type: 3}
+  MoneyMonster: {fileID: 21300000, guid: 6375ee604922547709d4cba093674eac, type: 3}
   BuffName: {fileID: 3109870037560302512}
   NumberOfBuffs: {fileID: 0}
   ExperienceText: {fileID: 8898394508783078128}
@@ -542,7 +542,6 @@ MonoBehaviour:
   MouseMovementThreshold: 0.5
   TimeToShowInfo: 0.1
   HoverPosition: {fileID: 1594521597}
-  BuyTenButton: {fileID: 0}
 --- !u!1 &8898394507597989413
 GameObject:
   m_ObjectHideFlags: 0

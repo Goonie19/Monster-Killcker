@@ -160,7 +160,7 @@ public class BossBehaviour : MonoBehaviour
     {
         int i = 0;
 
-        while(i < AllyManager.Instance.allies.Count)
+        while(i < AllyManager.Instance.allies.Count && BossManager.Instance.InBossFight)
         {
             if (AllyManager.Instance.allies[i].NumberOfAllies - BossManager.Instance.NumberOfAlliesToKill > 0)
                 AllyManager.Instance.allies[i].NumberOfAllies -= BossManager.Instance.NumberOfAlliesToKill;

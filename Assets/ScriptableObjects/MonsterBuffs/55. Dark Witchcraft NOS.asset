@@ -10,29 +10,28 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 55. Dark Witchcraft
+  m_Name: 55. Dark Witchcraft NOS
   m_EditorClassIdentifier: 
   Id: 55
   Icon: {fileID: 21300000, guid: b91cf1dbd490c41aab12079d0311cdf5, type: 3}
   BuffName: Dark Witchcraft
-  BuffDescription: Witches are willing to increase the heads monsters drop by a 10%
-    for a head price... Although it will increase monsters life by 150.
-  HeadsToUnlock: 5000
-  Price: 3000
-  PriceMultiplier: 0
-  OneUseBuff: 1
+  BuffDescription: Witches are willing to increase the heads monsters drop by 300...
+    Although it will increase monsters life by 900.
+  HeadsToUnlock: 300000
+  Price: 10000
+  PriceMultiplier: 1.2
+  OneUseBuff: 0
   Acquired: 1
   NumberOfBuffs: 1
   addToHealth: 1
   addToHeads: 1
   addToExperience: 0
-  DefaultBaseHealthToAdd: 0
-  HealthAddToBase: 150
+  HealthAddToBase: 900
   MultiplyHealth: 1
   HealthAddToMultiplierEXP: 0
   DefaultBaseHeadsToAdd: 0
-  HeadsToAdd: 0
-  MultiplierHeads: 1.1
+  HeadsToAdd: 300
+  MultiplierHeads: 1
   BaseExperienceToAdd: 0
   MultiplyExperienceValue: 1
   DefaultBaseExperienceToAdd: 0

@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 547ceb7fc9649f3499465bfa40e1a9da, type: 3}
-  m_Name: 66. Monster power potion
+  m_Name: 67. Monster power potion
   m_EditorClassIdentifier: 
-  Id: 66
+  Id: 67
   Icon: {fileID: 21300000, guid: 2ca4bb8a4afd7459682a33a0153b5b85, type: 3}
   BuffName: Monster power potion
   BuffDescription: Alchemist found the ultimate potion for monsters. This will give

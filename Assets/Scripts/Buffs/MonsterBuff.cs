@@ -12,8 +12,6 @@ public class MonsterBuff : Buff
     public bool addToExperience;
 
     [ShowIf("addToHealth")]
-    public float DefaultBaseHealthToAdd;
-    [ShowIf("addToHealth")]
     public float HealthAddToBase = 0;
     [ShowIf("addToHealth")]
     public float MultiplyHealth = 1;
