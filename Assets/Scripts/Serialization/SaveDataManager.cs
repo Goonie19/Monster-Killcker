@@ -54,14 +54,16 @@ public class SaveDataManager : MonoBehaviour
     public void ResetData()
     {
         _saveData = new Data();
-        _saveData.PlayerParameters = GameManager.Instance.DefaultPlayerData;
-        _saveData.MonsterParameters = GameManager.Instance.DefaultMonsterData;
-        _saveData.BossParameters = GameManager.Instance.DefaultBossData;
+        _saveData.PlayerParameters = new PlayerData();
+        _saveData.MonsterParameters = new MonsterData();
+        _saveData.BossParameters = new BossData();
 
         _saveData.allies = new List<AlliesData>();
         _saveData.buffs = new List<BuffData>();
 
         _saveData.completed = false;
+
+        File.Delete(Application.persistentDataPath + "/" + FileName + ".dat");
     }
 
     #region SERIALIZATION METHODS

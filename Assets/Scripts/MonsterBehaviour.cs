@@ -145,7 +145,7 @@ public class MonsterBehaviour : MonoBehaviour
             SpawnTimer = Random.Range(1, 10);
             yield return new WaitForSeconds(SpawnTimer);
 
-            if (!_dead)
+            if (!_dead && GameManager.Instance.GetDialogues())
                 Speak();
         }
     }

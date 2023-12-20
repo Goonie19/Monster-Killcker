@@ -65,10 +65,10 @@ public class BossManager : MonoBehaviour
     {
         BossData parameters;
 
-        if (SaveDataManager.Instance.CanGetData())
+        if (SaveDataManager.Instance.CanGetData() && !GameManager.Instance.StartAgain)
             parameters = SaveDataManager.Instance.GetBossParameters();
         else
-            parameters = new BossData(GameManager.Instance.DefaultBossData);
+            parameters = new BossData();
 
         foreach(LifeGoal goal in Goals)
         {

@@ -1,5 +1,6 @@
 ﻿using DG.Tweening;
 using System;
+using System.Linq;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,7 +39,7 @@ public class BossBehaviour : MonoBehaviour
         if (SaveDataManager.Instance.CanGetData())
             parameters = SaveDataManager.Instance.GetBossParameters();
         else
-            parameters = new BossData(GameManager.Instance.DefaultBossData);
+            parameters = new BossData();
 
         _actualHealth = parameters.actualHealth;
 
@@ -59,6 +60,8 @@ public class BossBehaviour : MonoBehaviour
             sq.Append(transform.DOScale(1, 0.1f).SetEase(Ease.Linear));
 
             sq.Play();
+
+            AudioManager.Instance.PlayHitSound();
 
             TakeDamage(PlayerManager.Instance.BaseDamage);
 
@@ -156,19 +159,30 @@ public class BossBehaviour : MonoBehaviour
         }
     }
 
+    //This gets the 2 allies that have less numbers and kills an amount of them
     private void Attack()
     {
-        int i = 0;
+        List<AllyType> alliesIds = new List<AllyType>();
 
-        while(i < AllyManager.Instance.allies.Count && BossManager.Instance.InBossFight)
-        {
-            if (AllyManager.Instance.allies[i].NumberOfAllies - BossManager.Instance.NumberOfAlliesToKill > 0)
-                AllyManager.Instance.allies[i].NumberOfAllies -= BossManager.Instance.NumberOfAlliesToKill;
-            else
-                AllyManager.Instance.allies[i].NumberOfAllies = 0;
+        foreach (AllyType ally in AllyManager.Instance.allies)
+            alliesIds.Add(ally);
 
-            ++i;
-        }
+        alliesIds = alliesIds.OrderBy(x => x.NumberOfAllies).ToList();
+
+
+        foreach(AllyType ally in alliesIds.FindAll(x => x.NumberOfAllies == 0))
+            alliesIds.Remove(ally);
+        
+
+        if (AllyManager.Instance.allies.Find(x => x.AllyId == alliesIds[0].AllyId).NumberOfAllies - BossManager.Instance.NumberOfAlliesToKill > 0)
+            AllyManager.Instance.allies.Find(x => x.AllyId == alliesIds[0].AllyId).NumberOfAllies -= BossManager.Instance.NumberOfAlliesToKill;
+        else
+            AllyManager.Instance.allies.Find(x => x.AllyId == alliesIds[0].AllyId).NumberOfAllies = 0;
+
+        if (AllyManager.Instance.allies.Find(x => x.AllyId == alliesIds[1].AllyId).NumberOfAllies - BossManager.Instance.NumberOfAlliesToKill > 0)
+            AllyManager.Instance.allies.Find(x => x.AllyId == alliesIds[1].AllyId).NumberOfAllies -= BossManager.Instance.NumberOfAlliesToKill;
+        else
+            AllyManager.Instance.allies.Find(x => x.AllyId == alliesIds[1].AllyId).NumberOfAllies = 0;
 
         AudioManager.Instance.PlayKillAllySound();
     }

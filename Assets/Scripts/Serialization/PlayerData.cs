@@ -12,6 +12,18 @@ public class PlayerData {
     public float BaseDamage;
     public float DamageMultiplier;
 
+    public PlayerData()
+    {
+        ActualExperience = Placeholder.PlayerActualExperience;
+        ActualHeads = Placeholder.PlayerActualHeads;
+        TotalHeads = Placeholder.PlayerTotalHeads;
+        TotalDamage = Placeholder.PlayerTotalDamage;
+        TotalExperience = Placeholder.PlayerTotalExperience;
+        GameTime = Placeholder.PlayerGameTime;
+        BaseDamage = Placeholder.PlayerBaseDamage;
+        DamageMultiplier = Placeholder.PlayerDamageMultiplier;
+    }
+
     public PlayerData(PlayerData data)
     {
         ActualExperience = data.ActualExperience;

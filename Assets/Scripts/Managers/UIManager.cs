@@ -105,6 +105,9 @@ public class UIManager : MonoBehaviour
     public GameObject AlliesHoverCheckmark;
     public Toggle WindowModeToggle;
     public GameObject WindowModeCheckmark;
+    public Toggle DialoguesToggle;
+    public GameObject DialoguesCheckmark;
+
 
     public TMP_Dropdown ResolutionDropdown;
 
@@ -148,12 +151,16 @@ public class UIManager : MonoBehaviour
         bool stats = GameManager.Instance.GetStatHovers();
         bool allies = GameManager.Instance.GetAlliesHovers();
         bool window = GameManager.Instance.GetWindowMode();
-        
+        bool dialogues = GameManager.Instance.GetDialogues();
+
         StatsHoverToggle.isOn = stats;
         StatsHoverCheckmark.SetActive(stats);
 
         AlliesHoverToggle.isOn = allies;
         AlliesHoverCheckmark.SetActive(allies);
+
+        DialoguesToggle.isOn = dialogues;
+        DialoguesCheckmark.SetActive(dialogues);
 
         WindowModeToggle.isOn = window;
         WindowModeCheckmark.SetActive(window);
@@ -175,6 +182,7 @@ public class UIManager : MonoBehaviour
         WindowModeToggle.onValueChanged.AddListener(GameManager.Instance.SetFullScreen);
         StatsHoverToggle.onValueChanged.AddListener(GameManager.Instance.ShowStatHovers);
         AlliesHoverToggle.onValueChanged.AddListener(GameManager.Instance.ShowAlliesHovers);
+        DialoguesToggle.onValueChanged.AddListener(GameManager.Instance.ShowMonsterDialogues);
         ResolutionDropdown.onValueChanged.AddListener(GameManager.Instance.SetScreenResolution);
 
         sq.OnComplete(() => {

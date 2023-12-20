@@ -15,6 +15,17 @@ public class MonsterData {
     public float BaseExperience;
     public float ExperienceMultiplier;
 
+    public MonsterData()
+    {
+        BaseHealth = Placeholder.MonstersBaseHealth;
+        HealthMultiplier = Placeholder.MonstersHealthMultiplier;
+        HealthPercentageMultiplier = Placeholder.MonstersHealthPercentageMultiplier;
+        BaseHeads = Placeholder.MonstersBaseHeads;
+        MultiplierHeads = Placeholder.MonstersMultiplierHeads;
+        ExperienceMultiplier = Placeholder.MonstersExperienceMultiplier;
+        BaseExperience = Placeholder.MonstersBaseExperience;
+    }
+
     public MonsterData(MonsterData data) { 
         BaseHealth = data.BaseHealth;
         HealthMultiplier = data.HealthMultiplier;

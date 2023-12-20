@@ -64,7 +64,7 @@ public class PlayerManager : MonoBehaviour
 
             UIManager.Instance.HeadsDisplayText.text = UIManager.Instance.SimplifyNumber(_actualHeads);
 
-            if (_totalHeadsAchieved >= BossManager.Instance.HeadsToUnlock)
+            if (_totalHeadsAchieved >= BossManager.Instance.HeadsToUnlock && !BossManager.Instance.InBossFight)
                 UIManager.Instance.BossAppearButton.SetActive(true);
 
             Sequence sq = DOTween.Sequence();
@@ -171,10 +171,10 @@ public class PlayerManager : MonoBehaviour
     {
         PlayerData parameters;
 
-        if (SaveDataManager.Instance.CanGetData())
+        if (SaveDataManager.Instance.CanGetData() && !GameManager.Instance.StartAgain)
             parameters = SaveDataManager.Instance.GetPlayerParameters();
         else
-            parameters = new PlayerData(GameManager.Instance.DefaultPlayerData);
+            parameters = new PlayerData();
 
         _totalHeadsAchieved = parameters.TotalHeads;
         _totalDamage = parameters.TotalDamage;
@@ -182,7 +182,7 @@ public class PlayerManager : MonoBehaviour
         _gameTime = parameters.GameTime;
 
         ActualExperience = parameters.ActualExperience;
-        ActualHeads = parameters.ActualHeads;
+        _actualHeads = parameters.ActualHeads;
 
         _baseDamage = parameters.BaseDamage;
 

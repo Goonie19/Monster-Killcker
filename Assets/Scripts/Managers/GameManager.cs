@@ -35,10 +35,7 @@ public class GameManager : MonoBehaviour
     public string MenuSceneName;
     public string GameSceneName;
 
-    [Title("Save Default Parameters")]
-    public PlayerData DefaultPlayerData;
-    public MonsterData DefaultMonsterData;
-    public BossData DefaultBossData;
+    
 
     public List<AllyType> DefaultAllies;
 
@@ -46,7 +43,9 @@ public class GameManager : MonoBehaviour
 
     private bool StatHovers = true;
     private bool AlliesHovers = true;
+    private bool Dialogues = true;
     private bool WindowMode = false;
+
 
     private int _resolutionIndex;
 
@@ -71,8 +70,26 @@ public class GameManager : MonoBehaviour
         if(PlayerPrefs.HasKey("AlliesHovers"))
             AlliesHovers = PlayerPrefs.GetInt("AlliesHovers") > 0 ? true : false;
 
+        if(PlayerPrefs.HasKey("Dialogues"))
+            Dialogues = PlayerPrefs.GetInt("Dialogues") > 0 ? true : false;
+
         if (PlayerPrefs.HasKey("ScreenIndex"))
+        {
             _resolutionIndex = PlayerPrefs.GetInt("ScreenIndex");
+            SetScreenResolution(_resolutionIndex);
+        } else
+        {
+
+            int i = 0;
+
+            do
+            {
+                ++i;
+            } while (Resolutions[i].x - Screen.currentResolution.width < 0 && Resolutions[i].y - Screen.currentResolution.height < 0 && i < Resolutions.Count);
+
+            SetScreenResolution(i);
+
+        }
         
     }
 
@@ -89,6 +106,14 @@ public class GameManager : MonoBehaviour
         AlliesHovers = show;
 
         PlayerPrefs.SetInt("AlliesHovers", AlliesHovers ? 1 : 0);
+        PlayerPrefs.Save();
+    }
+
+    public void ShowMonsterDialogues(bool show)
+    {
+        Dialogues = show;
+
+        PlayerPrefs.SetInt("Dialogues", Dialogues ? 1 : 0);
         PlayerPrefs.Save();
     }
 
@@ -125,6 +150,11 @@ public class GameManager : MonoBehaviour
     public bool GetAlliesHovers()
     {
         return AlliesHovers;
+    }
+
+    public bool GetDialogues()
+    {
+        return Dialogues;
     }
 
     public bool GetWindowMode()
